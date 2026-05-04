@@ -577,8 +577,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -630,8 +630,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn active" data-tab="events"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -652,19 +652,6 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="msg-item"><div class="mi-av" style="background:#2A68A8;">LF</div><div class="mi-info"><div class="mi-name">Lee Family Office</div><div class="mi-prev">Can we schedule a call this week?</div></div><div class="mi-time">1d</div></div>
         <div class="msg-item"><div class="mi-av" style="background:#8A3A1A;">RF</div><div class="mi-info"><div class="mi-name">Ricci Family</div><div class="mi-prev">Looking forward to Dubai summit!</div></div><div class="mi-time">3d</div></div>
       </div>
-      <div class="sec-label">Co-Invest Deal Room</div>
-      <div class="deal-intro"><div class="di-title">Curated, not distributed</div><div class="di-text">GPs pay a listing fee to be here. Every deal is vetted by NAFIC. Commercial relationships disclosed on every card. You are never sold to.</div></div>
-      <div class="deal-card">
-        <div class="dc-top"><div class="dc-cat">FinTech · Singapore</div><div class="dc-title">Orbit FinTech Series B</div><div class="dc-sub">B2B payments infrastructure · Sequoia Asia-led</div><div class="dc-gp-row"><div class="gp-verified">✓ Verified GP</div><div class="dc-gp-label" style="margin-left:8px;">Horizon Capital</div></div><div class="dc-disclosure">⚠ <b>Disclosure:</b> NAFIC has a listing-fee relationship with Horizon Capital. No carry or equity held.</div></div>
-        <div class="dc-metrics"><div class="dcm"><div class="dcm-val">$40M</div><div class="dcm-lbl">Raise</div></div><div class="dcm"><div class="dcm-val">$500K</div><div class="dcm-lbl">Min Check</div></div><div class="dcm"><div class="dcm-val">Jun 30</div><div class="dcm-lbl">Closing</div></div></div>
-        <div class="nda-zone"><div class="nda-label">NDA Required</div><div class="nda-text">Full deal details require NDA acknowledgment.</div><div class="nda-check-row" onclick="unlock('d1')"><div class="nda-chk" id="d1-chk"></div><div class="nda-chk-lbl">I agree to keep all information strictly confidential</div></div><div class="deal-reveal" id="d1-reveal">Orbit processes $2.4B annualized GMV. Series B led by Sequoia Asia. 3× revenue YoY. NAFIC members have a reserved $3M allocation.</div><button class="express-btn" id="d1-btn">Express Interest →</button></div>
-      </div>
-      <div class="deal-card">
-        <div class="dc-top"><div class="dc-cat">Healthcare · Pre-IPO</div><div class="dc-title">NovaBio Health Pre-IPO</div><div class="dc-sub">AI-driven diagnostics · FDA Breakthrough Device</div><div class="dc-gp-row"><div class="gp-verified">✓ Verified GP</div><div class="dc-gp-label" style="margin-left:8px;">MedVenture Partners</div></div><div class="dc-disclosure">⚠ <b>Disclosure:</b> NAFIC has a listing-fee relationship with MedVenture Partners. No carry or equity held.</div></div>
-        <div class="dc-metrics"><div class="dcm"><div class="dcm-val">$25M</div><div class="dcm-lbl">Raise</div></div><div class="dcm"><div class="dcm-val">$1M</div><div class="dcm-lbl">Min Check</div></div><div class="dcm"><div class="dcm-val">Jul 15</div><div class="dcm-lbl">Closing</div></div></div>
-        <div class="nda-zone"><div class="nda-label">NDA Required</div><div class="nda-text">Full deal details require NDA acknowledgment.</div><div class="nda-check-row" onclick="unlock('d2')"><div class="nda-chk" id="d2-chk"></div><div class="nda-chk-lbl">I agree to keep all information strictly confidential</div></div><div class="deal-reveal" id="d2-reveal">NovaBio FDA Breakthrough Device designation. $180M ARR targeting $500M IPO. $2M block reserved for NAFIC members.</div><button class="express-btn" id="d2-btn">Express Interest →</button></div>
-      </div>
-      <div style="padding:4px 16px 16px;"><button class="btn-outline" onclick="go('s-gpdirectory')" style="padding:14px;">View GP Directory →</button></div>
     </div>
     <!-- ALERTS -->
     <div id="msg-alerts-content" style="display:none;">
@@ -685,8 +672,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn active" data-tab="messages"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn active" data-tab="messages"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -803,8 +790,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn active" data-tab="investments"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -850,8 +837,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn active" data-tab="profile"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
