@@ -277,8 +277,29 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .ev-head-title{font-size:22px;font-weight:700;color:#fff;}
 .ev-head-sub{font-size:13px;color:rgba(255,255,255,.4);margin-top:3px;}
 .ev-tabs{display:flex;padding:0;gap:0;border-bottom:1px solid var(--sand);background:#fff;flex-shrink:0;}
-.ev-tab{flex:1;text-align:center;padding:12px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;}
+.ev-tab{flex:1;text-align:center;padding:12px 6px;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;}
 .ev-tab.active{color:var(--gold-dim);border-bottom-color:var(--gold);}
+
+/* Past events / gallery */
+.past-hero{position:relative;width:calc(100% - 32px);margin:12px 16px 0;border-radius:16px;overflow:hidden;height:210px;cursor:pointer;}
+.past-hero-img{width:100%;height:100%;object-fit:cover;display:block;}
+.past-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,7,.85) 40%,rgba(10,9,7,.1) 100%);}
+.past-hero-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;}
+.past-hero-body{position:absolute;bottom:0;left:0;right:0;padding:16px;}
+.ph-eyebrow{font-size:9px;letter-spacing:2.5px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:5px;}
+.ph-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:3px;line-height:1.25;}
+.ph-meta{font-size:12px;color:rgba(255,255,255,.55);}
+.ph-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.ph-tag{font-size:10px;padding:3px 8px;border-radius:12px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);}
+.gallery-strip{padding:12px 16px 0;}
+.gallery-lbl{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.gallery-thumb{aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:28px;}
+.past-detail{background:#fff;border-radius:14px;margin:10px 16px 0;padding:14px;}
+.pd-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--sand);font-size:13px;}
+.pd-row:last-child{border-bottom:none;}
+.pd-k{color:var(--muted);}
+.pd-v{color:var(--text);font-weight:500;text-align:right;}
 .event-card{background:#fff;border-radius:16px;margin:12px 16px 0;overflow:hidden;border:1px solid var(--sand);}
 .ec-badge-row{padding:14px 16px 0;display:flex;gap:6px;}
 .ec-badge{font-size:10px;font-weight:600;padding:4px 10px;border-radius:20px;letter-spacing:.3px;}
@@ -586,14 +607,17 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 <!-- ── EVENTS ── -->
 <div id="s-events" class="screen">
   <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
-  <div class="ev-head"><div class="ev-head-title">Events & Academy</div><div class="ev-head-sub">Exclusive gatherings · Partner programmes</div></div>
+  <div class="ev-head"><div class="ev-head-title">Events & Academy</div><div class="ev-head-sub">Gatherings · Past · Partner programmes</div></div>
   <div class="ev-tabs">
-    <div class="ev-tab active" id="evt-events" onclick="evTab('events')">Events</div>
+    <div class="ev-tab active" id="evt-upcoming" onclick="evTab('upcoming')">Upcoming</div>
+    <div class="ev-tab" id="evt-past" onclick="evTab('past')">Past</div>
     <div class="ev-tab" id="evt-academy" onclick="evTab('academy')">Academy</div>
   </div>
   <div class="scroll-body">
-    <div id="ev-events-content">
-      <div class="event-card">
+
+    <!-- UPCOMING -->
+    <div id="ev-upcoming-content">
+      <div class="event-card" style="margin-top:12px;">
         <div class="ec-badge-row"><span class="ec-badge ecb-private">Private</span><span class="ec-badge ecb-members">50 cap</span></div>
         <div class="ec-body"><div class="ec-date">May 12 · Burj Al Arab, Dubai</div><div class="ec-title">NAFIC Summit Dubai</div><div class="ec-loc">Members-only investment summit</div><div class="ec-caps"><span class="ec-cap">38 going</span><span class="ec-cap">12 seats left</span></div></div>
         <div class="ec-footer">
@@ -601,31 +625,98 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
           <button class="btn-sm dark">RSVP →</button>
         </div>
       </div>
-      <div class="event-card">
+      <div style="height:12px;"></div>
+    </div>
+
+    <!-- PAST EVENTS + GALLERY -->
+    <div id="ev-past-content" style="display:none;">
+
+      <!-- Event 1: Doha -->
+      <div class="past-hero" style="background:linear-gradient(135deg,#1a2a1a,#2a4a3a);">
+        <div class="past-hero-placeholder" style="position:absolute;inset:0;background:linear-gradient(135deg,#1C3A2A 0%,#2A5040 40%,#1A4030 100%);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;opacity:.3;font-size:52px;">🕌</div>
+        </div>
+        <div class="past-hero-grad"></div>
+        <div class="past-hero-body">
+          <div class="ph-eyebrow">NAFIC · Nov 2024 · Doha, Qatar</div>
+          <div class="ph-title">Qatar Family Office Gathering</div>
+          <div class="ph-meta">Members-only roundtable · Al Rayyan, Doha</div>
+          <div class="ph-tags"><span class="ph-tag">#QatarFamilies</span><span class="ph-tag">#FamilyOffice</span><span class="ph-tag">#Doha</span></div>
+        </div>
+      </div>
+      <div class="past-detail">
+        <div class="pd-row"><div class="pd-k">Attendees</div><div class="pd-v">22 members</div></div>
+        <div class="pd-row"><div class="pd-k">Topics</div><div class="pd-v">GCC deal flow, succession</div></div>
+        <div class="pd-row"><div class="pd-k">Host</div><div class="pd-v">Lixia Zhu · 76 Columbus</div></div>
+      </div>
+      <div class="gallery-strip">
+        <div class="gallery-lbl">Gallery</div>
+        <div class="gallery-grid">
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#1C3A2A,#2A5040);">🕌</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#2A4030,#1C3020);">🤝</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#1A3828,#243830);">🌙</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#253828,#1A3020);">🏙</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#202820,#2A3828);">👥</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#1E3026,#243828);">📊</div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:8px;font-style:italic;">Add your photos — tap any tile to upload from your LinkedIn post.</p>
+      </div>
+
+      <!-- Event 2: Abu Dhabi -->
+      <div class="past-hero" style="margin-top:16px;background:linear-gradient(135deg,#1A1A2E,#16213E);">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0F1B3C 0%,#1A2E58 40%,#0D1830 100%);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;opacity:.3;font-size:52px;">₿</div>
+        </div>
+        <div class="past-hero-grad"></div>
+        <div class="past-hero-body">
+          <div class="ph-eyebrow">NAFIC · Oct 2024 · Abu Dhabi, UAE</div>
+          <div class="ph-title">Bitcoin MENA & Solana Breakpoint</div>
+          <div class="ph-meta">Digital Assets Summit · ADNEC, Abu Dhabi</div>
+          <div class="ph-tags"><span class="ph-tag">#BitcoinMENA</span><span class="ph-tag">#SolanaBreakpoint</span><span class="ph-tag">#AbuDhabi</span></div>
+        </div>
+      </div>
+      <div class="past-detail">
+        <div class="pd-row"><div class="pd-k">Attendees</div><div class="pd-v">18 members</div></div>
+        <div class="pd-row"><div class="pd-k">Topics</div><div class="pd-v">Digital assets, tokenisation, DeFi</div></div>
+        <div class="pd-row"><div class="pd-k">Host</div><div class="pd-v">Lixia Zhu · 76 Columbus</div></div>
+      </div>
+      <div class="gallery-strip">
+        <div class="gallery-lbl">Gallery</div>
+        <div class="gallery-grid">
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#0F1B3C,#1A2E58);">₿</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#162040,#0F1830);">🌐</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#1A2A50,#101830);">⚡</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#0E1A38,#182848);">🏛</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#141E3A,#1A2A4A);">👥</div>
+          <div class="gallery-thumb" style="background:linear-gradient(135deg,#101830,#1A2840);">📱</div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:8px;font-style:italic;">Add your photos — tap any tile to upload from your LinkedIn post.</p>
+      </div>
+      <div style="height:16px;"></div>
+    </div>
+
+    <!-- ACADEMY -->
+    <div id="ev-academy-content" style="display:none;">
+      <div class="event-card" style="margin-top:12px;">
         <div class="ec-badge-row"><span class="ec-badge ecb-partner">NAFIC × Columbia</span></div>
         <div class="ec-body"><div class="ec-date">Jun 20 · Columbia Business School, NYC</div><div class="ec-title">Columbia Leadership Forum</div><div class="ec-loc">Next-gen family wealth leaders programme</div><div class="ec-desc">Senior executive programme for next-gen leaders. Collaborative curriculum, global cohort. Facilitated roundtable hosted by NAFIC members.</div><div class="ec-caps"><span class="ec-cap">50 cap</span><span class="ec-cap">22 going</span></div></div>
         <div class="partner-strip"><div class="ps-head"><div class="ps-logo">🎓</div><div class="ps-title">Columbia Business School Partner</div></div><div class="ps-text">NAFIC members receive priority access and a reserved allocation. Columbia shares programme design; members receive a 15% enrolment benefit.</div><div class="ps-enrol-note">✓ Enrol via NAFIC — priority placement secured</div></div>
-        <div class="ec-footer">
-          <div style="display:flex;align-items:center;"><div class="going-av" style="background:#5A4A80;">MK</div><div class="going-av" style="background:#2A6A58;z-index:4;">TA</div><span class="going-count">+20</span></div>
-          <button class="btn-sm dark">RSVP →</button>
-        </div>
+        <div class="ec-footer"><div style="display:flex;align-items:center;"><div class="going-av" style="background:#5A4A80;">MK</div><div class="going-av" style="background:#2A6A58;z-index:4;">TA</div><span class="going-count">+20</span></div><button class="btn-sm dark">RSVP →</button></div>
       </div>
-      <div style="height:12px;"></div>
-    </div>
-    <div id="ev-academy-content" style="display:none;">
-      <div class="event-card" style="margin-bottom:12px;">
+      <div class="event-card" style="margin-top:10px;">
         <div class="ec-badge-row"><span class="ec-badge ecb-partner">NAFIC × HKUST</span><span class="ec-badge ecb-members">Cohort 2</span></div>
         <div class="ec-body"><div class="ec-date">May 19 · HKUST Hong Kong + Virtual</div><div class="ec-title">Digital Assets Allocation Framework</div><div class="ec-loc">For family offices allocating 5–15% to digital assets</div><div class="ec-desc">Co-designed with HKUST faculty. 6-week cohort, 40 participants max. Covers custody, tokenised real assets, DeFi exposure, and portfolio risk.</div></div>
         <div class="partner-strip"><div class="ps-head"><div class="ps-logo">🏛</div><div class="ps-title">HKUST Academic Partner</div></div><div class="ps-text">HKUST faculty lead curriculum design. NAFIC facilitates cohort access and peer discussion groups.</div><div class="ps-enrol-note">✓ Members get priority — 6 seats remaining</div></div>
         <div class="ec-footer"><span class="going-count" style="margin-left:0;">$8,500 / member</span><button class="btn-sm gold">Enrol →</button></div>
       </div>
-      <div class="event-card">
+      <div class="event-card" style="margin-top:10px;">
         <div class="ec-badge-row"><span class="ec-badge ecb-partner">NAFIC × HKUST</span><span class="ec-badge" style="background:var(--paper);color:var(--muted);">Coming Soon</span></div>
         <div class="ec-body"><div class="ec-date">Sep 2026 · Singapore</div><div class="ec-title">AI for Family Office Operations</div><div class="ec-loc">Due diligence, deal sourcing & portfolio monitoring</div></div>
         <div class="ec-footer"><span class="going-count" style="margin-left:0;">Notify me</span><button class="btn-sm outline">Waitlist</button></div>
       </div>
       <div style="height:12px;"></div>
     </div>
+
   </div>
   <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
@@ -861,10 +952,12 @@ function setTab(el){
   el.classList.add('active');
 }
 function evTab(tab){
-  document.querySelectorAll('.ev-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('evt-'+tab).classList.add('active');
-  document.getElementById('ev-events-content').style.display=tab==='events'?'block':'none';
-  document.getElementById('ev-academy-content').style.display=tab==='academy'?'block':'none';
+  ['upcoming','past','academy'].forEach(k=>{
+    const el=document.getElementById('evt-'+k);
+    const ct=document.getElementById('ev-'+k+'-content');
+    if(el)el.classList.toggle('active',k===tab);
+    if(ct)ct.style.display=k===tab?'block':'none';
+  });
 }
 function msgTab(t){
   document.getElementById('msgt-inbox').classList.toggle('active',t==='inbox');
