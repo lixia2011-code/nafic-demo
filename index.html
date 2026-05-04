@@ -390,6 +390,37 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .pdc-v{font-size:13px;color:var(--text);font-weight:500;text-align:right;}
 .pdc-v.gold{color:var(--gold-dim);}
 .signout-btn{width:calc(100% - 32px);margin:16px;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:14px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:var(--red);cursor:pointer;}
+
+/* Investments */
+#s-investments{background:var(--paper);}
+.inv-head{background:var(--black);padding:16px 20px 20px;flex-shrink:0;}
+.inv-head-title{font-size:22px;font-weight:700;color:#fff;}
+.inv-head-sub{font-size:13px;color:rgba(255,255,255,.4);margin-top:3px;}
+.inv-tabs{display:flex;padding:0;gap:0;border-bottom:1px solid var(--sand);background:#fff;flex-shrink:0;}
+.inv-tab{flex:1;text-align:center;padding:12px 6px;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;}
+.inv-tab.active{color:var(--gold-dim);border-bottom-color:var(--gold);}
+.port-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 16px;}
+.ps-stat{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid var(--sand);}
+.ps-stat-val{font-size:18px;font-weight:700;color:var(--text);}
+.ps-stat-lbl{font-size:10px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;}
+.inv-card{background:#fff;border-radius:16px;margin:0 16px 10px;overflow:hidden;border:1px solid var(--sand);}
+.inv-card-top{padding:14px 16px;}
+.inv-cat{font-size:10px;letter-spacing:2px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:5px;}
+.inv-name{font-size:17px;font-weight:700;color:var(--text);margin-bottom:2px;}
+.inv-sub{font-size:12px;color:var(--muted);margin-bottom:10px;}
+.inv-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--sand);}
+.invm{background:#fff;padding:12px;text-align:center;}
+.invm-val{font-size:15px;font-weight:700;color:var(--text);}
+.invm-val.green{color:var(--green);}
+.invm-val.gold{color:var(--gold-dim);}
+.invm-lbl{font-size:10px;color:var(--muted);margin-top:2px;}
+.inv-footer{padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--sand);}
+.inv-status{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;}
+.inv-status.active{background:var(--green-bg);color:var(--green);}
+.inv-status.exited{background:var(--paper);color:var(--muted);}
+.inv-status.open{background:var(--gold-bg);color:var(--gold-dim);}
+.family-led-badge{display:inline-flex;align-items:center;gap:5px;background:var(--teal-bg);border:1px solid rgba(26,122,120,.25);border-radius:20px;padding:3px 10px;font-size:11px;color:var(--teal);font-weight:500;}
+.community-note{font-size:12px;color:var(--muted);padding:14px 16px 4px;line-height:1.5;}
 </style>
 </head>
 <body>
@@ -507,7 +538,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <div class="referral-banner">
       <div style="font-size:26px;">🌟</div>
       <div class="rb-info"><div class="rb-title">Founding Circle — 2 of 5 referrals</div><div class="rb-sub">Refer 3 more approved members to unlock Founding Circle status</div><div class="rb-progress"><div class="rb-prog-fill"></div></div><div class="rb-prog-label">Bring in the right families. Earn the badge.</div></div>
-      <button class="rb-invite-btn" onclick="setTab(document.querySelector('[data-tab=alerts]'));showInner('s-alerts')">Invite</button>
+      <button class="rb-invite-btn" onclick="setTab(document.querySelector('[data-tab=messages]'));showInner('s-messages');msgTab('alerts')">Invite</button>
     </div>
     <div class="sec-label">Recent Activity</div>
     <div class="act-card"><div class="act-icon">📅</div><div class="act-info"><div class="act-title">EVENT RSVPed</div><div class="act-sub">NAFIC Summit Dubai · May 12</div></div><span class="badge badge-g">Going</span></div>
@@ -547,7 +578,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn active" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
-    <button class="tab-btn" data-tab="alerts" onclick="setTab(this);showInner('s-alerts')"><div class="tab-icon">🔔</div><div class="tab-lbl">Alerts</div></button>
+    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -600,7 +631,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn active" data-tab="events"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
-    <button class="tab-btn" data-tab="alerts" onclick="setTab(this);showInner('s-alerts')"><div class="tab-icon">🔔</div><div class="tab-lbl">Alerts</div></button>
+    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -608,56 +639,54 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 <!-- ── MESSAGES ── -->
 <div id="s-messages" class="screen">
   <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
-  <div class="msgs-head"><div class="ev-head-title">Messages</div><div class="ev-head-sub">Inbox & Deal Room</div></div>
+  <div class="msgs-head"><div class="ev-head-title">Messages</div><div class="ev-head-sub">Inbox · Alerts · Deal Room</div></div>
+  <div class="ev-tabs">
+    <div class="ev-tab active" id="msgt-inbox" onclick="msgTab('inbox')">Inbox</div>
+    <div class="ev-tab" id="msgt-alerts" onclick="msgTab('alerts')">Alerts</div>
+  </div>
   <div class="scroll-body">
-    <div style="background:#fff;margin-bottom:12px;border-radius:14px;overflow:hidden;margin:0 16px 12px;">
-      <div class="msg-item"><div class="mi-av" style="background:#C4A050;">AF</div><div class="mi-info"><div class="mi-name">Al-Farsi Family</div><div class="mi-prev">Interested in connecting re: Dubai deal flow</div></div><div class="mi-time">2h</div></div>
-      <div class="msg-item"><div class="mi-av" style="background:#2A68A8;">LF</div><div class="mi-info"><div class="mi-name">Lee Family Office</div><div class="mi-prev">Can we schedule a call this week?</div></div><div class="mi-time">1d</div></div>
-      <div class="msg-item"><div class="mi-av" style="background:#8A3A1A;">RF</div><div class="mi-info"><div class="mi-name">Ricci Family</div><div class="mi-prev">Looking forward to Dubai summit!</div></div><div class="mi-time">3d</div></div>
+    <!-- INBOX -->
+    <div id="msg-inbox-content">
+      <div style="background:#fff;border-radius:14px;overflow:hidden;margin:12px 16px 12px;">
+        <div class="msg-item"><div class="mi-av" style="background:#C4A050;">AF</div><div class="mi-info"><div class="mi-name">Al-Farsi Family</div><div class="mi-prev">Interested in connecting re: Dubai deal flow</div></div><div class="mi-time">2h</div></div>
+        <div class="msg-item"><div class="mi-av" style="background:#2A68A8;">LF</div><div class="mi-info"><div class="mi-name">Lee Family Office</div><div class="mi-prev">Can we schedule a call this week?</div></div><div class="mi-time">1d</div></div>
+        <div class="msg-item"><div class="mi-av" style="background:#8A3A1A;">RF</div><div class="mi-info"><div class="mi-name">Ricci Family</div><div class="mi-prev">Looking forward to Dubai summit!</div></div><div class="mi-time">3d</div></div>
+      </div>
+      <div class="sec-label">Co-Invest Deal Room</div>
+      <div class="deal-intro"><div class="di-title">Curated, not distributed</div><div class="di-text">GPs pay a listing fee to be here. Every deal is vetted by NAFIC. Commercial relationships disclosed on every card. You are never sold to.</div></div>
+      <div class="deal-card">
+        <div class="dc-top"><div class="dc-cat">FinTech · Singapore</div><div class="dc-title">Orbit FinTech Series B</div><div class="dc-sub">B2B payments infrastructure · Sequoia Asia-led</div><div class="dc-gp-row"><div class="gp-verified">✓ Verified GP</div><div class="dc-gp-label" style="margin-left:8px;">Horizon Capital</div></div><div class="dc-disclosure">⚠ <b>Disclosure:</b> NAFIC has a listing-fee relationship with Horizon Capital. No carry or equity held.</div></div>
+        <div class="dc-metrics"><div class="dcm"><div class="dcm-val">$40M</div><div class="dcm-lbl">Raise</div></div><div class="dcm"><div class="dcm-val">$500K</div><div class="dcm-lbl">Min Check</div></div><div class="dcm"><div class="dcm-val">Jun 30</div><div class="dcm-lbl">Closing</div></div></div>
+        <div class="nda-zone"><div class="nda-label">NDA Required</div><div class="nda-text">Full deal details require NDA acknowledgment.</div><div class="nda-check-row" onclick="unlock('d1')"><div class="nda-chk" id="d1-chk"></div><div class="nda-chk-lbl">I agree to keep all information strictly confidential</div></div><div class="deal-reveal" id="d1-reveal">Orbit processes $2.4B annualized GMV. Series B led by Sequoia Asia. 3× revenue YoY. NAFIC members have a reserved $3M allocation.</div><button class="express-btn" id="d1-btn">Express Interest →</button></div>
+      </div>
+      <div class="deal-card">
+        <div class="dc-top"><div class="dc-cat">Healthcare · Pre-IPO</div><div class="dc-title">NovaBio Health Pre-IPO</div><div class="dc-sub">AI-driven diagnostics · FDA Breakthrough Device</div><div class="dc-gp-row"><div class="gp-verified">✓ Verified GP</div><div class="dc-gp-label" style="margin-left:8px;">MedVenture Partners</div></div><div class="dc-disclosure">⚠ <b>Disclosure:</b> NAFIC has a listing-fee relationship with MedVenture Partners. No carry or equity held.</div></div>
+        <div class="dc-metrics"><div class="dcm"><div class="dcm-val">$25M</div><div class="dcm-lbl">Raise</div></div><div class="dcm"><div class="dcm-val">$1M</div><div class="dcm-lbl">Min Check</div></div><div class="dcm"><div class="dcm-val">Jul 15</div><div class="dcm-lbl">Closing</div></div></div>
+        <div class="nda-zone"><div class="nda-label">NDA Required</div><div class="nda-text">Full deal details require NDA acknowledgment.</div><div class="nda-check-row" onclick="unlock('d2')"><div class="nda-chk" id="d2-chk"></div><div class="nda-chk-lbl">I agree to keep all information strictly confidential</div></div><div class="deal-reveal" id="d2-reveal">NovaBio FDA Breakthrough Device designation. $180M ARR targeting $500M IPO. $2M block reserved for NAFIC members.</div><button class="express-btn" id="d2-btn">Express Interest →</button></div>
+      </div>
+      <div style="padding:4px 16px 16px;"><button class="btn-outline" onclick="go('s-gpdirectory')" style="padding:14px;">View GP Directory →</button></div>
     </div>
-    <div class="sec-label">Co-Invest Deal Room</div>
-    <div class="deal-intro"><div class="di-title">Curated, not distributed</div><div class="di-text">GPs pay a listing fee to be here. Every deal is vetted by NAFIC. Commercial relationships disclosed on every card. You are never sold to.</div></div>
-    <div class="deal-card">
-      <div class="dc-top">
-        <div class="dc-cat">FinTech · Singapore</div>
-        <div class="dc-title">Orbit FinTech Series B</div>
-        <div class="dc-sub">B2B payments infrastructure · Sequoia Asia-led</div>
-        <div class="dc-gp-row"><div class="gp-verified">✓ Verified GP</div><div class="dc-gp-label" style="margin-left:8px;">Horizon Capital</div></div>
-        <div class="dc-disclosure">⚠ <b>Disclosure:</b> NAFIC has a listing-fee relationship with Horizon Capital. No carry or equity held. Full conflict policy in settings.</div>
+    <!-- ALERTS -->
+    <div id="msg-alerts-content" style="display:none;">
+      <div class="referral-alert" style="margin-top:12px;">
+        <div class="ra-title">🌟 Invite to NAFIC</div>
+        <div class="ra-sub">You're 3 referrals away from Founding Circle. Invite the right family — your reputation travels with every invite.</div>
+        <div class="ra-invite-row"><input class="ra-input" type="email" placeholder="family@office.com"/><button class="ra-btn">Send</button></div>
       </div>
-      <div class="dc-metrics"><div class="dcm"><div class="dcm-val">$40M</div><div class="dcm-lbl">Raise</div></div><div class="dcm"><div class="dcm-val">$500K</div><div class="dcm-lbl">Min Check</div></div><div class="dcm"><div class="dcm-val">Jun 30</div><div class="dcm-lbl">Closing</div></div></div>
-      <div class="nda-zone">
-        <div class="nda-label">NDA Required</div>
-        <div class="nda-text">Full deal details and data room require NDA acknowledgment.</div>
-        <div class="nda-check-row" onclick="unlock('d1')"><div class="nda-chk" id="d1-chk"></div><div class="nda-chk-lbl">I agree to keep all information strictly confidential</div></div>
-        <div class="deal-reveal" id="d1-reveal">Orbit processes $2.4B annualized GMV across 18 markets. Series B led by Sequoia Asia. 3× revenue growth YoY. NAFIC members have a reserved $3M allocation.</div>
-        <button class="express-btn" id="d1-btn">Express Interest →</button>
-      </div>
-    </div>
-    <div class="deal-card">
-      <div class="dc-top">
-        <div class="dc-cat">Healthcare · Pre-IPO</div>
-        <div class="dc-title">NovaBio Health Pre-IPO</div>
-        <div class="dc-sub">AI-driven diagnostics · FDA Breakthrough Device</div>
-        <div class="dc-gp-row"><div class="gp-verified">✓ Verified GP</div><div class="dc-gp-label" style="margin-left:8px;">MedVenture Partners</div></div>
-        <div class="dc-disclosure">⚠ <b>Disclosure:</b> NAFIC has a listing-fee relationship with MedVenture Partners. No carry or equity held.</div>
-      </div>
-      <div class="dc-metrics"><div class="dcm"><div class="dcm-val">$25M</div><div class="dcm-lbl">Raise</div></div><div class="dcm"><div class="dcm-val">$1M</div><div class="dcm-lbl">Min Check</div></div><div class="dcm"><div class="dcm-val">Jul 15</div><div class="dcm-lbl">Closing</div></div></div>
-      <div class="nda-zone">
-        <div class="nda-label">NDA Required</div>
-        <div class="nda-text">Full deal details require NDA acknowledgment.</div>
-        <div class="nda-check-row" onclick="unlock('d2')"><div class="nda-chk" id="d2-chk"></div><div class="nda-chk-lbl">I agree to keep all information strictly confidential</div></div>
-        <div class="deal-reveal" id="d2-reveal">NovaBio has FDA Breakthrough Device designation. $180M ARR targeting $500M IPO. Allocation reserved for NAFIC members only — $2M block available.</div>
-        <button class="express-btn" id="d2-btn">Express Interest →</button>
+      <div style="background:#fff;margin:12px 16px;border-radius:14px;overflow:hidden;">
+        <div class="alert-item"><div class="alert-icon-box">🤝</div><div class="alert-body"><div class="alert-title">New match: Al-Farsi Family</div><div class="alert-sub">83% mandate match · Abu Dhabi SFO</div></div><div class="alert-time">2h</div></div>
+        <div class="alert-item"><div class="alert-icon-box">📅</div><div class="alert-body"><div class="alert-title">NAFIC Summit Dubai in 5 days</div><div class="alert-sub">38 members attending · 12 seats left</div></div><div class="alert-time">Yesterday</div></div>
+        <div class="alert-item"><div class="alert-icon-box">📊</div><div class="alert-body"><div class="alert-title">New deal: NovaBio Pre-IPO</div><div class="alert-sub">Healthcare · $25M · Mandate match 78%</div></div><div class="alert-time">2 days ago</div></div>
+        <div class="alert-item"><div class="alert-icon-box">🎓</div><div class="alert-body"><div class="alert-title">Academy: 6 seats left</div><div class="alert-sub">Digital Assets cohort · HKUST × NAFIC · May 19</div></div><div class="alert-time">3 days ago</div></div>
+        <div class="alert-item"><div class="alert-icon-box">💳</div><div class="alert-body"><div class="alert-title">Annual membership renewal</div><div class="alert-sub">Member tier · $45,000 · Due Jun 1 2026</div></div><div class="alert-time">1 week ago</div></div>
       </div>
     </div>
-    <div style="padding:4px 16px 16px;"><button class="btn-outline" onclick="go('s-gpdirectory')" style="padding:14px;">View GP Directory →</button></div>
   </div>
   <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn active" data-tab="messages"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
-    <button class="tab-btn" data-tab="alerts" onclick="setTab(this);showInner('s-alerts')"><div class="tab-icon">🔔</div><div class="tab-lbl">Alerts</div></button>
+    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -687,29 +716,95 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   </div>
 </div>
 
-<!-- ── ALERTS ── -->
-<div id="s-alerts" class="screen">
+<!-- ── INVESTMENTS ── -->
+<div id="s-investments" class="screen">
   <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
-  <div class="msgs-head"><div class="ev-head-title">Alerts</div></div>
+  <div class="inv-head"><div class="inv-head-title">Investments</div><div class="inv-head-sub">Portfolio · Community · Family-Led</div></div>
+  <div class="inv-tabs">
+    <div class="inv-tab active" id="invt-portfolio" onclick="invTab('portfolio')">My Portfolio</div>
+    <div class="inv-tab" id="invt-community" onclick="invTab('community')">Community</div>
+    <div class="inv-tab" id="invt-family" onclick="invTab('family')">Family-Led</div>
+  </div>
   <div class="scroll-body">
-    <div class="referral-alert">
-      <div class="ra-title">🌟 Invite to NAFIC</div>
-      <div class="ra-sub">You're 3 referrals away from Founding Circle status. Invite the right family — your reputation travels with every invite.</div>
-      <div class="ra-invite-row"><input class="ra-input" type="email" placeholder="family@office.com"/><button class="ra-btn">Send</button></div>
+
+    <!-- MY PORTFOLIO -->
+    <div id="inv-portfolio-content">
+      <div class="port-summary">
+        <div class="ps-stat"><div class="ps-stat-val">$8.4M</div><div class="ps-stat-lbl">Deployed</div></div>
+        <div class="ps-stat"><div class="ps-stat-val" style="color:var(--green);">+18.2%</div><div class="ps-stat-lbl">IRR</div></div>
+        <div class="ps-stat"><div class="ps-stat-val">4</div><div class="ps-stat-lbl">Positions</div></div>
+      </div>
+      <div class="sec-label">Active Positions</div>
+      <div class="inv-card">
+        <div class="inv-card-top"><div class="inv-cat">FinTech · Series B</div><div class="inv-name">Orbit FinTech</div><div class="inv-sub">Co-invested via NAFIC SYNDICATE · Horizon Capital</div></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$2M</div><div class="invm-lbl">Invested</div></div><div class="invm"><div class="invm-val green">2.1×</div><div class="invm-lbl">Current MOIC</div></div><div class="invm"><div class="invm-val gold">Jun 2027</div><div class="invm-lbl">Est. Exit</div></div></div>
+        <div class="inv-footer"><span class="inv-status active">Active</span><button class="btn-sm dark">View Details →</button></div>
+      </div>
+      <div class="inv-card">
+        <div class="inv-card-top"><div class="inv-cat">Healthcare · Pre-IPO</div><div class="inv-name">NovaBio Health</div><div class="inv-sub">Co-invested via NAFIC SYNDICATE · MedVenture Partners</div></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$1.5M</div><div class="invm-lbl">Invested</div></div><div class="invm"><div class="invm-val green">1.4×</div><div class="invm-lbl">Current MOIC</div></div><div class="invm"><div class="invm-val gold">Q4 2026</div><div class="invm-lbl">IPO Target</div></div></div>
+        <div class="inv-footer"><span class="inv-status active">Pre-IPO</span><button class="btn-sm dark">View Details →</button></div>
+      </div>
+      <div class="sec-label">Exited</div>
+      <div class="inv-card">
+        <div class="inv-card-top"><div class="inv-cat">Real Estate · Singapore</div><div class="inv-name">Marina Bay Commercial Trust</div><div class="inv-sub">Co-invested with Al-Farsi Family · Direct</div></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$3M</div><div class="invm-lbl">Invested</div></div><div class="invm"><div class="invm-val green">1.8×</div><div class="invm-lbl">Exit MOIC</div></div><div class="invm"><div class="invm-val">Mar 2026</div><div class="invm-lbl">Exited</div></div></div>
+        <div class="inv-footer"><span class="inv-status exited">Exited</span><button class="btn-sm outline">Summary →</button></div>
+      </div>
+      <div style="height:8px;"></div>
     </div>
-    <div style="background:#fff;margin:12px 0;border-radius:14px;overflow:hidden;">
-      <div class="alert-item"><div class="alert-icon-box">🤝</div><div class="alert-body"><div class="alert-title">New match: Al-Farsi Family</div><div class="alert-sub">83% mandate match · Abu Dhabi SFO</div></div><div class="alert-time">2h</div></div>
-      <div class="alert-item"><div class="alert-icon-box">📅</div><div class="alert-body"><div class="alert-title">NAFIC Summit Dubai in 5 days</div><div class="alert-sub">38 members attending · 12 seats left</div></div><div class="alert-time">Yesterday</div></div>
-      <div class="alert-item"><div class="alert-icon-box">📊</div><div class="alert-body"><div class="alert-title">New deal: NovaBio Pre-IPO</div><div class="alert-sub">Healthcare · $25M · Mandate match 78%</div></div><div class="alert-time">2 days ago</div></div>
-      <div class="alert-item"><div class="alert-icon-box">🎓</div><div class="alert-body"><div class="alert-title">Academy: 6 seats left</div><div class="alert-sub">Digital Assets cohort · HKUST × NAFIC · May 19</div></div><div class="alert-time">3 days ago</div></div>
-      <div class="alert-item"><div class="alert-icon-box">💳</div><div class="alert-body"><div class="alert-title">Annual membership renewal</div><div class="alert-sub">Member tier · $45,000 · Due Jun 1 2026</div></div><div class="alert-time">1 week ago</div></div>
+
+    <!-- COMMUNITY AVAILABLE -->
+    <div id="inv-community-content" style="display:none;">
+      <div class="community-note">Investment opportunities shared by NAFIC members. All co-investments follow LP-controlled terms — no cold approaches.</div>
+      <div class="inv-card" style="margin-top:8px;">
+        <div class="inv-card-top"><div class="inv-cat">Private Equity · MENA</div><div class="inv-name">GCC Infrastructure Fund III</div><div class="inv-sub">Raising $120M · GP: Arabian Capital · MENA logistics & ports</div></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$1M</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$34M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Aug 31</div><div class="invm-lbl">Closing</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold">Express Interest →</button></div>
+      </div>
+      <div class="inv-card">
+        <div class="inv-card-top"><div class="inv-cat">Venture · AI</div><div class="inv-name">DeepMind Ventures Fund II</div><div class="inv-sub">Raising $80M · GP: Vertex Asia · Enterprise AI SaaS</div></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$500K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$18M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Jul 20</div><div class="invm-lbl">Closing</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold">Express Interest →</button></div>
+      </div>
+      <div class="inv-card">
+        <div class="inv-card-top"><div class="inv-cat">Private Credit · SEA</div><div class="inv-name">Southeast Asia Credit Opportunities</div><div class="inv-sub">Raising $60M · GP: Crescent Capital · SME lending</div></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$250K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$22M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Sep 15</div><div class="invm-lbl">Closing</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold">Express Interest →</button></div>
+      </div>
+      <div style="height:8px;"></div>
     </div>
+
+    <!-- FAMILY-LED -->
+    <div id="inv-family-content" style="display:none;">
+      <div class="community-note">Deals originated and led by NAFIC member families. Direct co-investment — no GP intermediary.</div>
+      <div class="inv-card" style="margin-top:8px;">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><div class="inv-cat" style="margin:0;">Real Estate · Dubai</div><span class="family-led-badge">👨‍👩‍👧 Al-Farsi Family</span></div>
+          <div class="inv-name">Dubai South Logistics Hub</div>
+          <div class="inv-sub">Class-A warehouse development · 15-year anchor tenant · Exit via REIT IPO</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$2M</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$8M</div><div class="invm-lbl">Syndication</div></div><div class="invm"><div class="invm-val">8.5%</div><div class="invm-lbl">Target Yield</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Open · 3 spots</span><button class="btn-sm gold">Connect →</button></div>
+      </div>
+      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><div class="inv-cat" style="margin:0;">Tech · Singapore</div><span class="family-led-badge">👨‍👩‍👧 Lee Family Office</span></div>
+          <div class="inv-name">Quantum Edge Pre-Seed</div>
+          <div class="inv-sub">Quantum-resistant encryption for financial institutions · $4M pre-seed</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val">$250K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$1.2M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">20%</div><div class="invm-lbl">Target IRR</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Open · 5 spots</span><button class="btn-sm gold">Connect →</button></div>
+      </div>
+      <div style="height:8px;"></div>
+    </div>
+
   </div>
   <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
-    <button class="tab-btn active" data-tab="alerts"><div class="tab-icon">🔔</div><div class="tab-lbl">Alerts</div></button>
+    <button class="tab-btn active" data-tab="investments"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -756,7 +851,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
-    <button class="tab-btn" data-tab="alerts" onclick="setTab(this);showInner('s-alerts')"><div class="tab-icon">🔔</div><div class="tab-lbl">Alerts</div></button>
+    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
     <button class="tab-btn active" data-tab="profile"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -770,7 +865,7 @@ function go(id){
   document.getElementById(id).classList.add('active');
 }
 function showInner(id){
-  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-profile'];
+  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-profile'];
   inner.forEach(sid=>{const el=document.getElementById(sid);if(el)el.classList.remove('active');});
   document.getElementById(id).classList.add('active');
 }
@@ -783,6 +878,18 @@ function evTab(tab){
   document.getElementById('evt-'+tab).classList.add('active');
   document.getElementById('ev-events-content').style.display=tab==='events'?'block':'none';
   document.getElementById('ev-academy-content').style.display=tab==='academy'?'block':'none';
+}
+function msgTab(t){
+  document.getElementById('msgt-inbox').classList.toggle('active',t==='inbox');
+  document.getElementById('msgt-alerts').classList.toggle('active',t==='alerts');
+  document.getElementById('msg-inbox-content').style.display=t==='inbox'?'block':'none';
+  document.getElementById('msg-alerts-content').style.display=t==='alerts'?'block':'none';
+}
+function invTab(t){
+  ['portfolio','community','family'].forEach(k=>{
+    document.getElementById('invt-'+k).classList.toggle('active',k===t);
+    document.getElementById('inv-'+k+'-content').style.display=k===t?'block':'none';
+  });
 }
 function unlock(id){
   const chk=document.getElementById(id+'-chk');
@@ -857,7 +964,7 @@ function renderStep(){
 }
 function applyNext(){if(applyStep<TOTAL){applyStep++;renderStep();}else{go('s-submitted');}}
 function applyBack(){if(applyStep>1){applyStep--;renderStep();}else{go('s-principles');}}
-const CK_LABELS=['$100K','$500K','$1M','$5M','$10M','$25M','$50M','$100M','$250M','$500M','$1B+'];
+const CK_LABELS=['$25K','$100K','$250K','$500K','$1M','$5M','$10M','$25M','$50M','$100M','$1B+'];
 function ckUpdate(){
   const minR=document.getElementById('ck-min-r');
   const maxR=document.getElementById('ck-max-r');
