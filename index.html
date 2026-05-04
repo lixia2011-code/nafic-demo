@@ -64,27 +64,19 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
 /* Splash */
 #s-splash{background:var(--black);}
-.splash-inner{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;overflow-y:scroll;-webkit-overflow-scrolling:touch;}
-.splash-quote{font-family:'DM Serif Display',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,.55);line-height:1.6;padding:12px 16px;margin-bottom:16px;border-left:2px solid var(--gold-dim);text-align:left;border-radius:0 8px 8px 0;background:rgba(200,168,75,0.04);}
-.sq-attr{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:11px;color:var(--gold-dim);margin-top:5px;letter-spacing:.5px;}
+.splash-inner{flex:1;display:flex;flex-direction:column;justify-content:center;padding:36px 28px 28px;overflow-y:scroll;-webkit-overflow-scrolling:touch;}
+.splash-eyebrow{font-size:10px;letter-spacing:4px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:20px;}
+.splash-logo{font-size:64px;font-weight:800;color:#fff;line-height:1;margin-bottom:6px;letter-spacing:-1px;}
+.splash-wordmark{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,.38);text-transform:uppercase;margin-bottom:18px;}
+.splash-divider{width:40px;height:2px;background:var(--gold);border-radius:2px;margin-bottom:24px;}
+.splash-tagline{font-size:18px;color:rgba(255,255,255,.82);line-height:1.55;margin-bottom:28px;font-weight:400;}
+.splash-quote{font-family:'DM Serif Display',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,.5);line-height:1.65;padding:14px 16px;margin-bottom:32px;border-left:2px solid var(--gold-dim);background:rgba(200,168,75,0.05);border-radius:0 8px 8px 0;}
+.sq-attr{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:11px;color:var(--gold-dim);margin-top:6px;letter-spacing:.5px;}
 .quote-card{background:rgba(200,168,75,0.06);border:1px solid var(--gold-border);border-radius:14px;padding:16px 18px;margin:0 16px 12px;}
 .qc-text{font-family:'DM Serif Display',serif;font-size:15px;font-style:italic;color:var(--text);line-height:1.65;margin-bottom:8px;}
 .qc-attr{font-size:11px;color:var(--muted);letter-spacing:.5px;}
-.prin-quote{font-family:'DM Serif Display',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,.55);line-height:1.65;padding:14px 16px;margin:0 16px 12px;border-left:2px solid var(--gold-dim);background:rgba(200,168,75,0.04);border-radius:0 8px 8px 0;}
+.prin-quote{font-family:'DM Serif Display',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,.5);line-height:1.65;padding:14px 16px;margin:0 16px 14px;border-left:2px solid var(--gold-dim);background:rgba(200,168,75,0.04);border-radius:0 8px 8px 0;}
 .prin-quote-attr{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:11px;color:var(--gold-dim);margin-top:5px;letter-spacing:.5px;}
-.splash-eyebrow{font-size:9px;letter-spacing:4px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:24px;padding:5px 16px;border:1px solid var(--gold-border);border-radius:20px;display:inline-block;}
-.splash-logo{font-family:'DM Serif Display',serif;font-size:56px;color:var(--gold);line-height:1;margin-bottom:6px;}
-.splash-wordmark{font-size:10px;letter-spacing:4px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:8px;}
-.splash-founded{font-size:11px;color:var(--gold-dim);letter-spacing:1.5px;margin-bottom:24px;}
-.splash-tagline{font-size:16px;color:rgba(255,255,255,.72);line-height:1.6;margin-bottom:28px;padding:0 4px;}
-.splash-stats{display:flex;width:100%;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:16px;margin-bottom:24px;}
-.ss-item{flex:1;text-align:center;padding:14px 8px;border-right:1px solid var(--border);}
-.ss-item:last-child{border-right:none;}
-.ss-num{font-family:'DM Serif Display',serif;font-size:22px;color:var(--gold);margin-bottom:3px;}
-.ss-lbl{font-size:9px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;}
-.splash-adv{display:flex;align-items:center;gap:8px;padding:12px 14px;background:var(--gold-bg);border:1px solid var(--gold-border);border-radius:10px;margin-bottom:24px;text-align:left;}
-.splash-adv-text{font-size:12px;color:rgba(255,255,255,.6);line-height:1.45;}
-.splash-adv-text b{color:var(--gold);font-weight:600;}
 
 /* Principles */
 #s-principles{background:var(--black);}
@@ -394,20 +386,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
     <div class="splash-eyebrow">INVITE ONLY</div>
     <div class="splash-logo">NAFIC</div>
     <div class="splash-wordmark">NEW AGE FAMILY INVESTMENT CLUB</div>
-    <div class="splash-founded">Founded Abu Dhabi · Dubai · HK · Singapore</div>
-    <div class="splash-tagline">Where next-generation family wealth leaders co-invest, learn together, and build lasting partnerships.</div>
-    <div class="splash-quote">"Never invest in a business you cannot understand."<span class="sq-attr"> — Warren Buffett</span></div>
-    <div class="splash-stats">
-      <div class="ss-item"><div class="ss-num">50</div><div class="ss-lbl">Members</div></div>
-      <div class="ss-item"><div class="ss-num">12+</div><div class="ss-lbl">Countries</div></div>
-      <div class="ss-item"><div class="ss-num">$2B+</div><div class="ss-lbl">AUM</div></div>
-      <div class="ss-item"><div class="ss-num">G2/G3</div><div class="ss-lbl">Focus</div></div>
-    </div>
-    <div class="splash-adv">
-      <div style="font-size:16px;">🔒</div>
-      <div class="splash-adv-text"><b>LP-controlled.</b> GPs only connect when you open the door. Zero cold pitches. All commercial relationships disclosed.</div>
-    </div>
-    <button class="btn-gold" style="margin-bottom:10px;" onclick="go('s-principles')">Enter NAFIC</button>
+    <div class="splash-divider"></div>
+    <div class="splash-tagline">Where family offices connect, invest together, and build lasting partnerships.</div>
+    <div class="splash-quote">"Never invest in a business you cannot understand."<span class="sq-attr">— Warren Buffett</span></div>
+    <button class="btn-gold" style="margin-bottom:14px;" onclick="go('s-principles')">Enter NAFIC</button>
     <button class="btn-ghost" onclick="go('s-signin')">Already a member? Sign in</button>
   </div>
 </div>
@@ -423,22 +405,12 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
   <div class="scroll-body-nofooter" style="background:var(--black);">
     <div class="prin-head">
       <div class="prin-eyebrow">BEFORE YOU JOIN</div>
-      <div class="prin-title">How NAFIC works</div>
-      <div class="prin-sub">Four principles. One commitment. Your interests first.</div>
+      <div class="prin-title">Why NAFIC is different</div>
+      <div class="prin-sub">Three principles that make this work.</div>
     </div>
-    <div class="prin-card"><div class="prin-num">01</div><div class="prin-title2">LP controls the relationship</div><div class="prin-desc">No cold pitches. No unsolicited decks. GPs only connect when you open the door — and every GP commercial relationship is disclosed upfront.</div><span class="prin-tag tag-green">Zero conflicts policy</span></div>
-    <div class="prin-card"><div class="prin-num">02</div><div class="prin-title2">Invite-only, always</div><div class="prin-desc">Every member is personally vetted by the admissions committee. No open signups. 68% of members arrive through member referral — your reputation travels with your invite.</div><span class="prin-tag tag-gold">68% member-referred</span></div>
-    <div class="prin-card"><div class="prin-num">03</div><div class="prin-title2">50 seats. On purpose.</div><div class="prin-desc">Intimacy is the product. Tiger 21 has 1,200+ members. We deliberately cap at 50 per cohort. A smaller circle means deeper trust, better deals, real relationships — and a waitlist that signals real demand.</div><span class="prin-tag tag-red">50-seat cap enforced</span></div>
-    <div class="prin-card"><div class="prin-num">04</div><div class="prin-title2">Three pillars. One membership.</div><div class="prin-desc">Co-invest through SYNDICATE. Learn through the Academy (×HKUST). Connect through the curated network. Your annual membership fee covers all three — no hidden charges to LPs, ever.</div><span class="prin-tag tag-teal">Flat LP fee only</span></div>
-    <div class="vs-card">
-      <div class="vs-title">WHY NOT TIGER 21?</div>
-      <div class="vs-row"><div class="vs-feature">Feature</div><div class="vs-nafic">NAFIC</div><div class="vs-other">Tiger 21</div></div>
-      <div class="vs-row"><div class="vs-feature">GCC–Asia focus</div><div class="vs-nafic">✓ Built for it</div><div class="vs-other">✗ US-centric</div></div>
-      <div class="vs-row"><div class="vs-feature">Next-gen mandate</div><div class="vs-nafic">✓ G2/G3</div><div class="vs-other">✗ G1 founders</div></div>
-      <div class="vs-row"><div class="vs-feature">SPV co-invest infra</div><div class="vs-nafic">✓ Full stack</div><div class="vs-other">✗ None</div></div>
-      <div class="vs-row"><div class="vs-feature">Mandate matching</div><div class="vs-nafic">✓ 7-point match</div><div class="vs-other">✗ Manual only</div></div>
-      <div class="vs-row"><div class="vs-feature">Intimacy (seat cap)</div><div class="vs-nafic">✓ 50 per cohort</div><div class="vs-other">✗ 1,200+ members</div></div>
-    </div>
+    <div class="prin-card"><div class="prin-num">01</div><div class="prin-title2">LP controls the relationship</div><div class="prin-desc">No cold pitches. No unsolicited decks. GPs only connect when an LP opens the door.</div></div>
+    <div class="prin-card"><div class="prin-num">02</div><div class="prin-title2">Invite-only, always</div><div class="prin-desc">Every member is personally vetted. No open signups. Admin reviews and approves each application.</div></div>
+    <div class="prin-card"><div class="prin-num">03</div><div class="prin-title2">50 seats. On purpose.</div><div class="prin-desc">Intimacy is the product. A smaller circle means deeper trust, better deals, real relationships.</div></div>
     <div class="prin-quote">"Never invest in a business you cannot understand."<span class="prin-quote-attr">— Warren Buffett</span></div>
     <div style="padding:16px;">
       <button class="btn-gold" style="margin-bottom:10px;" onclick="go('s-apply');initApply()">I understand — let me in</button>
@@ -448,21 +420,20 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
 </div>
 
 <!-- ── SIGN IN ── -->
-<div id="s-signin" class="screen" style="background:var(--black);">
-  <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div><div class="sb-icons"><svg width="16" height="12" viewBox="0 0 16 12"><path d="M0 4h2v8H0zm3-2h2v10H3zm3-2h2v12H6zm3 4h2v6H9zm3-3h2v9h-2z" fill="#fff"/></svg><svg width="20" height="12" viewBox="0 0 20 12"><rect x="0" y="2" width="17" height="8" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="17.5" y="4" width="2" height="4" rx="1" fill="#fff"/><rect x="1.5" y="3.5" width="11" height="5" rx="1.5" fill="#fff"/></svg></div></div>
-  <div class="top-bar dark">
-    <button class="tb-back" onclick="go('s-splash')">‹</button>
-    <div class="tb-title gold">NAFIC</div>
-    <div style="width:24px;"></div>
-  </div>
-  <div class="signin-body">
-    <div class="si-title">Welcome back</div>
-    <div class="si-sub">Sign in to your family office account</div>
-    <div class="si-field"><div class="si-label">EMAIL</div><input class="si-input" type="email" placeholder="your@familyoffice.com"/></div>
-    <div class="si-field"><div class="si-label">PASSCODE</div><input class="si-input" type="password" placeholder="••••••"/></div>
-    <div class="demo-pill"><div class="dp-label">DEMO ACCESS</div><div class="dp-text">Tap Sign In to explore the full platform</div></div>
-    <button class="btn-gold" onclick="go('s-dash')">Sign In</button>
-    <div class="si-link" onclick="go('s-apply');initApply()">New family? <span>Apply for membership</span></div>
+<div id="s-signin" class="screen" style="background:var(--paper);">
+  <div class="status-bar" style="background:var(--paper)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:var(--text)">9:41</div><div class="sb-icons"><svg width="16" height="12" viewBox="0 0 16 12"><path d="M0 4h2v8H0zm3-2h2v10H3zm3-2h2v12H6zm3 4h2v6H9zm3-3h2v9h-2z" fill="rgba(26,24,16,0.7)"/></svg><svg width="16" height="10" viewBox="0 0 16 10"><path d="M8 1.5C5 1.5 2.3 3 .6 5.3l1.4 1.4C3.3 4.5 5.5 3.5 8 3.5s4.7 1 6 3.2l1.4-1.4C13.7 3 11 1.5 8 1.5zm0 3.5C6.3 5 4.8 5.8 3.8 7l1.4 1.4c.7-.8 1.7-1.4 2.8-1.4s2.1.6 2.8 1.4L12.2 7C11.2 5.8 9.7 5 8 5zm0 3.5c-.8 0-1.4.6-1.4 1.4S7.2 11.3 8 11.3s1.4-.6 1.4-1.4S8.8 8.5 8 8.5z" fill="rgba(26,24,16,0.7)"/></svg><svg width="20" height="12" viewBox="0 0 20 12"><rect x="0" y="2" width="17" height="8" rx="2.5" fill="none" stroke="rgba(26,24,16,0.7)" stroke-width="1.2"/><rect x="17.5" y="4" width="2" height="4" rx="1" fill="rgba(26,24,16,0.7)"/><rect x="1.5" y="3.5" width="11" height="5" rx="1.5" fill="rgba(26,24,16,0.7)"/></svg></div></div>
+  <div class="signin-body" style="background:var(--paper);">
+    <div style="font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:16px;font-weight:500;">NAFIC</div>
+    <div class="si-title" style="color:var(--text);">Welcome back</div>
+    <div class="si-sub" style="color:var(--muted);">Sign in to your family office account</div>
+    <div class="si-field"><div class="si-label" style="color:var(--muted);">Email</div><input class="si-input" style="background:#fff;border-color:var(--sand);color:var(--text);" type="email" placeholder="you@family.com"/></div>
+    <div class="si-field"><div class="si-label" style="color:var(--muted);">Passcode</div><input class="si-input" style="background:#fff;border-color:var(--sand);color:var(--text);" type="password" placeholder="••••••"/></div>
+    <button class="btn-gold" style="margin-bottom:14px;" onclick="go('s-dash')">Sign In</button>
+    <div class="si-link" style="color:var(--muted);" onclick="go('s-apply');initApply()">New family? <span style="color:var(--gold-dim);">Apply for membership</span></div>
+    <div class="demo-pill" style="background:rgba(200,168,75,0.08);border:1px solid var(--gold-border);margin-top:20px;">
+      <div class="dp-label" style="color:var(--gold-dim);">DEMO ACCESS</div>
+      <div class="dp-text" style="color:var(--muted);">Tap Sign In to explore the full app demo</div>
+    </div>
   </div>
 </div>
 
