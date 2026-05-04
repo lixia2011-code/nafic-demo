@@ -147,9 +147,26 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .toggle-knob{width:20px;height:20px;background:#fff;border-radius:50%;position:absolute;top:3px;left:23px;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,.2);}
 .toggle-switch.off .toggle-knob{left:3px;}
 .slider-val-lg{font-size:24px;font-weight:700;color:var(--gold);margin-bottom:10px;}
-input[type=range]{width:100%;accent-color:var(--gold);-webkit-appearance:none;height:4px;border-radius:2px;background:var(--sand);outline:none;}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--gold);cursor:pointer;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2);}
-.slider-marks{display:flex;justify-content:space-between;font-size:10px;color:var(--ghost);margin-top:6px;}
+/* Custom chip input */
+.add-chip-row{display:flex;gap:8px;margin-top:12px;align-items:center;}
+.add-chip-input{flex:1;background:#fff;border:1.5px solid var(--sand);border-radius:20px;padding:8px 14px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);outline:none;transition:border-color .2s;}
+.add-chip-input:focus{border-color:var(--gold);}
+.add-chip-input::placeholder{color:var(--ghost);}
+.add-chip-btn{width:34px;height:34px;border-radius:50%;background:var(--gold);border:none;color:var(--black);font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* Dual range slider */
+.ck-display{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px;}
+.ck-badge{text-align:center;}
+.ck-badge-lbl{font-size:10px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:4px;}
+.ck-badge-val{font-size:24px;font-weight:700;color:var(--gold);}
+.ck-arrow{font-size:18px;color:var(--ghost);padding-bottom:4px;}
+.dual-range-wrap{position:relative;height:44px;margin:0 4px 6px;}
+.dual-track{position:absolute;width:100%;height:4px;background:var(--sand);border-radius:2px;top:50%;transform:translateY(-50%);}
+.dual-fill{position:absolute;height:4px;background:var(--gold);border-radius:2px;top:0;}
+.dual-range-wrap input[type=range]{position:absolute;width:100%;height:4px;-webkit-appearance:none;appearance:none;background:transparent;pointer-events:none;top:50%;transform:translateY(-50%);margin:0;}
+.dual-range-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--gold);cursor:pointer;pointer-events:all;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.18);}
+.dual-range-wrap input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--gold);cursor:pointer;pointer-events:all;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.18);}
+.slider-marks{display:flex;justify-content:space-between;font-size:10px;color:var(--ghost);margin-top:2px;}
 .intent-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--sand);}
 .intent-row:last-child{border-bottom:none;}
 .intent-name{font-size:14px;color:var(--text);}
@@ -411,7 +428,6 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
     <div class="prin-card"><div class="prin-num">01</div><div class="prin-title2">LP controls the relationship</div><div class="prin-desc">No cold pitches. No unsolicited decks. GPs only connect when an LP opens the door.</div></div>
     <div class="prin-card"><div class="prin-num">02</div><div class="prin-title2">Invite-only, always</div><div class="prin-desc">Every member is personally vetted. No open signups. Admin reviews and approves each application.</div></div>
     <div class="prin-card"><div class="prin-num">03</div><div class="prin-title2">50 seats. On purpose.</div><div class="prin-desc">Intimacy is the product. A smaller circle means deeper trust, better deals, real relationships.</div></div>
-    <div class="prin-quote">"Never invest in a business you cannot understand."<span class="prin-quote-attr">— Warren Buffett</span></div>
     <div style="padding:16px;">
       <button class="btn-gold" style="margin-bottom:10px;" onclick="go('s-apply');initApply()">I understand — let me in</button>
       <div style="text-align:center;"><button style="border:none;color:rgba(255,255,255,.4);background:none;cursor:pointer;font-size:14px;padding:8px;font-family:'Inter',sans-serif;" onclick="go('s-signin')">Skip</button></div>
@@ -782,20 +798,36 @@ let applyStep=1;
 const TOTAL=8;
 const steps=[
   {title:"Basic Information",sub:"Tell us about yourself and your family office.",render:()=>`
-    <button class="li-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Autofill from LinkedIn</button>
-    <div class="af"><div class="af-label">FULL NAME</div><input class="af-input" type="text" placeholder="Your full name"/></div>
-    <div class="af"><div class="af-label">EMAIL</div><input class="af-input" type="email" placeholder="your@familyoffice.com"/></div>
-    <div class="af"><div class="af-label">WHATSAPP / PHONE</div><input class="af-input" type="tel" placeholder="+971 50 000 0000"/></div>
-    <div class="af"><div class="af-label">LEVEL</div><select class="af-select"><option>Select level</option><option>Principal / Owner</option><option>CIO / Investment Director</option><option>Managing Director</option><option>Associate / Analyst</option><option>Advisor</option></select></div>
-    <div class="af"><div class="af-label">ORGANIZATION TYPE</div><select class="af-select"><option>Select type</option><option>Single Family Office (LP)</option><option>Multi-Family Office (LP/GP)</option><option>Family Business (LP)</option><option>GP / Fund</option><option>LP Advisor / Consultant</option></select></div>
-    <div class="af"><div class="af-label">FAMILY OFFICE / BUSINESS NAME</div><input class="af-input" type="text" placeholder="Your organization name"/></div>
-    <div class="af"><div class="af-label">GENERATION IN FAMILY BUSINESS</div><select class="af-select"><option>Select generation</option><option>G1 — Founder</option><option>G2 — Second generation</option><option>G3 — Third generation</option><option>G4+ — Multi-generational</option></select></div>
+    <button class="li-btn" id="li-autofill-btn" onclick="linkedinAutofill()"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span id="li-btn-text">Autofill from LinkedIn</span></button>
+    <div id="li-success" style="display:none;align-items:center;gap:8px;padding:10px 14px;background:rgba(30,122,72,0.1);border:1px solid rgba(30,122,72,0.25);border-radius:10px;margin-bottom:12px;font-size:13px;color:#1E7A48;">✓ Profile imported from LinkedIn</div>
+    <div class="af"><div class="af-label">FULL NAME</div><input class="af-input" id="fi-name" type="text" placeholder="Your full name"/></div>
+    <div class="af"><div class="af-label">EMAIL</div><input class="af-input" id="fi-email" type="email" placeholder="your@familyoffice.com"/></div>
+    <div class="af"><div class="af-label">WHATSAPP / PHONE</div><input class="af-input" id="fi-phone" type="tel" placeholder="+971 50 000 0000"/></div>
+    <div class="af"><div class="af-label">LEVEL</div><select class="af-select" id="fi-level"><option>Select level</option><option>Principal / Owner</option><option>CIO / Investment Director</option><option>Managing Director</option><option>Associate / Analyst</option><option>Advisor</option></select></div>
+    <div class="af"><div class="af-label">ORGANIZATION TYPE</div><select class="af-select" id="fi-orgtype"><option>Select type</option><option>Single Family Office (LP)</option><option>Multi-Family Office (LP/GP)</option><option>Family Business (LP)</option><option>GP / Fund</option><option>LP Advisor / Consultant</option></select></div>
+    <div class="af"><div class="af-label">FAMILY OFFICE / BUSINESS NAME</div><input class="af-input" id="fi-org" type="text" placeholder="Your organization name"/></div>
+    <div class="af"><div class="af-label">GENERATION IN FAMILY BUSINESS</div><select class="af-select" id="fi-gen"><option>Select generation</option><option>G1 — Founder</option><option>G2 — Second generation</option><option>G3 — Third generation</option><option>G4+ — Multi-generational</option></select></div>
     <div class="af"><div class="toggle-row"><div class="toggle-info"><div class="toggle-name">WhatsApp Notifications</div><div class="toggle-desc">Receive approvals and alerts via WhatsApp</div></div><div class="toggle-switch" onclick="this.classList.toggle('off')"><div class="toggle-knob"></div></div></div></div>
-    <div class="af"><div class="af-label">WECHAT (OPTIONAL)</div><input class="af-input" type="text" placeholder="WeChat ID for Asia connections"/></div>`},
-  {title:"Where do you focus?",sub:"Select all asset classes that apply.",render:()=>`<div class="chips-wrap">${['Private Equity','Venture / Growth','Real Estate','Private Credit / Debt','Infrastructure','Digital Assets','Public Markets','Hedge Funds','Real Assets','Impact / ESG'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>`},
-  {title:"What industries do you focus on?",sub:"Select all that apply.",render:()=>`<div class="chips-wrap">${['Technology','Healthcare / Biotech','FinTech','Real Estate','Energy / CleanTech','Consumer / Retail','AI & Deep Tech','Defence & Security','Media & Entertainment','Education','Food & AgriTech','Manufacturing'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>`},
+    <div class="af"><div class="af-label">WECHAT (OPTIONAL)</div><input class="af-input" id="fi-wechat" type="text" placeholder="WeChat ID for Asia connections"/></div>`},
+  {title:"Where do you focus?",sub:"Select all asset classes that apply. Add your own below.",render:()=>`
+    <div class="chips-wrap" id="focus-chips">${['Private Equity','Venture / Growth','Real Estate','Private Credit / Debt','Infrastructure','Digital Assets','Public Markets','Hedge Funds','Real Assets','Impact / ESG'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>
+    <div class="add-chip-row"><input class="add-chip-input" id="focus-input" type="text" placeholder="Add your own…" onkeydown="if(event.key==='Enter'){addCustomChip('focus-chips','focus-input');}"/><button class="add-chip-btn" onclick="addCustomChip('focus-chips','focus-input')">+</button></div>`},
+  {title:"What industries do you focus on?",sub:"Select all that apply. Add your own below.",render:()=>`
+    <div class="chips-wrap" id="industry-chips">${['Technology','Healthcare / Biotech','FinTech','Real Estate','Energy / CleanTech','Consumer / Retail','AI & Deep Tech','Defence & Security','Media & Entertainment','Education','Food & AgriTech','Manufacturing','Digital Assets'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>
+    <div class="add-chip-row"><input class="add-chip-input" id="industry-input" type="text" placeholder="Add your own…" onkeydown="if(event.key==='Enter'){addCustomChip('industry-chips','industry-input');}"/><button class="add-chip-btn" onclick="addCustomChip('industry-chips','industry-input')">+</button></div>`},
   {title:"Geographic Focus",sub:"Select regions and countries of interest.",render:()=>`<div class="chips-wrap">${['GCC / MENA','Greater China','Southeast Asia','South Asia','Japan / Korea','Europe','North America','Latin America','Africa','Global'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>`},
-  {title:"Typical Check Size",sub:"Drag to set your usual investment range.",render:()=>`<div class="slider-val-lg" id="ck-val">$1M — $25M</div><input type="range" min="0" max="4" step="1" value="2" oninput="ckChange(this.value)"/><div class="slider-marks"><span>$100K</span><span>$1M</span><span>$10M</span><span>$100M</span><span>$1B+</span></div>`},
+  {title:"Typical Check Size",sub:"Set your minimum and maximum investment range.",render:()=>`
+    <div class="ck-display">
+      <div class="ck-badge"><div class="ck-badge-lbl">MIN</div><div class="ck-badge-val" id="ck-min-lbl">$1M</div></div>
+      <div class="ck-arrow">→</div>
+      <div class="ck-badge"><div class="ck-badge-lbl">MAX</div><div class="ck-badge-val" id="ck-max-lbl">$25M</div></div>
+    </div>
+    <div class="dual-range-wrap" id="ck-wrap">
+      <div class="dual-track"><div class="dual-fill" id="ck-fill"></div></div>
+      <input type="range" id="ck-min-r" min="0" max="10" step="1" value="2" oninput="ckUpdate()"/>
+      <input type="range" id="ck-max-r" min="0" max="10" step="1" value="6" oninput="ckUpdate()"/>
+    </div>
+    <div class="slider-marks"><span>$100K</span><span>$500K</span><span>$1M</span><span>$5M</span><span>$10M</span><span>$25M</span><span>$50M</span><span>$100M</span><span>$250M</span><span>$500M</span><span>$1B+</span></div>`},
   {title:"What are you exploring?",sub:"Select topics — then set your depth: E=Explore · V=Vetting · A=Active",render:()=>`<div>${['Co-investment opportunities','Fund manager sourcing','LP introductions','Deal origination','Education & thought leadership','Digital assets allocation','AI & emerging tech','Family governance','Succession planning'].map(t=>`<div class="intent-row"><span class="intent-name">${t}</span><div class="depth-group"><button class="depth-btn" onclick="setDepth(this,'E')">E</button><button class="depth-btn" onclick="setDepth(this,'V')">V</button><button class="depth-btn" onclick="setDepth(this,'A')">A</button></div></div>`).join('')}</div>`},
   {title:"Choose your membership",sub:"Your annual fee is a commitment signal — not a revenue line for us.",render:()=>`
     <div class="tier-options">
@@ -825,9 +857,71 @@ function renderStep(){
 }
 function applyNext(){if(applyStep<TOTAL){applyStep++;renderStep();}else{go('s-submitted');}}
 function applyBack(){if(applyStep>1){applyStep--;renderStep();}else{go('s-principles');}}
-function ckChange(v){const l=['$100K–$500K','$500K–$1M','$1M–$25M','$25M–$100M','$100M+'];const el=document.getElementById('ck-val');if(el)el.textContent=l[v];}
+const CK_LABELS=['$100K','$500K','$1M','$5M','$10M','$25M','$50M','$100M','$250M','$500M','$1B+'];
+function ckUpdate(){
+  const minR=document.getElementById('ck-min-r');
+  const maxR=document.getElementById('ck-max-r');
+  if(!minR||!maxR)return;
+  let lo=parseInt(minR.value),hi=parseInt(maxR.value);
+  if(lo>hi){if(this===minR){minR.value=hi;}else{maxR.value=lo;}lo=parseInt(minR.value);hi=parseInt(maxR.value);}
+  const pct=v=>v/10*100;
+  const fill=document.getElementById('ck-fill');
+  if(fill){fill.style.left=pct(lo)+'%';fill.style.width=(pct(hi)-pct(lo))+'%';}
+  const minLbl=document.getElementById('ck-min-lbl');
+  const maxLbl=document.getElementById('ck-max-lbl');
+  if(minLbl)minLbl.textContent=CK_LABELS[lo];
+  if(maxLbl)maxLbl.textContent=CK_LABELS[hi];
+}
+setTimeout(()=>{ckUpdate();},50);
+
+function addCustomChip(containerId,inputId){
+  const input=document.getElementById(inputId);
+  const container=document.getElementById(containerId);
+  if(!input||!container)return;
+  const val=input.value.trim();
+  if(!val)return;
+  const chip=document.createElement('span');
+  chip.className='achip on';
+  chip.textContent=val;
+  chip.onclick=function(){this.classList.toggle('on');};
+  container.appendChild(chip);
+  input.value='';
+  input.focus();
+}
 function setDepth(btn,d){const g=btn.closest('.depth-group');g.querySelectorAll('.depth-btn').forEach(b=>b.className='depth-btn');btn.classList.add('on-'+d);}
 function selTier(el){document.querySelectorAll('.tier-opt').forEach(t=>{t.classList.remove('sel');t.style.borderColor='';t.style.background='';});el.classList.add('sel');el.style.borderColor='var(--gold)';el.style.background='rgba(200,168,75,.04)';}
+
+function linkedinAutofill(){
+  const btn=document.getElementById('li-autofill-btn');
+  const txt=document.getElementById('li-btn-text');
+  if(!btn||btn.disabled)return;
+  // Step 1: connecting state
+  btn.disabled=true;
+  btn.style.opacity='0.7';
+  txt.textContent='Connecting to LinkedIn…';
+  setTimeout(()=>{
+    txt.textContent='Importing profile…';
+  },900);
+  setTimeout(()=>{
+    // Fill fields with demo profile data
+    const set=(id,val)=>{const el=document.getElementById(id);if(el){el.value=val;el.style.borderColor='var(--gold)';el.style.transition='border-color .3s';setTimeout(()=>{el.style.borderColor='';},1200);}};
+    const setOpt=(id,val)=>{const el=document.getElementById(id);if(el){for(let i=0;i<el.options.length;i++){if(el.options[i].text===val){el.selectedIndex=i;break;}}el.style.borderColor='var(--gold)';el.style.transition='border-color .3s';setTimeout(()=>{el.style.borderColor='';},1200);}};
+    set('fi-name','Lixia Zhu');
+    set('fi-email','lixia.zhu2011@gmail.com');
+    set('fi-phone','+1 (___) ___-____');
+    setOpt('fi-level','Principal / Owner');
+    setOpt('fi-orgtype','Single Family Office (LP)');
+    set('fi-org','76 Columbus');
+    setOpt('fi-gen','G2 — Second generation');
+    // Show success banner
+    btn.style.display='none';
+    const success=document.getElementById('li-success');
+    if(success){success.style.display='flex';}
+    // Scroll to show filled fields
+    const scroll=document.getElementById('apply-scroll');
+    if(scroll)scroll.scrollTop=80;
+  },1800);
+}
 </script>
 </body>
 </html>
