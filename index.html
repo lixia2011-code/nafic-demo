@@ -324,6 +324,17 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .ps-text{font-size:12px;color:var(--muted);line-height:1.5;}
 .ps-enrol-note{font-size:11px;color:var(--green);font-weight:500;margin-top:5px;}
 
+/* Past events carousel */
+.past-carousel{display:flex;gap:12px;padding:16px 16px 12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-right:32px;}
+.past-carousel::-webkit-scrollbar{display:none;}
+.past-carousel-card{flex-shrink:0;width:78vw;max-width:290px;height:185px;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;scroll-snap-align:start;box-shadow:0 4px 16px rgba(0,0,0,0.18);}
+.past-carousel-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.pc-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,7,.9) 38%,rgba(10,9,7,0.05) 100%);}
+.pc-body{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;}
+.pc-eyebrow{font-size:10px;color:rgba(255,255,255,0.65);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px;}
+.pc-title{font-size:14px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;line-height:1.3;}
+.past-carousel-hint{font-size:11px;color:var(--muted);padding:0 16px 4px;display:flex;align-items:center;gap:4px;}
+
 /* Event Detail Screen */
 #s-event-detail{background:var(--paper);}
 .ed-hero{position:relative;height:220px;flex-shrink:0;overflow:hidden;}
@@ -666,33 +677,40 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div style="height:12px;"></div>
     </div>
 
-    <!-- PAST — compact hero cards, tap for detail -->
+    <!-- PAST — horizontal swipe carousel -->
     <div id="ev-past-content" style="display:none;">
-      <div class="past-hero" style="height:130px;cursor:pointer;" onclick="showEventDetail('qatar')">
-        <img src="Event1.jpg" class="past-hero-img" style="object-position:center center;"/>
-        <div class="past-hero-grad"></div>
-        <div class="past-hero-body" style="padding:12px 16px;">
-          <div class="ph-eyebrow">Jan 2026 · Doha, Qatar</div>
-          <div class="ph-title" style="font-size:15px;">Qatar Family Office Gathering</div>
+      <div class="past-carousel-hint">Swipe to browse past events →</div>
+      <div class="past-carousel">
+
+        <div class="past-carousel-card" style="background:#1C3020;" onclick="showEventDetail('qatar')">
+          <img src="Event1.jpg" style="object-position:center center;"/>
+          <div class="pc-grad"></div>
+          <div class="pc-body">
+            <div class="pc-eyebrow">Jan 2026 · Doha, Qatar</div>
+            <div class="pc-title">Qatar Family Office Gathering</div>
+          </div>
         </div>
-      </div>
-      <div class="past-hero" style="height:130px;margin-top:10px;cursor:pointer;" onclick="showEventDetail('abudhabi-ambassador')">
-        <img src="event2.jpg" class="past-hero-img" style="object-position:center top;"/>
-        <div class="past-hero-grad"></div>
-        <div class="past-hero-body" style="padding:12px 16px;">
-          <div class="ph-eyebrow">Nov 2025 · Abu Dhabi</div>
-          <div class="ph-title" style="font-size:15px;">Family Office at Ambassador's Residence</div>
+
+        <div class="past-carousel-card" style="background:#0D1830;" onclick="showEventDetail('abudhabi-ambassador')">
+          <img src="event2.jpg" style="object-position:center top;"/>
+          <div class="pc-grad"></div>
+          <div class="pc-body">
+            <div class="pc-eyebrow">Nov 2025 · Abu Dhabi</div>
+            <div class="pc-title">Family Office at Ambassador's Residence</div>
+          </div>
         </div>
-      </div>
-      <div class="past-hero" style="height:130px;margin-top:10px;background:#0D1830;cursor:pointer;" onclick="showEventDetail('adfw-delegation')">
-        <img src="event3.jpg" class="past-hero-img" style="object-position:center center;"/>
-        <div class="past-hero-grad"></div>
-        <div class="past-hero-body" style="padding:12px 16px;">
-          <div class="ph-eyebrow">Nov 2025 · Abu Dhabi Finance Week</div>
-          <div class="ph-title" style="font-size:15px;">Family Office Delegation · ADFW</div>
+
+        <div class="past-carousel-card" style="background:#0D1830;" onclick="showEventDetail('adfw-delegation')">
+          <img src="event3.jpg" style="object-position:center center;"/>
+          <div class="pc-grad"></div>
+          <div class="pc-body">
+            <div class="pc-eyebrow">Nov 2025 · Abu Dhabi Finance Week</div>
+            <div class="pc-title">Family Office Delegation · ADFW</div>
+          </div>
         </div>
+
       </div>
-      <div style="height:16px;"></div>
+      <div style="height:8px;"></div>
     </div>
 
     <!-- ACADEMY — compact cards, tap for detail -->
