@@ -455,6 +455,30 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .pdc-v.gold{color:var(--gold-dim);}
 .signout-btn{width:calc(100% - 32px);margin:16px;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:14px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:var(--red);cursor:pointer;}
 
+/* Toast notification */
+.toast{position:fixed;bottom:110px;left:50%;transform:translateX(-50%) translateY(12px);background:var(--black);color:#fff;padding:12px 18px;border-radius:30px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;opacity:0;transition:all .3s ease;z-index:9999;white-space:nowrap;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast-icon{width:20px;height:20px;background:var(--gold-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
+
+/* Interests bottom sheet */
+.interests-overlay{position:fixed;inset:0;background:rgba(10,9,7,.55);z-index:998;display:none;align-items:flex-end;}
+.interests-overlay.show{display:flex;}
+.interests-sheet{background:#fff;border-radius:20px 20px 0 0;width:100%;padding:16px 20px 32px;max-height:72vh;overflow-y:auto;box-shadow:0 -4px 24px rgba(0,0,0,0.15);}
+.is-handle{width:36px;height:4px;background:var(--sand);border-radius:2px;margin:0 auto 16px;}
+.is-title{font-size:17px;font-weight:700;color:var(--text);}
+.is-sub{font-size:12px;color:var(--muted);margin-top:3px;margin-bottom:16px;}
+.is-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--sand);}
+.is-row:last-child{border-bottom:none;}
+.is-av{width:40px;height:40px;border-radius:50%;background:var(--black);color:var(--gold-dim);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.is-info{flex:1;min-width:0;}
+.is-name{font-size:14px;font-weight:600;color:var(--text);}
+.is-detail{font-size:12px;color:var(--muted);margin-top:1px;}
+.is-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0;}
+.is-time{font-size:11px;color:var(--ghost);}
+.is-followup{background:var(--black);color:var(--gold-dim);border:none;border-radius:8px;padding:6px 12px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.is-empty{text-align:center;padding:32px 0;color:var(--muted);font-size:13px;}
+.is-close{width:100%;background:none;border:1.5px solid var(--sand);border-radius:12px;padding:12px;font-size:14px;font-weight:500;color:var(--text);cursor:pointer;font-family:'Inter',sans-serif;margin-top:16px;}
+
 /* Admin Panel */
 #s-admin{background:var(--paper);}
 .admin-head{background:var(--black);padding:16px 20px 0;flex-shrink:0;}
@@ -927,17 +951,17 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div class="inv-card" style="margin-top:8px;">
         <div class="inv-card-top"><div class="inv-cat">Private Equity · MENA</div><div class="inv-name">GCC Infrastructure Fund III</div><div class="inv-sub">Raising $120M · GP: Arabian Capital · MENA logistics & ports</div></div>
         <div class="inv-metrics"><div class="invm"><div class="invm-val">$1M</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$34M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Aug 31</div><div class="invm-lbl">Closing</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold">Express Interest →</button></div>
+        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('GCC Infrastructure Fund III',this)">Express Interest →</button></div>
       </div>
       <div class="inv-card">
         <div class="inv-card-top"><div class="inv-cat">Venture · AI</div><div class="inv-name">DeepMind Ventures Fund II</div><div class="inv-sub">Raising $80M · GP: Vertex Asia · Enterprise AI SaaS</div></div>
         <div class="inv-metrics"><div class="invm"><div class="invm-val">$500K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$18M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Jul 20</div><div class="invm-lbl">Closing</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold">Express Interest →</button></div>
+        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('DeepMind Ventures Fund II',this)">Express Interest →</button></div>
       </div>
       <div class="inv-card">
         <div class="inv-card-top"><div class="inv-cat">Private Credit · SEA</div><div class="inv-name">Southeast Asia Credit Opportunities</div><div class="inv-sub">Raising $60M · GP: Crescent Capital · SME lending</div></div>
         <div class="inv-metrics"><div class="invm"><div class="invm-val">$250K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$22M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Sep 15</div><div class="invm-lbl">Closing</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold">Express Interest →</button></div>
+        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('Southeast Asia Credit Opportunities',this)">Express Interest →</button></div>
       </div>
       <div style="height:8px;"></div>
     </div>
@@ -1291,9 +1315,9 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <!-- Live deals with interest counts -->
       <div class="admin-section"><div class="admin-section-title">Live in Member Feed</div></div>
       <div class="admin-card" style="margin:0 16px 16px;">
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">NovaBio Pre-IPO</div><div class="ar-sub">Healthcare · $25M · <b style="color:var(--gold-dim);">5 member interests</b></div></div><span class="ar-status pending">✓ Live</span></div><div class="ar-actions" style="margin-top:8px;"><button class="ar-review">View Interests</button></div></div>
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Asia VC Fund III</div><div class="ar-sub">Venture Capital · $50M · <b style="color:var(--gold-dim);">2 member interests</b></div></div><span class="ar-status pending">✓ Live</span></div><div class="ar-actions" style="margin-top:8px;"><button class="ar-review">View Interests</button></div></div>
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Dubai RE Fund</div><div class="ar-sub">Real Estate · $80M · <b style="color:var(--gold-dim);">3 member interests</b></div></div><span class="ar-status pending">✓ Live</span></div><div class="ar-actions" style="margin-top:8px;"><button class="ar-review">View Interests</button></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">NovaBio Pre-IPO</div><div class="ar-sub">Healthcare · $25M · <b style="color:var(--gold-dim);" id="count-NovaBio Pre-IPO">5 member interests</b></div></div><span class="ar-status pending">✓ Live</span></div><div class="ar-actions" style="margin-top:8px;"><button class="ar-review" onclick="viewInterests('NovaBio Pre-IPO')">View Interests</button></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">DeepMind Ventures Fund II</div><div class="ar-sub">Venture · AI · <b style="color:var(--gold-dim);" id="count-DeepMind Ventures Fund II">1 member interest</b></div></div><span class="ar-status pending">✓ Live</span></div><div class="ar-actions" style="margin-top:8px;"><button class="ar-review" onclick="viewInterests('DeepMind Ventures Fund II')">View Interests</button></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">GCC Infrastructure Fund III</div><div class="ar-sub">PE · MENA · <b style="color:var(--gold-dim);" id="count-GCC Infrastructure Fund III">2 member interests</b></div></div><span class="ar-status pending">✓ Live</span></div><div class="ar-actions" style="margin-top:8px;"><button class="ar-review" onclick="viewInterests('GCC Infrastructure Fund III')">View Interests</button></div></div>
       </div>
 
     </div>
@@ -1302,6 +1326,24 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 </div>
 
 </div><!-- /screens -->
+
+<!-- Toast -->
+<div class="toast" id="global-toast">
+  <div class="toast-icon">✓</div>
+  <span class="toast-msg">Interest noted — admin will be in touch</span>
+</div>
+
+<!-- Interests bottom sheet -->
+<div class="interests-overlay" id="interests-overlay" onclick="if(event.target===this)this.classList.remove('show')">
+  <div class="interests-sheet">
+    <div class="is-handle"></div>
+    <div class="is-title" id="interests-deal-name"></div>
+    <div class="is-sub" id="interests-count"></div>
+    <div id="interests-list"></div>
+    <button class="is-close" onclick="document.getElementById('interests-overlay').classList.remove('show')">Close</button>
+  </div>
+</div>
+
 </div><!-- /wrap -->
 
 <script>
@@ -1347,6 +1389,74 @@ function showEventDetail(id){
   if(e.action){actEl.textContent=e.action.label;actEl.className=e.action.style==='gold'?'btn-gold':e.action.style==='outline'?'btn-outline':'btn-dark';actEl.style.cssText='width:100%;display:block;';}
   else{actEl.style.display='none';}
   showInner('s-event-detail');
+}
+
+// ── Express Interest & View Interests ──
+const memberInterests = {
+  'NovaBio Pre-IPO':[
+    {name:'Al-Farsi Family',initials:'AF',bg:'#C4A050',office:'SFO · Abu Dhabi · PE, Real Estate',time:'2h ago'},
+    {name:'Chen Holdings',initials:'CH',bg:'#1A1A2E',office:'SFO · Hong Kong · Digital Assets, VC',time:'5h ago'},
+    {name:'Ricci Family',initials:'RF',bg:'#8A3A1A',office:'SFO · Milan · PE, Hedge Funds',time:'1d ago'},
+    {name:'Tanaka Family',initials:'TF',bg:'#1A2A1A',office:'SFO · Tokyo · PE, Infrastructure',time:'2d ago'},
+    {name:'Al-Rashid Capital',initials:'AR',bg:'#1E1A2E',office:'SFO · Dubai · Real Estate, PE',time:'3d ago'},
+  ],
+  'DeepMind Ventures Fund II':[
+    {name:'Lee Family Office',initials:'LF',bg:'#2A68A8',office:'MFO · Singapore · VC, Technology',time:'3h ago'},
+  ],
+  'GCC Infrastructure Fund III':[
+    {name:'Al-Farsi Family',initials:'AF',bg:'#C4A050',office:'SFO · Abu Dhabi · PE, Real Estate',time:'1d ago'},
+    {name:'Al-Rashid Capital',initials:'AR',bg:'#1E1A2E',office:'SFO · Dubai · Real Estate, PE',time:'2d ago'},
+  ],
+  'Southeast Asia Credit Opportunities':[],
+};
+
+function expressInterest(dealName, btn){
+  btn.textContent='✓ Interest Noted';
+  btn.style.background='#2E7D32';
+  btn.style.color='#fff';
+  btn.style.border='none';
+  btn.disabled=true;
+  showToast('Interest noted — admin will be in touch');
+  // Add current member to interests list
+  if(!memberInterests[dealName]) memberInterests[dealName]=[];
+  memberInterests[dealName].unshift({name:'Lixia Zhu · 76 Columbus',initials:'LZ',bg:'#0A0907',office:'SFO · 76 Columbus · Founding Member',time:'Just now'});
+  // Update admin count display if visible
+  const countEl=document.getElementById('count-'+dealName);
+  if(countEl){const n=memberInterests[dealName].length;countEl.textContent=n+' member interest'+(n!==1?'s':'');}
+  // Push to admin alerts
+  const alertsList=document.getElementById('msg-alerts-content');
+  if(alertsList){
+    const alertsDiv=alertsList.querySelector('.alert-item:first-child');
+    const newAlert=document.createElement('div');
+    newAlert.className='alert-item';
+    newAlert.style.cssText='background:#FFF8E7;border-left:3px solid var(--gold);';
+    newAlert.innerHTML=`<div class="alert-icon-box">💼</div><div class="alert-body"><div class="alert-title">New Interest: ${dealName}</div><div class="alert-sub">Lixia Zhu expressed interest · Just now</div></div><div class="alert-time">Now</div>`;
+    const container=alertsList.querySelector('div[style*="background:#fff"]');
+    if(container) container.insertBefore(newAlert,container.firstChild);
+  }
+}
+
+function showToast(msg){
+  const t=document.getElementById('global-toast');
+  t.querySelector('.toast-msg').textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+function viewInterests(dealName){
+  const list=memberInterests[dealName]||[];
+  document.getElementById('interests-deal-name').textContent=dealName;
+  const n=list.length;
+  document.getElementById('interests-count').textContent=n===0?'No interests yet':n+' member'+(n!==1?'s have':'has')+' expressed interest';
+  document.getElementById('interests-list').innerHTML=n===0
+    ?'<div class="is-empty">No members have expressed interest yet.</div>'
+    :list.map(i=>`
+      <div class="is-row">
+        <div class="is-av" style="background:${i.bg||'var(--black)'};">${i.initials}</div>
+        <div class="is-info"><div class="is-name">${i.name}</div><div class="is-detail">${i.office}</div></div>
+        <div class="is-right"><div class="is-time">${i.time}</div><button class="is-followup" onclick="showToast('Opening message thread…')">Follow Up</button></div>
+      </div>`).join('');
+  document.getElementById('interests-overlay').classList.add('show');
 }
 
 function adminTab(t){
