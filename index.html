@@ -455,6 +455,71 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .pdc-v.gold{color:var(--gold-dim);}
 .signout-btn{width:calc(100% - 32px);margin:16px;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:14px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:var(--red);cursor:pointer;}
 
+/* GP Onboarding */
+#s-gp-apply{background:var(--black);}
+.gp-step{display:none;flex-direction:column;height:100%;}
+.gp-step.active{display:flex;}
+.gp-progress{display:flex;gap:6px;padding:12px 20px 0;}
+.gp-prog-dot{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,0.15);transition:background .3s;}
+.gp-prog-dot.done{background:var(--gold);}
+.gp-step-head{padding:20px 20px 12px;}
+.gp-step-eyebrow{font-size:11px;color:var(--gold-dim);font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px;}
+.gp-step-title{font-size:22px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;line-height:1.25;}
+.gp-step-sub{font-size:13px;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.5;}
+.gp-form{flex:1;overflow-y:auto;padding:8px 20px 24px;}
+.gp-input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:13px 14px;font-size:14px;font-family:'Inter',sans-serif;color:#fff;outline:none;box-sizing:border-box;margin-bottom:10px;}
+.gp-input::placeholder{color:rgba(255,255,255,.35);}
+.gp-select{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:13px 14px;font-size:14px;font-family:'Inter',sans-serif;color:#fff;outline:none;box-sizing:border-box;margin-bottom:10px;appearance:none;}
+.gp-select option{background:#1A1A1A;color:#fff;}
+.gp-label{font-size:11px;color:rgba(255,255,255,.5);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;margin-top:4px;display:block;}
+.gp-row-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.gp-type-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
+.gp-type-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 12px;cursor:pointer;transition:all .2s;}
+.gp-type-card.selected{border-color:var(--gold);background:rgba(196,160,80,.12);}
+.gp-type-icon{font-size:22px;margin-bottom:6px;}
+.gp-type-label{font-size:12px;font-weight:600;color:#fff;line-height:1.3;}
+.gp-type-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px;}
+.gp-highlight-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;}
+.gp-ref-row{display:flex;align-items:center;gap:10px;padding:8px 6px;border-radius:8px;cursor:pointer;transition:background .15s;}
+.gp-ref-row:hover,.gp-ref-row.selected{background:rgba(200,168,75,.12);}
+.gp-ref-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
+.gp-ref-name{font-size:13px;font-weight:600;color:#fff;}
+.gp-ref-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:1px;}
+.gp-highlight-num{width:22px;height:22px;border-radius:50%;background:var(--gold-dim);color:var(--black);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:12px;}
+.gp-footer{padding:16px 20px 32px;flex-shrink:0;}
+.gp-next-btn{width:100%;background:var(--gold);color:var(--black);border:none;border-radius:14px;padding:15px;font-size:16px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;letter-spacing:.2px;}
+.gp-back-btn{background:none;border:none;color:rgba(255,255,255,.5);font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;padding:10px 0 0;width:100%;text-align:center;}
+
+/* GP Dashboard */
+#s-gp-dash{background:var(--paper);}
+.gpd-hero{background:var(--black);padding:20px 20px 24px;}
+.gpd-status-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(196,160,80,.15);border:1px solid rgba(196,160,80,.3);border-radius:20px;padding:5px 12px;margin-bottom:14px;}
+.gpd-status-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.gpd-status-txt{font-size:11px;color:var(--gold-dim);font-weight:600;letter-spacing:.4px;}
+.gpd-firm{font-size:22px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;}
+.gpd-deal{font-size:14px;color:rgba(255,255,255,.55);margin-top:4px;}
+.gpd-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px;}
+.gpd-stat{background:#fff;border-radius:12px;padding:14px;text-align:center;border:1px solid var(--sand);}
+.gpd-stat-n{font-size:22px;font-weight:700;color:var(--text);}
+.gpd-stat-l{font-size:10px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;}
+.gpd-section{padding:4px 16px 8px;}
+.gpd-section-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;}
+.gpd-card{background:#fff;border-radius:14px;margin:0 16px 12px;overflow:hidden;border:1px solid var(--sand);}
+.gpd-row{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--sand);}
+.gpd-row:last-child{border-bottom:none;}
+.gpd-k{font-size:12px;color:var(--muted);width:90px;flex-shrink:0;}
+.gpd-v{font-size:13px;color:var(--text);font-weight:500;flex:1;}
+.gpd-interest-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--sand);}
+.gpd-interest-row:last-child{border-bottom:none;}
+.gpd-av{width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--gold-dim);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.gpd-member-info{flex:1;}
+.gpd-member-name{font-size:13px;font-weight:600;color:var(--text);}
+.gpd-member-sub{font-size:11px;color:var(--muted);margin-top:1px;}
+.gpd-msg-btn{background:var(--black);color:var(--gold-dim);border:none;border-radius:8px;padding:7px 12px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.gpd-pending-card{background:rgba(255,165,0,.06);border:1px solid rgba(255,165,0,.2);border-radius:14px;margin:0 16px 12px;padding:16px;}
+.gpd-pending-title{font-size:14px;font-weight:600;color:#B45309;margin-bottom:4px;}
+.gpd-pending-sub{font-size:12px;color:#92400E;line-height:1.5;}
+
 /* Toast notification */
 .toast{position:fixed;bottom:110px;left:50%;transform:translateX(-50%) translateY(12px);background:var(--black);color:#fff;padding:12px 18px;border-radius:30px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;opacity:0;transition:all .3s ease;z-index:9999;white-space:nowrap;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,0.3);}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
@@ -574,7 +639,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <div class="splash-tagline">Where family offices connect, invest together, and build lasting partnerships.</div>
     <div class="splash-quote">"Never invest in a business you cannot understand."<span class="sq-attr">— Warren Buffett</span></div>
     <button class="btn-gold" style="margin-bottom:14px;" onclick="go('s-principles')">Enter NAFIC</button>
-    <button class="btn-ghost" onclick="go('s-signin')">Already a member? Sign in</button>
+    <button class="btn-ghost" onclick="go('s-signin')" style="margin-bottom:10px;">Already a member? Sign in</button>
+    <button style="border:none;background:none;color:rgba(255,255,255,.35);font-size:13px;padding:8px;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline;text-underline-offset:3px;" onclick="go('s-gp-apply')">GP / Fund Manager? Submit a deal →</button>
   </div>
 </div>
 
@@ -1325,6 +1391,273 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   </div>
 </div>
 
+<!-- ── GP ONBOARDING ── -->
+<div id="s-gp-apply" class="screen">
+  <div class="status-bar"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:#fff;">9:41</div></div>
+
+  <!-- Step 1: Organisation -->
+  <div class="gp-step active" id="gp-step-1">
+    <div class="gp-progress">
+      <div class="gp-prog-dot done"></div>
+      <div class="gp-prog-dot"></div>
+      <div class="gp-prog-dot"></div>
+      <div class="gp-prog-dot"></div>
+    </div>
+    <div class="gp-step-head">
+      <div class="gp-step-eyebrow">Step 1 of 4 · GP Onboarding</div>
+      <div class="gp-step-title">Your organisation</div>
+      <div class="gp-step-sub">Select your type — your fund summary will adapt to match.</div>
+    </div>
+    <div class="gp-form">
+      <div class="gp-type-grid">
+        <div class="gp-type-card selected" onclick="selectGpType(this)">
+          <div class="gp-type-icon">🚀</div>
+          <div class="gp-type-label">Pre-IPO Company</div>
+          <div class="gp-type-sub">Series B–D, raising before listing</div>
+        </div>
+        <div class="gp-type-card" onclick="selectGpType(this)">
+          <div class="gp-type-icon">📊</div>
+          <div class="gp-type-label">Fund Manager</div>
+          <div class="gp-type-sub">PE, VC, Hedge, Private Credit</div>
+        </div>
+        <div class="gp-type-card" onclick="selectGpType(this)">
+          <div class="gp-type-icon">🏢</div>
+          <div class="gp-type-label">Real Estate Sponsor</div>
+          <div class="gp-type-sub">Developer or asset manager</div>
+        </div>
+        <div class="gp-type-card" onclick="selectGpType(this)">
+          <div class="gp-type-icon">🤝</div>
+          <div class="gp-type-label">Co-Investment Lead</div>
+          <div class="gp-type-sub">Syndicating a deal to families</div>
+        </div>
+        <div class="gp-type-card" onclick="selectGpType(this)" style="grid-column:span 2;">
+          <div class="gp-type-icon">🎓</div>
+          <div class="gp-type-label">Academia Partner</div>
+          <div class="gp-type-sub">Executive education or research collaboration</div>
+        </div>
+      </div>
+      <label class="gp-label">Organisation Name</label>
+      <input class="gp-input" type="text" placeholder="Your firm or company name"/>
+      <label class="gp-label">Headquarters</label>
+      <input class="gp-input" type="text" placeholder="City, Country"/>
+      <label class="gp-label">Website</label>
+      <input class="gp-input" type="url" placeholder="https://"/>
+    </div>
+    <div class="gp-footer">
+      <button class="gp-next-btn" onclick="gpStep(2)">Continue →</button>
+      <button class="gp-back-btn" onclick="go('s-splash')">← Back to login</button>
+    </div>
+  </div>
+
+  <!-- Step 2: Your Details -->
+  <div class="gp-step" id="gp-step-2">
+    <div class="gp-progress">
+      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
+      <div class="gp-prog-dot"></div><div class="gp-prog-dot"></div>
+    </div>
+    <div class="gp-step-head">
+      <div class="gp-step-eyebrow">Step 2 of 4 · Your Details</div>
+      <div class="gp-step-title">Who are we speaking with?</div>
+      <div class="gp-step-sub">The primary contact for this submission.</div>
+    </div>
+    <div class="gp-form">
+      <label class="gp-label">Full Name</label>
+      <input class="gp-input" type="text" placeholder="Your full name"/>
+      <label class="gp-label">Role / Title</label>
+      <input class="gp-input" type="text" placeholder="e.g. Managing Partner, CEO, CFO"/>
+      <label class="gp-label">Email</label>
+      <input class="gp-input" type="email" placeholder="your@firm.com"/>
+      <label class="gp-label">WhatsApp / Phone</label>
+      <input class="gp-input" type="tel" placeholder="+1 000 000 0000"/>
+      <label class="gp-label">LinkedIn URL</label>
+      <input class="gp-input" type="url" placeholder="linkedin.com/in/yourprofile"/>
+    </div>
+    <div class="gp-footer">
+      <button class="gp-next-btn" onclick="gpStep(3)">Continue →</button>
+      <button class="gp-back-btn" onclick="gpStep(1)">← Back</button>
+    </div>
+  </div>
+
+  <!-- Step 3: Fund Summary -->
+  <div class="gp-step" id="gp-step-3">
+    <div class="gp-progress">
+      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
+      <div class="gp-prog-dot"></div>
+    </div>
+    <div class="gp-step-head">
+      <div class="gp-step-eyebrow">Step 3 of 4 · Fund Summary</div>
+      <div class="gp-step-title">Tell us about the opportunity</div>
+      <div class="gp-step-sub">Be specific — NAFIC families review dozens of opportunities.</div>
+    </div>
+    <div class="gp-form">
+      <label class="gp-label">Deal / Fund Name</label>
+      <input class="gp-input" type="text" placeholder="e.g. FinEdge Technologies Pre-IPO"/>
+      <label class="gp-label">Sector / Industry</label>
+      <select class="gp-select">
+        <option>FinTech</option><option>Healthcare & Life Sciences</option>
+        <option>Technology & AI</option><option>Real Estate</option>
+        <option>Energy & Infrastructure</option><option>Consumer & Retail</option>
+        <option>Digital Assets</option><option>Education</option><option>Other</option>
+      </select>
+      <label class="gp-label">Stage</label>
+      <select class="gp-select">
+        <option>Pre-IPO (Series C+)</option><option>Series B</option>
+        <option>Fund I</option><option>Fund II+</option>
+        <option>Single Asset</option><option>Co-Investment</option>
+      </select>
+      <div class="gp-row-2">
+        <div>
+          <label class="gp-label">Total Raise</label>
+          <input class="gp-input" type="text" placeholder="e.g. $30M"/>
+        </div>
+        <div>
+          <label class="gp-label">Min Ticket</label>
+          <input class="gp-input" type="text" placeholder="e.g. $500K"/>
+        </div>
+      </div>
+      <div class="gp-row-2">
+        <div>
+          <label class="gp-label">Valuation / NAV</label>
+          <input class="gp-input" type="text" placeholder="e.g. $150M"/>
+        </div>
+        <div>
+          <label class="gp-label">Target Close</label>
+          <input class="gp-input" type="text" placeholder="e.g. Q4 2026"/>
+        </div>
+      </div>
+      <label class="gp-label">IPO Target / Exit Strategy</label>
+      <input class="gp-input" type="text" placeholder="e.g. HKEX listing Q1 2027 / Trade sale"/>
+      <label class="gp-label">One-line description</label>
+      <input class="gp-input" type="text" placeholder="What does the company/fund do?"/>
+      <label class="gp-label">Pitch Deck / One-Pager</label>
+      <div style="border:1.5px dashed rgba(255,255,255,.2);border-radius:12px;padding:18px;text-align:center;cursor:pointer;margin-bottom:4px;">
+        <div style="font-size:22px;margin-bottom:4px;">📎</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.5);">Tap to upload PDF · Max 20MB</div>
+      </div>
+      <label class="gp-label" style="margin-top:8px;">3 Key Highlights</label>
+      <div class="gp-highlight-row"><div class="gp-highlight-num">1</div><input class="gp-input" style="margin:0;" type="text" placeholder="e.g. $12M ARR, 3x YoY growth"/></div>
+      <div class="gp-highlight-row"><div class="gp-highlight-num">2</div><input class="gp-input" style="margin:0;" type="text" placeholder="e.g. Backed by Sequoia & GIC"/></div>
+      <div class="gp-highlight-row"><div class="gp-highlight-num">3</div><input class="gp-input" style="margin:0;" type="text" placeholder="e.g. HKEX IPO target Q1 2027"/></div>
+    </div>
+    <div class="gp-footer">
+      <button class="gp-next-btn" onclick="gpStep(4)">Continue →</button>
+      <button class="gp-back-btn" onclick="gpStep(2)">← Back</button>
+    </div>
+  </div>
+
+  <!-- Step 4: Referral -->
+  <div class="gp-step" id="gp-step-4">
+    <div class="gp-progress">
+      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
+      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
+    </div>
+    <div class="gp-step-head">
+      <div class="gp-step-eyebrow">Step 4 of 4 · Referral</div>
+      <div class="gp-step-title">Who referred you?</div>
+      <div class="gp-step-sub">NAFIC is trust-based. A referral from a member or LP carries weight in our review.</div>
+    </div>
+    <div class="gp-form">
+      <label class="gp-label">Referred by (NAFIC Member / LP)</label>
+      <input class="gp-input" type="text" placeholder="Search member name or family office…"/>
+      <div style="margin-top:-4px;margin-bottom:10px;padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;">
+        <div style="font-size:12px;color:rgba(255,255,255,.4);margin-bottom:6px;">NAFIC MEMBERS</div>
+        <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
+          <div class="gp-ref-av" style="background:#C4A050;">AF</div>
+          <div><div class="gp-ref-name">Al-Farsi Family</div><div class="gp-ref-sub">SFO · Abu Dhabi</div></div>
+        </div>
+        <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
+          <div class="gp-ref-av" style="background:#1A1A2E;">CH</div>
+          <div><div class="gp-ref-name">Chen Holdings</div><div class="gp-ref-sub">SFO · Hong Kong</div></div>
+        </div>
+        <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
+          <div class="gp-ref-av" style="background:#2A68A8;">LF</div>
+          <div><div class="gp-ref-name">Lee Family Office</div><div class="gp-ref-sub">MFO · Singapore</div></div>
+        </div>
+        <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
+          <div class="gp-ref-av" style="background:#1E1A2E;">AR</div>
+          <div><div class="gp-ref-name">Al-Rashid Capital</div><div class="gp-ref-sub">SFO · Dubai</div></div>
+        </div>
+      </div>
+      <label class="gp-label">How else did you hear about NAFIC?</label>
+      <select class="gp-select">
+        <option>Referred by member listed above</option>
+        <option>NAFIC event or summit</option>
+        <option>LinkedIn</option>
+        <option>Industry conference</option>
+        <option>Other</option>
+      </select>
+      <label class="gp-label">Any message for the NAFIC team? (optional)</label>
+      <textarea class="gp-input" rows="3" style="resize:none;line-height:1.5;" placeholder="Additional context about your deal or introduction…"></textarea>
+    </div>
+    <div class="gp-footer">
+      <button class="gp-next-btn" onclick="gpSubmit()">Submit for Review →</button>
+      <button class="gp-back-btn" onclick="gpStep(3)">← Back</button>
+    </div>
+  </div>
+
+  <!-- Submitted state -->
+  <div class="gp-step" id="gp-step-done">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center;">
+      <div style="width:72px;height:72px;border-radius:50%;background:rgba(196,160,80,.15);border:2px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:24px;">✓</div>
+      <div style="font-size:24px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;margin-bottom:10px;">Submission received</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:32px;">Thank you. The NAFIC team will review your submission within 48 hours. You'll be notified by email once a decision is made.</div>
+      <button class="gp-next-btn" onclick="showInner('s-gp-dash')" style="max-width:280px;">View Your Dashboard →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── GP DASHBOARD ── -->
+<div id="s-gp-dash" class="screen">
+  <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
+  <div class="gpd-hero">
+    <div class="gpd-status-badge"><div class="gpd-status-dot"></div><div class="gpd-status-txt">UNDER REVIEW</div></div>
+    <div class="gpd-firm">FinEdge Technologies</div>
+    <div class="gpd-deal">Pre-IPO · FinTech · Submitted to NAFIC</div>
+  </div>
+  <div class="scroll-body-nofooter" style="padding-bottom:32px;">
+
+    <div class="gpd-stat-row">
+      <div class="gpd-stat"><div class="gpd-stat-n" style="color:#E65100;">—</div><div class="gpd-stat-l">Status</div></div>
+      <div class="gpd-stat"><div class="gpd-stat-n">0</div><div class="gpd-stat-l">Interests</div></div>
+      <div class="gpd-stat"><div class="gpd-stat-n">48h</div><div class="gpd-stat-l">Response</div></div>
+    </div>
+
+    <div class="gpd-pending-card">
+      <div class="gpd-pending-title">🕐 Pending NAFIC Review</div>
+      <div class="gpd-pending-sub">Your submission is being reviewed by the NAFIC team. You'll receive an email notification once approved or if we need more information. Typical response time is 48 hours.</div>
+    </div>
+
+    <div class="gpd-section"><div class="gpd-section-title">Your Submission</div></div>
+    <div class="gpd-card">
+      <div class="gpd-row"><div class="gpd-k">Deal</div><div class="gpd-v">FinEdge Technologies Pre-IPO</div></div>
+      <div class="gpd-row"><div class="gpd-k">Type</div><div class="gpd-v">Pre-IPO · FinTech · Series C</div></div>
+      <div class="gpd-row"><div class="gpd-k">Raise</div><div class="gpd-v">$30M total · $500K min ticket</div></div>
+      <div class="gpd-row"><div class="gpd-k">Valuation</div><div class="gpd-v">$150M pre-money</div></div>
+      <div class="gpd-row"><div class="gpd-k">Target close</div><div class="gpd-v">Q4 2026</div></div>
+      <div class="gpd-row"><div class="gpd-k">Exit</div><div class="gpd-v">HKEX listing Q1 2027</div></div>
+    </div>
+
+    <div class="gpd-section" style="margin-top:4px;"><div class="gpd-section-title">Member Interests</div></div>
+    <div class="gpd-card">
+      <div style="padding:24px;text-align:center;">
+        <div style="font-size:13px;color:var(--muted);">No interests yet — your deal is under review.<br>Interests will appear here once published.</div>
+      </div>
+    </div>
+
+    <div class="gpd-section" style="margin-top:4px;"><div class="gpd-section-title">Messages from NAFIC</div></div>
+    <div class="gpd-card">
+      <div class="gpd-row" style="flex-direction:column;align-items:flex-start;gap:6px;">
+        <div style="font-size:12px;color:var(--muted);">NAFIC Team · Just now</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.5;">Thanks for submitting. We've received your deck and are reviewing the opportunity. We'll be in touch within 48 hours.</div>
+      </div>
+    </div>
+
+    <div style="padding:16px;">
+      <button style="width:100%;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:13px;font-size:14px;font-weight:500;color:var(--text);cursor:pointer;font-family:'Inter',sans-serif;" onclick="go('s-splash')">Sign Out</button>
+    </div>
+  </div>
+</div>
+
 </div><!-- /screens -->
 
 <!-- Toast -->
@@ -1352,7 +1685,7 @@ function go(id){
   document.getElementById(id).classList.add('active');
 }
 function showInner(id){
-  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail','s-admin'];
+  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail','s-admin','s-gp-apply','s-gp-dash'];
   inner.forEach(sid=>{const el=document.getElementById(sid);if(el)el.classList.remove('active');});
   document.getElementById(id).classList.add('active');
 }
@@ -1591,6 +1924,27 @@ function addCustomChip(containerId,inputId){
 }
 function setDepth(btn,d){const g=btn.closest('.depth-group');g.querySelectorAll('.depth-btn').forEach(b=>b.className='depth-btn');btn.classList.add('on-'+d);}
 function selTier(el){document.querySelectorAll('.tier-opt').forEach(t=>{t.classList.remove('sel');t.style.borderColor='';t.style.background='';});el.classList.add('sel');el.style.borderColor='var(--gold)';el.style.background='rgba(200,168,75,.04)';}
+
+// ── GP Onboarding ──
+function selectGpType(card){
+  document.querySelectorAll('.gp-type-card').forEach(c=>c.classList.remove('selected'));
+  card.classList.add('selected');
+}
+function gpStep(n){
+  document.querySelectorAll('.gp-step').forEach(s=>s.classList.remove('active'));
+  const target=document.getElementById('gp-step-'+n);
+  if(target)target.classList.add('active');
+  // update progress dots
+  document.querySelectorAll('.gp-prog-dot').forEach((d,i)=>{
+    d.classList.toggle('done',i<n-1);
+    d.classList.toggle('active-dot',i===n-1);
+  });
+}
+function gpSubmit(){
+  document.querySelectorAll('.gp-step').forEach(s=>s.classList.remove('active'));
+  const done=document.getElementById('gp-step-done');
+  if(done)done.classList.add('active');
+}
 
 function linkedinAutofill(){
   const btn=document.getElementById('li-autofill-btn');
