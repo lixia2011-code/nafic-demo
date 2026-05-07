@@ -1293,21 +1293,51 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
     <!-- ② INVITES — admin sends invite first, member gets unique link -->
     <div id="admin-invites-content" style="display:none;">
-      <div class="admin-form">
-        <div class="admin-form-title">Send New Invitation</div>
-        <div class="admin-form-hint">Pre-fill what you know — the member's form will be pre-loaded with this info. They confirm and complete the rest.</div>
+
+      <!-- Invite type toggle -->
+      <div style="padding:16px 16px 0;">
+        <div style="font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px;">WHO ARE YOU INVITING?</div>
+        <div style="display:flex;background:#F0EBE3;border-radius:12px;padding:3px;gap:3px;" id="invite-type-toggle">
+          <button id="inv-type-lp" onclick="setInviteType('lp')" style="flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:var(--black);color:#fff;transition:all .2s;">👤 LP Member</button>
+          <button id="inv-type-gp" onclick="setInviteType('gp')" style="flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;">🏢 GP / Fund</button>
+        </div>
+      </div>
+
+      <!-- LP invite form -->
+      <div id="inv-form-lp" class="admin-form">
+        <div class="admin-form-title">Invite LP Member</div>
+        <div class="admin-form-hint">Their application form will be pre-filled with what you enter. They confirm details and complete the remaining steps.</div>
         <input class="admin-input" type="email" placeholder="Email address *"/>
         <input class="admin-input" type="text" placeholder="Full name"/>
         <input class="admin-input" type="text" placeholder="WhatsApp / Phone"/>
         <input class="admin-input" type="text" placeholder="WeChat ID (optional)"/>
         <input class="admin-input" type="text" placeholder="LinkedIn URL (optional)"/>
-        <button class="admin-submit" onclick="this.textContent='✓ Invitation sent';this.style.background='#2E7D32';">Send Invitation →</button>
+        <div style="padding:10px 12px;background:rgba(200,168,75,.07);border:1px solid var(--gold-border);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 Recipient receives LP onboarding link → 8-step application → pending admin approval</div>
+        <button class="admin-submit" onclick="showInviteSent(this,'LP')">Send LP Invitation →</button>
       </div>
-      <div class="admin-section"><div class="admin-section-title">Pending — Invited, Not Yet Applied</div></div>
+
+      <!-- GP invite form -->
+      <div id="inv-form-gp" class="admin-form" style="display:none;">
+        <div class="admin-form-title">Invite GP / Fund Manager</div>
+        <div class="admin-form-hint">Their GP onboarding form will be pre-filled. Since you're inviting them, the referral step is automatically confirmed — they go straight to submitting their deal.</div>
+        <input class="admin-input" type="email" placeholder="Email address *"/>
+        <input class="admin-input" type="text" placeholder="Full name"/>
+        <input class="admin-input" type="text" placeholder="Organisation name"/>
+        <input class="admin-input" type="text" placeholder="Role / Title (e.g. Managing Partner)"/>
+        <input class="admin-input" type="text" placeholder="WhatsApp / Phone"/>
+        <input class="admin-input" type="text" placeholder="LinkedIn URL (optional)"/>
+        <div style="padding:10px 12px;background:rgba(42,104,168,.07);border:1px solid rgba(42,104,168,.2);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 Recipient receives GP onboarding link → 3-step deal submission (referral pre-confirmed) → pending admin deal review</div>
+        <button class="admin-submit" style="background:#1A5888;" onclick="showInviteSent(this,'GP')">Send GP Invitation →</button>
+      </div>
+
+      <!-- Pending invites list -->
+      <div class="admin-section"><div class="admin-section-title">Pending Invitations</div></div>
       <div class="admin-card" style="margin:0 16px 10px;">
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Sophia Müller</div><div class="ar-sub">sophia@mfo-berlin.de · Invited 2 days ago</div></div><span class="ar-status new">Not opened</span></div></div>
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">James Thornton</div><div class="ar-sub">j.thornton@thornton.co.uk · Invited 4 days ago</div></div><span class="ar-status" style="background:#E3F2FD;color:#1565C0;">Link opened</span></div></div>
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Park Min-jun</div><div class="ar-sub">minjun@parkfamily.kr · Invited 1 week ago</div></div><span class="ar-status" style="background:#E3F2FD;color:#1565C0;">In progress</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Sophia Müller <span style="font-size:10px;font-weight:700;background:#E8F5E9;color:#2E7D32;padding:2px 7px;border-radius:20px;margin-left:6px;">LP</span></div><div class="ar-sub">sophia@mfo-berlin.de · Invited 2 days ago</div></div><span class="ar-status new">Not opened</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">James Thornton <span style="font-size:10px;font-weight:700;background:#E8F5E9;color:#2E7D32;padding:2px 7px;border-radius:20px;margin-left:6px;">LP</span></div><div class="ar-sub">j.thornton@thornton.co.uk · Invited 4 days ago</div></div><span class="ar-status" style="background:#E3F2FD;color:#1565C0;">Link opened</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Park Min-jun <span style="font-size:10px;font-weight:700;background:#E8F5E9;color:#2E7D32;padding:2px 7px;border-radius:20px;margin-left:6px;">LP</span></div><div class="ar-sub">minjun@parkfamily.kr · Invited 1 week ago</div></div><span class="ar-status" style="background:#E3F2FD;color:#1565C0;">In progress</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">FinEdge Technologies <span style="font-size:10px;font-weight:700;background:#E3F2FD;color:#1565C0;padding:2px 7px;border-radius:20px;margin-left:6px;">GP</span></div><div class="ar-sub">david@finedge.io · Invited 1 day ago</div></div><span class="ar-status" style="background:#E3F2FD;color:#1565C0;">Link opened</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">NovaMed Capital <span style="font-size:10px;font-weight:700;background:#E3F2FD;color:#1565C0;padding:2px 7px;border-radius:20px;margin-left:6px;">GP</span></div><div class="ar-sub">info@novamedcap.com · Invited 3 days ago</div></div><span class="ar-status new">Not opened</span></div></div>
       </div>
     </div>
 
@@ -1924,6 +1954,31 @@ function addCustomChip(containerId,inputId){
 }
 function setDepth(btn,d){const g=btn.closest('.depth-group');g.querySelectorAll('.depth-btn').forEach(b=>b.className='depth-btn');btn.classList.add('on-'+d);}
 function selTier(el){document.querySelectorAll('.tier-opt').forEach(t=>{t.classList.remove('sel');t.style.borderColor='';t.style.background='';});el.classList.add('sel');el.style.borderColor='var(--gold)';el.style.background='rgba(200,168,75,.04)';}
+
+// ── Admin Invite Type Toggle ──
+function setInviteType(type){
+  const lpBtn=document.getElementById('inv-type-lp');
+  const gpBtn=document.getElementById('inv-type-gp');
+  const lpForm=document.getElementById('inv-form-lp');
+  const gpForm=document.getElementById('inv-form-gp');
+  if(type==='lp'){
+    lpBtn.style.cssText='flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:Inter,sans-serif;cursor:pointer;background:var(--black);color:#fff;transition:all .2s;';
+    gpBtn.style.cssText='flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:Inter,sans-serif;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;';
+    lpForm.style.display='block';
+    gpForm.style.display='none';
+  } else {
+    gpBtn.style.cssText='flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:Inter,sans-serif;cursor:pointer;background:#1A5888;color:#fff;transition:all .2s;';
+    lpBtn.style.cssText='flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:Inter,sans-serif;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;';
+    lpForm.style.display='none';
+    gpForm.style.display='block';
+  }
+}
+function showInviteSent(btn, type){
+  btn.textContent='✓ '+(type==='LP'?'LP':'GP')+' invitation sent';
+  btn.style.background='#2E7D32';
+  btn.disabled=true;
+  showToast((type==='LP'?'LP member':'GP / Fund') + ' invitation sent successfully');
+}
 
 // ── GP Onboarding ──
 function selectGpType(card){
