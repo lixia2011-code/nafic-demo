@@ -265,8 +265,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
 /* Tab bar */
 .tab-bar{position:absolute;bottom:0;left:0;right:0;height:82px;background:#fff;border-top:1px solid var(--sand);display:flex;align-items:center;justify-content:space-around;padding:0 4px 10px;z-index:100;}
-.tab-btn{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 10px;cursor:pointer;border:none;background:none;min-width:50px;}
-.tab-icon{font-size:22px;transition:transform .15s;}
+.tab-btn{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px;cursor:pointer;border:none;background:none;min-width:42px;}
+.tab-icon{font-size:20px;transition:transform .15s;}
 .tab-lbl{font-size:10px;color:var(--muted);letter-spacing:.3px;font-weight:400;}
 .tab-btn.active .tab-lbl{color:var(--gold-dim);font-weight:600;}
 .tab-btn.active .tab-icon{transform:scale(1.1);}
@@ -384,6 +384,25 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .ra-invite-row{display:flex;gap:8px;}
 .ra-input{flex:1;background:#fff;border:1px solid var(--sand);border-radius:10px;padding:10px 12px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);outline:none;}
 .ra-btn{background:var(--gold);border:none;border-radius:10px;padding:10px 16px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--black);cursor:pointer;}
+
+/* Members Directory */
+#s-members{background:var(--paper);}
+.mem-search-wrap{padding:12px 16px 4px;}
+.mem-search{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:10px 14px;color:#fff;font-size:14px;width:100%;box-sizing:border-box;outline:none;}
+.mem-search::placeholder{color:rgba(255,255,255,0.4);}
+.mem-filters{display:flex;gap:8px;padding:10px 16px 14px;overflow-x:auto;flex-shrink:0;scrollbar-width:none;}
+.mem-filter{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:5px 13px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);white-space:nowrap;cursor:pointer;}
+.mem-filter.on{background:var(--gold-dim);color:#fff;border-color:var(--gold-dim);}
+.mem-card{background:#fff;border-radius:14px;padding:14px 16px;margin:0 16px 10px;display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
+.mem-av{width:46px;height:46px;border-radius:50%;background:var(--black);color:var(--gold-dim);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.mem-info{flex:1;min-width:0;}
+.mem-name{font-weight:700;font-size:15px;color:var(--text);}
+.mem-office{font-size:12px;color:var(--muted);margin-top:1px;}
+.mem-region{font-size:11px;color:var(--gold-dim);font-weight:600;margin-top:4px;}
+.mem-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px;}
+.mem-tag{background:var(--paper);border:1px solid var(--sand);border-radius:7px;padding:3px 8px;font-size:11px;color:var(--text);}
+.mem-connect{background:var(--black);color:var(--gold-dim);border:none;border-radius:9px;padding:7px 13px;font-size:12px;font-weight:600;cursor:pointer;flex-shrink:0;align-self:center;}
+.mem-count{font-size:12px;color:var(--muted);padding:8px 16px 4px;}
 
 /* Profile */
 #s-profile{background:var(--paper);}
@@ -599,6 +618,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn active" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
@@ -720,6 +740,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn active" data-tab="events"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
@@ -762,6 +783,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
     <button class="tab-btn active" data-tab="messages"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
@@ -880,6 +902,108 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn active" data-tab="investments"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
+    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
+    <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
+  </div>
+</div>
+
+<!-- ── MEMBERS DIRECTORY ── -->
+<div id="s-members" class="screen">
+  <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
+  <div class="ev-head" style="padding-bottom:0;">
+    <div class="ev-head-title">Members</div>
+    <div class="ev-head-sub">Private directory · Approved families only</div>
+    <div class="mem-search-wrap" style="padding:12px 0 0;">
+      <input class="mem-search" type="text" placeholder="🔍  Search by name or office…"/>
+    </div>
+    <div class="mem-filters">
+      <div class="mem-filter on">All</div>
+      <div class="mem-filter">Middle East</div>
+      <div class="mem-filter">Asia Pacific</div>
+      <div class="mem-filter">Europe</div>
+      <div class="mem-filter">Americas</div>
+      <div class="mem-filter">Private Equity</div>
+      <div class="mem-filter">Digital Assets</div>
+      <div class="mem-filter">Venture Capital</div>
+    </div>
+  </div>
+  <div class="scroll-body">
+    <div class="mem-count">23 members</div>
+
+    <div class="mem-card">
+      <div class="mem-av" style="background:#1C2E1A;">AF</div>
+      <div class="mem-info">
+        <div class="mem-name">Al-Farsi Family</div>
+        <div class="mem-office">Single Family Office · Abu Dhabi</div>
+        <div class="mem-region">Middle East</div>
+        <div class="mem-tags"><span class="mem-tag">Private Equity</span><span class="mem-tag">Real Estate</span><span class="mem-tag">$5M–$50M</span></div>
+      </div>
+      <button class="mem-connect">Connect</button>
+    </div>
+
+    <div class="mem-card">
+      <div class="mem-av" style="background:#0D1F35;">LF</div>
+      <div class="mem-info">
+        <div class="mem-name">Lee Family Office</div>
+        <div class="mem-office">Multi-Family Office · Singapore</div>
+        <div class="mem-region">Asia Pacific</div>
+        <div class="mem-tags"><span class="mem-tag">Venture Capital</span><span class="mem-tag">Technology</span><span class="mem-tag">$1M–$10M</span></div>
+      </div>
+      <button class="mem-connect">Connect</button>
+    </div>
+
+    <div class="mem-card">
+      <div class="mem-av" style="background:#2A1A0D;">RF</div>
+      <div class="mem-info">
+        <div class="mem-name">Ricci Family</div>
+        <div class="mem-office">Single Family Office · Milan</div>
+        <div class="mem-region">Europe</div>
+        <div class="mem-tags"><span class="mem-tag">Private Equity</span><span class="mem-tag">Hedge Funds</span><span class="mem-tag">$10M–$100M</span></div>
+      </div>
+      <button class="mem-connect">Connect</button>
+    </div>
+
+    <div class="mem-card">
+      <div class="mem-av" style="background:#1A1A2E;">CH</div>
+      <div class="mem-info">
+        <div class="mem-name">Chen Holdings</div>
+        <div class="mem-office">Single Family Office · Hong Kong</div>
+        <div class="mem-region">Asia Pacific</div>
+        <div class="mem-tags"><span class="mem-tag">Digital Assets</span><span class="mem-tag">Venture Capital</span><span class="mem-tag">$500K–$5M</span></div>
+      </div>
+      <button class="mem-connect">Connect</button>
+    </div>
+
+    <div class="mem-card">
+      <div class="mem-av" style="background:#1E1A2E;">AR</div>
+      <div class="mem-info">
+        <div class="mem-name">Al-Rashid Capital</div>
+        <div class="mem-office">Single Family Office · Dubai</div>
+        <div class="mem-region">Middle East</div>
+        <div class="mem-tags"><span class="mem-tag">Real Estate</span><span class="mem-tag">Private Credit</span><span class="mem-tag">$25M–$100M</span></div>
+      </div>
+      <button class="mem-connect">Connect</button>
+    </div>
+
+    <div class="mem-card">
+      <div class="mem-av" style="background:#1A2A1A;">TF</div>
+      <div class="mem-info">
+        <div class="mem-name">Tanaka Family</div>
+        <div class="mem-office">Single Family Office · Tokyo</div>
+        <div class="mem-region">Asia Pacific</div>
+        <div class="mem-tags"><span class="mem-tag">Private Equity</span><span class="mem-tag">Infrastructure</span><span class="mem-tag">$10M–$50M</span></div>
+      </div>
+      <button class="mem-connect">Connect</button>
+    </div>
+
+    <div style="height:16px;"></div>
+  </div>
+  <div class="tab-bar">
+    <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
+    <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
+    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn active" data-tab="members"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
@@ -927,6 +1051,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
+    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
     <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
     <button class="tab-btn active" data-tab="profile"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
@@ -941,7 +1066,7 @@ function go(id){
   document.getElementById(id).classList.add('active');
 }
 function showInner(id){
-  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-profile'];
+  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile'];
   inner.forEach(sid=>{const el=document.getElementById(sid);if(el)el.classList.remove('active');});
   document.getElementById(id).classList.add('active');
 }
