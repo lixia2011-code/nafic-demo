@@ -455,6 +455,43 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .pdc-v.gold{color:var(--gold-dim);}
 .signout-btn{width:calc(100% - 32px);margin:16px;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:14px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:var(--red);cursor:pointer;}
 
+/* Admin Panel */
+#s-admin{background:var(--paper);}
+.admin-head{background:var(--black);padding:16px 20px 0;flex-shrink:0;}
+.admin-head-title{font-size:22px;font-weight:700;color:#fff;}
+.admin-head-sub{font-size:12px;color:rgba(255,255,255,.4);margin-top:2px;}
+.admin-badge{display:inline-block;background:var(--gold);color:var(--black);font-size:10px;font-weight:700;letter-spacing:.5px;padding:2px 8px;border-radius:20px;margin-bottom:12px;margin-top:6px;}
+.admin-tabs{display:flex;background:#fff;border-bottom:1px solid var(--sand);flex-shrink:0;}
+.admin-tab{flex:1;text-align:center;padding:12px 4px;font-size:11px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;}
+.admin-tab.active{color:var(--gold-dim);border-bottom-color:var(--gold);font-weight:600;}
+.admin-section{padding:12px 16px 4px;}
+.admin-section-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;}
+.admin-card{background:#fff;border-radius:14px;margin-bottom:10px;overflow:hidden;border:1px solid var(--sand);}
+.admin-row{padding:14px 16px;border-bottom:1px solid var(--sand);}
+.admin-row:last-child{border-bottom:none;}
+.ar-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;}
+.ar-info{flex:1;}
+.ar-name{font-size:14px;font-weight:600;color:var(--text);}
+.ar-sub{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4;}
+.ar-time{font-size:11px;color:var(--ghost);flex-shrink:0;margin-top:2px;}
+.ar-actions{display:flex;gap:8px;margin-top:10px;}
+.ar-approve{background:var(--black);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.ar-reject{background:#fff;color:var(--red,#C0392B);border:1.5px solid #eee;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.ar-review{background:var(--gold-bg);color:var(--gold-dim);border:1px solid var(--gold-border);border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.ar-status{display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;margin-top:6px;}
+.ar-status.new{background:#FFF3E0;color:#E65100;}
+.ar-status.pending{background:#E8F5E9;color:#2E7D32;}
+.admin-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 16px;}
+.admin-stat{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid var(--sand);}
+.admin-stat-n{font-size:24px;font-weight:700;color:var(--text);}
+.admin-stat-l{font-size:10px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.4px;}
+.admin-panel-btn{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--sand);border-radius:12px;padding:14px 16px;margin:8px 16px 0;cursor:pointer;}
+.apb-left{display:flex;align-items:center;gap:10px;}
+.apb-icon{font-size:18px;}
+.apb-label{font-size:14px;font-weight:600;color:var(--text);}
+.apb-sub{font-size:11px;color:var(--muted);margin-top:1px;}
+.apb-arrow{color:var(--muted);font-size:16px;}
+
 /* Investments */
 #s-investments{background:var(--paper);}
 .inv-head{background:var(--black);padding:16px 20px 20px;flex-shrink:0;}
@@ -1066,6 +1103,20 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="pdc-row"><div class="pdc-k">Conflict policy</div><div class="pdc-v">View full policy</div></div>
       </div>
     </div>
+    <div style="padding:16px 0 0;">
+      <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:0 16px 8px;">Admin</div>
+      <div class="admin-panel-btn" onclick="showInner('s-admin')">
+        <div class="apb-left">
+          <div class="apb-icon">🛡️</div>
+          <div><div class="apb-label">Admin Panel</div><div class="apb-sub">Applications · Interests · GP Submissions</div></div>
+        </div>
+        <div class="apb-arrow">›</div>
+      </div>
+      <div style="background:#FFF3E0;border:1px solid #FFE0B2;border-radius:12px;padding:10px 14px;margin:8px 16px 0;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:16px;">🔔</span>
+        <div style="font-size:12px;color:#E65100;font-weight:500;">3 new items need your review</div>
+      </div>
+    </div>
     <button class="signout-btn" onclick="go('s-splash')">Sign Out</button>
   </div>
   <div class="tab-bar">
@@ -1078,6 +1129,128 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   </div>
 </div>
 
+<!-- ── ADMIN PANEL ── -->
+<div id="s-admin" class="screen">
+  <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
+  <div class="admin-head">
+    <div class="top-bar dark" style="padding:0 0 8px;background:transparent;"><button class="tb-back" onclick="showInner('s-profile')">‹</button><div class="tb-title white">Admin Panel</div><div style="width:24px;"></div></div>
+    <div class="admin-badge">NAFIC ADMIN</div>
+  </div>
+
+  <div class="admin-tabs">
+    <div class="admin-tab active" id="admint-applications" onclick="adminTab('applications')">Applications<br><span style="font-size:10px;color:#E65100;font-weight:700;">2 new</span></div>
+    <div class="admin-tab" id="admint-interests" onclick="adminTab('interests')">Interests<br><span style="font-size:10px;color:var(--muted);">5 total</span></div>
+    <div class="admin-tab" id="admint-gp" onclick="adminTab('gp')">GP Submissions<br><span style="font-size:10px;color:#E65100;font-weight:700;">1 new</span></div>
+  </div>
+
+  <div class="scroll-body">
+
+    <!-- APPLICATIONS -->
+    <div id="admin-applications-content">
+      <div class="admin-stat-row">
+        <div class="admin-stat"><div class="admin-stat-n">23</div><div class="admin-stat-l">Active</div></div>
+        <div class="admin-stat"><div class="admin-stat-n" style="color:#E65100;">2</div><div class="admin-stat-l">Pending</div></div>
+        <div class="admin-stat"><div class="admin-stat-n">8</div><div class="admin-stat-l">Rejected</div></div>
+      </div>
+      <div class="admin-section"><div class="admin-section-title">Pending Review</div></div>
+      <div class="admin-card" style="margin:0 16px 10px;">
+        <div class="admin-row">
+          <div class="ar-top">
+            <div class="ar-info">
+              <div class="ar-name">Zhang Wei</div>
+              <div class="ar-sub">Single Family Office · Shanghai<br>Focus: Private Equity, Digital Assets · $5M–$50M</div>
+              <span class="ar-status new">New · 2h ago</span>
+            </div>
+            <div class="ar-time">Today</div>
+          </div>
+          <div class="ar-actions">
+            <button class="ar-approve" onclick="this.textContent='✓ Approved';this.style.background='#2E7D32';">Approve</button>
+            <button class="ar-reject" onclick="this.textContent='Rejected';this.style.opacity='.5';">Reject</button>
+          </div>
+        </div>
+        <div class="admin-row">
+          <div class="ar-top">
+            <div class="ar-info">
+              <div class="ar-name">Khalid Al-Mansoori</div>
+              <div class="ar-sub">Multi-Family Office · Abu Dhabi<br>Focus: Real Estate, Infrastructure · $25M–$100M</div>
+              <span class="ar-status new">New · 5h ago</span>
+            </div>
+            <div class="ar-time">Today</div>
+          </div>
+          <div class="ar-actions">
+            <button class="ar-approve" onclick="this.textContent='✓ Approved';this.style.background='#2E7D32';">Approve</button>
+            <button class="ar-reject" onclick="this.textContent='Rejected';this.style.opacity='.5';">Reject</button>
+          </div>
+        </div>
+      </div>
+      <div class="admin-section"><div class="admin-section-title">Recently Approved</div></div>
+      <div class="admin-card" style="margin:0 16px 10px;">
+        <div class="admin-row">
+          <div class="ar-top"><div class="ar-info"><div class="ar-name">Ricci Family</div><div class="ar-sub">SFO · Milan · Private Equity, Hedge Funds</div></div><span class="ar-status pending">✓ Approved</span></div>
+        </div>
+        <div class="admin-row">
+          <div class="ar-top"><div class="ar-info"><div class="ar-name">Lee Family Office</div><div class="ar-sub">MFO · Singapore · Venture Capital, Tech</div></div><span class="ar-status pending">✓ Approved</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERESTS -->
+    <div id="admin-interests-content" style="display:none;">
+      <div class="admin-stat-row">
+        <div class="admin-stat"><div class="admin-stat-n">5</div><div class="admin-stat-l">This week</div></div>
+        <div class="admin-stat"><div class="admin-stat-n">18</div><div class="admin-stat-l">Total</div></div>
+        <div class="admin-stat"><div class="admin-stat-n">3</div><div class="admin-stat-l">Deals</div></div>
+      </div>
+      <div class="admin-section"><div class="admin-section-title">Recent Interests</div></div>
+      <div class="admin-card" style="margin:0 16px 10px;">
+        <div class="admin-row">
+          <div class="ar-top"><div class="ar-info"><div class="ar-name">Al-Farsi Family</div><div class="ar-sub">Expressed interest in: NovaBio Pre-IPO<br>Healthcare · $25M · Ticket: $2M–$5M</div><span class="ar-status new">New · 2h ago</span></div></div>
+          <div class="ar-actions"><button class="ar-review">Follow Up</button></div>
+        </div>
+        <div class="admin-row">
+          <div class="ar-top"><div class="ar-info"><div class="ar-name">Chen Holdings</div><div class="ar-sub">Expressed interest in: Asia VC Fund III<br>Venture Capital · $50M · Ticket: $500K–$2M</div><span class="ar-status new">New · 1d ago</span></div></div>
+          <div class="ar-actions"><button class="ar-review">Follow Up</button></div>
+        </div>
+        <div class="admin-row">
+          <div class="ar-top"><div class="ar-info"><div class="ar-name">Lee Family Office</div><div class="ar-sub">Expressed interest in: Dubai RE Fund<br>Real Estate · $80M · Ticket: $1M–$10M</div></div></div>
+          <div class="ar-actions"><button class="ar-review">Follow Up</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GP SUBMISSIONS -->
+    <div id="admin-gp-content" style="display:none;">
+      <div class="admin-stat-row">
+        <div class="admin-stat"><div class="admin-stat-n" style="color:#E65100;">1</div><div class="admin-stat-l">Pending</div></div>
+        <div class="admin-stat"><div class="admin-stat-n">4</div><div class="admin-stat-l">Live</div></div>
+        <div class="admin-stat"><div class="admin-stat-n">2</div><div class="admin-stat-l">Rejected</div></div>
+      </div>
+      <div class="admin-section"><div class="admin-section-title">New Submission</div></div>
+      <div class="admin-card" style="margin:0 16px 10px;">
+        <div class="admin-row">
+          <div class="ar-top">
+            <div class="ar-info">
+              <div class="ar-name">FinEdge Technologies</div>
+              <div class="ar-sub">Pre-IPO · FinTech · Series C<br>Raise: $30M · Min ticket: $500K<br>IPO target: HKEX, Q4 2026</div>
+              <span class="ar-status new">New · 3h ago</span>
+            </div>
+          </div>
+          <div class="ar-actions">
+            <button class="ar-approve" onclick="this.textContent='✓ Published';this.style.background='#2E7D32';">Publish to Feed</button>
+            <button class="ar-reject" onclick="this.textContent='Rejected';this.style.opacity='.5';">Reject</button>
+          </div>
+        </div>
+      </div>
+      <div class="admin-section"><div class="admin-section-title">Live in Feed</div></div>
+      <div class="admin-card" style="margin:0 16px 16px;">
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">NovaBio</div><div class="ar-sub">Pre-IPO · Healthcare · 5 interests so far</div></div><span class="ar-status pending">✓ Live</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Asia VC Fund III</div><div class="ar-sub">Venture Capital · $50M · 2 interests</div></div><span class="ar-status pending">✓ Live</span></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </div><!-- /screens -->
 </div><!-- /wrap -->
 
@@ -1087,7 +1260,7 @@ function go(id){
   document.getElementById(id).classList.add('active');
 }
 function showInner(id){
-  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail'];
+  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail','s-admin'];
   inner.forEach(sid=>{const el=document.getElementById(sid);if(el)el.classList.remove('active');});
   document.getElementById(id).classList.add('active');
 }
@@ -1126,6 +1299,12 @@ function showEventDetail(id){
   showInner('s-event-detail');
 }
 
+function adminTab(t){
+  ['applications','interests','gp'].forEach(k=>{
+    document.getElementById('admint-'+k).classList.toggle('active',k===t);
+    document.getElementById('admin-'+k+'-content').style.display=k===t?'block':'none';
+  });
+}
 function evTab(tab){
   ['upcoming','past','academy'].forEach(k=>{
     const el=document.getElementById('evt-'+k);
