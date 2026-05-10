@@ -303,6 +303,35 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .pd-row:last-child{border-bottom:none;}
 .pd-k{color:var(--muted);}
 .pd-v{color:var(--text);font-weight:500;text-align:right;}
+/* ── Luma-style event cards ── */
+.luma-card{background:#fff;border-radius:18px;margin:12px 16px 0;overflow:hidden;border:1px solid var(--sand);box-shadow:0 2px 14px rgba(0,0,0,.05);cursor:pointer;transition:box-shadow .18s;}
+.luma-card:hover{box-shadow:0 4px 22px rgba(0,0,0,.09);}
+.luma-cover{height:148px;position:relative;overflow:hidden;}
+.luma-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.luma-cover-grad{position:absolute;inset:0;}
+.luma-date-chip{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:10px;padding:5px 11px;font-size:11px;font-weight:700;color:var(--text);letter-spacing:-.1px;}
+.luma-badge-chip{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border-radius:10px;padding:4px 10px;font-size:10px;font-weight:600;color:#fff;}
+.luma-cover-title{position:absolute;bottom:0;left:0;right:0;padding:36px 16px 14px;background:linear-gradient(to top,rgba(8,7,5,.8) 50%,transparent);font-family:'DM Serif Display',serif;font-size:19px;font-weight:700;color:#fff;line-height:1.25;}
+.luma-body{padding:12px 16px 4px;}
+.luma-host-row{display:flex;align-items:center;gap:7px;margin-bottom:8px;}
+.luma-host-av{width:22px;height:22px;border-radius:50%;background:var(--gold-bg);border:1.5px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--gold-dim);}
+.luma-host-txt{font-size:11px;color:var(--muted);}
+.luma-host-txt b{color:var(--body);font-weight:600;}
+.luma-host-name{font-size:12px;font-weight:600;color:var(--body);}
+.luma-meta{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.45;}
+.luma-meta-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);}
+.luma-meta-icon{font-size:13px;}
+.luma-footer{padding:10px 0 2px;display:flex;align-items:center;justify-content:space-between;}
+.luma-facepile{display:flex;align-items:center;}
+.luma-going{display:flex;align-items:center;}
+.luma-going-av{width:22px;height:22px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#fff;margin-right:-7px;}
+.luma-going-count{font-size:11px;color:var(--muted);margin-left:16px;}
+.luma-actions{display:flex;align-items:center;gap:8px;}
+.luma-share-btn{width:32px;height:32px;border-radius:50%;background:var(--paper);border:1px solid var(--sand);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;flex-shrink:0;}
+.luma-rsvp-btn{background:var(--black);color:#fff;border:none;border-radius:20px;padding:8px 18px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.luma-rsvp-btn.gold{background:var(--gold);color:var(--black);}
+.luma-rsvp-btn.outline{background:transparent;border:1.5px solid var(--sand);color:var(--body);}
+/* Legacy badges kept for compatibility */
 .event-card{background:#fff;border-radius:16px;margin:12px 16px 0;overflow:hidden;border:1px solid var(--sand);}
 .ec-badge-row{padding:14px 16px 0;display:flex;gap:6px;}
 .ec-badge{font-size:10px;font-weight:600;padding:4px 10px;border-radius:20px;letter-spacing:.3px;}
@@ -313,9 +342,6 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .ec-date{font-size:12px;color:var(--gold-dim);font-weight:600;margin-bottom:5px;}
 .ec-title{font-size:17px;font-weight:700;color:var(--text);margin-bottom:3px;}
 .ec-loc{font-size:13px;color:var(--muted);margin-bottom:10px;}
-.ec-desc{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px;}
-.ec-caps{display:flex;gap:7px;}
-.ec-cap{font-size:11px;color:var(--muted);background:var(--paper);padding:4px 10px;border-radius:20px;}
 .ec-footer{padding:12px 16px;border-top:1px solid var(--sand);display:flex;align-items:center;justify-content:space-between;}
 .going-avs{display:flex;}
 .going-av{width:26px;height:26px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;margin-right:-8px;}
@@ -326,6 +352,29 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .ps-title{font-size:12px;font-weight:600;color:var(--teal);}
 .ps-text{font-size:12px;color:var(--muted);line-height:1.5;}
 .ps-enrol-note{font-size:11px;color:var(--green);font-weight:500;margin-top:5px;}
+/* Public event landing */
+#s-event-public{background:var(--paper);}
+.pub-hero{position:relative;height:260px;overflow:hidden;flex-shrink:0;}
+.pub-hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,7,5,.85) 40%,rgba(8,7,5,.15) 100%);}
+.pub-hero-body{position:absolute;bottom:0;left:0;right:0;padding:20px;}
+.pub-eyebrow{font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.6);text-transform:uppercase;margin-bottom:6px;}
+.pub-title{font-family:'DM Serif Display',serif;font-size:24px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:6px;}
+.pub-when{font-size:13px;color:rgba(255,255,255,.7);font-weight:500;}
+.pub-section{background:#fff;border-radius:16px;margin:12px 16px 0;padding:16px;}
+.pub-section-lbl{font-size:10px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;margin-bottom:10px;}
+.pub-host-row{display:flex;align-items:center;gap:10px;}
+.pub-host-av{width:44px;height:44px;border-radius:50%;background:var(--gold-bg);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--gold-dim);flex-shrink:0;}
+.pub-host-name{font-size:14px;font-weight:700;color:var(--text);}
+.pub-host-sub{font-size:11px;color:var(--muted);margin-top:1px;}
+.pub-attendee-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.pub-attendee{width:36px;height:36px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;}
+.pub-field{margin-bottom:12px;}
+.pub-label{font-size:11px;font-weight:600;color:var(--body);margin-bottom:4px;}
+.pub-input{width:100%;background:var(--paper);border:1.5px solid var(--sand);border-radius:10px;padding:11px 13px;font-size:14px;font-family:'Inter',sans-serif;color:var(--text);outline:none;-webkit-appearance:none;}
+.pub-input:focus{border-color:var(--gold-dim);}
+.pub-submit{width:100%;background:var(--black);border:none;border-radius:14px;padding:16px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:#fff;cursor:pointer;margin-top:4px;}
+/* Share sheet */
+.share-sheet-url{background:var(--paper);border:1px solid var(--sand);border-radius:10px;padding:11px 13px;font-size:12px;color:var(--body);word-break:break-all;margin-bottom:10px;font-family:monospace;}
 
 /* Past events carousel */
 .past-carousel{display:flex;gap:12px;padding:16px 16px 12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-right:32px;}
@@ -484,7 +533,48 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .prof-tier{margin:10px auto 0;display:inline-flex;align-items:center;gap:6px;background:var(--gold-bg);border:1px solid var(--gold-border);border-radius:20px;padding:5px 14px;}
 .pt-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
 .pt-text{font-size:11px;color:var(--gold-dim);font-weight:500;}
-.founding-badge{margin:12px 16px 0;background:linear-gradient(135deg,#1A1610,#2A2010);border:1px solid var(--gold-border);border-radius:14px;padding:14px;}
+/* ── Member Progress (reward / token system) ── */
+.mp-card{margin:12px 16px 0;background:#fff;border:1px solid var(--sand);border-radius:18px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.mp-header{background:linear-gradient(135deg,#0A0907 0%,#1A1610 60%,#2A1E08 100%);padding:16px 18px 14px;}
+.mp-header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.mp-title{font-size:14px;font-weight:700;color:#fff;}
+.mp-tier-badge{font-size:10px;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:20px;border:1px solid;}
+.mp-tier-badge.observer{background:rgba(200,168,75,.12);border-color:var(--gold-border);color:var(--gold);}
+.mp-tier-badge.member{background:rgba(30,122,72,.15);border-color:rgba(30,122,72,.4);color:#4ACA82;}
+.mp-token-row{display:flex;align-items:flex-end;gap:6px;margin-bottom:10px;}
+.mp-token-count{font-family:'DM Serif Display',serif;font-size:36px;font-weight:700;color:var(--gold);line-height:1;}
+.mp-token-of{font-size:13px;color:rgba(255,255,255,.4);padding-bottom:5px;}
+.mp-token-label{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.6px;text-transform:uppercase;padding-bottom:4px;}
+.mp-bar-track{height:6px;background:rgba(255,255,255,.1);border-radius:3px;margin-bottom:6px;}
+.mp-bar-fill{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--gold2),var(--gold));transition:width .6s cubic-bezier(.4,0,.2,1);}
+.mp-bar-label{font-size:10px;color:rgba(255,255,255,.35);}
+.mp-buy-note{font-size:11px;color:rgba(200,168,75,.55);margin-top:6px;font-style:italic;}
+/* Token earn rows */
+.mp-earn-section{padding:14px 18px 6px;}
+.mp-earn-title{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;}
+.mp-earn-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--sand);}
+.mp-earn-row:last-child{border-bottom:none;}
+.mp-earn-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.mp-earn-body{flex:1;}
+.mp-earn-name{font-size:13px;font-weight:600;color:var(--text);}
+.mp-earn-desc{font-size:11px;color:var(--muted);margin-top:1px;line-height:1.4;}
+.mp-earn-tokens{font-size:13px;font-weight:700;color:var(--gold-dim);white-space:nowrap;flex-shrink:0;}
+/* Activity log */
+.mp-activity{padding:4px 18px 14px;}
+.mp-act-title{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;}
+.mp-act-item{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.04);}
+.mp-act-item:last-child{border-bottom:none;}
+.mp-act-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.mp-act-text{font-size:12px;color:var(--body);flex:1;}
+.mp-act-time{font-size:10px;color:var(--ghost);}
+.mp-act-tok{font-size:11px;font-weight:700;color:var(--green);}
+/* CTA strip */
+.mp-cta-strip{padding:12px 18px 16px;border-top:1px solid var(--sand);display:flex;gap:8px;}
+.mp-cta-btn{flex:1;border:none;border-radius:12px;padding:11px 10px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;text-align:center;}
+.mp-cta-btn.primary{background:var(--black);color:#fff;}
+.mp-cta-btn.secondary{background:var(--paper);border:1.5px solid var(--sand);color:var(--body);}
+/* Legacy kept for other refs */
+.founding-badge{margin:12px 16px 0;background:linear-gradient(135deg,#1A1610,#2A2010);border:1px solid var(--gold-border);border-radius:14px;padding:14px;display:none;}
 .fb-title{font-size:13px;font-weight:600;color:var(--gold);margin-bottom:3px;}
 .fb-sub{font-size:12px;color:var(--muted);margin-bottom:10px;}
 .fb-prog{height:4px;background:var(--border);border-radius:2px;margin-bottom:4px;}
@@ -1020,16 +1110,19 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
     <!-- ── SECTION 2: NEW FAMILIES JOINED ── -->
     <div class="sec-label" style="margin-top:6px;">New Families Joined</div>
+    <div style="margin:0 16px 8px;display:flex;align-items:center;gap:6px;padding:8px 11px;background:rgba(200,168,75,.06);border:1px solid var(--gold-border);border-radius:10px;">
+      <span style="font-size:13px;">🛡</span><span style="font-size:11px;color:var(--body);">Families shown by country & mandate — identity protected until introduction</span>
+    </div>
 
-    <!-- Al-Farsi family card -->
-    <div class="match-card">
+    <!-- Qatar Family -->
+    <div class="match-card" onclick="showFamProfile('qa-sfo-g2')" style="cursor:pointer;">
       <div class="mc-hd">
-        <div class="mc-av" style="background:#C4A050;">AF</div>
+        <div class="mc-av" style="background:#7A5C1E;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:10px;font-weight:700;color:#fff;letter-spacing:.3px;">QAT</span><span style="font-size:7px;color:rgba(255,255,255,.65);">SFO</span></div>
         <div>
-          <div class="mc-name">Al-Farsi Family</div>
-          <div class="mc-meta">Abu Dhabi · Single Family Office · G2</div>
+          <div class="mc-name">Qatar Family · G2 · SFO</div>
+          <div class="mc-meta">MENA · Single Family Office</div>
         </div>
-        <div class="mc-online">Online</div>
+        <div class="mc-online">New</div>
       </div>
       <div class="mc-tags"><span class="mc-tag">Private Equity</span><span class="mc-tag">Real Estate</span><span class="mc-tag">MENA</span></div>
       <div class="mc-match-label">Mandate Match</div>
@@ -1039,19 +1132,19 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:75%"></div></div><div class="mbar-lbl">Size</div><div class="mbar-pct">75%</div></div>
       </div>
       <div class="mc-overall"><b>83%</b> overall match</div>
-      <button class="btn-gold" style="padding:12px;margin-bottom:0;" onclick="showInner('s-members')">Connect →</button>
+      <button class="btn-gold" style="padding:12px;margin-bottom:0;" onclick="event.stopPropagation();showFamProfile('qa-sfo-g2')">View Mandate Profile →</button>
     </div>
 
-    <!-- Lee Family card -->
-    <div class="match-card">
+    <!-- Hong Kong Family -->
+    <div class="match-card" onclick="showFamProfile('hk-sfo-g2')" style="cursor:pointer;">
       <div class="mc-hd">
-        <div class="mc-av" style="background:#2A68A8;">LF</div>
+        <div class="mc-av" style="background:#1A4A7A;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:10px;font-weight:700;color:#fff;letter-spacing:.3px;">HKG</span><span style="font-size:7px;color:rgba(255,255,255,.65);">SFO</span></div>
         <div>
-          <div class="mc-name">Lee Family Office</div>
-          <div class="mc-meta">Singapore · Multi-Family Office · G3</div>
+          <div class="mc-name">Hong Kong Family · G1 · SFO</div>
+          <div class="mc-meta">Asia · Single Family Office</div>
         </div>
       </div>
-      <div class="mc-tags"><span class="mc-tag">Venture Capital</span><span class="mc-tag">Tech</span><span class="mc-tag">Asia-Pacific</span></div>
+      <div class="mc-tags"><span class="mc-tag">Digital Assets</span><span class="mc-tag">Venture Capital</span><span class="mc-tag">Asia</span></div>
       <div class="mc-match-label">Mandate Match</div>
       <div class="mc-bars">
         <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:78%"></div></div><div class="mbar-lbl">Asset</div><div class="mbar-pct">78%</div></div>
@@ -1059,20 +1152,20 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:88%"></div></div><div class="mbar-lbl">Size</div><div class="mbar-pct">88%</div></div>
       </div>
       <div class="mc-overall"><b>77%</b> overall match</div>
-      <button class="btn-outline" style="padding:12px;" onclick="showInner('s-members')">Connect →</button>
+      <button class="btn-outline" style="padding:12px;" onclick="event.stopPropagation();showFamProfile('hk-sfo-g2')">View Mandate Profile →</button>
     </div>
 
-    <!-- Tanaka family - newest -->
-    <div class="match-card">
+    <!-- Greater China Family -->
+    <div class="match-card" onclick="showFamProfile('cn-sfo-g2')" style="cursor:pointer;">
       <div class="mc-hd">
-        <div class="mc-av" style="background:#1A2A1A;">TF</div>
+        <div class="mc-av" style="background:#1A1A3E;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:10px;font-weight:700;color:#fff;letter-spacing:.3px;">CHN</span><span style="font-size:7px;color:rgba(255,255,255,.65);">SFO</span></div>
         <div>
-          <div class="mc-name">Tanaka Family</div>
-          <div class="mc-meta">Tokyo · Single Family Office · G2</div>
+          <div class="mc-name">Greater China Family · G2 · SFO</div>
+          <div class="mc-meta">Asia · Single Family Office</div>
         </div>
         <div style="font-size:10px;background:rgba(200,168,75,.12);color:var(--gold-dim);padding:3px 8px;border-radius:10px;font-weight:600;border:1px solid var(--gold-border);">New</div>
       </div>
-      <div class="mc-tags"><span class="mc-tag">Private Equity</span><span class="mc-tag">Infrastructure</span><span class="mc-tag">Asia Pacific</span></div>
+      <div class="mc-tags"><span class="mc-tag">Private Equity</span><span class="mc-tag">Infrastructure</span><span class="mc-tag">Asia</span></div>
       <div class="mc-match-label">Mandate Match</div>
       <div class="mc-bars">
         <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:70%"></div></div><div class="mbar-lbl">Asset</div><div class="mbar-pct">70%</div></div>
@@ -1080,7 +1173,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:80%"></div></div><div class="mbar-lbl">Size</div><div class="mbar-pct">80%</div></div>
       </div>
       <div class="mc-overall"><b>70%</b> overall match</div>
-      <button class="btn-outline" style="padding:12px;" onclick="showInner('s-members')">Connect →</button>
+      <button class="btn-outline" style="padding:12px;" onclick="event.stopPropagation();showFamProfile('cn-sfo-g2')">View Mandate Profile →</button>
     </div>
 
     <div style="height:16px;"></div>
@@ -1105,22 +1198,65 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   </div>
   <div class="scroll-body">
 
-    <!-- UPCOMING — compact cards, tap for detail -->
+    <!-- UPCOMING — Luma-style cards -->
     <div id="ev-upcoming-content">
-      <div class="event-card" style="margin-top:12px;cursor:pointer;" onclick="showEventDetail('dubai-summit')">
-        <div class="ec-badge-row"><span class="ec-badge ecb-private">Private</span><span class="ec-badge ecb-members">50 cap</span></div>
-        <div class="ec-body"><div class="ec-date">May 12 · Burj Al Arab, Dubai</div><div class="ec-title">NAFIC Summit Dubai</div><div class="ec-loc">Members-only investment summit · 12 seats left</div></div>
-        <div class="ec-footer">
-          <div style="display:flex;align-items:center;"><div class="going-av" style="background:#C4A050;z-index:5;">AF</div><div class="going-av" style="background:#2A68A8;z-index:4;">LF</div><div class="going-av" style="background:#8A3A1A;z-index:3;">RF</div><span class="going-count">+35</span></div>
-          <button class="btn-sm dark" onclick="event.stopPropagation()">RSVP →</button>
+
+      <!-- Dubai Summit -->
+      <div class="luma-card" onclick="showEventDetail('dubai-summit')">
+        <div class="luma-cover" style="background:linear-gradient(135deg,#7A5C1E 0%,#1A1208 100%);">
+          <div class="luma-cover-grad" style="background:linear-gradient(to top,rgba(8,7,5,.82) 40%,transparent 100%);"></div>
+          <div class="luma-date-chip">May 12 · Dubai</div>
+          <div class="luma-badge-chip">Members Only · 50 cap</div>
+          <div class="luma-cover-title">NAFIC Summit Dubai</div>
+        </div>
+        <div class="luma-body">
+          <div class="luma-host-row">
+            <div class="luma-host-av" style="background:linear-gradient(135deg,var(--gold-bg),var(--sand));"></div>
+            <span class="luma-host-name">Hosted by NAFIC</span>
+            <div style="flex:1;"></div>
+            <button class="luma-share-btn" onclick="event.stopPropagation();shareEvent('dubai-summit')" title="Share event">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--body)" stroke-width="1.8"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.3" y1="7.2" x2="10.7" y2="4"/><line x1="5.3" y1="8.8" x2="10.7" y2="12"/></svg>
+            </button>
+          </div>
+          <div class="luma-meta">Burj Al Arab · 12 seats left · Members-only investment summit</div>
+          <div class="luma-footer">
+            <div class="luma-facepile">
+              <div class="going-av" style="background:#C4A050;z-index:5;width:26px;height:26px;font-size:9px;">AF</div>
+              <div class="going-av" style="background:#2A68A8;z-index:4;width:26px;height:26px;font-size:9px;">LF</div>
+              <div class="going-av" style="background:#8A3A1A;z-index:3;width:26px;height:26px;font-size:9px;">RF</div>
+              <span class="going-count" style="font-size:11px;">+35 attending</span>
+            </div>
+            <button class="luma-rsvp-btn" onclick="event.stopPropagation();showEventDetail('dubai-summit')">RSVP →</button>
+          </div>
         </div>
       </div>
-      <div class="event-card" style="margin-top:10px;cursor:pointer;" onclick="showEventDetail('hkust-waitlist')">
-        <div class="ec-badge-row"><span class="ec-badge ecb-partner">NAFIC × HKUST</span><span class="ec-badge" style="background:var(--gold-bg);color:var(--gold-dim);">Coming Soon</span></div>
-        <div class="ec-body"><div class="ec-date">Sep 2026 · Singapore</div><div class="ec-title">AI for Family Office Operations</div><div class="ec-loc">Due diligence, deal sourcing & portfolio monitoring</div></div>
-        <div class="ec-footer"><span class="going-count" style="margin-left:0;">Notify me</span><button class="btn-sm outline" onclick="event.stopPropagation()">Waitlist</button></div>
+
+      <!-- HKUST Waitlist -->
+      <div class="luma-card" onclick="showEventDetail('hkust-waitlist')">
+        <div class="luma-cover" style="background:linear-gradient(135deg,#0D1828 0%,#1A2840 100%);">
+          <div class="luma-cover-grad" style="background:linear-gradient(to top,rgba(8,7,5,.82) 40%,transparent 100%);"></div>
+          <div class="luma-date-chip">Sep 2026 · Singapore</div>
+          <div class="luma-badge-chip" style="background:rgba(200,168,75,.7);">Coming Soon</div>
+          <div class="luma-cover-title">AI for Family Office Operations</div>
+        </div>
+        <div class="luma-body">
+          <div class="luma-host-row">
+            <div class="luma-host-av" style="background:linear-gradient(135deg,#0D1828,#2A4A70);"></div>
+            <span class="luma-host-name">NAFIC × HKUST</span>
+            <div style="flex:1;"></div>
+            <button class="luma-share-btn" onclick="event.stopPropagation();shareEvent('hkust-waitlist')" title="Share event">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--body)" stroke-width="1.8"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.3" y1="7.2" x2="10.7" y2="4"/><line x1="5.3" y1="8.8" x2="10.7" y2="12"/></svg>
+            </button>
+          </div>
+          <div class="luma-meta">Due diligence · Deal sourcing · Portfolio monitoring</div>
+          <div class="luma-footer">
+            <div class="luma-facepile"><span class="going-count" style="margin-left:0;font-size:11px;">Notify me when open</span></div>
+            <button class="luma-rsvp-btn" style="background:transparent;color:var(--text);border:1.5px solid var(--sand);" onclick="event.stopPropagation()">Waitlist</button>
+          </div>
+        </div>
       </div>
-      <div style="height:12px;"></div>
+
+      <div style="height:14px;"></div>
     </div>
 
     <!-- PAST — horizontal swipe carousel -->
@@ -1159,19 +1295,64 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div style="height:8px;"></div>
     </div>
 
-    <!-- ACADEMY — compact cards, tap for detail -->
+    <!-- ACADEMY — Luma-style cards -->
     <div id="ev-academy-content" style="display:none;">
-      <div class="event-card" style="margin-top:12px;cursor:pointer;" onclick="showEventDetail('columbia')">
-        <div class="ec-badge-row"><span class="ec-badge ecb-partner">NAFIC × Columbia</span><span class="ec-badge ecb-members">50 cap</span></div>
-        <div class="ec-body"><div class="ec-date">Jun 20 · Columbia Business School, NYC</div><div class="ec-title">Columbia Leadership Forum</div><div class="ec-loc">Next-gen family wealth leaders programme</div></div>
-        <div class="ec-footer"><div style="display:flex;align-items:center;"><div class="going-av" style="background:#5A4A80;">MK</div><div class="going-av" style="background:#2A6A58;z-index:4;">TA</div><span class="going-count">+20</span></div><button class="btn-sm dark" onclick="event.stopPropagation()">RSVP →</button></div>
+
+      <!-- Columbia Leadership Forum -->
+      <div class="luma-card" onclick="showEventDetail('columbia')">
+        <div class="luma-cover" style="background:linear-gradient(135deg,#1A1030 0%,#2A1848 100%);">
+          <div class="luma-cover-grad" style="background:linear-gradient(to top,rgba(8,7,5,.82) 40%,transparent 100%);"></div>
+          <div class="luma-date-chip">Jun 20 · New York</div>
+          <div class="luma-badge-chip">NAFIC × Columbia · 50 cap</div>
+          <div class="luma-cover-title">Columbia Leadership Forum</div>
+        </div>
+        <div class="luma-body">
+          <div class="luma-host-row">
+            <div class="luma-host-av" style="background:linear-gradient(135deg,#1A1030,#4A3080);"></div>
+            <span class="luma-host-name">Columbia Business School</span>
+            <div style="flex:1;"></div>
+            <button class="luma-share-btn" onclick="event.stopPropagation();shareEvent('columbia')" title="Share event">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--body)" stroke-width="1.8"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.3" y1="7.2" x2="10.7" y2="4"/><line x1="5.3" y1="8.8" x2="10.7" y2="12"/></svg>
+            </button>
+          </div>
+          <div class="luma-meta">Next-gen family wealth leaders programme · 15% NAFIC benefit</div>
+          <div class="luma-footer">
+            <div class="luma-facepile">
+              <div class="going-av" style="background:#5A4A80;width:26px;height:26px;font-size:9px;">MK</div>
+              <div class="going-av" style="background:#2A6A58;z-index:4;width:26px;height:26px;font-size:9px;">TA</div>
+              <span class="going-count" style="font-size:11px;">+20 attending</span>
+            </div>
+            <button class="luma-rsvp-btn" onclick="event.stopPropagation();showEventDetail('columbia')">RSVP →</button>
+          </div>
+        </div>
       </div>
-      <div class="event-card" style="margin-top:10px;cursor:pointer;" onclick="showEventDetail('hkust-cohort')">
-        <div class="ec-badge-row"><span class="ec-badge ecb-partner">NAFIC × HKUST</span><span class="ec-badge ecb-members">Cohort 2</span></div>
-        <div class="ec-body"><div class="ec-date">May 19 · HKUST Hong Kong + Virtual</div><div class="ec-title">Digital Assets Allocation Framework</div><div class="ec-loc">6-week cohort · 6 seats remaining · $8,500</div></div>
-        <div class="ec-footer"><span class="going-count" style="margin-left:0;">$8,500 / member</span><button class="btn-sm gold" onclick="event.stopPropagation()">Enrol →</button></div>
+
+      <!-- HKUST Digital Assets Cohort -->
+      <div class="luma-card" onclick="showEventDetail('hkust-cohort')">
+        <div class="luma-cover" style="background:linear-gradient(135deg,#0D1828 0%,#1A2840 100%);">
+          <div class="luma-cover-grad" style="background:linear-gradient(to top,rgba(8,7,5,.82) 40%,transparent 100%);"></div>
+          <div class="luma-date-chip">May 19 · Hong Kong</div>
+          <div class="luma-badge-chip">Cohort 2 · 6 seats left</div>
+          <div class="luma-cover-title">Digital Assets Allocation Framework</div>
+        </div>
+        <div class="luma-body">
+          <div class="luma-host-row">
+            <div class="luma-host-av" style="background:linear-gradient(135deg,#0D1828,#2A4A70);"></div>
+            <span class="luma-host-name">NAFIC × HKUST</span>
+            <div style="flex:1;"></div>
+            <button class="luma-share-btn" onclick="event.stopPropagation();shareEvent('hkust-cohort')" title="Share event">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--body)" stroke-width="1.8"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.3" y1="7.2" x2="10.7" y2="4"/><line x1="5.3" y1="8.8" x2="10.7" y2="12"/></svg>
+            </button>
+          </div>
+          <div class="luma-meta">6-week cohort · $8,500 / member · HK + Virtual</div>
+          <div class="luma-footer">
+            <div class="luma-facepile"><span class="going-count" style="margin-left:0;font-size:11px;">$8,500 / member</span></div>
+            <button class="luma-rsvp-btn" style="background:var(--gold);color:var(--black);" onclick="event.stopPropagation();showEventDetail('hkust-cohort')">Enrol →</button>
+          </div>
+        </div>
       </div>
-      <div style="height:12px;"></div>
+
+      <div style="height:14px;"></div>
     </div>
 
   </div>
@@ -1190,7 +1371,10 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   <div class="top-bar dark">
     <button class="tb-back" onclick="showInner('s-events')">‹</button>
     <div class="tb-title white">Event Details</div>
-    <div style="width:24px;"></div>
+    <button id="ed-share-btn" onclick="shareEvent(_currentEventId)" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:5px 12px;color:#fff;font-size:12px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:5px;">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.3" y1="7.2" x2="10.7" y2="4"/><line x1="5.3" y1="8.8" x2="10.7" y2="12"/></svg>
+      Share
+    </button>
   </div>
   <div class="scroll-body-nofooter" style="padding-bottom:32px;">
     <div id="ed-hero" class="ed-hero">
@@ -1209,6 +1393,80 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <div class="ed-action-wrap">
       <button id="ed-action" class="btn-gold" style="width:100%;display:none;"></button>
     </div>
+  </div>
+</div>
+
+<!-- ── PUBLIC EVENT LANDING (external link entry point) ── -->
+<div id="s-event-public" class="screen">
+  <div class="pub-hero" id="pub-hero" style="background:linear-gradient(135deg,#7A5C1E,#0A0907);">
+    <div class="pub-hero-grad"></div>
+    <div class="pub-hero-body">
+      <div class="pub-eyebrow" id="pub-eyebrow">NAFIC Event</div>
+      <div class="pub-title" id="pub-title">Event Title</div>
+    </div>
+  </div>
+  <div style="flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:32px;">
+
+    <!-- Host row -->
+    <div style="display:flex;align-items:center;gap:10px;padding:16px 20px 4px;">
+      <div style="width:36px;height:36px;border-radius:50%;background:var(--gold-bg);border:1.5px solid var(--gold-border);flex-shrink:0;"></div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--text);">NAFIC — New Age Family Investment Club</div>
+        <div style="font-size:11px;color:var(--muted);">Invite-only private gathering</div>
+      </div>
+    </div>
+
+    <!-- Key details strip -->
+    <div id="pub-details" style="padding:12px 20px 0;display:flex;flex-direction:column;gap:7px;"></div>
+
+    <!-- Description -->
+    <div style="padding:14px 20px;border-bottom:1px solid var(--sand);">
+      <div id="pub-desc" style="font-size:13px;color:var(--body);line-height:1.65;"></div>
+    </div>
+
+    <!-- Attending facepile -->
+    <div style="padding:14px 20px;border-bottom:1px solid var(--sand);">
+      <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:10px;" id="pub-attending-label">Attending</div>
+      <div style="display:flex;align-items:center;gap:8px;" id="pub-facepile">
+        <div class="going-av" style="background:#C4A050;z-index:5;width:32px;height:32px;font-size:11px;">AF</div>
+        <div class="going-av" style="background:#2A68A8;z-index:4;width:32px;height:32px;font-size:11px;">LF</div>
+        <div class="going-av" style="background:#8A3A1A;z-index:3;width:32px;height:32px;font-size:11px;">RF</div>
+        <span style="font-size:12px;color:var(--muted);margin-left:4px;" id="pub-attending-count">+35 attending</span>
+      </div>
+    </div>
+
+    <!-- Registration form -->
+    <div id="pub-reg-form" style="padding:20px;">
+      <div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--text);margin-bottom:4px;">Request Access</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:18px;">NAFIC is invite-only. Submitting this form creates an Observer account pending admin approval.</div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <input class="pub-input" id="pub-name" type="text" placeholder="Full name"/>
+        <input class="pub-input" id="pub-email" type="email" placeholder="Email address"/>
+        <input class="pub-input" id="pub-whatsapp" type="tel" placeholder="WhatsApp / Phone"/>
+        <input class="pub-input" id="pub-office" type="text" placeholder="Family office or firm name"/>
+        <select class="pub-input" id="pub-role">
+          <option value="" disabled selected>Your role</option>
+          <option>Founder / Principal</option>
+          <option>Next Generation</option>
+          <option>Investment Director</option>
+          <option>Advisor / Consultant</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <button class="pub-submit" style="margin-top:20px;" onclick="handlePublicSignup()">Request to Attend →</button>
+      <div style="font-size:11px;color:var(--muted);text-align:center;margin-top:10px;">By submitting, you agree to NAFIC's membership principles.</div>
+    </div>
+
+    <!-- Success state (hidden by default) -->
+    <div id="pub-reg-success" style="display:none;padding:40px 20px;text-align:center;">
+      <div style="font-size:40px;margin-bottom:14px;">🛡</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--text);margin-bottom:8px;">Request Received</div>
+      <div style="font-size:13px;color:var(--body);line-height:1.65;margin-bottom:24px;">Your Observer account has been created. Admin will review your application and confirm your place at the event.</div>
+      <button class="pub-submit" onclick="pubEnterApp()">Open NAFIC App →</button>
+    </div>
+
   </div>
 </div>
 
@@ -1330,11 +1588,11 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <!-- ══ ALL TAB ══ -->
     <div id="ci-all-content">
 
-    <!-- Card 1: GCC Family · Real Estate -->
-    <div class="ci-card" data-ci="fam re" style="margin-top:10px;">
+    <!-- Card 1: Qatar Family · Real Estate -->
+    <div class="ci-card" data-ci="fam re" style="margin-top:10px;cursor:pointer;" onclick="showDealDetail('dubai-logistics')">
       <div class="ci-card-header">
-        <div class="ci-av" style="background:#C4A050;">GF</div>
-        <div class="ci-src"><div class="ci-who">GCC Family</div><div class="ci-what">SFO · Real Estate focus · Abu Dhabi</div></div>
+        <div class="ci-av" style="background:#7A5C1E;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:9px;font-weight:700;color:#fff;">QAT</span><span style="font-size:7px;color:rgba(255,255,255,.65);">SFO</span></div>
+        <div class="ci-src"><div class="ci-who">Qatar Family · SFO · G2</div><div class="ci-what">Real Estate focus · MENA</div></div>
         <span class="ci-badge fam">👨‍👩‍👧 Family-Led</span>
       </div>
       <div class="ci-voice">"Anchoring $5M ourselves — looking for 2–3 families with a real estate mandate to come in alongside us."</div>
@@ -1346,14 +1604,14 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="ci-stat"><div class="ci-sv">8.5%</div><div class="ci-sl">Yield</div></div>
         <div class="ci-stat"><div class="ci-sv">2 left</div><div class="ci-sl">Spots</div></div>
       </div>
-      <div class="ci-foot"><span class="inv-status open">Open · Aug 31</span><button class="btn-sm gold" onclick="expressInterest('Dubai South Logistics Hub',this)">Express Interest →</button></div>
+      <div class="ci-foot"><span class="inv-status open">Open · Aug 31</span><button class="btn-sm gold" onclick="event.stopPropagation();expressInterest('Dubai South Logistics Hub',this)">Express Interest →</button></div>
     </div>
 
-    <!-- Card 2: Asia-Pacific Family · Pre-IPO -->
-    <div class="ci-card" data-ci="fam ipo">
+    <!-- Card 2: Singapore Family · Pre-IPO -->
+    <div class="ci-card" data-ci="fam ipo" style="cursor:pointer;" onclick="showDealDetail('quantum-edge')">
       <div class="ci-card-header">
-        <div class="ci-av" style="background:#2A68A8;">AP</div>
-        <div class="ci-src"><div class="ci-who">Asia-Pacific Family</div><div class="ci-what">MFO · Tech focus · Singapore</div></div>
+        <div class="ci-av" style="background:#1A4A7A;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:9px;font-weight:700;color:#fff;">SGP</span><span style="font-size:7px;color:rgba(255,255,255,.65);">MFO</span></div>
+        <div class="ci-src"><div class="ci-who">Singapore Family · MFO · G3</div><div class="ci-what">Tech focus · Southeast Asia</div></div>
         <span class="ci-badge ipo">🚀 Pre-IPO</span>
       </div>
       <div class="ci-voice">"We've been in since seed. Sharing with the community ahead of Series B close — strong team, $12M ARR."</div>
@@ -1365,33 +1623,33 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="ci-stat"><div class="ci-sv">20%</div><div class="ci-sl">Target IRR</div></div>
         <div class="ci-stat"><div class="ci-sv">5 left</div><div class="ci-sl">Spots</div></div>
       </div>
-      <div class="ci-foot"><span class="inv-status open">Open · Jul 31</span><button class="btn-sm gold" onclick="expressInterest('Quantum Edge Pre-Seed',this)">Express Interest →</button></div>
+      <div class="ci-foot"><span class="inv-status open">Open · Jul 31</span><button class="btn-sm gold" onclick="event.stopPropagation();expressInterest('Quantum Edge',this)">Express Interest →</button></div>
     </div>
 
-    <!-- Card 3: Gulf Family · Family-led PE Fund -->
-    <div class="ci-card" data-ci="fam alt">
+    <!-- Card 3: UAE Family · Family-led PE Fund -->
+    <div class="ci-card" data-ci="fam alt" style="cursor:pointer;" onclick="showDealDetail('gcc-infra-fund')">
       <div class="ci-card-header">
-        <div class="ci-av" style="background:#1E4A2E;">GL</div>
-        <div class="ci-src"><div class="ci-who">Gulf Family · Family-led Manager</div><div class="ci-what">PE · Alternatives · MENA</div></div>
+        <div class="ci-av" style="background:#1E4A2E;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:9px;font-weight:700;color:#fff;">UAE</span><span style="font-size:7px;color:rgba(255,255,255,.65);">SFO</span></div>
+        <div class="ci-src"><div class="ci-who">UAE Family · SFO · G3</div><div class="ci-what">PE &amp; Alternatives · GCC</div></div>
         <span class="ci-badge fund">🏛️ Family-led Fund</span>
       </div>
       <div class="ci-voice">"Third-gen family running this strategy since 2014. Fund II returned 2.8×. Offering community members preferred allocation."</div>
       <div class="ci-title">GCC Infrastructure Fund III</div>
-      <div class="ci-sub">MENA logistics & ports · Family office is anchor LP · $120M total raise</div>
+      <div class="ci-sub">MENA logistics &amp; ports · Family office is anchor LP · $120M total raise</div>
       <div class="ci-stats">
         <div class="ci-stat"><div class="ci-sv">$1M</div><div class="ci-sl">Min</div></div>
         <div class="ci-stat"><div class="ci-sv g">$34M</div><div class="ci-sl">Remaining</div></div>
         <div class="ci-stat"><div class="ci-sv">18%</div><div class="ci-sl">Target IRR</div></div>
         <div class="ci-stat"><div class="ci-sv">Aug 31</div><div class="ci-sl">Close</div></div>
       </div>
-      <div class="ci-foot"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('GCC Infrastructure Fund III',this)">Express Interest →</button></div>
+      <div class="ci-foot"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="event.stopPropagation();expressInterest('GCC Infrastructure Fund III',this)">Express Interest →</button></div>
     </div>
 
-    <!-- Card 4: Asia Family Digital · Pre-IPO AI -->
-    <div class="ci-card" data-ci="fam ipo alt">
+    <!-- Card 4: Hong Kong Family · Pre-IPO AI -->
+    <div class="ci-card" data-ci="fam ipo alt" style="cursor:pointer;" onclick="showDealDetail('deepmind-vc')">
       <div class="ci-card-header">
-        <div class="ci-av" style="background:#1A1A2E;">AS</div>
-        <div class="ci-src"><div class="ci-who">Asia Family — Digital Focus</div><div class="ci-what">SFO · VC &amp; Digital Assets · HK</div></div>
+        <div class="ci-av" style="background:#1A1A3E;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:9px;font-weight:700;color:#fff;">HKG</span><span style="font-size:7px;color:rgba(255,255,255,.65);">SFO</span></div>
+        <div class="ci-src"><div class="ci-who">Hong Kong Family · SFO · G1</div><div class="ci-what">VC &amp; Digital Assets · Greater China</div></div>
         <span class="ci-badge ipo">🚀 Pre-IPO</span>
       </div>
       <div class="ci-voice">"We're already oversubscribed in our own fund — sharing this AI opportunity with families we trust before it closes."</div>
@@ -1403,14 +1661,14 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="ci-stat"><div class="ci-sv">3×</div><div class="ci-sl">Target MOIC</div></div>
         <div class="ci-stat"><div class="ci-sv">Jul 20</div><div class="ci-sl">Close</div></div>
       </div>
-      <div class="ci-foot"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('DeepMind Ventures Fund II',this)">Express Interest →</button></div>
+      <div class="ci-foot"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="event.stopPropagation();expressInterest('DeepMind Ventures Fund II',this)">Express Interest →</button></div>
     </div>
 
-    <!-- Card 5: European Family Real Estate -->
-    <div class="ci-card" data-ci="fam re">
+    <!-- Card 5: Italy / European Family · Life Sciences -->
+    <div class="ci-card" data-ci="fam re" style="cursor:pointer;" onclick="showDealDetail('novabio-ipo')">
       <div class="ci-card-header">
-        <div class="ci-av" style="background:#4A3020;">EU</div>
-        <div class="ci-src"><div class="ci-who">European Family Office</div><div class="ci-what">MFO · Real Estate &amp; PE · Milan</div></div>
+        <div class="ci-av" style="background:#4A3020;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-size:9px;font-weight:700;color:#fff;">ITA</span><span style="font-size:7px;color:rgba(255,255,255,.65);">SFO</span></div>
+        <div class="ci-src"><div class="ci-who">Italy Family · SFO · G3</div><div class="ci-what">Real Estate &amp; PE · Europe</div></div>
         <span class="ci-badge fam">👨‍👩‍👧 Family-Led</span>
       </div>
       <div class="ci-voice">"Family has operated in European and MENA RE for 40 years. Opening a co-invest tranche exclusively to NAFIC families."</div>
@@ -1422,7 +1680,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="ci-stat"><div class="ci-sv">25%</div><div class="ci-sl">Target IRR</div></div>
         <div class="ci-stat"><div class="ci-sv">Sep 15</div><div class="ci-sl">Close</div></div>
       </div>
-      <div class="ci-foot"><span class="inv-status open">Open · 5 spots</span><button class="btn-sm gold" onclick="expressInterest('NovaBio Pre-IPO',this)">Express Interest →</button></div>
+      <div class="ci-foot"><span class="inv-status open">Open · 5 spots</span><button class="btn-sm gold" onclick="event.stopPropagation();expressInterest('NovaBio Pre-IPO',this)">Express Interest →</button></div>
     </div>
 
     <div style="height:8px;"></div>
@@ -1673,63 +1931,86 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         </div>
       </div>
 
-      <div id="dir-mem-count" class="mem-count" style="margin-top:6px;">23 anonymous mandate profiles · Signal interest to connect</div>
+      <div id="dir-mem-count" class="mem-count" style="margin-top:6px;">23 anonymous mandate profiles · Tap a card to view details</div>
 
-      <!-- Anonymous family cards -->
-      <div class="fam-card" data-region="MENA" data-asset="Private Equity Real Estate" data-type="SFO">
+      <!-- Anonymous family cards — 4 country examples -->
+      <div class="fam-card" data-region="MENA" data-asset="Private Equity Real Estate" data-type="SFO" onclick="showFamProfile('qa-sfo-g2')">
         <div class="fam-card-top">
-          <div class="fam-shield" style="background:#7A5C1E;"><div class="fam-shield-code">GCC</div><div class="fam-shield-icon">SFO · G2</div></div>
+          <div class="fam-shield" style="background:#7A5C1E;"><div class="fam-shield-code">QAT</div><div class="fam-shield-icon">SFO · G2</div></div>
           <div class="fam-meta">
-            <div class="fam-type">MENA Family · Single Family Office</div>
+            <div class="fam-type">Qatar Family · Single Family Office</div>
             <div class="fam-desc">2nd generation · Active since 2024</div>
           </div>
           <div class="fam-match-score"><div class="fam-pct">94%</div><div class="fam-pct-lbl">mandate</div></div>
         </div>
         <div class="fam-mandate">
           <div class="fam-mandate-row">
-            <span class="fam-mandate-pill geo">📍 GCC / MENA</span>
+            <span class="fam-mandate-pill geo">📍 Qatar / GCC</span>
             <span class="fam-mandate-pill asset">Private Equity</span>
             <span class="fam-mandate-pill asset">Real Estate</span>
             <span class="fam-mandate-pill size">$5M – $50M</span>
           </div>
         </div>
         <div class="fam-card-foot">
-          <div class="fam-privacy-note">🛡 Identity protected</div>
-          <button class="signal-btn" onclick="signalInterest(this,'GCC-SFO-G2')">Signal Interest →</button>
+          <div class="fam-privacy-note">🛡 Identity protected · Tap to view</div>
+          <button class="signal-btn" onclick="event.stopPropagation();signalInterest(this,'QAT-SFO-G2')">Signal Interest →</button>
         </div>
       </div>
 
-      <div class="fam-card" data-region="Asia" data-asset="Venture Capital Digital Assets" data-type="SFO">
+      <div class="fam-card" data-region="Asia" data-asset="Digital Assets Venture Capital" data-type="SFO" onclick="showFamProfile('hk-sfo-g1')">
         <div class="fam-card-top">
-          <div class="fam-shield" style="background:#1A4A7A;"><div class="fam-shield-code">ASIA</div><div class="fam-shield-icon">SFO · G1</div></div>
+          <div class="fam-shield" style="background:#1A1A3E;"><div class="fam-shield-code">HKG</div><div class="fam-shield-icon">SFO · G1</div></div>
           <div class="fam-meta">
-            <div class="fam-type">Asia Family · Single Family Office</div>
+            <div class="fam-type">Hong Kong Family · Single Family Office</div>
             <div class="fam-desc">1st generation · Active since 2023</div>
           </div>
           <div class="fam-match-score"><div class="fam-pct">87%</div><div class="fam-pct-lbl">mandate</div></div>
         </div>
         <div class="fam-mandate">
           <div class="fam-mandate-row">
-            <span class="fam-mandate-pill geo">📍 Southeast Asia</span>
-            <span class="fam-mandate-pill asset">Venture Capital</span>
+            <span class="fam-mandate-pill geo">📍 Hong Kong</span>
             <span class="fam-mandate-pill asset">Digital Assets</span>
-            <span class="fam-mandate-pill size">$1M – $10M</span>
+            <span class="fam-mandate-pill asset">Venture Capital</span>
+            <span class="fam-mandate-pill size">$500K – $5M</span>
           </div>
         </div>
         <div class="fam-card-foot">
-          <div class="fam-privacy-note">🛡 Identity protected</div>
-          <button class="signal-btn" onclick="signalInterest(this,'ASIA-SFO-G1')">Signal Interest →</button>
+          <div class="fam-privacy-note">🛡 Identity protected · Tap to view</div>
+          <button class="signal-btn" onclick="event.stopPropagation();signalInterest(this,'HKG-SFO-G1')">Signal Interest →</button>
         </div>
       </div>
 
-      <div class="fam-card" data-region="Europe" data-asset="Private Equity Hedge Funds" data-type="SFO">
+      <div class="fam-card" data-region="Asia" data-asset="Private Equity Infrastructure" data-type="SFO" onclick="showFamProfile('cn-sfo-g2')">
         <div class="fam-card-top">
-          <div class="fam-shield" style="background:#2A3A1E;"><div class="fam-shield-code">EU</div><div class="fam-shield-icon">SFO · G3</div></div>
+          <div class="fam-shield" style="background:#1A3A5A;"><div class="fam-shield-code">CHN</div><div class="fam-shield-icon">SFO · G2</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">Greater China Family · Single Family Office</div>
+            <div class="fam-desc">2nd generation · Active since 2024</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">81%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 Greater China</span>
+            <span class="fam-mandate-pill asset">Private Equity</span>
+            <span class="fam-mandate-pill asset">Infrastructure</span>
+            <span class="fam-mandate-pill size">$10M – $50M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected · Tap to view</div>
+          <button class="signal-btn" onclick="event.stopPropagation();signalInterest(this,'CHN-SFO-G2')">Signal Interest →</button>
+        </div>
+      </div>
+
+      <div class="fam-card" data-region="Europe" data-asset="Private Equity Hedge Funds" data-type="SFO" onclick="showFamProfile('eu-sfo-g3')">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#2A3A1E;"><div class="fam-shield-code">EUR</div><div class="fam-shield-icon">SFO · G3</div></div>
           <div class="fam-meta">
             <div class="fam-type">European Family · Single Family Office</div>
             <div class="fam-desc">3rd generation · Active since 2025</div>
           </div>
-          <div class="fam-match-score"><div class="fam-pct">81%</div><div class="fam-pct-lbl">mandate</div></div>
+          <div class="fam-match-score"><div class="fam-pct">76%</div><div class="fam-pct-lbl">mandate</div></div>
         </div>
         <div class="fam-mandate">
           <div class="fam-mandate-row">
@@ -1740,109 +2021,9 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
           </div>
         </div>
         <div class="fam-card-foot">
-          <div class="fam-privacy-note">🛡 Identity protected</div>
-          <button class="signal-btn" onclick="signalInterest(this,'EU-SFO-G3')">Signal Interest →</button>
+          <div class="fam-privacy-note">🛡 Identity protected · Tap to view</div>
+          <button class="signal-btn" onclick="event.stopPropagation();signalInterest(this,'EUR-SFO-G3')">Signal Interest →</button>
         </div>
-      </div>
-
-      <div class="fam-card" data-region="Asia" data-asset="Digital Assets Venture Capital" data-type="SFO">
-        <div class="fam-card-top">
-          <div class="fam-shield" style="background:#1A1A3E;"><div class="fam-shield-code">HK</div><div class="fam-shield-icon">SFO · G2</div></div>
-          <div class="fam-meta">
-            <div class="fam-type">Greater China Family · Single Family Office</div>
-            <div class="fam-desc">2nd generation · Active since 2024</div>
-          </div>
-          <div class="fam-match-score"><div class="fam-pct">79%</div><div class="fam-pct-lbl">mandate</div></div>
-        </div>
-        <div class="fam-mandate">
-          <div class="fam-mandate-row">
-            <span class="fam-mandate-pill geo">📍 Greater China</span>
-            <span class="fam-mandate-pill asset">Digital Assets</span>
-            <span class="fam-mandate-pill asset">Venture Capital</span>
-            <span class="fam-mandate-pill size">$500K – $5M</span>
-          </div>
-        </div>
-        <div class="fam-card-foot">
-          <div class="fam-privacy-note">🛡 Identity protected</div>
-          <button class="signal-btn" onclick="signalInterest(this,'HK-SFO-G2')">Signal Interest →</button>
-        </div>
-      </div>
-
-      <div class="fam-card" data-region="MENA" data-asset="Real Estate Private Credit" data-type="SFO">
-        <div class="fam-card-top">
-          <div class="fam-shield" style="background:#2A1E3E;"><div class="fam-shield-code">UAE</div><div class="fam-shield-icon">SFO · G2</div></div>
-          <div class="fam-meta">
-            <div class="fam-type">Gulf Family · Single Family Office</div>
-            <div class="fam-desc">2nd generation · Active since 2025</div>
-          </div>
-          <div class="fam-match-score"><div class="fam-pct">76%</div><div class="fam-pct-lbl">mandate</div></div>
-        </div>
-        <div class="fam-mandate">
-          <div class="fam-mandate-row">
-            <span class="fam-mandate-pill geo">📍 GCC / MENA</span>
-            <span class="fam-mandate-pill asset">Real Estate</span>
-            <span class="fam-mandate-pill asset">Private Credit</span>
-            <span class="fam-mandate-pill size">$25M – $100M</span>
-          </div>
-        </div>
-        <div class="fam-card-foot">
-          <div class="fam-privacy-note">🛡 Identity protected</div>
-          <button class="signal-btn" onclick="signalInterest(this,'UAE-SFO-G2')">Signal Interest →</button>
-        </div>
-      </div>
-
-      <div class="fam-card" data-region="Asia" data-asset="Private Equity Infrastructure" data-type="SFO">
-        <div class="fam-card-top">
-          <div class="fam-shield" style="background:#1A3A1A;"><div class="fam-shield-code">JPN</div><div class="fam-shield-icon">SFO · G1</div></div>
-          <div class="fam-meta">
-            <div class="fam-type">Japan Family · Single Family Office</div>
-            <div class="fam-desc">1st generation · Active since 2025</div>
-          </div>
-          <div class="fam-match-score"><div class="fam-pct">73%</div><div class="fam-pct-lbl">mandate</div></div>
-        </div>
-        <div class="fam-mandate">
-          <div class="fam-mandate-row">
-            <span class="fam-mandate-pill geo">📍 Japan / Korea</span>
-            <span class="fam-mandate-pill asset">Private Equity</span>
-            <span class="fam-mandate-pill asset">Infrastructure</span>
-            <span class="fam-mandate-pill size">$10M – $50M</span>
-          </div>
-        </div>
-        <div class="fam-card-foot">
-          <div class="fam-privacy-note">🛡 Identity protected</div>
-          <button class="signal-btn" onclick="signalInterest(this,'JPN-SFO-G1')">Signal Interest →</button>
-        </div>
-      </div>
-
-      <div class="fam-card" data-region="Americas" data-asset="Venture Capital Private Equity" data-type="MFO">
-        <div class="fam-card-top">
-          <div class="fam-shield" style="background:#3A1A0D;"><div class="fam-shield-code">AM</div><div class="fam-shield-icon">MFO · G2</div></div>
-          <div class="fam-meta">
-            <div class="fam-type">Americas Family · Multi-Family Office</div>
-            <div class="fam-desc">2nd generation · Active since 2026</div>
-          </div>
-          <div class="fam-match-score"><div class="fam-pct">68%</div><div class="fam-pct-lbl">mandate</div></div>
-        </div>
-        <div class="fam-mandate">
-          <div class="fam-mandate-row">
-            <span class="fam-mandate-pill geo">📍 North America</span>
-            <span class="fam-mandate-pill asset">Venture Capital</span>
-            <span class="fam-mandate-pill asset">Private Equity</span>
-            <span class="fam-mandate-pill size">$2M – $20M</span>
-          </div>
-        </div>
-        <div class="fam-card-foot">
-          <div class="fam-privacy-note">🛡 Identity protected</div>
-          <button class="signal-btn" onclick="signalInterest(this,'AM-MFO-G2')">Signal Interest →</button>
-        </div>
-      </div>
-
-      <!-- Met at event unlock -->
-      <div class="event-unlock-card">
-        <div class="eu-title">🤝 Met at a NAFIC Event?</div>
-        <div class="eu-sub">If you were introduced to a member in person at one of our events, you can request a direct connection. Admin will verify and unlock within 24 hours.</div>
-        <input class="eu-input" type="text" placeholder="Name or event you met them at…"/>
-        <button class="eu-btn" onclick="this.textContent='Request sent ✓';this.style.background='#1E7A48';this.style.color='#fff';">Request Direct Connection</button>
       </div>
 
       <div style="height:16px;"></div>
@@ -1955,11 +2136,92 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div class="prof-sub">76 Columbus · Single Family Office · G2</div>
       <div class="prof-tier"><div class="pt-dot"></div><div id="prof-tier-text" class="pt-text">Member · Active</div></div>
     </div>
-    <div class="founding-badge">
-      <div class="fb-title">🌟 Founding Circle Progress</div>
-      <div class="fb-sub">Refer 3 more approved members to unlock Founding Circle — first-look on every deal.</div>
-      <div class="fb-prog"><div class="fb-prog-fill"></div></div>
-      <div class="fb-label">2 of 5 referrals · 3 remaining</div>
+    <!-- ── Member Progress & Token Reward System ── -->
+    <div class="mp-card" id="mp-card">
+
+      <!-- Dark header: token count + progress bar -->
+      <div class="mp-header">
+        <div class="mp-header-top">
+          <div class="mp-title">Member Progress</div>
+          <div class="mp-tier-badge observer" id="mp-tier-badge">Observer</div>
+        </div>
+        <div class="mp-token-row">
+          <div class="mp-token-count" id="mp-token-count">4</div>
+          <div class="mp-token-of">/ 10</div>
+          <div style="flex:1;"></div>
+          <div class="mp-token-label">Community<br>Tokens</div>
+        </div>
+        <div class="mp-bar-track">
+          <div class="mp-bar-fill" id="mp-bar-fill" style="width:40%;"></div>
+        </div>
+        <div class="mp-bar-label" id="mp-bar-label">6 tokens to unlock Member Access</div>
+        <div class="mp-buy-note">Or upgrade directly — annual membership $45,000 ›</div>
+      </div>
+
+      <!-- How to earn tokens -->
+      <div class="mp-earn-section">
+        <div class="mp-earn-title">How to Earn Tokens</div>
+
+        <div class="mp-earn-row">
+          <div class="mp-earn-icon" style="background:rgba(200,168,75,.1);">👤</div>
+          <div class="mp-earn-body">
+            <div class="mp-earn-name">Refer a Family Office</div>
+            <div class="mp-earn-desc">Introduce another family — +3 tokens when they're approved as a Member</div>
+          </div>
+          <div class="mp-earn-tokens">+3 ◆</div>
+        </div>
+
+        <div class="mp-earn-row">
+          <div class="mp-earn-icon" style="background:rgba(42,104,168,.1);">💼</div>
+          <div class="mp-earn-body">
+            <div class="mp-earn-name">Co-Invest in a Community Deal</div>
+            <div class="mp-earn-desc">Commit capital alongside other NAFIC members — per deal completed</div>
+          </div>
+          <div class="mp-earn-tokens">+2 ◆</div>
+        </div>
+
+        <div class="mp-earn-row">
+          <div class="mp-earn-icon" style="background:rgba(30,122,72,.1);">🔍</div>
+          <div class="mp-earn-body">
+            <div class="mp-earn-name">Recommend a Deal</div>
+            <div class="mp-earn-desc">Submit a quality deal that gets published to the member feed</div>
+          </div>
+          <div class="mp-earn-tokens">+2 ◆</div>
+        </div>
+
+        <div class="mp-earn-row">
+          <div class="mp-earn-icon" style="background:rgba(26,122,120,.1);">📅</div>
+          <div class="mp-earn-body">
+            <div class="mp-earn-name">Attend a NAFIC Event</div>
+            <div class="mp-earn-desc">Show up at a gathering, summit, or delegation trip</div>
+          </div>
+          <div class="mp-earn-tokens">+1 ◆</div>
+        </div>
+      </div>
+
+      <!-- Recent token activity -->
+      <div class="mp-activity">
+        <div class="mp-act-title">Recent Activity</div>
+        <div class="mp-act-item">
+          <div class="mp-act-dot" style="background:var(--gold);"></div>
+          <div class="mp-act-text">Referred Hong Kong Family · Approved</div>
+          <div class="mp-act-tok">+3 ◆</div>
+          <div class="mp-act-time">2w ago</div>
+        </div>
+        <div class="mp-act-item">
+          <div class="mp-act-dot" style="background:var(--green);"></div>
+          <div class="mp-act-text">Co-invested · Dubai South Logistics Hub</div>
+          <div class="mp-act-tok">+1 ◆</div>
+          <div class="mp-act-time">1mo ago</div>
+        </div>
+      </div>
+
+      <!-- CTA strip -->
+      <div class="mp-cta-strip">
+        <button class="mp-cta-btn primary" onclick="showTokenReferSheet()">Refer a Family →</button>
+        <button class="mp-cta-btn secondary" onclick="showInner('s-tiers')">View Tiers</button>
+      </div>
+
     </div>
     <div class="prof-section">
       <div class="ps-lbl">Focus Areas</div>
@@ -1983,13 +2245,6 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     </div>
     <div style="padding:16px 0 0;">
       <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:0 16px 8px;">My Account</div>
-      <div class="admin-panel-btn" onclick="showInner('s-tiers')" style="margin-bottom:8px;">
-        <div class="apb-left">
-          <div class="apb-icon">🏛️</div>
-          <div><div class="apb-label">Contribution Tiers</div><div class="apb-sub">Observer · Member · What's included</div></div>
-        </div>
-        <div class="apb-arrow">›</div>
-      </div>
       <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:8px 16px 8px;">Admin</div>
       <div class="admin-panel-btn" onclick="showInner('s-admin')">
         <div class="apb-left">
@@ -2015,125 +2270,125 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 </div>
 
 <!-- ── CONTRIBUTION TIERS ── -->
-<div id="s-tiers" class="screen" style="background:#0F0F0E;">
-  <div class="status-bar" style="background:#0F0F0E;"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:#fff;">9:41</div></div>
-  <div style="background:#0F0F0E;padding:8px 16px 0;display:flex;align-items:center;">
+<div id="s-tiers" class="screen" style="background:var(--paper);">
+  <div class="status-bar" style="background:var(--black);"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:#fff;">9:41</div></div>
+  <div style="background:var(--black);padding:8px 16px 14px;display:flex;align-items:center;">
     <button onclick="showInner('s-profile')" style="color:#fff;font-size:22px;background:none;border:none;padding:0 12px 0 0;cursor:pointer;">&#x2039;</button>
     <div style="color:#fff;font-size:16px;font-weight:700;flex:1;text-align:center;">Contribution Tiers</div>
     <div style="width:36px;"></div>
   </div>
-  <div class="scroll-body" style="background:#0F0F0E;padding-bottom:40px;">
-    <div style="padding:18px 16px 14px;">
-      <div style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px;">Knowledge &#xB7; Events &#xB7; Network &#xB7; Co-Invest</div>
-      <div style="color:#666;font-size:12px;font-style:italic;">You learn, you gather, you connect, you co-invest.</div>
+  <div class="scroll-body" style="background:var(--paper);padding-bottom:40px;">
+    <div style="padding:16px 16px 10px;">
+      <div style="color:var(--gold-dim);font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px;">Knowledge · Events · Network · Co-Invest</div>
+      <div style="color:var(--muted);font-size:12px;font-style:italic;">You learn, you gather, you connect, you co-invest.</div>
     </div>
-    <div style="margin:0 16px;border-radius:14px;overflow:hidden;border:1px solid #2A2A28;">
+    <div style="margin:0 16px;border-radius:16px;overflow:hidden;border:1px solid var(--sand);background:#fff;box-shadow:0 2px 16px rgba(0,0,0,.06);">
       <!-- Column headers — tap to select tier -->
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#1C1C1A;">
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:var(--black);">
         <div style="padding:14px 12px 12px;">
-          <div style="font-size:9px;color:#555;letter-spacing:.8px;text-transform:uppercase;line-height:1.4;">Tap column<br>to preview</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.3);letter-spacing:.8px;text-transform:uppercase;line-height:1.4;">Tap column<br>to preview</div>
         </div>
-        <div id="tier-col-obs" class="tier-col-hdr" onclick="selectTier('observer')" style="padding:14px 8px 10px;text-align:center;border-left:1px solid #2A2A28;">
+        <div id="tier-col-obs" class="tier-col-hdr" onclick="selectTier('observer')" style="padding:14px 8px 10px;text-align:center;border-left:1px solid rgba(255,255,255,.1);">
           <div style="font-size:12px;font-weight:700;color:#C0A860;">Observer</div>
-          <div style="font-size:10px;color:#6A6050;margin-top:2px;">Inv. Only</div>
-          <div id="tier-obs-check" class="tier-check" style="color:#C0A860;opacity:0;">✓</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:2px;">Inv. Only</div>
+          <div id="tier-obs-check" class="tier-check" style="color:#C0A860;opacity:0;margin-top:3px;">✓</div>
         </div>
-        <div id="tier-col-mem" class="tier-col-hdr" onclick="selectTier('member')" style="padding:14px 8px 10px;text-align:center;border-left:1px solid #2A2A28;background:rgba(200,168,75,.1);">
+        <div id="tier-col-mem" class="tier-col-hdr" onclick="selectTier('member')" style="padding:14px 8px 10px;text-align:center;border-left:1px solid rgba(255,255,255,.1);background:rgba(200,168,75,.2);">
           <div style="font-size:12px;font-weight:700;color:var(--gold);">Member</div>
-          <div style="font-size:10px;color:#B89040;margin-top:2px;">Annual fee</div>
-          <div id="tier-mem-check" class="tier-check" style="color:var(--gold);opacity:1;">✓</div>
+          <div style="font-size:10px;color:rgba(200,168,75,.7);margin-top:2px;">Annual fee</div>
+          <div id="tier-mem-check" class="tier-check" style="color:var(--gold);opacity:1;margin-top:3px;">✓</div>
         </div>
       </div>
       <!-- KNOWLEDGE -->
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
-        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">KNOWLEDGE</div>
-        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:var(--paper);border-top:1px solid var(--sand);">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:var(--text);letter-spacing:1.2px;">KNOWLEDGE</div>
+        <div style="border-left:1px solid var(--sand);"></div><div style="border-left:1px solid var(--sand);background:rgba(200,168,75,.04);"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Market Intel</div><div style="font-size:10px;color:#555;margin-top:2px;">Macro / Financial / Industry briefings</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#8A7040;">&#x2713;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Market Intel</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Macro / Financial / FO briefings</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--gold-dim);">&#x2713;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Research Participation</div><div style="font-size:10px;color:#555;margin-top:2px;">Case studies &amp; co-research</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Research Participation</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Case studies &amp; co-research</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:10px;font-weight:700;color:#B8780A;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Academy Branding</div><div style="font-size:10px;color:#444;margin-top:2px;">Columbia, HKUST programme access</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);opacity:.6;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Academy Access</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Columbia, HKUST programmes</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:16px;color:var(--ghost);">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
       <!-- EVENTS -->
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
-        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">EVENTS</div>
-        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:var(--paper);border-top:1px solid var(--sand);">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:var(--text);letter-spacing:1.2px;">EVENTS</div>
+        <div style="border-left:1px solid var(--sand);"></div><div style="border-left:1px solid var(--sand);background:rgba(200,168,75,.04);"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Curated Roundtables</div><div style="font-size:10px;color:#555;margin-top:2px;">&#x2264;50 pax &#xB7; Vetted FO discussions</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#8A7040;">&#x2713;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Curated Roundtables</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">≤50 pax · Vetted FO discussions</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--gold-dim);">&#x2713;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Delegation Trips</div><div style="font-size:10px;color:#444;margin-top:2px;">&#x2264;10 pax &#xB7; ADFW &amp; cross-border</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);opacity:.6;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Delegation Trips</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">≤10 pax · ADFW &amp; cross-border</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:16px;color:var(--ghost);">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Private Residency</div><div style="font-size:10px;color:#444;margin-top:2px;">&#x2264;10 pax &#xB7; Multi-day immersive</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);opacity:.6;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Private Residency</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">≤10 pax · Multi-day immersive</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:16px;color:var(--ghost);">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
       <!-- NETWORK -->
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
-        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">NETWORK</div>
-        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:var(--paper);border-top:1px solid var(--sand);">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:var(--text);letter-spacing:1.2px;">NETWORK</div>
+        <div style="border-left:1px solid var(--sand);"></div><div style="border-left:1px solid var(--sand);background:rgba(200,168,75,.04);"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Member Directory</div><div style="font-size:10px;color:#555;margin-top:2px;">Searchable approved member roster</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Family Connect</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Mandate profiles · Identity protected</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:10px;font-weight:700;color:#B8780A;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">AI Match Making</div><div style="font-size:10px;color:#444;margin-top:2px;">Auto-alerts when mandates align</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);opacity:.6;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">AI Match Making</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Auto-alerts when mandates align</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:16px;color:var(--ghost);">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Bumble Connect</div><div style="font-size:10px;color:#444;margin-top:2px;">Direct msg &#xB7; GPs never cold-reach</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);opacity:.6;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Signal Connect</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">You initiate · GP never cold-reaches</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:16px;color:var(--ghost);">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
       <!-- CO-INVEST -->
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
-        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">CO-INVEST</div>
-        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:var(--paper);border-top:1px solid var(--sand);">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:var(--text);letter-spacing:1.2px;">CO-INVEST</div>
+        <div style="border-left:1px solid var(--sand);"></div><div style="border-left:1px solid var(--sand);background:rgba(200,168,75,.04);"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Deal Flow</div><div style="font-size:10px;color:#555;margin-top:2px;">Family-led co-investments</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Deal Flow</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Family-led co-investments</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:10px;font-weight:700;color:#B8780A;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">SWF Access</div><div style="font-size:10px;color:#555;margin-top:2px;">Mubadala, ADIA, QIA, OIA warm intros</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">SWF Access</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Mubadala, ADIA, QIA, OIA warm intros</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:10px;font-weight:700;color:#B8780A;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Express Interest</div><div style="font-size:10px;color:#444;margin-top:2px;">Signal intent &#xB7; admin facilitates intro</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);opacity:.6;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Express Interest</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Signal intent · admin facilitates intro</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:16px;color:var(--ghost);">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
-        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Anchor Deal</div><div style="font-size:10px;color:#444;margin-top:2px;">Anchor &amp; publish across allocators</div></div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
-        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid var(--sand);opacity:.6;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:var(--text);">Anchor Deal</div><div style="font-size:10px;color:var(--muted);margin-top:2px;">Anchor &amp; publish across allocators</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:16px;color:var(--ghost);">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid var(--sand);font-size:15px;font-weight:700;color:var(--green);background:rgba(200,168,75,.04);">&#x2713;</div>
       </div>
     </div>
-    <div style="padding:12px 16px 4px;display:flex;gap:16px;font-size:10.5px;color:#555;">
-      <span><b style="color:#5A9A5A;">&#x2713;</b> Full</span>
-      <span><b style="color:#8A6820;">Limited</b> = Partial</span>
-      <span><b style="color:#444;">&#x2013;</b> Not included</span>
+    <div style="padding:12px 16px 4px;display:flex;gap:16px;font-size:10.5px;color:var(--muted);">
+      <span><b style="color:var(--green);">&#x2713;</b> Full access</span>
+      <span><b style="color:#B8780A;">Limited</b> = Partial</span>
+      <span><b style="color:var(--ghost);">&#x2013;</b> Not included</span>
     </div>
     <div style="margin:16px 16px 8px;background:linear-gradient(135deg,#221A00,#3A2A00);border:1.5px solid var(--gold);border-radius:16px;padding:18px 16px;text-align:center;">
       <div style="color:var(--gold);font-size:15px;font-weight:700;margin-bottom:4px;">Become a Contributing Member</div>
@@ -2231,40 +2486,45 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <!-- ② INVITES — admin sends invite first, member gets unique link -->
     <div id="admin-invites-content" style="display:none;">
 
-      <!-- Invite type toggle -->
-      <div style="padding:16px 16px 0;">
-        <div style="font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px;">WHO ARE YOU INVITING?</div>
-        <div style="display:flex;background:#F0EBE3;border-radius:12px;padding:3px;gap:3px;" id="invite-type-toggle">
-          <button id="inv-type-lp" onclick="setInviteType('lp')" style="flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:var(--black);color:#fff;transition:all .2s;">👤 LP Member</button>
-          <button id="inv-type-gp" onclick="setInviteType('gp')" style="flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;">🏢 Asset Manager</button>
-        </div>
-      </div>
+      <!-- Unified invite form -->
+      <div class="admin-form">
+        <div class="admin-form-title">Send Invitation</div>
+        <div class="admin-form-hint">Recipient receives a personalised onboarding link pre-filled with what you enter. Routing (LP vs Asset Manager) is determined automatically by organisation type.</div>
 
-      <!-- LP invite form -->
-      <div id="inv-form-lp" class="admin-form">
-        <div class="admin-form-title">Invite LP Member</div>
-        <div class="admin-form-hint">Their application form will be pre-filled with what you enter. They confirm details and complete the remaining steps.</div>
         <input class="admin-input" type="email" placeholder="Email address *"/>
-        <input class="admin-input" type="text" placeholder="Full name"/>
+        <input class="admin-input" type="text" placeholder="Full name *"/>
         <input class="admin-input" type="text" placeholder="WhatsApp / Phone"/>
         <input class="admin-input" type="text" placeholder="WeChat ID (optional)"/>
-        <input class="admin-input" type="text" placeholder="LinkedIn URL (optional)"/>
-        <div style="padding:10px 12px;background:rgba(200,168,75,.07);border:1px solid var(--gold-border);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 Recipient receives LP onboarding link → 8-step application → pending admin approval</div>
-        <button class="admin-submit" onclick="showInviteSent(this,'LP')">Send LP Invitation →</button>
-      </div>
 
-      <!-- GP invite form -->
-      <div id="inv-form-gp" class="admin-form" style="display:none;">
-        <div class="admin-form-title">Invite Asset Manager</div>
-        <div class="admin-form-hint">Their onboarding form will be pre-filled. Since you're inviting them, the referral step is automatically confirmed — they go straight to submitting their deal.</div>
-        <input class="admin-input" type="email" placeholder="Email address *"/>
-        <input class="admin-input" type="text" placeholder="Full name"/>
-        <input class="admin-input" type="text" placeholder="Organisation name"/>
-        <input class="admin-input" type="text" placeholder="Role / Title (e.g. Managing Partner)"/>
-        <input class="admin-input" type="text" placeholder="WhatsApp / Phone"/>
+        <!-- Org type — matches onboarding options exactly -->
+        <select class="admin-select" id="inv-orgtype" onchange="adminInviteOrgHint(this.value)">
+          <option value="" disabled selected>Organisation type *</option>
+          <optgroup label="— LP / Capital Allocator —">
+            <option value="sfo">Single Family Office (LP)</option>
+            <option value="mfo">Multi-Family Office (LP/GP)</option>
+            <option value="fb">Family Business</option>
+            <option value="adv">LP Advisor / Consultant</option>
+          </optgroup>
+          <optgroup label="— Asset Manager —">
+            <option value="pe">Private Equity Firm</option>
+            <option value="vc">Venture Capital Firm</option>
+            <option value="hf">Hedge Fund</option>
+            <option value="pc">Private Credit</option>
+            <option value="re">Real Estate Fund</option>
+            <option value="fof">Fund of Funds</option>
+            <option value="co">Co-Investment Vehicle</option>
+          </optgroup>
+        </select>
+
+        <input class="admin-input" type="text" placeholder="Organisation / Firm name"/>
+        <input class="admin-input" type="text" placeholder="Role / Level (e.g. Principal, CIO)"/>
         <input class="admin-input" type="text" placeholder="LinkedIn URL (optional)"/>
-        <div style="padding:10px 12px;background:rgba(42,104,168,.07);border:1px solid rgba(42,104,168,.2);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 Recipient receives asset manager onboarding link → 3-step deal submission (referral pre-confirmed) → pending admin review</div>
-        <button class="admin-submit" style="background:#1A5888;" onclick="showInviteSent(this,'Asset Manager')">Send Invitation →</button>
+
+        <!-- Dynamic routing hint -->
+        <div id="inv-route-hint-lp" style="display:none;padding:10px 12px;background:rgba(200,168,75,.07);border:1px solid var(--gold-border);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 LP onboarding link — 8-step application → pending your approval</div>
+        <div id="inv-route-hint-gp" style="display:none;padding:10px 12px;background:rgba(42,104,168,.07);border:1px solid rgba(42,104,168,.2);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 Asset Manager onboarding link — referral pre-confirmed → deal submission → pending your review</div>
+
+        <button class="admin-submit" onclick="showInviteSent(this,'Member')">Send Invitation →</button>
       </div>
 
       <!-- Pending invites list -->
@@ -2294,7 +2554,18 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
           <input class="admin-input" type="text" placeholder="Capacity (max 50)"/>
         </div>
         <input class="admin-input" type="text" placeholder="Location / Venue"/>
-        <input class="admin-input" type="text" placeholder="Short description"/>
+
+        <!-- Cover image upload -->
+        <div id="ev-img-drop" onclick="document.getElementById('ev-img-input').click()" style="border:1.5px dashed var(--sand);border-radius:12px;padding:18px 16px;text-align:center;cursor:pointer;background:var(--paper);margin-bottom:10px;transition:border-color .2s;" onmouseenter="this.style.borderColor='var(--gold-dim)'" onmouseleave="this.style.borderColor='var(--sand)'">
+          <div id="ev-img-preview" style="display:none;width:100%;height:110px;border-radius:8px;overflow:hidden;margin-bottom:8px;"><img id="ev-img-prev-img" style="width:100%;height:100%;object-fit:cover;"/></div>
+          <div id="ev-img-label" style="font-size:13px;color:var(--muted);">📷 Tap to upload cover image</div>
+          <div style="font-size:11px;color:var(--ghost);margin-top:3px;">JPG, PNG or WebP · shown on event card</div>
+          <input id="ev-img-input" type="file" accept="image/*" style="display:none;" onchange="previewEventImg(this)"/>
+        </div>
+
+        <!-- Long description textarea -->
+        <textarea class="admin-input" id="ev-description" placeholder="Full description — agenda, speakers, dress code, what to expect…" style="min-height:120px;resize:vertical;line-height:1.55;padding-top:11px;"></textarea>
+
         <button class="admin-submit" onclick="this.textContent='✓ Event published';this.style.background='#2E7D32';">Publish Event →</button>
       </div>
       <div class="admin-section"><div class="admin-section-title">Upcoming Events</div></div>
@@ -2310,6 +2581,30 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <!-- Admin creates deal -->
       <div class="admin-form">
         <div class="admin-form-title">Create Deal (Admin)</div>
+
+        <!-- Lead — who is bringing this deal -->
+        <div style="margin-bottom:2px;">
+          <div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px;">Lead</div>
+          <select class="admin-select" style="margin-bottom:0;">
+            <option value="" disabled selected>Select lead *</option>
+            <option value="nafic">NAFIC (admin-sourced)</option>
+            <optgroup label="— Member Families —">
+              <option>Qatar Family · SFO · G2</option>
+              <option>Hong Kong Family · SFO · G1</option>
+              <option>Hong Kong Family · SFO · G2</option>
+              <option>Greater China Family · SFO · G2</option>
+              <option>European Family · SFO · G3</option>
+              <option>Singapore Family · SFO</option>
+              <option>UAE Family · SFO</option>
+              <option>Italy Family · SFO</option>
+            </optgroup>
+            <optgroup label="— Asset Managers —">
+              <option>FinEdge Technologies</option>
+              <option>NovaMed Capital</option>
+            </optgroup>
+          </select>
+        </div>
+
         <input class="admin-input" type="text" placeholder="Deal / Company name *"/>
         <select class="admin-select">
           <option>Type: Pre-IPO</option>
@@ -2611,7 +2906,7 @@ function go(id){
   document.getElementById(id).classList.add('active');
 }
 function showInner(id){
-  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail','s-admin','s-gp-apply','s-gp-dash','s-tiers'];
+  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail','s-event-public','s-admin','s-gp-apply','s-gp-dash','s-tiers'];
   inner.forEach(sid=>{const el=document.getElementById(sid);if(el)el.classList.remove('active');});
   document.getElementById(id).classList.add('active');
 }
@@ -2664,7 +2959,9 @@ const EVENTS = {
   'columbia':{bg:'linear-gradient(135deg,#1A1030,#2A1848)',img:null,eyebrow:'NAFIC × Columbia · Jun 2026 · New York',title:'Columbia Leadership Forum',subtitle:'Next-gen family wealth leaders programme',tags:['#Columbia','#Leadership','#NYC'],rows:[{k:'Date',v:'Jun 20, 2026'},{k:'Location',v:'Columbia Business School, NYC'},{k:'Capacity',v:'50 cap · 22 going'},{k:'Partner',v:'Columbia Business School'},{k:'Format',v:'Senior executive programme'},{k:'Benefit',v:'15% enrolment benefit for NAFIC members'}],gallery:null,action:{label:'RSVP →',style:'dark'}},
   'hkust-cohort':{bg:'linear-gradient(135deg,#0D1828,#1A2840)',img:null,eyebrow:'NAFIC × HKUST · May 2026 · Hong Kong',title:'Digital Assets Allocation Framework',subtitle:'For family offices allocating 5–15% to digital assets',tags:['#DigitalAssets','#HKUST','#FamilyOffice'],rows:[{k:'Date',v:'May 19, 2026'},{k:'Location',v:'HKUST Hong Kong + Virtual'},{k:'Capacity',v:'40 participants · 6 seats left'},{k:'Partner',v:'HKUST'},{k:'Duration',v:'6-week cohort'},{k:'Cost',v:'$8,500 / member'}],gallery:null,action:{label:'Enrol →',style:'gold'}},
 };
+var _currentEventId='';
 function showEventDetail(id){
+  _currentEventId=id;
   const e=EVENTS[id]; if(!e)return;
   const hero=document.getElementById('ed-hero');
   hero.style.background=e.bg||'#0A0907';
@@ -2684,6 +2981,157 @@ function showEventDetail(id){
   else{actEl.style.display='none';}
   showInner('s-event-detail');
 }
+
+// ── Share Event ──
+var _shareSheetEventId='';
+function shareEvent(id){
+  _shareSheetEventId=id||_currentEventId;
+  const e=EVENTS[_shareSheetEventId];
+  const slug=_shareSheetEventId||'event';
+  const fakeUrl='https://nafic.club/event/'+slug;
+  // Try native share first
+  if(navigator.share){
+    navigator.share({title:e?e.title:'NAFIC Event',url:fakeUrl}).catch(()=>{});
+    return;
+  }
+  // Fall back to copy sheet
+  let sheet=document.getElementById('share-event-sheet');
+  if(!sheet){
+    sheet=document.createElement('div');
+    sheet.id='share-event-sheet';
+    sheet.style.cssText='position:fixed;inset:0;z-index:9995;display:none;';
+    sheet.innerHTML=`
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,.45);" onclick="closeShareSheet()"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;background:#fff;border-radius:22px 22px 0 0;padding:24px 20px 44px;">
+        <div style="width:36px;height:4px;background:var(--sand);border-radius:2px;margin:0 auto 18px;"></div>
+        <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="share-sheet-title">Share Event</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Anyone with this link can view the event and request access.</div>
+        <div class="share-sheet-url" id="share-sheet-url">${fakeUrl}</div>
+
+        <!-- Share channel buttons -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+          <button onclick="shareViaWhatsApp()" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;border:none;border-radius:12px;padding:13px 10px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;font-family:'Inter',sans-serif;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </button>
+          <button onclick="copyShareLink()" style="display:flex;align-items:center;justify-content:center;gap:8px;background:var(--black);border:none;border-radius:12px;padding:13px 10px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;font-family:'Inter',sans-serif;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            Copy Link
+          </button>
+        </div>
+
+        <button onclick="closeShareSheet()" style="width:100%;background:transparent;border:1.5px solid var(--sand);border-radius:12px;padding:12px;font-size:13px;font-weight:500;color:var(--body);cursor:pointer;font-family:'Inter',sans-serif;">Cancel</button>
+      </div>`;
+    document.body.appendChild(sheet);
+  }
+  if(e){
+    const titleEl=sheet.querySelector('#share-sheet-title');
+    if(titleEl)titleEl.textContent='Share: '+e.title;
+  }
+  const urlEl=sheet.querySelector('#share-sheet-url');
+  if(urlEl)urlEl.textContent=fakeUrl;
+  sheet.style.display='block';
+}
+function closeShareSheet(){
+  const s=document.getElementById('share-event-sheet');
+  if(s)s.style.display='none';
+}
+function copyShareLink(){
+  const urlEl=document.getElementById('share-sheet-url');
+  const url=urlEl?urlEl.textContent:'';
+  if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{showToast('Link copied ✓');closeShareSheet();});}
+  else{showToast('Link copied ✓');closeShareSheet();}
+}
+function shareViaWhatsApp(){
+  const urlEl=document.getElementById('share-sheet-url');
+  const titleEl=document.getElementById('share-sheet-title');
+  const url=urlEl?urlEl.textContent:'';
+  const title=titleEl?titleEl.textContent.replace('Share: ',''):'NAFIC Event';
+  const msg=encodeURIComponent('You\'re invited to '+title+' — a private NAFIC gathering.\n\nRequest your place here: '+url);
+  window.open('https://wa.me/?text='+msg,'_blank');
+  closeShareSheet();
+}
+
+// ── Public Event Landing Page ──
+var _pubEventId='';
+function showPublicEvent(id){
+  _pubEventId=id||'dubai-summit';
+  const e=EVENTS[_pubEventId];
+  // Hero
+  const hero=document.getElementById('pub-hero');
+  if(hero){
+    hero.style.background=e?(e.bg||'linear-gradient(135deg,#7A5C1E,#0A0907)'):'linear-gradient(135deg,#7A5C1E,#0A0907)';
+    if(e&&e.img){
+      let im=hero.querySelector('img');
+      if(!im){im=document.createElement('img');im.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;';hero.insertBefore(im,hero.firstChild);}
+      im.src=e.img;
+    }
+  }
+  const eyebrow=document.getElementById('pub-eyebrow');
+  if(eyebrow)eyebrow.textContent=e?e.eyebrow:'NAFIC Event';
+  const title=document.getElementById('pub-title');
+  if(title)title.textContent=e?e.title:'Event';
+  // Details strip
+  const det=document.getElementById('pub-details');
+  if(det&&e&&e.rows){
+    const show=e.rows.slice(0,3);
+    det.innerHTML=show.map(r=>`<div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;font-weight:600;color:var(--muted);width:70px;flex-shrink:0;">${r.k}</span><span style="font-size:13px;color:var(--text);font-weight:500;">${r.v}</span></div>`).join('');
+  }
+  // Description
+  const desc=document.getElementById('pub-desc');
+  if(desc)desc.textContent=e?e.subtitle+' — This is an invite-only NAFIC gathering. Submit the form below to request your place.':'';
+  // Attending
+  const countEl=document.getElementById('pub-attending-count');
+  if(countEl)countEl.textContent=e&&e.rows?((e.rows.find(r=>r.k==='Capacity')||{}).v||'Members'):'Members attending';
+  // Reset form / success state
+  const form=document.getElementById('pub-reg-form');
+  const success=document.getElementById('pub-reg-success');
+  if(form)form.style.display='';
+  if(success)success.style.display='none';
+  ['pub-name','pub-email','pub-whatsapp','pub-office'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  const roleEl=document.getElementById('pub-role');
+  if(roleEl)roleEl.selectedIndex=0;
+  // Show screen (no tab bar — standalone public page)
+  const allScreens=document.querySelectorAll('.screen');
+  allScreens.forEach(s=>s.classList.remove('active'));
+  const pubScreen=document.getElementById('s-event-public');
+  if(pubScreen)pubScreen.classList.add('active');
+}
+
+function handlePublicSignup(){
+  const name=(document.getElementById('pub-name')||{}).value||'';
+  const email=(document.getElementById('pub-email')||{}).value||'';
+  if(!name.trim()||!email.trim()){showToast('Please fill in name and email');return;}
+  // Grant Observer tier and show success
+  _naficTier='observer';
+  const form=document.getElementById('pub-reg-form');
+  const success=document.getElementById('pub-reg-success');
+  if(form)form.style.display='none';
+  if(success)success.style.display='';
+}
+
+function pubEnterApp(){
+  // Navigate into the app as Observer
+  go('s-app');
+  showInner('s-events');
+  // Update tab bar state
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  const evBtn=document.querySelector('.tab-btn[data-tab="events"]');
+  if(evBtn)evBtn.classList.add('active');
+}
+
+// ── URL hash / query param detection ──
+// Supports: nafic.club/event/dubai-summit → shows public landing
+window.addEventListener('DOMContentLoaded',function(){
+  try{
+    const params=new URLSearchParams(window.location.search);
+    const hash=window.location.hash.replace('#','');
+    const eventId=params.get('event')||hash.replace('event-','');
+    if(eventId&&EVENTS&&EVENTS[eventId]){
+      showPublicEvent(eventId);
+    }
+  }catch(err){}
+});
 
 // ── Express Interest & View Interests ──
 // Family identities are anonymised in the GP/Asset Manager view — shown as type + region only
@@ -2712,6 +3160,8 @@ function expressInterest(dealName, btn){
   btn.style.border='none';
   btn.disabled=true;
   showToast('Interest noted — admin will be in touch');
+  // Award community token for co-investing
+  earnToken(2, 'Co-invested · '+dealName);
   // Add current member to interests list
   if(!memberInterests[dealName]) memberInterests[dealName]=[];
   memberInterests[dealName].unshift({name:'Lixia Zhu · 76 Columbus',initials:'LZ',bg:'#0A0907',office:'SFO · 76 Columbus · Founding Member',time:'Just now'});
@@ -2730,6 +3180,107 @@ function expressInterest(dealName, btn){
     if(container) container.insertBefore(newAlert,container.firstChild);
   }
 }
+
+// ── Member Progress / Token Reward System ──
+var _naficTokens = 4; // Observer starts with some tokens from prior activity
+var _tokenGoal   = 10;
+
+function updateTokenUI(){
+  const count=document.getElementById('mp-token-count');
+  const fill=document.getElementById('mp-bar-fill');
+  const lbl=document.getElementById('mp-bar-label');
+  const badge=document.getElementById('mp-tier-badge');
+  if(count) count.textContent=_naficTokens;
+  const pct=Math.min(100,(_naficTokens/_tokenGoal)*100);
+  if(fill) fill.style.width=pct+'%';
+  const remaining=Math.max(0,_tokenGoal-_naficTokens);
+  if(lbl) lbl.textContent=remaining>0?remaining+' token'+(remaining!==1?'s':'')+' to unlock Member Access':'🎉 Member Access unlocked!';
+  if(badge){
+    if(_naficTokens>=_tokenGoal){
+      badge.textContent='Member';
+      badge.className='mp-tier-badge member';
+      // Upgrade tour prompt
+      if(remaining===0){
+        setTimeout(()=>{
+          const strip=document.querySelector('.mp-cta-strip');
+          if(strip&&!document.getElementById('mp-upgrade-banner')){
+            const banner=document.createElement('div');
+            banner.id='mp-upgrade-banner';
+            banner.style.cssText='padding:12px 18px;background:linear-gradient(135deg,rgba(30,122,72,.12),rgba(30,122,72,.05));border-top:1px solid rgba(30,122,72,.2);font-size:13px;color:var(--green);font-weight:600;text-align:center;cursor:pointer;';
+            banner.textContent='🎉 You\'ve earned Member Access — claim it →';
+            banner.onclick=()=>showInner('s-tiers');
+            strip.parentNode.insertBefore(banner,strip);
+          }
+        },400);
+      }
+    } else {
+      badge.textContent='Observer';
+      badge.className='mp-tier-badge observer';
+    }
+  }
+}
+
+function earnToken(amount, label){
+  _naficTokens=Math.min(_tokenGoal+5,_naficTokens+amount);
+  updateTokenUI();
+  // Add activity row
+  const act=document.querySelector('.mp-activity');
+  if(act){
+    const list=act.querySelectorAll('.mp-act-item');
+    const newRow=document.createElement('div');
+    newRow.className='mp-act-item';
+    newRow.style.cssText='background:rgba(30,122,72,.05);border-radius:6px;padding:6px 4px;';
+    newRow.innerHTML=`<div class="mp-act-dot" style="background:var(--green);"></div><div class="mp-act-text">${label}</div><div class="mp-act-tok">+${amount} ◆</div><div class="mp-act-time">Just now</div>`;
+    if(list.length>0) list[0].parentNode.insertBefore(newRow,list[0]);
+  }
+  showToast('+'+amount+' token'+(amount!==1?'s':'')+' earned ◆');
+}
+
+function showTokenReferSheet(){
+  let sheet=document.getElementById('token-refer-sheet');
+  if(!sheet){
+    sheet=document.createElement('div');
+    sheet.id='token-refer-sheet';
+    sheet.style.cssText='position:fixed;inset:0;z-index:9995;display:none;';
+    sheet.innerHTML=`
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,.45);" onclick="closeTokenReferSheet()"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;background:#fff;border-radius:22px 22px 0 0;padding:24px 20px 44px;">
+        <div style="width:36px;height:4px;background:var(--sand);border-radius:2px;margin:0 auto 18px;"></div>
+        <div style="font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;">Refer a Family Office</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:18px;line-height:1.55;">Earn <b style="color:var(--gold-dim);">+3 tokens ◆</b> when your referral is approved as a Member. Your reputation travels with every invite.</div>
+        <input class="pub-input" id="ref-name" type="text" placeholder="Family or contact name" style="margin-bottom:10px;"/>
+        <input class="pub-input" id="ref-email" type="email" placeholder="Email address" style="margin-bottom:10px;"/>
+        <textarea class="pub-input" id="ref-note" placeholder="Brief note — why are they a good fit for NAFIC?" style="min-height:70px;resize:none;margin-bottom:16px;line-height:1.5;"></textarea>
+        <button style="width:100%;background:var(--black);border:none;border-radius:12px;padding:14px;font-size:14px;font-weight:600;color:#fff;cursor:pointer;font-family:'Inter',sans-serif;" onclick="submitTokenReferral()">Send Invitation →</button>
+      </div>`;
+    document.body.appendChild(sheet);
+  }
+  sheet.style.display='block';
+}
+function closeTokenReferSheet(){
+  const s=document.getElementById('token-refer-sheet');
+  if(s)s.style.display='none';
+}
+function submitTokenReferral(){
+  const email=(document.getElementById('ref-email')||{}).value||'';
+  if(!email.trim()){showToast('Please enter an email address');return;}
+  closeTokenReferSheet();
+  showToast('Referral sent — +3 ◆ when approved');
+  // Optimistically note "pending" in activity (no tokens until approved)
+  const act=document.querySelector('.mp-activity');
+  if(act){
+    const list=act.querySelectorAll('.mp-act-item');
+    const newRow=document.createElement('div');
+    newRow.className='mp-act-item';
+    newRow.innerHTML=`<div class="mp-act-dot" style="background:var(--gold-dim);"></div><div class="mp-act-text">Referral sent · <span style="color:var(--muted);">${email}</span></div><div class="mp-act-tok" style="color:var(--muted);">+3 ◆ pending</div><div class="mp-act-time">Now</div>`;
+    if(list.length>0) list[0].parentNode.insertBefore(newRow,list[0]);
+  }
+}
+
+// Init token UI on load
+window.addEventListener('DOMContentLoaded',function(){
+  updateTokenUI();
+});
 
 function showToast(msg){
   const t=document.getElementById('global-toast');
@@ -3055,8 +3606,32 @@ function setInviteType(type){
     gpForm.style.display='block';
   }
 }
+// Admin invite org type hint — shows LP or GP routing note
+function adminInviteOrgHint(val){
+  const lpTypes=['sfo','mfo','fb','adv'];
+  const gpTypes=['pe','vc','hf','pc','re','fof','co'];
+  const lpHint=document.getElementById('inv-route-hint-lp');
+  const gpHint=document.getElementById('inv-route-hint-gp');
+  if(lpHint)lpHint.style.display=lpTypes.includes(val)?'block':'none';
+  if(gpHint)gpHint.style.display=gpTypes.includes(val)?'block':'none';
+}
+// Event cover image preview
+function previewEventImg(input){
+  const file=input.files&&input.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    const preview=document.getElementById('ev-img-preview');
+    const img=document.getElementById('ev-img-prev-img');
+    const label=document.getElementById('ev-img-label');
+    if(img)img.src=e.target.result;
+    if(preview)preview.style.display='block';
+    if(label)label.textContent='✓ '+file.name;
+  };
+  reader.readAsDataURL(file);
+}
 function showInviteSent(btn, type){
-  btn.textContent='✓ '+(type==='LP'?'LP':'GP')+' invitation sent';
+  btn.textContent='✓ Invitation sent';
   btn.style.background='#2E7D32';
   btn.disabled=true;
   showToast((type==='LP'?'LP member':'Asset manager') + ' invitation sent successfully');
@@ -3323,6 +3898,133 @@ function submitAnchorDeal(btn){
     const existing=dealsList.querySelector('.admin-section');
     if(existing){const card=document.createElement('div');card.className='admin-card';card.style='margin:0 16px 10px;';card.innerHTML='<div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">'+name+'</div><div class="ar-sub">'+asset+' · '+raise+' · Min '+min+'</div><span class="ar-status new">Submitted · Pending approval</span></div></div><div class="ar-actions"><button class="ar-approve" onclick="this.textContent=\'✓ Approved · Now Live\';this.style.background=\'#2E7D32\';">Approve &amp; Publish</button><button class="ar-reject" onclick="this.textContent=\'Rejected\';this.style.opacity=\'.5\';">Reject</button></div></div>';existing.after(card);}
   }
+}
+
+// ── Family Profile Sheet ──
+const FAM_PROFILES={
+  'qa-sfo-g2':{code:'QAT',bg:'#7A5C1E',title:'Qatar Family · SFO · G2',region:'Qatar / GCC',type:'Single Family Office',gen:'2nd Generation',since:'2024',assets:['Private Equity','Real Estate','Private Credit'],geo:['GCC / MENA','Southeast Asia'],size:'$5M – $50M',coInvest:'Open to co-investments in real estate and infrastructure. Prefers 3–5 year hold periods.',style:'Selective · Long-term · Relationship-driven',events:'NAFIC Summit Dubai 2026 · Qatar Gathering 2025'},
+  'hk-sfo-g1':{code:'HKG',bg:'#1A1A3E',title:'Hong Kong Family · SFO · G1',region:'Hong Kong / Greater China',type:'Single Family Office',gen:'1st Generation',since:'2023',assets:['Digital Assets','Venture Capital','Pre-IPO'],geo:['Greater China','Southeast Asia'],size:'$500K – $5M',coInvest:'Active co-investor in early-stage tech and digital assets. Writes fast on vetted deals.',style:'High-conviction · Tech-forward · Global',events:'NAFIC ADFW Delegation 2025 · HKUST Cohort 2026'},
+  'hk-sfo-g2':{code:'HKG',bg:'#1A1A3E',title:'Hong Kong Family · SFO · G2',region:'Hong Kong',type:'Single Family Office',gen:'2nd Generation',since:'2023',assets:['Digital Assets','Venture Capital'],geo:['Hong Kong','Southeast Asia'],size:'$500K – $5M',coInvest:'Active co-investor in digital assets and VC. Fast decision cycle.',style:'Tech-forward · High-conviction',events:'HKUST Cohort 2026'},
+  'cn-sfo-g2':{code:'CHN',bg:'#1A3A5A',title:'Greater China Family · SFO · G2',region:'Mainland China / Greater China',type:'Single Family Office',gen:'2nd Generation',since:'2024',assets:['Private Equity','Infrastructure','Real Estate'],geo:['Greater China','MENA'],size:'$10M – $50M',coInvest:'Looking for infrastructure and real asset co-investments with MENA or Asian exposure.',style:'Institutional · Value-oriented · Long-term',events:'NAFIC Summit Dubai 2026'},
+  'eu-sfo-g3':{code:'EUR',bg:'#2A3A1E',title:'European Family · SFO · G3',region:'Europe (Western)',type:'Single Family Office',gen:'3rd Generation',since:'2025',assets:['Private Equity','Hedge Funds','Real Estate'],geo:['Europe','Americas'],size:'$10M – $100M',coInvest:'Interested in European and cross-border PE and real assets. Prefers co-GP structures.',style:'Conservative · Multi-generational · Governance-focused',events:'NAFIC Summit 2026'},
+};
+function showFamProfile(id){
+  const p=FAM_PROFILES[id];if(!p)return;
+  let sheet=document.getElementById('fam-profile-sheet');
+  if(!sheet){
+    sheet=document.createElement('div');sheet.id='fam-profile-sheet';
+    sheet.style.cssText='position:fixed;inset:0;z-index:9990;display:flex;flex-direction:column;justify-content:flex-end;';
+    sheet.innerHTML='<div onclick="closeFamProfile()" style="flex:1;background:rgba(0,0,0,.45);"></div><div id="fam-sheet-inner" style="background:#fff;border-radius:20px 20px 0 0;padding:0 0 32px;max-height:82vh;overflow-y:auto;"></div>';
+    document.body.appendChild(sheet);
+  }
+  const inner=document.getElementById('fam-sheet-inner');
+  inner.innerHTML=`
+    <div style="padding:12px 0 0;display:flex;justify-content:center;"><div style="width:36px;height:4px;background:var(--sand);border-radius:2px;"></div></div>
+    <div style="padding:16px 18px 12px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--sand);">
+      <div style="width:52px;height:52px;border-radius:14px;background:${p.bg};display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;">
+        <span style="font-size:11px;font-weight:700;color:#fff;">${p.code}</span>
+        <span style="font-size:8px;color:rgba(255,255,255,.65);">${p.type.split(' ')[0]}</span>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:700;color:var(--text);">${p.title}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px;">${p.type} · ${p.gen}</div>
+      </div>
+      <div style="margin-left:auto;text-align:right;padding:5px 10px;background:rgba(200,168,75,.08);border:1px solid var(--gold-border);border-radius:20px;"><span style="font-size:10px;font-weight:600;color:var(--gold-dim);">🛡 Identity<br>protected</span></div>
+    </div>
+    <div style="padding:14px 18px 0;">
+      <div style="font-size:10px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;margin-bottom:8px;">Investment Mandate</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;">
+        ${p.assets.map(a=>`<span style="background:rgba(200,168,75,.08);border:1px solid var(--gold-border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:500;color:var(--gold-dim);">${a}</span>`).join('')}
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;">
+        <div style="background:var(--paper);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:10px;color:var(--muted);margin-bottom:3px;">Geography</div>
+          <div style="font-size:12px;font-weight:600;color:var(--text);">${p.geo.join(' · ')}</div>
+        </div>
+        <div style="background:var(--paper);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:10px;color:var(--muted);margin-bottom:3px;">Ticket Size</div>
+          <div style="font-size:12px;font-weight:600;color:var(--text);">${p.size}</div>
+        </div>
+        <div style="background:var(--paper);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:10px;color:var(--muted);margin-bottom:3px;">Member since</div>
+          <div style="font-size:12px;font-weight:600;color:var(--text);">${p.since}</div>
+        </div>
+        <div style="background:var(--paper);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:10px;color:var(--muted);margin-bottom:3px;">Style</div>
+          <div style="font-size:11px;font-weight:500;color:var(--text);">${p.style}</div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(200,168,75,.07),rgba(200,168,75,.03));border:1px solid var(--gold-border);border-radius:12px;padding:12px 13px;margin-bottom:14px;">
+        <div style="font-size:10px;font-weight:700;color:var(--gold-dim);margin-bottom:5px;">Co-invest Appetite</div>
+        <div style="font-size:12px;color:var(--body);line-height:1.55;font-style:italic;">"${p.coInvest}"</div>
+      </div>
+      <div style="background:var(--paper);border-radius:12px;padding:11px 13px;margin-bottom:16px;">
+        <div style="font-size:10px;font-weight:700;color:var(--muted);margin-bottom:3px;">NAFIC Events attended</div>
+        <div style="font-size:11px;color:var(--body);">${p.events}</div>
+      </div>
+      <button onclick="closeFamProfile();signalInterest(document.createElement('button'),'${id}')" style="width:100%;background:var(--black);border:none;border-radius:14px;padding:15px;font-size:14px;font-weight:700;color:var(--gold-dim);cursor:pointer;margin-bottom:8px;">Signal Interest — Admin will facilitate →</button>
+      <button onclick="closeFamProfile()" style="width:100%;background:transparent;border:1.5px solid var(--sand);border-radius:14px;padding:14px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;">Back to Directory</button>
+    </div>`;
+  sheet.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeFamProfile(){
+  const s=document.getElementById('fam-profile-sheet');
+  if(s)s.style.display='none';
+  document.body.style.overflow='';
+}
+
+// ── Deal Detail Sheet ──
+const DEAL_DETAILS={
+  'dubai-logistics':{country:'QAT',countryBg:'#7A5C1E',sharer:'Qatar Family · SFO · G2',sharerSub:'Real Estate focus · MENA',badge:'👨‍👩‍👧 Family-Led',title:'Dubai South Logistics Hub',sub:'Class-A warehouse · 15-yr anchor tenant · REIT IPO exit path',voice:'Anchoring $5M ourselves — looking for 2–3 families with a real estate mandate to come in alongside us.',details:[['Asset type','Core+ Real Estate'],['Location','Dubai South Free Zone'],['Anchor tenant','Global logistics operator'],['Lease term','15 years NNN'],['Exit','REIT IPO H1 2028'],['Total raise','$22M'],['Min ticket','$2M'],['Yield','8.5% cash-on-cash'],['Target IRR','14–16%'],['Spots','2 of 5 remaining']],status:'Open · Closes Aug 31'},
+  'quantum-edge':{country:'SGP',countryBg:'#1A4A7A',sharer:'Singapore Family · MFO · G3',sharerSub:'Tech focus · Southeast Asia',badge:'🚀 Pre-IPO',title:'Quantum Edge — Encryption Infrastructure',sub:'Quantum-resistant encryption · Series B · $4M community round',voice:'We\'ve been in since seed. Sharing with the community ahead of Series B close — strong team, $12M ARR.',details:[['Stage','Series B'],['Sector','Cybersecurity / Deep Tech'],['ARR','$12M (68% YoY)'],['Customers','14 financial institutions'],['Lead','Top-tier US fund'],['Community round','$4M'],['Min ticket','$250K'],['Target IRR','20–25%'],['MOIC target','3–4×'],['Spots','5 remaining']],status:'Open · Closes Jul 31'},
+  'gcc-infra-fund':{country:'UAE',countryBg:'#1E4A2E',sharer:'UAE Family · SFO · G3',sharerSub:'PE & Alternatives · GCC',badge:'🏛️ Family-led Fund',title:'GCC Infrastructure Fund III',sub:'MENA logistics & ports · Family office anchor LP',voice:'Third-gen family running this strategy since 2014. Fund II returned 2.8×. Offering community members preferred allocation.',details:[['Strategy','MENA Infrastructure PE'],['Focus','Logistics, ports, utilities'],['Fund size','$120M total'],['Family anchor','$15M committed'],['Vintage','2025'],['Target IRR','18–22%'],['Target MOIC','2.5×'],['Min LP','$1M'],['Remaining','$34M'],['Close','Aug 31, 2026']],status:'Open — preferred allocation for NAFIC'},
+  'deepmind-vc':{country:'HKG',countryBg:'#1A1A3E',sharer:'Hong Kong Family · SFO · G1',sharerSub:'VC & Digital Assets · Greater China',badge:'🚀 Pre-IPO',title:'DeepMind Ventures Fund II',sub:'Enterprise AI SaaS · Southeast Asia · $80M fund',voice:'We\'re already oversubscribed in our own fund — sharing this AI opportunity with families we trust before it closes.',details:[['Strategy','Enterprise AI SaaS VC'],['Geography','Southeast Asia'],['Fund size','$80M'],['Stage focus','Series A–B'],['Portfolio','8 companies active'],['Min LP','$500K'],['Target MOIC','3×'],['Target IRR','25%+'],['Remaining','$18M'],['Close','Jul 20, 2026']],status:'Open — closing imminently'},
+  'novabio-ipo':{country:'ITA',countryBg:'#4A3020',sharer:'Italy Family · SFO · G3',sharerSub:'Real Estate & PE · Europe',badge:'👨‍👩‍👧 Family-Led',title:'NovaBio Pre-IPO — Life Sciences',sub:'European biotech · Phase III · Nasdaq listing target H1 2027',voice:'Family has operated in European and MENA RE for 40 years. Opening a co-invest tranche exclusively to NAFIC families.',details:[['Stage','Pre-IPO (Phase III)'],['Sector','Life Sciences / Biotech'],['Indication','Oncology — Phase III trial'],['Listing target','Nasdaq H1 2027'],['Revenue (est.)','$8M recurring'],['Community tranche','$8M'],['Min ticket','$1M'],['Target IRR','25%'],['Lock-up','12 months post-IPO'],['Spots','5 remaining · Sep 15']],status:'Open · 5 spots · Sep 15 close'},
+};
+function showDealDetail(id){
+  const d=DEAL_DETAILS[id];if(!d)return;
+  let sheet=document.getElementById('deal-detail-sheet');
+  if(!sheet){
+    sheet=document.createElement('div');sheet.id='deal-detail-sheet';
+    sheet.style.cssText='position:fixed;inset:0;z-index:9991;display:flex;flex-direction:column;justify-content:flex-end;';
+    sheet.innerHTML='<div onclick="closeDealDetail()" style="flex:1;background:rgba(0,0,0,.45);"></div><div id="deal-sheet-inner" style="background:#fff;border-radius:20px 20px 0 0;max-height:86vh;overflow-y:auto;padding-bottom:32px;"></div>';
+    document.body.appendChild(sheet);
+  }
+  const inner=document.getElementById('deal-sheet-inner');
+  inner.innerHTML=`
+    <div style="padding:12px 0 0;display:flex;justify-content:center;"><div style="width:36px;height:4px;background:var(--sand);border-radius:2px;"></div></div>
+    <div style="padding:14px 18px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--sand);">
+      <div style="width:40px;height:40px;border-radius:12px;background:${d.countryBg};display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;">
+        <span style="font-size:9px;font-weight:700;color:#fff;">${d.country}</span>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:11px;color:var(--muted);">${d.sharer}</div>
+        <div style="font-size:10px;color:var(--ghost);">${d.sharerSub}</div>
+      </div>
+      <span style="font-size:10px;background:var(--paper);border:1px solid var(--sand);border-radius:20px;padding:4px 9px;color:var(--body);font-weight:500;">${d.badge}</span>
+    </div>
+    <div style="padding:14px 18px 0;">
+      <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">${d.title}</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px;">${d.sub}</div>
+      <div style="font-size:12px;font-style:italic;color:var(--body);line-height:1.55;padding:10px 12px 10px 14px;background:var(--paper);border-left:2px solid var(--gold-dim);border-radius:0 8px 8px 0;margin-bottom:14px;">"${d.voice}"</div>
+      <div style="font-size:10px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;margin-bottom:8px;">Deal Terms</div>
+      <div style="background:var(--paper);border-radius:12px;overflow:hidden;margin-bottom:14px;">
+        ${d.details.map((r,i)=>`<div style="display:flex;justify-content:space-between;padding:9px 12px;${i?'border-top:1px solid var(--sand);':''}"><span style="font-size:12px;color:var(--muted);">${r[0]}</span><span style="font-size:12px;font-weight:600;color:var(--text);">${r[1]}</span></div>`).join('')}
+      </div>
+      <div style="padding:9px 12px;background:rgba(30,122,72,.06);border:1px solid rgba(30,122,72,.2);border-radius:10px;margin-bottom:14px;">
+        <span style="font-size:11px;font-weight:600;color:var(--green);">● ${d.status}</span>
+      </div>
+      <button id="deal-ei-btn-${id}" onclick="expressInterest('${d.title}',this);document.getElementById('deal-ei-btn-${id}').disabled=true;" style="width:100%;background:var(--black);border:none;border-radius:14px;padding:15px;font-size:14px;font-weight:700;color:var(--gold-dim);cursor:pointer;margin-bottom:8px;">Express Interest — Admin will facilitate →</button>
+      <button onclick="closeDealDetail()" style="width:100%;background:transparent;border:1.5px solid var(--sand);border-radius:14px;padding:14px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;">Back</button>
+    </div>`;
+  sheet.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeDealDetail(){
+  const s=document.getElementById('deal-detail-sheet');
+  if(s)s.style.display='none';
+  document.body.style.overflow='';
 }
 </script>
 </body>
