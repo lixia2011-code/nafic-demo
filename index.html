@@ -1033,11 +1033,13 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="pa-row"><div class="pa-key">Exploring</div><div class="pa-val">Co-investments · Digital Assets</div></div>
         <div class="pa-row"><div class="pa-key">Tier Selected</div><div class="pa-val">Member (Contributing)</div></div>
       </div>
-      <div style="width:100%;padding:13px 16px;background:rgba(200,168,75,.06);border:1px solid var(--gold-border);border-radius:12px;font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:24px;">
-        <b style="color:var(--gold-dim);">For the demo:</b> Open <b>Profile → Admin Panel → Applications</b> to see this submission and approve or reject it.
+      <div style="width:100%;padding:13px 16px;background:rgba(30,122,72,.06);border:1px solid rgba(30,122,72,.2);border-radius:12px;font-size:12px;color:var(--body);line-height:1.6;margin-bottom:24px;">
+        <b style="color:var(--green);">What happens next:</b> Admin reviews your application within 1–2 days. You'll receive a WhatsApp message once a decision is made. Your data is kept private and secure.
       </div>
-      <button class="btn-gold" onclick="go('s-dash')" style="margin-bottom:8px;width:100%;">Preview the App →</button>
-      <button class="btn-outline" onclick="go('s-splash')" style="margin-bottom:30px;width:100%;padding:13px;border-radius:14px;border:1.5px solid var(--border);background:transparent;font-size:14px;color:var(--muted);cursor:pointer;">Back to Home</button>
+      <div style="width:100%;padding:13px 16px;background:rgba(200,168,75,.06);border:1px solid var(--gold-border);border-radius:12px;font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:24px;">
+        <b style="color:var(--gold-dim);">Demo tip:</b> Open <b>Profile → Admin Panel → Applications</b> to approve or reject this submission.
+      </div>
+      <button class="btn-outline" onclick="go('s-splash')" style="margin-bottom:30px;width:100%;padding:13px;border-radius:14px;border:1.5px solid var(--sand);background:transparent;font-size:14px;color:var(--muted);cursor:pointer;">Back to Home</button>
     </div>
   </div>
 </div>
@@ -2134,7 +2136,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div class="prof-av">LZ</div>
       <div class="prof-name">Lixia Zhu</div>
       <div class="prof-sub">76 Columbus · Single Family Office · G2</div>
-      <div class="prof-tier"><div class="pt-dot"></div><div id="prof-tier-text" class="pt-text">Member · Active</div></div>
+      <div class="prof-tier"><div class="pt-dot"></div><div id="prof-tier-text" class="pt-text">Observer · Active</div></div>
     </div>
     <!-- ── Member Progress & Token Reward System ── -->
     <div class="mp-card" id="mp-card">
@@ -2244,7 +2246,6 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       </div>
     </div>
     <div style="padding:16px 0 0;">
-      <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:0 16px 8px;">My Account</div>
       <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:8px 16px 8px;">Admin</div>
       <div class="admin-panel-btn" onclick="showInner('s-admin')">
         <div class="apb-left">
@@ -2424,7 +2425,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       </div>
       <div class="admin-section"><div class="admin-section-title">Awaiting Your Approval</div></div>
       <div class="admin-card" style="margin:0 16px 10px;">
-        <div class="admin-row">
+        <div class="admin-row" id="zw-row">
           <div class="ar-top">
             <div class="ar-info">
               <div class="ar-name">Zhang Wei</div>
@@ -2445,11 +2446,11 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
             <b>WhatsApp:</b> +86 138 0000 1234
           </div>
           <div class="ar-actions">
-            <button class="ar-approve" onclick="this.textContent='✓ Approved';this.style.background='#2E7D32';">Approve</button>
-            <button class="ar-reject" onclick="this.textContent='Rejected';this.style.opacity='.5';">Reject</button>
+            <button class="ar-approve" onclick="approveApplication('Zhang Wei','zw-row','+86 138 0000 1234',this)">Approve → Observer</button>
+            <button class="ar-reject" onclick="rejectApplication('Zhang Wei','zw-row',this)">Reject</button>
           </div>
         </div>
-        <div class="admin-row">
+        <div class="admin-row" id="km-row">
           <div class="ar-top">
             <div class="ar-info">
               <div class="ar-name">Khalid Al-Mansoori</div>
@@ -2470,16 +2471,22 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
             <b>WhatsApp:</b> +971 50 000 5678
           </div>
           <div class="ar-actions">
-            <button class="ar-approve" onclick="this.textContent='✓ Approved';this.style.background='#2E7D32';">Approve</button>
-            <button class="ar-reject" onclick="this.textContent='Rejected';this.style.opacity='.5';">Reject</button>
+            <button class="ar-approve" onclick="approveApplication('Khalid Al-Mansoori','km-row','+971 50 000 5678',this)">Approve → Observer</button>
+            <button class="ar-reject" onclick="rejectApplication('Khalid Al-Mansoori','km-row',this)">Reject</button>
           </div>
         </div>
       </div>
-      <div class="admin-section"><div class="admin-section-title">Active Members</div></div>
-      <div class="admin-card" style="margin:0 16px 16px;">
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Ricci Family</div><div class="ar-sub">SFO · Milan · PE, Hedge Funds</div></div><span class="ar-status pending">✓ Active</span></div></div>
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Lee Family Office</div><div class="ar-sub">MFO · Singapore · VC, Tech</div></div><span class="ar-status pending">✓ Active</span></div></div>
-        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Al-Farsi Family</div><div class="ar-sub">SFO · Abu Dhabi · PE, Real Estate</div></div><span class="ar-status pending">✓ Active</span></div></div>
+      <div class="admin-section"><div class="admin-section-title">Active Observers & Members</div></div>
+      <div id="admin-active-members" class="admin-card" style="margin:0 16px 10px;">
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Ricci Family</div><div class="ar-sub">SFO · Milan · PE, Hedge Funds · Observer</div></div><span class="ar-status pending">✓ Active</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Lee Family Office</div><div class="ar-sub">MFO · Singapore · VC, Tech · Observer</div></div><span class="ar-status pending">✓ Active</span></div></div>
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Al-Farsi Family</div><div class="ar-sub">SFO · Abu Dhabi · PE, Real Estate · Member</div></div><span class="ar-status pending">✓ Active</span></div></div>
+      </div>
+
+      <!-- Draft Applications (rejected — record kept but not active) -->
+      <div class="admin-section"><div class="admin-section-title">Draft / Not Active</div></div>
+      <div id="admin-draft-members" class="admin-card" style="margin:0 16px 16px;">
+        <div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">Park Joon-ho</div><div class="ar-sub">SFO · Seoul · Record saved · Not activated</div></div><span class="ar-status" style="background:#F5F5F5;color:#9E9E9E;border:1px solid #E0E0E0;">Draft</span></div><div class="ar-actions" style="margin-top:4px;"><button class="ar-approve" style="font-size:11px;" onclick="approveApplication('Park Joon-ho','park-row',null,this)">Re-activate</button></div></div>
       </div>
     </div>
 
@@ -2989,12 +2996,7 @@ function shareEvent(id){
   const e=EVENTS[_shareSheetEventId];
   const slug=_shareSheetEventId||'event';
   const fakeUrl='https://nafic.club/event/'+slug;
-  // Try native share first
-  if(navigator.share){
-    navigator.share({title:e?e.title:'NAFIC Event',url:fakeUrl}).catch(()=>{});
-    return;
-  }
-  // Fall back to copy sheet
+  // Always show custom sheet (with WhatsApp option)
   let sheet=document.getElementById('share-event-sheet');
   if(!sheet){
     sheet=document.createElement('div');
@@ -3008,19 +3010,23 @@ function shareEvent(id){
         <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Anyone with this link can view the event and request access.</div>
         <div class="share-sheet-url" id="share-sheet-url">${fakeUrl}</div>
 
-        <!-- Share channel buttons -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
-          <button onclick="shareViaWhatsApp()" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;border:none;border-radius:12px;padding:13px 10px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;font-family:'Inter',sans-serif;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <!-- iOS-style share list -->
+        <div style="background:#fff;border-radius:14px;overflow:hidden;margin-bottom:10px;border:1px solid rgba(0,0,0,.07);">
+          <button onclick="shareViaWhatsApp()" style="width:100%;display:flex;align-items:center;gap:12px;background:none;border:none;border-bottom:1px solid rgba(0,0,0,.06);padding:13px 16px;font-size:16px;color:#000;cursor:pointer;font-family:'Inter',sans-serif;text-align:left;">
+            <span style="width:30px;height:30px;border-radius:7px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
             WhatsApp
           </button>
-          <button onclick="copyShareLink()" style="display:flex;align-items:center;justify-content:center;gap:8px;background:var(--black);border:none;border-radius:12px;padding:13px 10px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;font-family:'Inter',sans-serif;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          <button onclick="copyShareLink()" style="width:100%;display:flex;align-items:center;gap:12px;background:none;border:none;padding:13px 16px;font-size:16px;color:#000;cursor:pointer;font-family:'Inter',sans-serif;text-align:left;">
+            <span style="width:30px;height:30px;border-radius:7px;background:#636366;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </span>
             Copy Link
           </button>
         </div>
 
-        <button onclick="closeShareSheet()" style="width:100%;background:transparent;border:1.5px solid var(--sand);border-radius:12px;padding:12px;font-size:13px;font-weight:500;color:var(--body);cursor:pointer;font-family:'Inter',sans-serif;">Cancel</button>
+        <button onclick="closeShareSheet()" style="width:100%;background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:14px;padding:14px;font-size:17px;font-weight:500;color:#000;cursor:pointer;font-family:'Inter',sans-serif;">Cancel</button>
       </div>`;
     document.body.appendChild(sheet);
   }
@@ -3305,6 +3311,116 @@ function viewInterests(dealName){
   document.getElementById('interests-overlay').classList.add('show');
 }
 
+// ── Application Approve / Reject ──
+function approveApplication(name, rowId, whatsapp, btn){
+  const row = document.getElementById(rowId);
+
+  // Update the row UI to approved state
+  if(row){
+    const actions = row.querySelector('.ar-actions');
+    if(actions) actions.innerHTML = '<span style="font-size:12px;font-weight:700;color:var(--green);">✓ Approved · Observer</span>';
+    const statusEl = row.querySelector('.ar-status');
+    if(statusEl){ statusEl.textContent='✓ Observer · Active'; statusEl.className='ar-status pending'; }
+  }
+
+  // Add to Active Members list
+  const activeList = document.getElementById('admin-active-members');
+  if(activeList){
+    const newRow = document.createElement('div');
+    newRow.className = 'admin-row';
+    newRow.style.cssText = 'background:rgba(30,122,72,.03);';
+    newRow.innerHTML = `<div class="ar-top"><div class="ar-info"><div class="ar-name">${name}</div><div class="ar-sub">Just approved · Observer access granted</div></div><span class="ar-status pending" style="background:rgba(30,122,72,.1);color:var(--green);border:1px solid rgba(30,122,72,.2);">✓ Observer · New</span></div>`;
+    activeList.insertBefore(newRow, activeList.firstChild);
+  }
+
+  // Update pending counter
+  updatePendingCount(-1);
+
+  // WhatsApp notification toast
+  const wa = whatsapp ? ' · WhatsApp sent to '+whatsapp : '';
+  showToast('✓ Approved — Observer access granted'+wa);
+
+  // Show WhatsApp send confirmation sheet
+  if(whatsapp){
+    const msg = encodeURIComponent('Hi '+name+', your NAFIC application has been approved. You now have Observer access to the platform. Welcome to the community. — Lixia');
+    setTimeout(()=>{
+      const confirm = document.createElement('div');
+      confirm.style.cssText = 'position:fixed;bottom:110px;left:50%;transform:translateX(-50%);background:#25D366;color:#fff;padding:10px 18px;border-radius:20px;font-size:12px;font-weight:600;z-index:9999;pointer-events:none;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.2);';
+      confirm.innerHTML = '📱 WhatsApp notification sent to '+name;
+      document.body.appendChild(confirm);
+      setTimeout(()=>confirm.remove(), 3200);
+    }, 800);
+  }
+}
+
+function rejectApplication(name, rowId, btn){
+  const row = document.getElementById(rowId);
+
+  // Show a brief confirmation before rejecting
+  if(!confirm('Reject '+name+'? Their record will be saved as Draft (not active in the club).')){return;}
+
+  // Update the row to draft state
+  if(row){
+    row.style.opacity = '0.55';
+    const actions = row.querySelector('.ar-actions');
+    if(actions) actions.innerHTML = '<span style="font-size:11px;font-weight:600;color:#9E9E9E;">Moved to Draft</span>';
+    const statusEl = row.querySelector('.ar-status');
+    if(statusEl){ statusEl.textContent='Draft'; statusEl.style.cssText='background:#F5F5F5;color:#9E9E9E;border:1px solid #E0E0E0;font-size:10px;padding:3px 8px;border-radius:20px;'; }
+    // Move to Draft section after short delay
+    setTimeout(()=>{
+      const draftList = document.getElementById('admin-draft-members');
+      if(draftList && row.parentNode){
+        const clone = row.cloneNode(true);
+        clone.style.opacity = '1';
+        draftList.appendChild(clone);
+        row.remove();
+      }
+    }, 800);
+  }
+
+  // Update pending counter
+  updatePendingCount(-1);
+  showToast(name+' moved to Draft — record kept, not activated');
+}
+
+function updatePendingCount(delta){
+  const tab = document.getElementById('admint-applications');
+  if(!tab) return;
+  const span = tab.querySelector('span');
+  if(!span) return;
+  const cur = parseInt(span.textContent) || 0;
+  const next = Math.max(0, cur + delta);
+  span.textContent = next > 0 ? next+' pending' : 'reviewed';
+  span.style.color = next > 0 ? '#E65100' : 'var(--green)';
+  // Update stat
+  const statEl = document.querySelector('#admin-applications-content .admin-stat-n[style*="E65100"]');
+  if(statEl) statEl.textContent = Math.max(0, (parseInt(statEl.textContent)||0)+delta);
+}
+
+// Wire onboarding completion → creates a pending card in admin
+function addPendingApplication(data){
+  const appsCard = document.querySelector('#admin-applications-content .admin-card');
+  if(!appsCard) return;
+  const id = 'new-app-'+Date.now();
+  const newRow = document.createElement('div');
+  newRow.className = 'admin-row';
+  newRow.id = id;
+  newRow.innerHTML = `
+    <div class="ar-top">
+      <div class="ar-info">
+        <div class="ar-name">${data.name||'New Applicant'}</div>
+        <div class="ar-sub">${data.org||'Family Office'} · ${data.phone||''}<br>${data.focus||''}</div>
+        <span class="ar-status new">Just submitted · Now</span>
+      </div>
+    </div>
+    <div class="ar-actions" style="margin-top:8px;">
+      <button class="ar-approve" onclick="approveApplication('${data.name}','${id}','${data.phone||''}',this)">Approve → Observer</button>
+      <button class="ar-reject" onclick="rejectApplication('${data.name}','${id}',this)">Reject</button>
+    </div>`;
+  appsCard.insertBefore(newRow, appsCard.firstChild);
+  updatePendingCount(1);
+}
+
 function adminTab(t){
   ['applications','invites','events','deals'].forEach(k=>{
     document.getElementById('admint-'+k).classList.toggle('active',k===t);
@@ -3539,7 +3655,20 @@ function applyNext(){
     if(sel&&GP_ORG_TYPES.includes(sel.value)){go('s-gp-apply');return;}
   }
   const T=totalSteps();
-  if(applyStep<T){applyStep++;renderStep();}else{go('s-pending');}
+  if(applyStep<T){applyStep++;renderStep();}else{
+    // Collect basic info for admin card
+    const nameEl=document.getElementById('fi-name');
+    const phoneEl=document.getElementById('fi-phone');
+    const orgEl=document.getElementById('fi-org');
+    const orgtypeEl=document.getElementById('fi-orgtype');
+    addPendingApplication({
+      name:(nameEl&&nameEl.value)||'New Applicant',
+      phone:(phoneEl&&phoneEl.value)||'',
+      org:(orgtypeEl&&orgtypeEl.value)||'Family Office',
+      focus:(orgEl&&orgEl.value)||''
+    });
+    go('s-pending');
+  }
 }
 function applyBack(){if(applyStep>1){applyStep--;renderStep();}else{go('s-principles');}}
 const CK_LABELS=['$25K','$100K','$250K','$500K','$1M','$5M','$10M','$25M','$50M','$100M','$1B+'];
