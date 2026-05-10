@@ -412,7 +412,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .ra-input{flex:1;background:#fff;border:1px solid var(--sand);border-radius:10px;padding:10px 12px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);outline:none;}
 .ra-btn{background:var(--gold);border:none;border-radius:10px;padding:10px 16px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--black);cursor:pointer;}
 
-/* Members Directory */
+/* Members Directory — Family Connect */
 #s-members{background:var(--paper);}
 .mem-search-wrap{padding:12px 16px 4px;}
 .mem-search{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:10px 14px;color:#fff;font-size:14px;width:100%;box-sizing:border-box;outline:none;}
@@ -420,15 +420,59 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .mem-filters{display:flex;gap:8px;padding:10px 16px 14px;flex-shrink:0;}
 .dir-filter-select{flex:1;min-width:0;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:10px;padding:8px 10px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;appearance:none;-webkit-appearance:none;cursor:pointer;outline:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;padding-right:22px;}
 .dir-filter-select option{background:#1A1812;color:#fff;}
-.mem-card{background:#fff;border-radius:14px;padding:14px 16px;margin:0 16px 10px;display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
-.mem-av{width:46px;height:46px;border-radius:50%;background:var(--black);color:var(--gold-dim);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.mem-info{flex:1;min-width:0;}
-.mem-name{font-weight:700;font-size:15px;color:var(--text);}
-.mem-office{font-size:12px;color:var(--muted);margin-top:1px;}
-.mem-region{font-size:11px;color:var(--gold-dim);font-weight:600;margin-top:4px;}
-.mem-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px;}
-.mem-tag{background:var(--paper);border:1px solid var(--sand);border-radius:7px;padding:3px 8px;font-size:11px;color:var(--text);}
-.mem-connect{background:var(--black);color:var(--gold-dim);border:none;border-radius:9px;padding:7px 13px;font-size:12px;font-weight:600;cursor:pointer;flex-shrink:0;align-self:center;}
+/* Privacy banner */
+.dir-privacy-banner{margin:12px 16px 0;padding:11px 13px;background:linear-gradient(135deg,rgba(200,168,75,.07),rgba(200,168,75,.03));border:1px solid var(--gold-border);border-radius:12px;display:flex;align-items:flex-start;gap:10px;}
+.dir-priv-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+.dir-priv-text{font-size:11px;color:var(--body);line-height:1.55;}
+.dir-priv-text b{color:var(--text);}
+/* Directory inner tabs */
+.dir-tabs{display:flex;border-bottom:1px solid var(--sand);margin:14px 16px 0;gap:0;}
+.dir-tab{flex:1;text-align:center;padding:8px 4px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .18s;}
+.dir-tab.active{color:var(--text);border-bottom-color:var(--gold);}
+/* Anonymous family card */
+.fam-card{background:#fff;border-radius:16px;padding:15px 15px 13px;margin:0 16px 10px;border:1px solid var(--sand);cursor:pointer;transition:box-shadow .18s;}
+.fam-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.06);}
+.fam-card-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
+.fam-shield{width:46px;height:46px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;position:relative;}
+.fam-shield-code{font-size:11px;font-weight:700;color:#fff;letter-spacing:.5px;}
+.fam-shield-icon{font-size:8px;color:rgba(255,255,255,.65);margin-top:1px;letter-spacing:.3px;}
+.fam-meta{flex:1;min-width:0;}
+.fam-type{font-size:12px;font-weight:600;color:var(--text);margin-bottom:2px;}
+.fam-desc{font-size:11px;color:var(--muted);}
+.fam-match-score{text-align:right;flex-shrink:0;}
+.fam-pct{font-size:17px;font-weight:700;color:var(--gold-dim);}
+.fam-pct-lbl{font-size:9px;color:var(--muted);margin-top:1px;}
+.fam-mandate{background:var(--paper);border-radius:10px;padding:9px 11px;margin-bottom:10px;}
+.fam-mandate-row{display:flex;gap:6px;flex-wrap:wrap;}
+.fam-mandate-pill{background:#fff;border:1px solid var(--sand);border-radius:20px;padding:3px 9px;font-size:10px;font-weight:500;color:var(--body);}
+.fam-mandate-pill.geo{background:rgba(42,104,168,.06);border-color:rgba(42,104,168,.2);color:#2A68A8;}
+.fam-mandate-pill.asset{background:rgba(200,168,75,.07);border-color:var(--gold-border);color:var(--gold-dim);}
+.fam-mandate-pill.size{background:rgba(30,122,72,.06);border-color:rgba(30,122,72,.2);color:var(--green);}
+.fam-card-foot{display:flex;align-items:center;justify-content:space-between;}
+.fam-privacy-note{font-size:10px;color:var(--ghost);}
+.signal-btn{background:var(--black);color:var(--gold-dim);border:none;border-radius:9px;padding:8px 14px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;}
+.signal-btn.signalled{background:var(--green-bg);border:1px solid var(--green-border);color:var(--green);}
+/* Signals tab */
+.signal-card{background:#fff;border-radius:14px;padding:14px 15px;margin:0 16px 10px;border:1px solid var(--sand);}
+.signal-card-top{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.signal-anon-av{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;}
+.signal-body{font-size:12px;color:var(--text);font-weight:600;margin-bottom:2px;}
+.signal-sub{font-size:11px;color:var(--muted);}
+.signal-mandate-hint{font-size:11px;color:var(--body);background:var(--paper);border-radius:8px;padding:7px 9px;margin-bottom:10px;line-height:1.5;}
+.signal-actions{display:flex;gap:8px;}
+.signal-accept{flex:1;background:var(--black);color:#fff;border:none;border-radius:9px;padding:9px;font-size:12px;font-weight:600;cursor:pointer;}
+.signal-pass{flex:1;background:transparent;color:var(--muted);border:1.5px solid var(--sand);border-radius:9px;padding:9px;font-size:12px;font-weight:500;cursor:pointer;}
+/* Event-unlock card */
+.event-unlock-card{background:linear-gradient(135deg,#1A1610,#211C0F);border-radius:16px;padding:16px;margin:0 16px 10px;border:1px solid var(--gold-border);}
+.eu-title{font-size:13px;font-weight:700;color:var(--gold);margin-bottom:4px;}
+.eu-sub{font-size:11px;color:rgba(255,255,255,.5);line-height:1.55;margin-bottom:12px;}
+.eu-input{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 12px;color:#fff;font-size:13px;width:100%;font-family:'Inter',sans-serif;outline:none;margin-bottom:8px;}
+.eu-btn{width:100%;background:var(--gold);color:var(--black);border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:700;cursor:pointer;}
+/* Connections tab */
+.conn-empty{text-align:center;padding:40px 24px;}
+.conn-empty-icon{font-size:36px;margin-bottom:12px;}
+.conn-empty-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px;}
+.conn-empty-sub{font-size:12px;color:var(--muted);line-height:1.55;}
 .mem-count{font-size:12px;color:var(--muted);padding:8px 16px 4px;}
 
 /* Profile */
@@ -1562,159 +1606,337 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 <div id="s-members" class="screen">
   <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
   <div class="ev-head" style="padding-bottom:0;">
-    <div class="ev-head-title">Directory</div>
-    <div class="ev-head-sub">Approved families · AI-matched · LP-initiated only</div>
-    <div class="mem-search-wrap" style="padding:12px 0 0;">
-      <input class="mem-search" type="text" placeholder="🔍  Search by name, region, or asset class…"/>
-    </div>
-    <div class="mem-filters">
+    <div class="ev-head-title">Family Connect</div>
+    <div class="ev-head-sub">Mandate-matched · Identity protected · Admin-facilitated</div>
+    <div class="mem-filters" style="padding-top:10px;">
       <select class="dir-filter-select" id="dir-f-region" onchange="filterDirectory()">
         <option value="">🌍 Region</option>
-        <option>GCC / MENA</option>
-        <option>Greater China</option>
-        <option>Southeast Asia</option>
-        <option>South Asia</option>
-        <option>Japan / Korea</option>
+        <option>MENA</option>
+        <option>Asia</option>
         <option>Europe</option>
-        <option>North America</option>
-        <option>South America</option>
-        <option>Africa</option>
-        <option>Global</option>
+        <option>Americas</option>
       </select>
       <select class="dir-filter-select" id="dir-f-asset" onchange="filterDirectory()">
         <option value="">💼 Asset Class</option>
         <option>Private Equity</option>
         <option>Venture Capital</option>
-        <option>Hedge Funds</option>
-        <option>Private Credit</option>
         <option>Real Estate</option>
-        <option>Fund of Funds</option>
-        <option>Co-Investments</option>
-        <option>Direct Investments</option>
+        <option>Private Credit</option>
         <option>Digital Assets</option>
         <option>Infrastructure</option>
-        <option>Impact / ESG</option>
       </select>
       <select class="dir-filter-select" id="dir-f-orgtype" onchange="filterDirectory()">
         <option value="">🏢 Type</option>
-        <option>Single Family Office</option>
-        <option>Multi-Family Office</option>
+        <option>SFO</option>
+        <option>MFO</option>
         <option>Family Business</option>
-        <option>LP Advisor</option>
-        <option>Asset Manager</option>
       </select>
     </div>
   </div>
+
+  <!-- Privacy banner -->
+  <div class="dir-privacy-banner">
+    <div class="dir-priv-icon">🛡</div>
+    <div class="dir-priv-text"><b>Identity-protected profiles.</b> You see investment mandates and appetite — not names or identities. Only admin facilitates introductions after mutual interest is confirmed on both sides.</div>
+  </div>
+
+  <!-- Inner tabs -->
+  <div class="dir-tabs">
+    <div class="dir-tab active" id="dt-discover" onclick="dirTab('discover')">Discover</div>
+    <div class="dir-tab" id="dt-signals" onclick="dirTab('signals')">Signals <span style="background:var(--gold);color:var(--black);border-radius:20px;padding:1px 6px;font-size:9px;font-weight:700;margin-left:3px;">2</span></div>
+    <div class="dir-tab" id="dt-connections" onclick="dirTab('connections')">Connections</div>
+  </div>
+
   <div class="scroll-body">
 
-    <!-- AI MATCH BANNER -->
-    <div id="dir-ai-match" style="margin:12px 16px 8px;padding:14px 15px;background:linear-gradient(135deg,rgba(200,168,75,.1),rgba(200,168,75,.04));border:1px solid var(--gold-border);border-radius:14px;">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-        <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;">🤖 AI Match — Your Top Matches</div>
-        <span style="font-size:10px;color:var(--muted);">Member Access</span>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#fff;border-radius:10px;border:1px solid var(--sand);">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:30px;height:30px;border-radius:8px;background:#C4A050;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">AF</div>
-            <div><div style="font-size:12px;font-weight:600;color:var(--text);">Al-Farsi Family</div><div style="font-size:10px;color:var(--muted);">PE · Real Estate · GCC</div></div>
+    <!-- ── DISCOVER TAB ── -->
+    <div id="dir-discover-content">
+
+      <!-- AI match top picks -->
+      <div id="dir-ai-match" style="margin:14px 16px 4px;padding:13px 14px;background:linear-gradient(135deg,rgba(200,168,75,.09),rgba(200,168,75,.03));border:1px solid var(--gold-border);border-radius:14px;">
+        <div style="font-size:10px;font-weight:700;color:var(--gold-dim);letter-spacing:.9px;text-transform:uppercase;margin-bottom:9px;">🤖 Mandate Match — Your Top Picks</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#fff;border-radius:10px;border:1px solid var(--sand);">
+            <div style="display:flex;align-items:center;gap:9px;">
+              <div class="fam-shield" style="background:#7A5C1E;width:34px;height:34px;border-radius:10px;"><div class="fam-shield-code" style="font-size:10px;">GCC</div><div class="fam-shield-icon">SFO</div></div>
+              <div><div style="font-size:12px;font-weight:600;color:var(--text);">MENA Family · G2 · SFO</div><div style="font-size:10px;color:var(--muted);">PE · Real Estate · $5M–$50M</div></div>
+            </div>
+            <div style="text-align:right;"><div style="font-size:15px;font-weight:700;color:var(--gold-dim);">94%</div><div style="font-size:9px;color:var(--muted);">match</div></div>
           </div>
-          <div style="text-align:right;"><div style="font-size:14px;font-weight:700;color:var(--gold-dim);">92%</div><div style="font-size:9px;color:var(--muted);">mandate match</div></div>
-        </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#fff;border-radius:10px;border:1px solid var(--sand);">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:30px;height:30px;border-radius:8px;background:#2A68A8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">LF</div>
-            <div><div style="font-size:12px;font-weight:600;color:var(--text);">Lee Family Office</div><div style="font-size:10px;color:var(--muted);">VC · Tech · Asia-Pacific</div></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#fff;border-radius:10px;border:1px solid var(--sand);">
+            <div style="display:flex;align-items:center;gap:9px;">
+              <div class="fam-shield" style="background:#1A4A7A;width:34px;height:34px;border-radius:10px;"><div class="fam-shield-code" style="font-size:10px;">ASIA</div><div class="fam-shield-icon">SFO</div></div>
+              <div><div style="font-size:12px;font-weight:600;color:var(--text);">Asia Family · G1 · SFO</div><div style="font-size:10px;color:var(--muted);">VC · Tech · $1M–$10M</div></div>
+            </div>
+            <div style="text-align:right;"><div style="font-size:15px;font-weight:700;color:var(--gold-dim);">87%</div><div style="font-size:9px;color:var(--muted);">match</div></div>
           </div>
-          <div style="text-align:right;"><div style="font-size:14px;font-weight:700;color:var(--gold-dim);">85%</div><div style="font-size:9px;color:var(--muted);">mandate match</div></div>
         </div>
       </div>
-      <button style="margin-top:10px;width:100%;background:none;border:1.5px solid var(--gold-border);border-radius:10px;padding:9px;font-size:12px;font-weight:600;color:var(--gold-dim);cursor:pointer;" onclick="showInner('s-dash')">View All AI Matches →</button>
-    </div>
 
-    <!-- MEMBER COUNT -->
-    <div id="dir-mem-count" class="mem-count">23 members · LP-initiated connections only</div>
+      <div id="dir-mem-count" class="mem-count" style="margin-top:6px;">23 anonymous mandate profiles · Signal interest to connect</div>
 
-    <div class="mem-card">
-      <div class="mem-av" style="background:#1C2E1A;">AF</div>
-      <div class="mem-info">
-        <div class="mem-name">Al-Farsi Family</div>
-        <div class="mem-office">Single Family Office · Abu Dhabi</div>
-        <div class="mem-region">Middle East</div>
-        <div class="mem-tags"><span class="mem-tag">Private Equity</span><span class="mem-tag">Real Estate</span><span class="mem-tag">$5M–$50M</span></div>
+      <!-- Anonymous family cards -->
+      <div class="fam-card" data-region="MENA" data-asset="Private Equity Real Estate" data-type="SFO">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#7A5C1E;"><div class="fam-shield-code">GCC</div><div class="fam-shield-icon">SFO · G2</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">MENA Family · Single Family Office</div>
+            <div class="fam-desc">2nd generation · Active since 2024</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">94%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 GCC / MENA</span>
+            <span class="fam-mandate-pill asset">Private Equity</span>
+            <span class="fam-mandate-pill asset">Real Estate</span>
+            <span class="fam-mandate-pill size">$5M – $50M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected</div>
+          <button class="signal-btn" onclick="signalInterest(this,'GCC-SFO-G2')">Signal Interest →</button>
+        </div>
       </div>
-      <button class="mem-connect">Connect</button>
-    </div>
 
-    <div class="mem-card">
-      <div class="mem-av" style="background:#0D1F35;">LF</div>
-      <div class="mem-info">
-        <div class="mem-name">Lee Family Office</div>
-        <div class="mem-office">Multi-Family Office · Singapore</div>
-        <div class="mem-region">Asia Pacific</div>
-        <div class="mem-tags"><span class="mem-tag">Venture Capital</span><span class="mem-tag">Technology</span><span class="mem-tag">$1M–$10M</span></div>
+      <div class="fam-card" data-region="Asia" data-asset="Venture Capital Digital Assets" data-type="SFO">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#1A4A7A;"><div class="fam-shield-code">ASIA</div><div class="fam-shield-icon">SFO · G1</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">Asia Family · Single Family Office</div>
+            <div class="fam-desc">1st generation · Active since 2023</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">87%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 Southeast Asia</span>
+            <span class="fam-mandate-pill asset">Venture Capital</span>
+            <span class="fam-mandate-pill asset">Digital Assets</span>
+            <span class="fam-mandate-pill size">$1M – $10M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected</div>
+          <button class="signal-btn" onclick="signalInterest(this,'ASIA-SFO-G1')">Signal Interest →</button>
+        </div>
       </div>
-      <button class="mem-connect">Connect</button>
-    </div>
 
-    <div class="mem-card">
-      <div class="mem-av" style="background:#2A1A0D;">RF</div>
-      <div class="mem-info">
-        <div class="mem-name">Ricci Family</div>
-        <div class="mem-office">Single Family Office · Milan</div>
-        <div class="mem-region">Europe</div>
-        <div class="mem-tags"><span class="mem-tag">Private Equity</span><span class="mem-tag">Hedge Funds</span><span class="mem-tag">$10M–$100M</span></div>
+      <div class="fam-card" data-region="Europe" data-asset="Private Equity Hedge Funds" data-type="SFO">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#2A3A1E;"><div class="fam-shield-code">EU</div><div class="fam-shield-icon">SFO · G3</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">European Family · Single Family Office</div>
+            <div class="fam-desc">3rd generation · Active since 2025</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">81%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 Europe</span>
+            <span class="fam-mandate-pill asset">Private Equity</span>
+            <span class="fam-mandate-pill asset">Hedge Funds</span>
+            <span class="fam-mandate-pill size">$10M – $100M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected</div>
+          <button class="signal-btn" onclick="signalInterest(this,'EU-SFO-G3')">Signal Interest →</button>
+        </div>
       </div>
-      <button class="mem-connect">Connect</button>
-    </div>
 
-    <div class="mem-card">
-      <div class="mem-av" style="background:#1A1A2E;">CH</div>
-      <div class="mem-info">
-        <div class="mem-name">Chen Holdings</div>
-        <div class="mem-office">Single Family Office · Hong Kong</div>
-        <div class="mem-region">Asia Pacific</div>
-        <div class="mem-tags"><span class="mem-tag">Digital Assets</span><span class="mem-tag">Venture Capital</span><span class="mem-tag">$500K–$5M</span></div>
+      <div class="fam-card" data-region="Asia" data-asset="Digital Assets Venture Capital" data-type="SFO">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#1A1A3E;"><div class="fam-shield-code">HK</div><div class="fam-shield-icon">SFO · G2</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">Greater China Family · Single Family Office</div>
+            <div class="fam-desc">2nd generation · Active since 2024</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">79%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 Greater China</span>
+            <span class="fam-mandate-pill asset">Digital Assets</span>
+            <span class="fam-mandate-pill asset">Venture Capital</span>
+            <span class="fam-mandate-pill size">$500K – $5M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected</div>
+          <button class="signal-btn" onclick="signalInterest(this,'HK-SFO-G2')">Signal Interest →</button>
+        </div>
       </div>
-      <button class="mem-connect">Connect</button>
-    </div>
 
-    <div class="mem-card">
-      <div class="mem-av" style="background:#1E1A2E;">AR</div>
-      <div class="mem-info">
-        <div class="mem-name">Al-Rashid Capital</div>
-        <div class="mem-office">Single Family Office · Dubai</div>
-        <div class="mem-region">Middle East</div>
-        <div class="mem-tags"><span class="mem-tag">Real Estate</span><span class="mem-tag">Private Credit</span><span class="mem-tag">$25M–$100M</span></div>
+      <div class="fam-card" data-region="MENA" data-asset="Real Estate Private Credit" data-type="SFO">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#2A1E3E;"><div class="fam-shield-code">UAE</div><div class="fam-shield-icon">SFO · G2</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">Gulf Family · Single Family Office</div>
+            <div class="fam-desc">2nd generation · Active since 2025</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">76%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 GCC / MENA</span>
+            <span class="fam-mandate-pill asset">Real Estate</span>
+            <span class="fam-mandate-pill asset">Private Credit</span>
+            <span class="fam-mandate-pill size">$25M – $100M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected</div>
+          <button class="signal-btn" onclick="signalInterest(this,'UAE-SFO-G2')">Signal Interest →</button>
+        </div>
       </div>
-      <button class="mem-connect">Connect</button>
-    </div>
 
-    <div class="mem-card">
-      <div class="mem-av" style="background:#1A2A1A;">TF</div>
-      <div class="mem-info">
-        <div class="mem-name">Tanaka Family</div>
-        <div class="mem-office">Single Family Office · Tokyo</div>
-        <div class="mem-region">Asia Pacific</div>
-        <div class="mem-tags"><span class="mem-tag">Private Equity</span><span class="mem-tag">Infrastructure</span><span class="mem-tag">$10M–$50M</span></div>
+      <div class="fam-card" data-region="Asia" data-asset="Private Equity Infrastructure" data-type="SFO">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#1A3A1A;"><div class="fam-shield-code">JPN</div><div class="fam-shield-icon">SFO · G1</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">Japan Family · Single Family Office</div>
+            <div class="fam-desc">1st generation · Active since 2025</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">73%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 Japan / Korea</span>
+            <span class="fam-mandate-pill asset">Private Equity</span>
+            <span class="fam-mandate-pill asset">Infrastructure</span>
+            <span class="fam-mandate-pill size">$10M – $50M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected</div>
+          <button class="signal-btn" onclick="signalInterest(this,'JPN-SFO-G1')">Signal Interest →</button>
+        </div>
       </div>
-      <button class="mem-connect">Connect</button>
-    </div>
 
-    <!-- BUMBLE CONNECT SECTION -->
-    <div id="dir-bumble" style="margin:6px 16px 8px;padding:14px 15px;background:#fff;border:1px solid var(--sand);border-radius:14px;position:relative;overflow:hidden;">
-      <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px;">Bumble Connect</div>
-      <div style="font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:10px;">LPs initiate first. GPs may never cold-reach a member. Admin facilitates all introductions after mutual interest is confirmed.</div>
-      <div style="display:flex;align-items:center;gap:8px;padding:10px 12px;background:var(--paper);border-radius:10px;border:1px solid var(--sand);">
-        <div style="font-size:20px;">🔔</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.45;"><b style="color:var(--text);">2 families have signalled interest</b> in connecting with you based on mandate match. Review and initiate if you choose.</div>
+      <div class="fam-card" data-region="Americas" data-asset="Venture Capital Private Equity" data-type="MFO">
+        <div class="fam-card-top">
+          <div class="fam-shield" style="background:#3A1A0D;"><div class="fam-shield-code">AM</div><div class="fam-shield-icon">MFO · G2</div></div>
+          <div class="fam-meta">
+            <div class="fam-type">Americas Family · Multi-Family Office</div>
+            <div class="fam-desc">2nd generation · Active since 2026</div>
+          </div>
+          <div class="fam-match-score"><div class="fam-pct">68%</div><div class="fam-pct-lbl">mandate</div></div>
+        </div>
+        <div class="fam-mandate">
+          <div class="fam-mandate-row">
+            <span class="fam-mandate-pill geo">📍 North America</span>
+            <span class="fam-mandate-pill asset">Venture Capital</span>
+            <span class="fam-mandate-pill asset">Private Equity</span>
+            <span class="fam-mandate-pill size">$2M – $20M</span>
+          </div>
+        </div>
+        <div class="fam-card-foot">
+          <div class="fam-privacy-note">🛡 Identity protected</div>
+          <button class="signal-btn" onclick="signalInterest(this,'AM-MFO-G2')">Signal Interest →</button>
+        </div>
       </div>
-      <button style="margin-top:10px;width:100%;background:var(--black);border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;">Review Inbound Interest →</button>
-    </div>
 
-    <div style="height:16px;"></div>
-  </div>
-<div class="tab-bar">
+      <!-- Met at event unlock -->
+      <div class="event-unlock-card">
+        <div class="eu-title">🤝 Met at a NAFIC Event?</div>
+        <div class="eu-sub">If you were introduced to a member in person at one of our events, you can request a direct connection. Admin will verify and unlock within 24 hours.</div>
+        <input class="eu-input" type="text" placeholder="Name or event you met them at…"/>
+        <button class="eu-btn" onclick="this.textContent='Request sent ✓';this.style.background='#1E7A48';this.style.color='#fff';">Request Direct Connection</button>
+      </div>
+
+      <div style="height:16px;"></div>
+    </div><!-- /dir-discover-content -->
+
+    <!-- ── SIGNALS TAB ── -->
+    <div id="dir-signals-content" style="display:none;padding-top:14px;">
+
+      <div style="margin:0 16px 12px;padding:11px 13px;background:#fff;border:1px solid var(--sand);border-radius:12px;">
+        <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:3px;">How Signals Work</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.55;">When you and another family both signal interest, admin reviews and facilitates an introduction — only if both parties consent. No family can cold-reach you directly.</div>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;padding:0 16px 8px;">Inbound — 2 families interested in you</div>
+
+      <div class="signal-card">
+        <div class="signal-card-top">
+          <div class="signal-anon-av" style="background:#7A5C1E;"><span style="font-size:11px;font-weight:700;color:#fff;">GCC</span></div>
+          <div>
+            <div class="signal-body">MENA Family · SFO · G2</div>
+            <div class="signal-sub">Signalled 2 days ago · Mandate overlap: 94%</div>
+          </div>
+        </div>
+        <div class="signal-mandate-hint">Their focus: <b>GCC / MENA</b> · Private Equity, Real Estate · <b>$5M–$50M tickets</b></div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-style:italic;">If you signal back, admin will facilitate an introduction — you control timing.</div>
+        <div class="signal-actions">
+          <button class="signal-accept" onclick="this.textContent='✓ Signalled back';this.style.background='#1E7A48';this.disabled=true;">Signal Back →</button>
+          <button class="signal-pass" onclick="this.closest('.signal-card').style.opacity='.4';this.disabled=true;">Pass</button>
+        </div>
+      </div>
+
+      <div class="signal-card">
+        <div class="signal-card-top">
+          <div class="signal-anon-av" style="background:#1A3A1A;"><span style="font-size:11px;font-weight:700;color:#fff;">JPN</span></div>
+          <div>
+            <div class="signal-body">Japan Family · SFO · G1</div>
+            <div class="signal-sub">Signalled 5 days ago · Mandate overlap: 73%</div>
+          </div>
+        </div>
+        <div class="signal-mandate-hint">Their focus: <b>Japan / Korea</b> · Private Equity, Infrastructure · <b>$10M–$50M tickets</b></div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-style:italic;">If you signal back, admin will facilitate an introduction — you control timing.</div>
+        <div class="signal-actions">
+          <button class="signal-accept" onclick="this.textContent='✓ Signalled back';this.style.background='#1E7A48';this.disabled=true;">Signal Back →</button>
+          <button class="signal-pass" onclick="this.closest('.signal-card').style.opacity='.4';this.disabled=true;">Pass</button>
+        </div>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;padding:8px 16px 8px;">Your Signals — Awaiting match</div>
+
+      <div class="signal-card" style="opacity:.65;">
+        <div class="signal-card-top">
+          <div class="signal-anon-av" style="background:#1A4A7A;"><span style="font-size:11px;font-weight:700;color:#fff;">ASIA</span></div>
+          <div>
+            <div class="signal-body">Asia Family · SFO · G1</div>
+            <div class="signal-sub">You signalled 3 days ago · Awaiting their response</div>
+          </div>
+        </div>
+        <div class="signal-mandate-hint">Their focus: <b>Southeast Asia</b> · Venture Capital, Digital Assets · <b>$1M–$10M</b></div>
+        <div style="font-size:11px;color:var(--muted);font-style:italic;">Waiting for mutual signal before admin facilitates introduction.</div>
+      </div>
+
+      <div style="height:16px;"></div>
+    </div><!-- /dir-signals-content -->
+
+    <!-- ── CONNECTIONS TAB ── -->
+    <div id="dir-connections-content" style="display:none;padding-top:20px;">
+      <div class="conn-empty">
+        <div class="conn-empty-icon">🔐</div>
+        <div class="conn-empty-title">No active connections yet</div>
+        <div class="conn-empty-sub">When admin facilitates a mutual introduction, your connections appear here — with the family's identity revealed and a private message channel opened.</div>
+      </div>
+      <div style="margin:0 16px;padding:14px;background:linear-gradient(135deg,rgba(200,168,75,.07),rgba(200,168,75,.03));border:1px solid var(--gold-border);border-radius:14px;">
+        <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px;">How connections are made</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+          <div style="display:flex;gap:9px;align-items:flex-start;">
+            <div style="width:20px;height:20px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--black);flex-shrink:0;">1</div>
+            <div style="font-size:11px;color:var(--body);line-height:1.5;">Both families signal interest based on mandate profiles</div>
+          </div>
+          <div style="display:flex;gap:9px;align-items:flex-start;">
+            <div style="width:20px;height:20px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--black);flex-shrink:0;">2</div>
+            <div style="font-size:11px;color:var(--body);line-height:1.5;">Admin reviews alignment and approves introduction</div>
+          </div>
+          <div style="display:flex;gap:9px;align-items:flex-start;">
+            <div style="width:20px;height:20px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--black);flex-shrink:0;">3</div>
+            <div style="font-size:11px;color:var(--body);line-height:1.5;">Identities are revealed and a private channel is opened</div>
+          </div>
+        </div>
+      </div>
+      <div style="height:16px;"></div>
+    </div><!-- /dir-connections-content -->
+
+  </div><!-- /scroll-body -->
+
+  <div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
     <button class="tab-btn active" data-tab="directory"><div class="tab-icon">👥</div><div class="tab-lbl">Directory</div></button>
@@ -2397,17 +2619,35 @@ function filterDirectory(){
   const region=(document.getElementById('dir-f-region')||{}).value||'';
   const asset=(document.getElementById('dir-f-asset')||{}).value||'';
   const orgtype=(document.getElementById('dir-f-orgtype')||{}).value||'';
-  document.querySelectorAll('.mem-card').forEach(card=>{
-    const office=(card.querySelector('.mem-office')||{}).textContent||'';
-    const reg=(card.querySelector('.mem-region')||{}).textContent||'';
-    const tagsEl=card.querySelector('.mem-tags');
-    const tags=tagsEl?tagsEl.textContent:'';
+  document.querySelectorAll('.fam-card').forEach(card=>{
+    const cardRegion=card.dataset.region||'';
+    const cardAsset=card.dataset.asset||'';
+    const cardType=card.dataset.type||'';
     let show=true;
-    if(region&&!reg.toLowerCase().includes(region.toLowerCase())&&!office.toLowerCase().includes(region.toLowerCase()))show=false;
-    if(asset&&!tags.toLowerCase().includes(asset.toLowerCase()))show=false;
-    if(orgtype&&!office.toLowerCase().includes(orgtype.toLowerCase()))show=false;
+    if(region&&!cardRegion.toLowerCase().includes(region.toLowerCase()))show=false;
+    if(asset&&!cardAsset.toLowerCase().includes(asset.toLowerCase()))show=false;
+    if(orgtype&&!cardType.toLowerCase().includes(orgtype.toLowerCase()))show=false;
     card.style.display=show?'':'none';
   });
+}
+function dirTab(tab){
+  ['discover','signals','connections'].forEach(t=>{
+    const btn=document.getElementById('dt-'+t);
+    if(btn)btn.classList.toggle('active',t===tab);
+    const cont=document.getElementById('dir-'+t+'-content');
+    if(cont)cont.style.display=t===tab?'block':'none';
+  });
+}
+function signalInterest(btn,id){
+  btn.textContent='✓ Interest Sent';
+  btn.classList.add('signalled');
+  btn.disabled=true;
+  // Show a subtle toast
+  const toast=document.createElement('div');
+  toast.style.cssText='position:fixed;bottom:110px;left:50%;transform:translateX(-50%);background:#1E7A48;color:#fff;padding:10px 20px;border-radius:20px;font-size:13px;font-weight:600;z-index:9999;pointer-events:none;';
+  toast.textContent='🛡 Signal sent — admin will review';
+  document.body.appendChild(toast);
+  setTimeout(()=>toast.remove(),2800);
 }
 
 function setTab(el){
@@ -2903,15 +3143,16 @@ function selectTier(tier){
   const ai=document.getElementById('dir-ai-match');
   if(ai)ai.style.display=isMem?'block':'none';
   const mc=document.getElementById('dir-mem-count');
-  if(mc)mc.textContent=isMem?'23 members · LP-initiated connections only':'5 members visible · Full directory for Members only';
-  const bumble=document.getElementById('dir-bumble');
-  if(bumble){
-    let lock=bumble.querySelector('.obs-lock-overlay');
-    if(!isMem){
-      if(!lock){lock=document.createElement('div');lock.className='obs-lock-overlay';lock.innerHTML='<div style="font-size:28px;">🔒</div><div style="font-size:13px;font-weight:700;color:var(--gold);">Member Only</div><div style="font-size:11px;color:rgba(255,255,255,.55);margin-top:2px;">Bumble Connect</div>';bumble.appendChild(lock);}
-      lock.style.display='flex';bumble.classList.add('member-gate');
-    } else {if(lock)lock.style.display='none';bumble.classList.remove('member-gate');}
-  }
+  if(mc)mc.textContent=isMem?'23 anonymous mandate profiles · Signal interest to connect':'5 profiles visible · Full directory for Members only';
+  // lock Signals + Connections tabs for observers
+  const sigTab=document.getElementById('dt-signals');
+  const connTab=document.getElementById('dt-connections');
+  if(sigTab){sigTab.style.opacity=isMem?'1':'0.4';sigTab.style.pointerEvents=isMem?'':'none';}
+  if(connTab){connTab.style.opacity=isMem?'1':'0.4';connTab.style.pointerEvents=isMem?'':'none';}
+  // show only first 2 fam-cards for observers
+  document.querySelectorAll('.fam-card').forEach((c,i)=>{
+    c.style.display=(isMem||i<2)?'':'none';
+  });
   // co-invest anchor tab
   const at=document.getElementById('cit-anchor');
   if(at){at.style.opacity=isMem?'1':'0.38';at.style.pointerEvents=isMem?'':'none';}
