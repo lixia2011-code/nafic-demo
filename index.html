@@ -79,7 +79,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .prin-quote-attr{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:11px;color:var(--gold-dim);margin-top:5px;letter-spacing:.5px;}
 
 /* Principles */
-#s-principles{background:var(--black);}
+#s-principles{background:#1A1A1A;}
 .prin-head{padding:20px 20px 8px;}
 .prin-eyebrow{font-size:9px;letter-spacing:3px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:10px;}
 .prin-title{font-family:'DM Serif Display',serif;font-size:24px;color:#fff;margin-bottom:6px;}
@@ -103,21 +103,18 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
 /* Sign In */
 #s-signin{background:var(--black);}
-.signin-body{flex:1;padding:36px 28px 28px;display:flex;flex-direction:column;justify-content:center;}
-.si-wordmark{font-size:11px;letter-spacing:5px;color:var(--gold-dim);text-transform:uppercase;font-weight:500;margin-bottom:36px;text-align:center;}
-.si-title{font-size:30px;font-weight:700;color:#fff;margin-bottom:6px;font-family:'DM Serif Display',serif;letter-spacing:-.3px;}
-.si-sub{font-size:14px;color:rgba(255,255,255,.38);margin-bottom:36px;line-height:1.5;}
+.signin-body{flex:1;padding:20px 28px 32px;display:flex;flex-direction:column;justify-content:center;}
+.si-title{font-size:32px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;letter-spacing:-.3px;line-height:1.15;}
 .si-field{margin-bottom:12px;}
-.si-label{font-size:10px;color:rgba(255,255,255,.35);margin-bottom:8px;letter-spacing:1.2px;text-transform:uppercase;font-weight:500;}
-.si-input{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 18px;font-family:'Inter',sans-serif;font-size:15px;color:#fff;outline:none;transition:border-color .25s,background .25s;}
-.si-input:focus{border-color:var(--gold);background:rgba(200,168,75,.06);}
-.si-input::placeholder{color:rgba(255,255,255,.18);}
-.si-divider{display:flex;align-items:center;gap:12px;margin:20px 0;}
-.si-divider-line{flex:1;height:1px;background:rgba(255,255,255,.08);}
-.si-divider-txt{font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.5px;}
-.si-google-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:rgba(255,255,255,.7);cursor:pointer;transition:background .2s,border-color .2s;}
-.si-google-btn:active{background:rgba(255,255,255,.09);}
-.demo-pill{background:rgba(200,168,75,.06);border:1px solid rgba(200,168,75,.15);border-radius:14px;padding:14px 16px;margin-top:24px;text-align:center;}
+.si-label{font-size:10px;color:rgba(255,255,255,.32);margin-bottom:7px;letter-spacing:1.2px;text-transform:uppercase;font-weight:500;}
+.si-input{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:13px;padding:14px 16px;font-family:'Inter',sans-serif;font-size:15px;color:#fff;outline:none;transition:border-color .2s,background .2s;}
+.si-input:focus{border-color:rgba(200,168,75,.5);background:rgba(200,168,75,.04);}
+.si-input::placeholder{color:rgba(255,255,255,.16);}
+.si-divider{display:flex;align-items:center;gap:10px;margin:16px 0;}
+.si-divider-line{flex:1;height:1px;background:rgba(255,255,255,.07);}
+.si-divider-txt{font-size:11px;color:rgba(255,255,255,.2);white-space:nowrap;}
+.si-google-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:13px;padding:13px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:rgba(255,255,255,.6);cursor:pointer;transition:background .15s;}
+.si-google-btn:active{background:rgba(255,255,255,.08);}
 .dp-label{font-size:9px;letter-spacing:2px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:3px;}
 .dp-text{font-size:12px;color:var(--muted);}
 .si-link{font-size:13px;color:var(--muted);text-align:center;margin-top:14px;cursor:pointer;}
@@ -177,7 +174,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .intent-row:last-child{border-bottom:none;}
 .intent-name{font-size:14px;color:var(--text);}
 .depth-group{display:flex;gap:5px;}
-.depth-btn{width:30px;height:30px;border-radius:8px;border:1.5px solid var(--sand);font-size:11px;font-weight:700;color:var(--muted);cursor:pointer;background:#fff;transition:all .15s;}
+.depth-btn{height:28px;padding:0 10px;border-radius:20px;border:1.5px solid var(--sand);font-size:10.5px;font-weight:600;color:var(--muted);cursor:pointer;background:#fff;transition:all .15s;white-space:nowrap;letter-spacing:.2px;}
 .depth-btn.on-E{border-color:var(--green);color:var(--green);background:var(--green-bg);}
 .depth-btn.on-V{border-color:var(--gold-dim);color:var(--gold-dim);background:var(--gold-bg);}
 .depth-btn.on-A{border-color:var(--red);color:var(--red);background:var(--red-bg);}
@@ -420,9 +417,9 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .mem-search-wrap{padding:12px 16px 4px;}
 .mem-search{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:10px 14px;color:#fff;font-size:14px;width:100%;box-sizing:border-box;outline:none;}
 .mem-search::placeholder{color:rgba(255,255,255,0.4);}
-.mem-filters{display:flex;gap:8px;padding:10px 16px 14px;overflow-x:auto;flex-shrink:0;scrollbar-width:none;}
-.mem-filter{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:5px 13px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);white-space:nowrap;cursor:pointer;}
-.mem-filter.on{background:var(--gold-dim);color:#fff;border-color:var(--gold-dim);}
+.mem-filters{display:flex;gap:8px;padding:10px 16px 14px;flex-shrink:0;}
+.dir-filter-select{flex:1;min-width:0;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:10px;padding:8px 10px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;appearance:none;-webkit-appearance:none;cursor:pointer;outline:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;padding-right:22px;}
+.dir-filter-select option{background:#1A1812;color:#fff;}
 .mem-card{background:#fff;border-radius:14px;padding:14px 16px;margin:0 16px 10px;display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
 .mem-av{width:46px;height:46px;border-radius:50%;background:var(--black);color:var(--gold-dim);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .mem-info{flex:1;min-width:0;}
@@ -462,39 +459,40 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .signout-btn{width:calc(100% - 32px);margin:16px;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:14px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:var(--red);cursor:pointer;}
 
 /* GP Onboarding */
-#s-gp-apply{background:var(--black);}
+#s-gp-apply{background:var(--paper);}
 .gp-step{display:none;flex-direction:column;height:100%;}
 .gp-step.active{display:flex;}
-.gp-progress{display:flex;gap:6px;padding:12px 20px 0;}
-.gp-prog-dot{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,0.15);transition:background .3s;}
-.gp-prog-dot.done{background:var(--gold);}
-.gp-step-head{padding:20px 20px 12px;}
+.gp-progress{padding:12px 20px 0;}
+.gp-prog-track{width:100%;height:4px;background:var(--sand);border-radius:2px;overflow:hidden;}
+.gp-prog-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .35s ease;}
+.gp-step-head{padding:18px 20px 10px;}
 .gp-step-eyebrow{font-size:11px;color:var(--gold-dim);font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px;}
-.gp-step-title{font-size:22px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;line-height:1.25;}
-.gp-step-sub{font-size:13px;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.5;}
+.gp-step-title{font-size:22px;font-weight:700;color:var(--text);font-family:'DM Serif Display',serif;line-height:1.25;}
+.gp-step-sub{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.5;}
 .gp-form{flex:1;overflow-y:auto;padding:8px 20px 24px;}
-.gp-input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:13px 14px;font-size:14px;font-family:'Inter',sans-serif;color:#fff;outline:none;box-sizing:border-box;margin-bottom:10px;}
-.gp-input::placeholder{color:rgba(255,255,255,.35);}
-.gp-select{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:13px 14px;font-size:14px;font-family:'Inter',sans-serif;color:#fff;outline:none;box-sizing:border-box;margin-bottom:10px;appearance:none;}
-.gp-select option{background:#1A1A1A;color:#fff;}
-.gp-label{font-size:11px;color:rgba(255,255,255,.5);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;margin-top:4px;display:block;}
+.gp-input{width:100%;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:13px 14px;font-size:14px;font-family:'Inter',sans-serif;color:var(--text);outline:none;box-sizing:border-box;margin-bottom:10px;}
+.gp-input::placeholder{color:var(--ghost);}
+.gp-input:focus{border-color:var(--gold);}
+.gp-select{width:100%;background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:13px 14px;font-size:14px;font-family:'Inter',sans-serif;color:var(--text);outline:none;box-sizing:border-box;margin-bottom:10px;appearance:none;}
+.gp-select option{background:#fff;color:var(--text);}
+.gp-label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;margin-top:4px;display:block;}
 .gp-row-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .gp-type-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
-.gp-type-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 12px;cursor:pointer;transition:all .2s;}
-.gp-type-card.selected{border-color:var(--gold);background:rgba(196,160,80,.12);}
+.gp-type-card{background:#fff;border:1.5px solid var(--sand);border-radius:12px;padding:14px 12px;cursor:pointer;transition:all .2s;}
+.gp-type-card.selected{border-color:var(--gold);background:rgba(200,168,75,.06);}
 .gp-type-icon{font-size:22px;margin-bottom:6px;}
-.gp-type-label{font-size:12px;font-weight:600;color:#fff;line-height:1.3;}
-.gp-type-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px;}
+.gp-type-label{font-size:12px;font-weight:600;color:var(--text);line-height:1.3;}
+.gp-type-sub{font-size:11px;color:var(--muted);margin-top:2px;}
 .gp-highlight-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;}
 .gp-ref-row{display:flex;align-items:center;gap:10px;padding:8px 6px;border-radius:8px;cursor:pointer;transition:background .15s;}
-.gp-ref-row:hover,.gp-ref-row.selected{background:rgba(200,168,75,.12);}
+.gp-ref-row:hover,.gp-ref-row.selected{background:rgba(200,168,75,.10);}
 .gp-ref-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
-.gp-ref-name{font-size:13px;font-weight:600;color:#fff;}
-.gp-ref-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:1px;}
+.gp-ref-name{font-size:13px;font-weight:600;color:var(--text);}
+.gp-ref-sub{font-size:11px;color:var(--muted);margin-top:1px;}
 .gp-highlight-num{width:22px;height:22px;border-radius:50%;background:var(--gold-dim);color:var(--black);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:12px;}
 .gp-footer{padding:16px 20px 32px;flex-shrink:0;}
 .gp-next-btn{width:100%;background:var(--gold);color:var(--black);border:none;border-radius:14px;padding:15px;font-size:16px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;letter-spacing:.2px;}
-.gp-back-btn{background:none;border:none;color:rgba(255,255,255,.5);font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;padding:10px 0 0;width:100%;text-align:center;}
+.gp-back-btn{background:none;border:none;color:var(--muted);font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;padding:10px 0 0;width:100%;text-align:center;}
 
 /* GP Dashboard */
 #s-gp-dash{background:var(--paper);}
@@ -628,6 +626,80 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 .inv-status.open{background:var(--gold-bg);color:var(--gold-dim);}
 .family-led-badge{display:inline-flex;align-items:center;gap:5px;background:var(--teal-bg);border:1px solid rgba(26,122,120,.25);border-radius:20px;padding:3px 10px;font-size:11px;color:var(--teal);font-weight:500;}
 .community-note{font-size:12px;color:var(--muted);padding:14px 16px 4px;line-height:1.5;}
+/* Co-Invest tabs */
+.ci-tabs{display:flex;background:#fff;border-bottom:1px solid var(--sand);flex-shrink:0;}
+.ci-tab{flex:1;text-align:center;padding:11px 4px 10px;font-size:11px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;}
+.ci-tab.active{color:var(--gold-dim);border-bottom-color:var(--gold);}
+/* Family-Led filter row */
+.ci-filt-row{display:flex;gap:6px;padding:10px 16px 6px;flex-shrink:0;background:var(--paper);}
+.ci-filt-sel{flex:1;min-width:0;background:#fff;border:1.5px solid var(--sand);border-radius:10px;padding:8px 8px 8px 10px;font-size:11px;font-weight:600;color:var(--text);font-family:'Inter',sans-serif;appearance:none;-webkit-appearance:none;cursor:pointer;outline:none;background-image:url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l3 3 3-3' stroke='%238A8070' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 7px center;padding-right:20px;}
+.ci-filt-sel option{color:var(--text);}
+.ci-mandate-hint{font-size:10px;color:var(--gold-dim);padding:0 16px 8px;background:var(--paper);}
+.ci-card{background:#fff;border-radius:16px;margin:0 16px 10px;padding:16px;border:1px solid var(--sand);}
+.ci-card-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.ci-av{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
+.ci-src{flex:1;min-width:0;}
+.ci-who{font-size:12px;font-weight:700;color:var(--text);line-height:1.2;}
+.ci-what{font-size:11px;color:var(--muted);margin-top:1px;}
+.ci-badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:12px;white-space:nowrap;flex-shrink:0;}
+.ci-badge.fam{background:rgba(200,168,75,.1);color:var(--gold-dim);border:1px solid var(--gold-border);}
+.ci-badge.ipo{background:rgba(42,104,168,.1);color:#2A68A8;border:1px solid rgba(42,104,168,.25);}
+.ci-badge.fund{background:rgba(30,74,46,.1);color:#1E4A2E;border:1px solid rgba(30,74,46,.25);}
+.ci-badge.swfb{background:rgba(80,40,120,.1);color:#502878;border:1px solid rgba(80,40,120,.25);}
+.ci-voice{font-size:12px;font-style:italic;color:var(--body);line-height:1.5;padding:8px 10px 8px 12px;background:var(--paper);border-radius:8px;border-left:2px solid var(--gold-dim);margin-bottom:10px;}
+.ci-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.ci-sub{font-size:12px;color:var(--muted);line-height:1.45;margin-bottom:10px;}
+.ci-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:10px;}
+.ci-stat{text-align:center;background:var(--paper);border-radius:8px;padding:7px 4px;}
+.ci-sv{font-size:13px;font-weight:700;color:var(--text);}
+.ci-sv.g{color:var(--gold-dim);}
+.ci-sl{font-size:9px;color:var(--muted);margin-top:1px;text-transform:uppercase;letter-spacing:.3px;}
+.ci-foot{display:flex;align-items:center;justify-content:space-between;}
+
+/* Enter NAFIC pulse */
+@keyframes nafic-pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,168,75,0);}50%{box-shadow:0 0 0 16px rgba(200,168,75,.22);}}
+.btn-enter-nafic{animation:nafic-pulse 2.6s ease-in-out infinite;font-size:17px !important;padding:18px !important;letter-spacing:.6px;font-weight:700 !important;}
+
+/* Continue button — white bg, black text */
+.btn-continue-white{width:100%;background:#fff;border:2px solid var(--gold);border-radius:14px;padding:15px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:var(--black);cursor:pointer;transition:background .18s,color .18s;display:block;text-align:center;}
+.btn-continue-white:hover{background:var(--gold);color:var(--black);}
+
+/* Geo region expand */
+.geo-chip{justify-content:space-between;width:100%;display:flex!important;border-radius:10px!important;padding:10px 14px!important;font-size:13px;font-weight:500;}
+.geo-country-panel{display:none;margin:4px 0 8px;padding:10px 12px;background:#F9F6EF;border-radius:10px;border:1px solid var(--sand);}
+.geo-country-label{font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.8px;margin-bottom:7px;}
+
+/* Pending review screen */
+#s-pending{background:var(--paper);}
+.pend-body{padding:0 20px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.pend-icon{font-size:52px;margin:32px 0 14px;}
+.pend-title{font-size:22px;font-weight:700;color:var(--text);font-family:'DM Serif Display',serif;margin-bottom:6px;}
+.pend-badge{display:inline-block;background:rgba(200,168,75,.12);color:var(--gold-dim);font-size:11px;font-weight:700;letter-spacing:1.2px;padding:5px 14px;border-radius:20px;border:1px solid var(--gold-border);margin-bottom:18px;}
+.pend-text{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:22px;}
+.pend-timeline{width:100%;text-align:left;background:#fff;border:1px solid var(--sand);border-radius:14px;padding:16px 18px;margin-bottom:20px;}
+.pt-step{display:flex;align-items:flex-start;gap:12px;padding:8px 0;}
+.pt-step:not(:last-child){border-bottom:1px solid var(--sand);}
+.pt-dot{width:22px;height:22px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;}
+.pt-dot.done{background:var(--gold);color:var(--black);}
+.pt-dot.wait{background:var(--sand);color:var(--muted);}
+.pt-info{flex:1;}
+.pt-label{font-size:13px;font-weight:600;color:var(--text);}
+.pt-sub{font-size:11px;color:var(--muted);margin-top:1px;}
+.pend-answers{width:100%;text-align:left;background:#fff;border:1px solid var(--sand);border-radius:14px;padding:16px 18px;margin-bottom:24px;}
+.pa-title{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:12px;}
+.pa-row{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--sand);}
+.pa-row:last-child{border-bottom:none;}
+.pa-key{font-size:11px;color:var(--muted);flex-shrink:0;width:110px;}
+.pa-val{font-size:12px;font-weight:600;color:var(--text);}
+
+/* Tier column header — clickable */
+.tier-col-hdr{cursor:pointer;transition:background .2s,box-shadow .15s;}
+.tier-col-hdr:active{opacity:.8;}
+.tier-check{font-size:16px;margin-top:5px;transition:opacity .2s;}
+/* Observer-mode locks */
+.obs-lock-overlay{display:none;position:absolute;inset:0;background:rgba(15,15,14,.82);border-radius:inherit;align-items:center;justify-content:center;flex-direction:column;gap:6px;z-index:4;}
+.obs-mode .obs-lock-overlay{display:flex;}
+.obs-mode .member-gate{pointer-events:none;}
 </style>
 </head>
 <body>
@@ -644,76 +716,111 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <div class="splash-divider"></div>
     <div class="splash-tagline">Where family offices connect, invest together, and build lasting partnerships.</div>
     <div class="splash-quote">"Never invest in a business you cannot understand."<span class="sq-attr">— Warren Buffett</span></div>
-    <button class="btn-gold" style="margin-bottom:14px;" onclick="go('s-principles')">Enter NAFIC</button>
+    <button class="btn-gold btn-enter-nafic" style="margin-bottom:18px;" onclick="go('s-principles')">✦ Enter NAFIC</button>
     <button class="btn-ghost" onclick="go('s-signin')">Already a member? Sign in</button>
   </div>
 </div>
 
 <!-- ── PRINCIPLES ── -->
-<div id="s-principles" class="screen" style="background:var(--black);">
-  <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div><div class="sb-icons"><svg width="16" height="12" viewBox="0 0 16 12"><path d="M0 4h2v8H0zm3-2h2v10H3zm3-2h2v12H6zm3 4h2v6H9zm3-3h2v9h-2z" fill="#fff"/></svg><svg width="20" height="12" viewBox="0 0 20 12"><rect x="0" y="2" width="17" height="8" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="17.5" y="4" width="2" height="4" rx="1" fill="#fff"/><rect x="1.5" y="3.5" width="11" height="5" rx="1.5" fill="#fff"/></svg></div></div>
-  <div class="top-bar dark">
+<div id="s-principles" class="screen" style="background:#1A1A1A;">
+  <div class="status-bar" style="background:#1A1A1A;"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:#fff;">9:41</div><div class="sb-icons"><svg width="16" height="12" viewBox="0 0 16 12"><path d="M0 4h2v8H0zm3-2h2v10H3zm3-2h2v12H6zm3 4h2v6H9zm3-3h2v9h-2z" fill="#fff"/></svg><svg width="20" height="12" viewBox="0 0 20 12"><rect x="0" y="2" width="17" height="8" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="17.5" y="4" width="2" height="4" rx="1" fill="#fff"/><rect x="1.5" y="3.5" width="11" height="5" rx="1.5" fill="#fff"/></svg></div></div>
+  <div class="top-bar dark" style="background:#1A1A1A;">
     <button class="tb-back" onclick="go('s-splash')">‹</button>
     <div class="tb-title gold">NAFIC</div>
     <div style="width:24px;"></div>
   </div>
-  <div class="scroll-body-nofooter" style="background:var(--black);">
-    <div class="prin-head">
-      <div class="prin-eyebrow">BEFORE YOU JOIN</div>
-      <div class="prin-title">Why NAFIC is different</div>
-      <div class="prin-sub">Three principles that make this work.</div>
+  <div class="scroll-body-nofooter" style="background:#1A1A1A;">
+    <!-- Header -->
+    <div style="padding:28px 20px 24px;">
+      <div style="font-size:9px;letter-spacing:3.5px;color:var(--gold-dim);text-transform:uppercase;font-weight:600;margin-bottom:14px;">BEFORE YOU JOIN</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:clamp(22px,6vw,28px);font-weight:700;color:#fff;line-height:1.15;white-space:nowrap;margin-bottom:10px;">NAFIC Guiding Principles</div>
+      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;">Why NAFIC is different</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.5;">Three principles that make this work.</div>
     </div>
-    <div class="prin-card"><div class="prin-num">01</div><div class="prin-title2">LP controls the relationship</div><div class="prin-desc">No cold pitches. No unsolicited decks. GPs only connect when an LP opens the door.</div></div>
-    <div class="prin-card"><div class="prin-num">02</div><div class="prin-title2">Invite-only, always</div><div class="prin-desc">Every member is personally vetted. No open signups. Admin reviews and approves each application.</div></div>
-    <div class="prin-card"><div class="prin-num">03</div><div class="prin-title2">50 seats. On purpose.</div><div class="prin-desc">Intimacy is the product. A smaller circle means deeper trust, better deals, real relationships.</div></div>
-    <div style="padding:16px;">
-      <button class="btn-gold" style="margin-bottom:10px;" onclick="go('s-apply');initApply()">I understand — let me in</button>
-      <div style="text-align:center;"><button style="border:none;color:rgba(255,255,255,.4);background:none;cursor:pointer;font-size:14px;padding:8px;font-family:'Inter',sans-serif;" onclick="go('s-signin')">Skip</button></div>
+
+    <!-- Separator -->
+    <div style="height:1px;background:rgba(255,255,255,.1);margin:0 20px 0;"></div>
+
+    <!-- Principle 01 -->
+    <div style="padding:26px 20px 24px;">
+      <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:10px;">
+        <span style="font-size:13px;font-weight:700;color:var(--gold);font-style:italic;">01</span>
+        <span style="font-size:16px;font-weight:700;color:#fff;line-height:1.3;">LP controls the relationship</span>
+      </div>
+      <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;padding-left:28px;">No cold pitches. No unsolicited decks. GPs only connect when an LP opens the door.</div>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,.08);margin:0 20px;"></div>
+
+    <!-- Principle 02 -->
+    <div style="padding:26px 20px 24px;">
+      <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:10px;">
+        <span style="font-size:13px;font-weight:700;color:var(--gold);font-style:italic;">02</span>
+        <span style="font-size:16px;font-weight:700;color:#fff;line-height:1.3;">Invite-only, always</span>
+      </div>
+      <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;padding-left:28px;">Every member is personally vetted and referred. No open signups. Admin reviews and approves each application.</div>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,.08);margin:0 20px;"></div>
+
+    <!-- Principle 03 -->
+    <div style="padding:26px 20px 32px;">
+      <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:10px;">
+        <span style="font-size:13px;font-weight:700;color:var(--gold);font-style:italic;">03</span>
+        <span style="font-size:16px;font-weight:700;color:#fff;line-height:1.3;">50 seats. On purpose.</span>
+      </div>
+      <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;padding-left:28px;">Intimacy is the product. A smaller circle means deeper trust, better deals, real relationships.</div>
+    </div>
+
+    <!-- CTA -->
+    <div style="padding:0 20px 16px;">
+      <button class="btn-gold" style="margin-bottom:12px;" onclick="go('s-apply');initApply()">I understand — let me in</button>
+      <div style="text-align:center;">
+        <button style="border:none;color:rgba(255,255,255,.38);background:none;cursor:pointer;font-size:14px;padding:8px;font-family:'Inter',sans-serif;" onclick="go('s-signin')">Skip</button>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- ── SIGN IN ── -->
-<div id="s-signin" class="screen" style="background:var(--paper);">
-  <div class="status-bar" style="background:var(--paper)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:var(--text)">9:41</div><div class="sb-icons"><svg width="16" height="12" viewBox="0 0 16 12"><path d="M0 4h2v8H0zm3-2h2v10H3zm3-2h2v12H6zm3 4h2v6H9zm3-3h2v9h-2z" fill="rgba(26,24,16,0.7)"/></svg><svg width="16" height="10" viewBox="0 0 16 10"><path d="M8 1.5C5 1.5 2.3 3 .6 5.3l1.4 1.4C3.3 4.5 5.5 3.5 8 3.5s4.7 1 6 3.2l1.4-1.4C13.7 3 11 1.5 8 1.5zm0 3.5C6.3 5 4.8 5.8 3.8 7l1.4 1.4c.7-.8 1.7-1.4 2.8-1.4s2.1.6 2.8 1.4L12.2 7C11.2 5.8 9.7 5 8 5zm0 3.5c-.8 0-1.4.6-1.4 1.4S7.2 11.3 8 11.3s1.4-.6 1.4-1.4S8.8 8.5 8 8.5z" fill="rgba(26,24,16,0.7)"/></svg><svg width="20" height="12" viewBox="0 0 20 12"><rect x="0" y="2" width="17" height="8" rx="2.5" fill="none" stroke="rgba(26,24,16,0.7)" stroke-width="1.2"/><rect x="17.5" y="4" width="2" height="4" rx="1" fill="rgba(26,24,16,0.7)"/><rect x="1.5" y="3.5" width="11" height="5" rx="1.5" fill="rgba(26,24,16,0.7)"/></svg></div></div>
+<div id="s-signin" class="screen">
+  <div class="status-bar"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div><div class="sb-icons"><svg width="16" height="12" viewBox="0 0 16 12"><path d="M0 4h2v8H0zm3-2h2v10H3zm3-2h2v12H6zm3 4h2v6H9zm3-3h2v9h-2z" fill="#fff"/></svg><svg width="20" height="12" viewBox="0 0 20 12"><rect x="0" y="2" width="17" height="8" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="17.5" y="4" width="2" height="4" rx="1" fill="#fff"/><rect x="1.5" y="3.5" width="11" height="5" rx="1.5" fill="#fff"/></svg></div></div>
   <div class="signin-body">
-    <div class="si-wordmark">NAFIC</div>
-    <div class="si-title">Welcome back</div>
-    <div class="si-sub">Sign in to your family office account.</div>
+
+    <div style="margin-bottom:32px;">
+      <div style="font-size:11px;letter-spacing:4px;color:var(--gold-dim);text-transform:uppercase;font-weight:500;margin-bottom:14px;">NAFIC</div>
+      <div class="si-title">Welcome back</div>
+    </div>
 
     <div class="si-field">
       <div class="si-label">Email</div>
       <input class="si-input" type="email" placeholder="you@familyoffice.com"/>
     </div>
-    <div class="si-field" style="margin-bottom:20px;">
-      <div class="si-label">Passcode</div>
+    <div class="si-field" style="margin-bottom:24px;">
+      <div class="si-label" style="display:flex;justify-content:space-between;align-items:center;">
+        <span>Passcode</span>
+        <span style="font-size:11px;color:var(--gold-dim);cursor:pointer;letter-spacing:0;text-transform:none;font-weight:400;">Forgot?</span>
+      </div>
       <div style="position:relative;">
         <input class="si-input" id="si-pass" type="password" placeholder="••••••••" style="padding-right:48px;"/>
-        <button onclick="var i=document.getElementById('si-pass');i.type=i.type==='password'?'text':'password';" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:0;line-height:1;font-size:17px;color:rgba(255,255,255,.3);">👁</button>
+        <button onclick="var i=document.getElementById('si-pass');i.type=i.type==='password'?'text':'password';" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:4px;line-height:1;color:rgba(255,255,255,.3);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
       </div>
     </div>
 
-    <button class="btn-gold" style="margin-bottom:0;" onclick="go('s-dash')">Sign In</button>
+    <button class="btn-gold" onclick="go('s-dash')" style="margin-bottom:16px;font-size:15px;letter-spacing:.3px;">Sign In</button>
 
     <div class="si-divider">
       <div class="si-divider-line"></div>
-      <div class="si-divider-txt">or</div>
+      <div class="si-divider-txt">or continue with</div>
       <div class="si-divider-line"></div>
     </div>
 
     <button class="si-google-btn" onclick="go('s-dash')">
-      <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-      Continue with Google
+      <svg width="16" height="16" viewBox="0 0 24 24" style="flex-shrink:0;"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      Google
     </button>
 
-    <div style="text-align:center;margin-top:22px;">
-      <span style="font-size:13px;color:rgba(255,255,255,.28);">New to NAFIC? </span><span style="font-size:13px;color:var(--gold-dim);cursor:pointer;text-decoration:underline;text-underline-offset:3px;" onclick="go('s-apply');initApply()">Apply for membership →</span>
-    </div>
 
-    <div class="demo-pill">
-      <div class="dp-label" style="font-size:10px;letter-spacing:1px;color:var(--gold-dim);margin-bottom:3px;">DEMO ACCESS</div>
-      <div class="dp-text" style="font-size:12px;color:rgba(255,255,255,.35);">Tap Sign In to explore the full app</div>
-    </div>
   </div>
 </div>
 
@@ -732,7 +839,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <div class="apply-pad" id="apply-content"></div>
   </div>
   <div class="apply-foot">
-    <button class="btn-gold" id="apply-continue-btn" onclick="applyNext()">Continue →</button>
+    <button class="btn-continue-white" id="apply-continue-btn" onclick="applyNext()">Continue →</button>
   </div>
 </div>
 
@@ -755,35 +862,131 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
   </div>
 </div>
 
+
+<!-- ── PENDING REVIEW ── -->
+<div id="s-pending" class="screen">
+  <div class="status-bar" style="background:var(--paper)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:var(--text)">9:41</div></div>
+  <div class="scroll-body">
+    <div class="pend-body">
+      <div class="pend-icon">📋</div>
+      <div class="pend-title">Application Received</div>
+      <div class="pend-badge">⏳ PENDING ADMIN REVIEW</div>
+      <div class="pend-text">Your application is in Lixia's review queue. NAFIC is invite-only — every member is personally vetted before access is granted.</div>
+      <div class="pend-timeline">
+        <div class="pt-step">
+          <div class="pt-dot done">✓</div>
+          <div class="pt-info"><div class="pt-label">Application Submitted</div><div class="pt-sub">Received today · All responses recorded</div></div>
+        </div>
+        <div class="pt-step">
+          <div class="pt-dot wait">2</div>
+          <div class="pt-info"><div class="pt-label">Admin Review</div><div class="pt-sub">Lixia reviews your answers (1–2 days)</div></div>
+        </div>
+        <div class="pt-step">
+          <div class="pt-dot wait">3</div>
+          <div class="pt-info"><div class="pt-label">Decision & WhatsApp</div><div class="pt-sub">Approval or next steps sent to your number</div></div>
+        </div>
+        <div class="pt-step">
+          <div class="pt-dot wait">4</div>
+          <div class="pt-info"><div class="pt-label">Platform Access</div><div class="pt-sub">Portal, deal room &amp; directory unlocked</div></div>
+        </div>
+      </div>
+      <div class="pend-answers">
+        <div class="pa-title">Your Submission Summary</div>
+        <div class="pa-row"><div class="pa-key">Organization</div><div class="pa-val">Single Family Office</div></div>
+        <div class="pa-row"><div class="pa-key">Focus</div><div class="pa-val">Private Equity · Venture Capital</div></div>
+        <div class="pa-row"><div class="pa-key">Geography</div><div class="pa-val">GCC / MENA · Greater China</div></div>
+        <div class="pa-row"><div class="pa-key">Check Size</div><div class="pa-val">$5M – $25M</div></div>
+        <div class="pa-row"><div class="pa-key">Exploring</div><div class="pa-val">Co-investments · Digital Assets</div></div>
+        <div class="pa-row"><div class="pa-key">Tier Selected</div><div class="pa-val">Member (Contributing)</div></div>
+      </div>
+      <div style="width:100%;padding:13px 16px;background:rgba(200,168,75,.06);border:1px solid var(--gold-border);border-radius:12px;font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:24px;">
+        <b style="color:var(--gold-dim);">For the demo:</b> Open <b>Profile → Admin Panel → Applications</b> to see this submission and approve or reject it.
+      </div>
+      <button class="btn-gold" onclick="go('s-dash')" style="margin-bottom:8px;width:100%;">Preview the App →</button>
+      <button class="btn-outline" onclick="go('s-splash')" style="margin-bottom:30px;width:100%;padding:13px;border-radius:14px;border:1.5px solid var(--border);background:transparent;font-size:14px;color:var(--muted);cursor:pointer;">Back to Home</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── DASHBOARD ── -->
 <div id="s-dash" class="screen">
   <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div><div class="sb-icons"><svg width="16" height="12" viewBox="0 0 16 12"><path d="M0 4h2v8H0zm3-2h2v10H3zm3-2h2v12H6zm3 4h2v6H9zm3-3h2v9h-2z" fill="#fff"/></svg><svg width="20" height="12" viewBox="0 0 20 12"><rect x="0" y="2" width="17" height="8" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="17.5" y="4" width="2" height="4" rx="1" fill="#fff"/><rect x="1.5" y="3.5" width="11" height="5" rx="1.5" fill="#fff"/></svg></div></div>
   <div class="scroll-body">
-    <div class="dash-head">
-      <div class="dh-row"><div><div class="dh-greeting">Good morning, Lixia</div><div class="dh-name">Dashboard</div></div><div class="dh-av">LZ</div></div>
-      <div class="dh-stats">
-        <div class="dhs"><div class="dhs-num">47</div><div class="dhs-lbl">Members</div></div>
-        <div class="dhs"><div class="dhs-num">2</div><div class="dhs-lbl">Events</div></div>
-        <div class="dhs"><div class="dhs-num">5</div><div class="dhs-lbl">Matches</div></div>
-        <div class="dhs"><div class="dhs-num">2</div><div class="dhs-lbl">Deals</div></div>
+    <!-- minimal greeting header -->
+    <div style="background:var(--black);padding:14px 18px 16px;display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <div style="font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.6px;text-transform:uppercase;margin-bottom:2px;">Good morning</div>
+        <div style="font-size:20px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;">Lixia</div>
       </div>
+      <div style="width:38px;height:38px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--black);">LZ</div>
     </div>
-    <div class="referral-banner">
-      <div style="font-size:26px;">🌟</div>
-      <div class="rb-info"><div class="rb-title">Founding Circle — 2 of 5 referrals</div><div class="rb-sub">Refer 3 more approved members to unlock Founding Circle status</div><div class="rb-progress"><div class="rb-prog-fill"></div></div><div class="rb-prog-label">Bring in the right families. Earn the badge.</div></div>
-      <button class="rb-invite-btn" onclick="setTab(document.querySelector('[data-tab=messages]'));showInner('s-messages');msgTab('alerts')">Invite</button>
+
+    <!-- ── SECTION 1: RECENT ACTIVITY ── -->
+    <div class="sec-label" style="margin-top:14px;">Recent Activity</div>
+
+    <!-- Event RSVPed -->
+    <div class="act-card">
+      <div class="act-icon">📅</div>
+      <div class="act-info">
+        <div class="act-title">EVENT RSVPed</div>
+        <div class="act-sub">NAFIC Summit Dubai · May 12 · Burj Al Arab</div>
+      </div>
+      <span class="badge badge-g">Going</span>
     </div>
-    <div class="sec-label">Recent Activity</div>
-    <div class="act-card"><div class="act-icon">📅</div><div class="act-info"><div class="act-title">EVENT RSVPed</div><div class="act-sub">NAFIC Summit Dubai · May 12</div></div><span class="badge badge-g">Going</span></div>
-    <div class="act-card"><div class="act-icon">🤝</div><div class="act-info"><div class="act-title">New LP Match</div><div class="act-sub">Lee Family Office · mandate match</div></div><span class="badge badge-go">92%</span></div>
-    <div class="act-card"><div class="act-icon">📊</div><div class="act-info"><div class="act-title">GP Match — Verified</div><div class="act-sub">Horizon Capital · disclosure on file</div></div><span class="badge badge-b">View</span></div>
-    <div class="quote-card">
-      <div class="qc-text">"Never invest in a business you cannot understand."</div>
-      <div class="qc-attr">— Warren Buffett · NAFIC Quote of the Day</div>
+
+    <!-- New Event Announced -->
+    <div class="act-card">
+      <div class="act-icon">🔔</div>
+      <div class="act-info">
+        <div class="act-title">New Event Announced</div>
+        <div class="act-sub">NAFIC × Columbia Leadership Roundtable · Jun 2026</div>
+      </div>
+      <span class="badge badge-b">RSVP</span>
     </div>
-    <div class="sec-label">New Families Joined</div>
+
+    <!-- Partnership Added -->
+    <div class="act-card">
+      <div class="act-icon">🤝</div>
+      <div class="act-info">
+        <div class="act-title">Partnership Added</div>
+        <div class="act-sub">Columbia Executive Education · Academy programme</div>
+      </div>
+      <span class="badge badge-go">New</span>
+    </div>
+
+    <!-- Deal Activity -->
+    <div class="act-card">
+      <div class="act-icon">💼</div>
+      <div class="act-info">
+        <div class="act-title">New Co-Invest Opportunity</div>
+        <div class="act-sub">GCC Infrastructure Fund III · $1M min · Closing Aug 31</div>
+      </div>
+      <span class="badge badge-b">View</span>
+    </div>
+
+    <!-- New LP Match -->
+    <div class="act-card">
+      <div class="act-icon">🔗</div>
+      <div class="act-info">
+        <div class="act-title">New LP Match</div>
+        <div class="act-sub">Lee Family Office · mandate aligned · 92%</div>
+      </div>
+      <span class="badge badge-go">92%</span>
+    </div>
+
+    <!-- ── SECTION 2: NEW FAMILIES JOINED ── -->
+    <div class="sec-label" style="margin-top:6px;">New Families Joined</div>
+
+    <!-- Al-Farsi family card -->
     <div class="match-card">
-      <div class="mc-hd"><div class="mc-av" style="background:#C4A050;">AF</div><div><div class="mc-name">Al-Farsi Family</div><div class="mc-meta">Abu Dhabi · Single Family Office · G2</div></div><div class="mc-online">Online</div></div>
+      <div class="mc-hd">
+        <div class="mc-av" style="background:#C4A050;">AF</div>
+        <div>
+          <div class="mc-name">Al-Farsi Family</div>
+          <div class="mc-meta">Abu Dhabi · Single Family Office · G2</div>
+        </div>
+        <div class="mc-online">Online</div>
+      </div>
       <div class="mc-tags"><span class="mc-tag">Private Equity</span><span class="mc-tag">Real Estate</span><span class="mc-tag">MENA</span></div>
       <div class="mc-match-label">Mandate Match</div>
       <div class="mc-bars">
@@ -792,10 +995,18 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:75%"></div></div><div class="mbar-lbl">Size</div><div class="mbar-pct">75%</div></div>
       </div>
       <div class="mc-overall"><b>83%</b> overall match</div>
-      <button class="btn-gold" style="padding:12px;margin-bottom:0;">Connect →</button>
+      <button class="btn-gold" style="padding:12px;margin-bottom:0;" onclick="showInner('s-members')">Connect →</button>
     </div>
+
+    <!-- Lee Family card -->
     <div class="match-card">
-      <div class="mc-hd"><div class="mc-av" style="background:#2A68A8;">LF</div><div><div class="mc-name">Lee Family Office</div><div class="mc-meta">Singapore · Multi-Family Office · G3</div></div></div>
+      <div class="mc-hd">
+        <div class="mc-av" style="background:#2A68A8;">LF</div>
+        <div>
+          <div class="mc-name">Lee Family Office</div>
+          <div class="mc-meta">Singapore · Multi-Family Office · G3</div>
+        </div>
+      </div>
       <div class="mc-tags"><span class="mc-tag">Venture Capital</span><span class="mc-tag">Tech</span><span class="mc-tag">Asia-Pacific</span></div>
       <div class="mc-match-label">Mandate Match</div>
       <div class="mc-bars">
@@ -804,15 +1015,37 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:88%"></div></div><div class="mbar-lbl">Size</div><div class="mbar-pct">88%</div></div>
       </div>
       <div class="mc-overall"><b>77%</b> overall match</div>
-      <button class="btn-outline" style="padding:12px;">Connect →</button>
+      <button class="btn-outline" style="padding:12px;" onclick="showInner('s-members')">Connect →</button>
     </div>
+
+    <!-- Tanaka family - newest -->
+    <div class="match-card">
+      <div class="mc-hd">
+        <div class="mc-av" style="background:#1A2A1A;">TF</div>
+        <div>
+          <div class="mc-name">Tanaka Family</div>
+          <div class="mc-meta">Tokyo · Single Family Office · G2</div>
+        </div>
+        <div style="font-size:10px;background:rgba(200,168,75,.12);color:var(--gold-dim);padding:3px 8px;border-radius:10px;font-weight:600;border:1px solid var(--gold-border);">New</div>
+      </div>
+      <div class="mc-tags"><span class="mc-tag">Private Equity</span><span class="mc-tag">Infrastructure</span><span class="mc-tag">Asia Pacific</span></div>
+      <div class="mc-match-label">Mandate Match</div>
+      <div class="mc-bars">
+        <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:70%"></div></div><div class="mbar-lbl">Asset</div><div class="mbar-pct">70%</div></div>
+        <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:60%"></div></div><div class="mbar-lbl">Region</div><div class="mbar-pct">60%</div></div>
+        <div class="mbar-item"><div class="mbar-track"><div class="mbar-fill" style="width:80%"></div></div><div class="mbar-lbl">Size</div><div class="mbar-pct">80%</div></div>
+      </div>
+      <div class="mc-overall"><b>70%</b> overall match</div>
+      <button class="btn-outline" style="padding:12px;" onclick="showInner('s-members')">Connect →</button>
+    </div>
+
+    <div style="height:16px;"></div>
   </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
+<div class="tab-bar">
+    <button class="tab-btn active" data-tab="home"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
-    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
+    <button class="tab-btn" data-tab="directory" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Directory</div></button>
+    <button class="tab-btn" data-tab="coinvest" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">💼</div><div class="tab-lbl">Co-Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -898,12 +1131,11 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     </div>
 
   </div>
-  <div class="tab-bar">
+<div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn active" data-tab="events"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
-    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
+    <button class="tab-btn" data-tab="directory" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Directory</div></button>
+    <button class="tab-btn" data-tab="coinvest" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">💼</div><div class="tab-lbl">Co-Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -969,12 +1201,11 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       </div>
     </div>
   </div>
-  <div class="tab-bar">
+<div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
-    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
-    <button class="tab-btn active" data-tab="messages"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
+    <button class="tab-btn" data-tab="directory" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Directory</div></button>
+    <button class="tab-btn" data-tab="coinvest" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">💼</div><div class="tab-lbl">Co-Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -1007,119 +1238,402 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 <!-- ── INVESTMENTS ── -->
 <div id="s-investments" class="screen">
   <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
-  <div class="inv-head"><div class="inv-head-title">Investments</div><div class="inv-head-sub">Portfolio · Community · Family-Led</div></div>
-  <div class="inv-tabs">
-    <div class="inv-tab active" id="invt-portfolio" onclick="invTab('portfolio')">My Portfolio</div>
-    <div class="inv-tab" id="invt-community" onclick="invTab('community')">Community</div>
-    <div class="inv-tab" id="invt-family" onclick="invTab('family')">Family-Led</div>
+  <div class="inv-head">
+    <div><div class="inv-head-title">Co-Invest</div><div class="inv-head-sub">Member-shared opportunities · Invite only</div></div>
   </div>
+  <!-- Main tabs -->
+  <div class="ci-tabs">
+    <div class="ci-tab active" id="cit2-all" onclick="ciTab2('all')">All</div>
+    <div class="ci-tab" id="cit2-fam" onclick="ciTab2('fam')">Family-Led</div>
+    <div class="ci-tab" id="cit2-swf" onclick="ciTab2('swf')">SWF Circle</div>
+    <div class="ci-tab" id="cit2-share" onclick="ciTab2('share')">Share a Deal</div>
+  </div>
+  <!-- Family-Led filters (hidden by default, shown when Family-Led tab active) -->
+  <div id="ci-fam-filters" style="display:none;">
+    <div class="ci-filt-row">
+      <select class="ci-filt-sel" id="cif-geo" onchange="applyFamFilters()">
+        <option value="">🌍 Geography</option>
+        <option>MENA</option>
+        <option>Asia</option>
+        <option>Europe</option>
+        <option>Americas</option>
+      </select>
+      <select class="ci-filt-sel" id="cif-asset" onchange="applyFamFilters()">
+        <option value="">💼 Asset Class</option>
+        <option>Pre-IPO</option>
+        <option>Private Equity</option>
+        <option>Venture Capital</option>
+        <option>Real Estate</option>
+        <option>Private Credit</option>
+        <option>Infrastructure</option>
+        <option>Digital Assets</option>
+        <option>Hedge Fund</option>
+      </select>
+      <select class="ci-filt-sel" id="cif-ticket" onchange="applyFamFilters()">
+        <option value="">🎫 Ticket Size</option>
+        <option value="xs">Under $500K</option>
+        <option value="sm">$500K – $2M</option>
+        <option value="md">$2M – $10M</option>
+        <option value="lg">$10M – $50M</option>
+        <option value="xl">$50M+</option>
+      </select>
+    </div>
+    <div class="ci-mandate-hint" id="ci-mandate-hint">✦ Showing all sizes · Your mandate: $250K – $10M</div>
+  </div>
+
   <div class="scroll-body">
 
-    <!-- MY PORTFOLIO -->
-    <div id="inv-portfolio-content">
-      <div class="port-summary">
-        <div class="ps-stat"><div class="ps-stat-val">$8.4M</div><div class="ps-stat-lbl">Deployed</div></div>
-        <div class="ps-stat"><div class="ps-stat-val" style="color:var(--green);">+18.2%</div><div class="ps-stat-lbl">IRR</div></div>
-        <div class="ps-stat"><div class="ps-stat-val">4</div><div class="ps-stat-lbl">Positions</div></div>
+    <!-- ══ ALL TAB ══ -->
+    <div id="ci-all-content">
+
+    <!-- Card 1: GCC Family · Real Estate -->
+    <div class="ci-card" data-ci="fam re" style="margin-top:10px;">
+      <div class="ci-card-header">
+        <div class="ci-av" style="background:#C4A050;">GF</div>
+        <div class="ci-src"><div class="ci-who">GCC Family</div><div class="ci-what">SFO · Real Estate focus · Abu Dhabi</div></div>
+        <span class="ci-badge fam">👨‍👩‍👧 Family-Led</span>
       </div>
-      <div class="sec-label">Active Positions</div>
-      <div class="inv-card">
-        <div class="inv-card-top"><div class="inv-cat">FinTech · Series B</div><div class="inv-name">Orbit FinTech</div><div class="inv-sub">Co-invested via NAFIC SYNDICATE · Horizon Capital</div></div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$2M</div><div class="invm-lbl">Invested</div></div><div class="invm"><div class="invm-val green">2.1×</div><div class="invm-lbl">Current MOIC</div></div><div class="invm"><div class="invm-val gold">Jun 2027</div><div class="invm-lbl">Est. Exit</div></div></div>
-        <div class="inv-footer"><span class="inv-status active">Active</span><button class="btn-sm dark">View Details →</button></div>
+      <div class="ci-voice">"Anchoring $5M ourselves — looking for 2–3 families with a real estate mandate to come in alongside us."</div>
+      <div class="ci-title">Dubai South Logistics Hub</div>
+      <div class="ci-sub">Class-A warehouse · 15-yr anchor tenant · REIT IPO exit path · 3 of 5 LP spots filled</div>
+      <div class="ci-stats">
+        <div class="ci-stat"><div class="ci-sv">$2M</div><div class="ci-sl">Min</div></div>
+        <div class="ci-stat"><div class="ci-sv g">$8M</div><div class="ci-sl">Syndication</div></div>
+        <div class="ci-stat"><div class="ci-sv">8.5%</div><div class="ci-sl">Yield</div></div>
+        <div class="ci-stat"><div class="ci-sv">2 left</div><div class="ci-sl">Spots</div></div>
       </div>
-      <div class="inv-card">
-        <div class="inv-card-top"><div class="inv-cat">Healthcare · Pre-IPO</div><div class="inv-name">NovaBio Health</div><div class="inv-sub">Co-invested via NAFIC SYNDICATE · MedVenture Partners</div></div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$1.5M</div><div class="invm-lbl">Invested</div></div><div class="invm"><div class="invm-val green">1.4×</div><div class="invm-lbl">Current MOIC</div></div><div class="invm"><div class="invm-val gold">Q4 2026</div><div class="invm-lbl">IPO Target</div></div></div>
-        <div class="inv-footer"><span class="inv-status active">Pre-IPO</span><button class="btn-sm dark">View Details →</button></div>
-      </div>
-      <div class="sec-label">Exited</div>
-      <div class="inv-card">
-        <div class="inv-card-top"><div class="inv-cat">Real Estate · Singapore</div><div class="inv-name">Marina Bay Commercial Trust</div><div class="inv-sub">Co-invested with Al-Farsi Family · Direct</div></div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$3M</div><div class="invm-lbl">Invested</div></div><div class="invm"><div class="invm-val green">1.8×</div><div class="invm-lbl">Exit MOIC</div></div><div class="invm"><div class="invm-val">Mar 2026</div><div class="invm-lbl">Exited</div></div></div>
-        <div class="inv-footer"><span class="inv-status exited">Exited</span><button class="btn-sm outline">Summary →</button></div>
-      </div>
-      <div style="height:8px;"></div>
+      <div class="ci-foot"><span class="inv-status open">Open · Aug 31</span><button class="btn-sm gold" onclick="expressInterest('Dubai South Logistics Hub',this)">Express Interest →</button></div>
     </div>
 
-    <!-- COMMUNITY AVAILABLE -->
-    <div id="inv-community-content" style="display:none;">
-      <div class="community-note">Investment opportunities shared by NAFIC members. All co-investments follow LP-controlled terms — no cold approaches.</div>
-      <div class="inv-card" style="margin-top:8px;">
-        <div class="inv-card-top"><div class="inv-cat">Private Equity · MENA</div><div class="inv-name">GCC Infrastructure Fund III</div><div class="inv-sub">Raising $120M · GP: Arabian Capital · MENA logistics & ports</div></div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$1M</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$34M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Aug 31</div><div class="invm-lbl">Closing</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('GCC Infrastructure Fund III',this)">Express Interest →</button></div>
+    <!-- Card 2: Asia-Pacific Family · Pre-IPO -->
+    <div class="ci-card" data-ci="fam ipo">
+      <div class="ci-card-header">
+        <div class="ci-av" style="background:#2A68A8;">AP</div>
+        <div class="ci-src"><div class="ci-who">Asia-Pacific Family</div><div class="ci-what">MFO · Tech focus · Singapore</div></div>
+        <span class="ci-badge ipo">🚀 Pre-IPO</span>
       </div>
-      <div class="inv-card">
-        <div class="inv-card-top"><div class="inv-cat">Venture · AI</div><div class="inv-name">DeepMind Ventures Fund II</div><div class="inv-sub">Raising $80M · GP: Vertex Asia · Enterprise AI SaaS</div></div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$500K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$18M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Jul 20</div><div class="invm-lbl">Closing</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('DeepMind Ventures Fund II',this)">Express Interest →</button></div>
+      <div class="ci-voice">"We've been in since seed. Sharing with the community ahead of Series B close — strong team, $12M ARR."</div>
+      <div class="ci-title">Quantum Edge — Encryption Infrastructure</div>
+      <div class="ci-sub">Quantum-resistant encryption for financial institutions · Series B · $4M community round</div>
+      <div class="ci-stats">
+        <div class="ci-stat"><div class="ci-sv">$250K</div><div class="ci-sl">Min</div></div>
+        <div class="ci-stat"><div class="ci-sv g">$1.2M</div><div class="ci-sl">Remaining</div></div>
+        <div class="ci-stat"><div class="ci-sv">20%</div><div class="ci-sl">Target IRR</div></div>
+        <div class="ci-stat"><div class="ci-sv">5 left</div><div class="ci-sl">Spots</div></div>
       </div>
-      <div class="inv-card">
-        <div class="inv-card-top"><div class="inv-cat">Private Credit · SEA</div><div class="inv-name">Southeast Asia Credit Opportunities</div><div class="inv-sub">Raising $60M · GP: Crescent Capital · SME lending</div></div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$250K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$22M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">Sep 15</div><div class="invm-lbl">Closing</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('Southeast Asia Credit Opportunities',this)">Express Interest →</button></div>
-      </div>
-      <div style="height:8px;"></div>
+      <div class="ci-foot"><span class="inv-status open">Open · Jul 31</span><button class="btn-sm gold" onclick="expressInterest('Quantum Edge Pre-Seed',this)">Express Interest →</button></div>
     </div>
 
-    <!-- FAMILY-LED -->
-    <div id="inv-family-content" style="display:none;">
-      <div class="community-note">Deals originated and led by NAFIC member families. Direct co-investment — no GP intermediary.</div>
-      <div class="inv-card" style="margin-top:8px;">
+    <!-- Card 3: Gulf Family · Family-led PE Fund -->
+    <div class="ci-card" data-ci="fam alt">
+      <div class="ci-card-header">
+        <div class="ci-av" style="background:#1E4A2E;">GL</div>
+        <div class="ci-src"><div class="ci-who">Gulf Family · Family-led Manager</div><div class="ci-what">PE · Alternatives · MENA</div></div>
+        <span class="ci-badge fund">🏛️ Family-led Fund</span>
+      </div>
+      <div class="ci-voice">"Third-gen family running this strategy since 2014. Fund II returned 2.8×. Offering community members preferred allocation."</div>
+      <div class="ci-title">GCC Infrastructure Fund III</div>
+      <div class="ci-sub">MENA logistics & ports · Family office is anchor LP · $120M total raise</div>
+      <div class="ci-stats">
+        <div class="ci-stat"><div class="ci-sv">$1M</div><div class="ci-sl">Min</div></div>
+        <div class="ci-stat"><div class="ci-sv g">$34M</div><div class="ci-sl">Remaining</div></div>
+        <div class="ci-stat"><div class="ci-sv">18%</div><div class="ci-sl">Target IRR</div></div>
+        <div class="ci-stat"><div class="ci-sv">Aug 31</div><div class="ci-sl">Close</div></div>
+      </div>
+      <div class="ci-foot"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('GCC Infrastructure Fund III',this)">Express Interest →</button></div>
+    </div>
+
+    <!-- Card 4: Asia Family Digital · Pre-IPO AI -->
+    <div class="ci-card" data-ci="fam ipo alt">
+      <div class="ci-card-header">
+        <div class="ci-av" style="background:#1A1A2E;">AS</div>
+        <div class="ci-src"><div class="ci-who">Asia Family — Digital Focus</div><div class="ci-what">SFO · VC &amp; Digital Assets · HK</div></div>
+        <span class="ci-badge ipo">🚀 Pre-IPO</span>
+      </div>
+      <div class="ci-voice">"We're already oversubscribed in our own fund — sharing this AI opportunity with families we trust before it closes."</div>
+      <div class="ci-title">DeepMind Ventures Fund II</div>
+      <div class="ci-sub">Enterprise AI SaaS · Southeast Asia · $80M fund · Family-backed lead investor</div>
+      <div class="ci-stats">
+        <div class="ci-stat"><div class="ci-sv">$500K</div><div class="ci-sl">Min</div></div>
+        <div class="ci-stat"><div class="ci-sv g">$18M</div><div class="ci-sl">Remaining</div></div>
+        <div class="ci-stat"><div class="ci-sv">3×</div><div class="ci-sl">Target MOIC</div></div>
+        <div class="ci-stat"><div class="ci-sv">Jul 20</div><div class="ci-sl">Close</div></div>
+      </div>
+      <div class="ci-foot"><span class="inv-status open">Open</span><button class="btn-sm gold" onclick="expressInterest('DeepMind Ventures Fund II',this)">Express Interest →</button></div>
+    </div>
+
+    <!-- Card 5: European Family Real Estate -->
+    <div class="ci-card" data-ci="fam re">
+      <div class="ci-card-header">
+        <div class="ci-av" style="background:#4A3020;">EU</div>
+        <div class="ci-src"><div class="ci-who">European Family Office</div><div class="ci-what">MFO · Real Estate &amp; PE · Milan</div></div>
+        <span class="ci-badge fam">👨‍👩‍👧 Family-Led</span>
+      </div>
+      <div class="ci-voice">"Family has operated in European and MENA RE for 40 years. Opening a co-invest tranche exclusively to NAFIC families."</div>
+      <div class="ci-title">NovaBio Pre-IPO — Life Sciences</div>
+      <div class="ci-sub">European biotech · Phase III · Healthcare · Nasdaq listing target H1 2027</div>
+      <div class="ci-stats">
+        <div class="ci-stat"><div class="ci-sv">$1M</div><div class="ci-sl">Min</div></div>
+        <div class="ci-stat"><div class="ci-sv g">$8M</div><div class="ci-sl">Community tranche</div></div>
+        <div class="ci-stat"><div class="ci-sv">25%</div><div class="ci-sl">Target IRR</div></div>
+        <div class="ci-stat"><div class="ci-sv">Sep 15</div><div class="ci-sl">Close</div></div>
+      </div>
+      <div class="ci-foot"><span class="inv-status open">Open · 5 spots</span><button class="btn-sm gold" onclick="expressInterest('NovaBio Pre-IPO',this)">Express Interest →</button></div>
+    </div>
+
+    <div style="height:8px;"></div>
+    </div><!-- /ci-all-content -->
+
+    <!-- ══ FAMILY-LED TAB ══ -->
+    <div id="ci-fam-content" style="display:none;">
+    </div><!-- /ci-fam-content placeholder — cards injected by ciTab2 -->
+
+    <!-- ══ SWF CIRCLE TAB ══ -->
+    <div id="ci-swf-content" style="display:none;">
+      <div style="margin:14px 16px 10px;padding:12px 14px;background:linear-gradient(135deg,rgba(200,168,75,.08),rgba(200,168,75,.03));border:1px solid var(--gold-border);border-radius:12px;">
+        <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px;">MEMBER ACCESS · Middle East SWFs</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.55;">Warm introductions via NAFIC's verified relationships. Admin facilitates — you are never cold-pitched. Mandates exchanged only after mutual confirmation.</div>
+      </div>
+      <div style="margin:4px 16px 2px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;">
+        <div style="padding:8px;background:#fff;border-radius:10px;border:1px solid var(--sand);"><div style="font-size:16px;font-weight:700;color:var(--text);">8</div><div style="font-size:10px;color:var(--muted);">SWF Partners</div></div>
+        <div style="padding:8px;background:#fff;border-radius:10px;border:1px solid var(--sand);"><div style="font-size:16px;font-weight:700;color:var(--gold-dim);">$3.6T</div><div style="font-size:10px;color:var(--muted);">Combined AUM</div></div>
+        <div style="padding:8px;background:#fff;border-radius:10px;border:1px solid var(--sand);"><div style="font-size:16px;font-weight:700;color:var(--text);">Active</div><div style="font-size:10px;color:var(--muted);">All Deploying</div></div>
+      </div>
+      <div class="sec-label" style="margin-top:10px;">UAE</div>
+      <div class="inv-card">
         <div class="inv-card-top">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><div class="inv-cat" style="margin:0;">Real Estate · Dubai</div><span class="family-led-badge">👨‍👩‍👧 Al-Farsi Family</span></div>
-          <div class="inv-name">Dubai South Logistics Hub</div>
-          <div class="inv-sub">Class-A warehouse development · 15-year anchor tenant · Exit via REIT IPO</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1A3A6A,#0D2040);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">MIC</div>
+            <div><div class="inv-name" style="margin:0;">Mubadala Investment Company</div><div class="inv-sub" style="margin:0;">Abu Dhabi · $330B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">PE, VC, Tech, Healthcare, Real Assets, Energy transition</div>
         </div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$2M</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$8M</div><div class="invm-lbl">Syndication</div></div><div class="invm"><div class="invm-val">8.5%</div><div class="invm-lbl">Target Yield</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open · 3 spots</span><button class="btn-sm gold">Connect →</button></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$25M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Active</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" onclick="expressInterest('MIC',this)">Request Intro →</button></div>
       </div>
       <div class="inv-card">
         <div class="inv-card-top">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><div class="inv-cat" style="margin:0;">Tech · Singapore</div><span class="family-led-badge">👨‍👩‍👧 Lee Family Office</span></div>
-          <div class="inv-name">Quantum Edge Pre-Seed</div>
-          <div class="inv-sub">Quantum-resistant encryption for financial institutions · $4M pre-seed</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1A4A2A,#0D3018);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">ADIA</div>
+            <div><div class="inv-name" style="margin:0;">Abu Dhabi Investment Authority</div><div class="inv-sub" style="margin:0;">Abu Dhabi · $993B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">Diversified global · Equities, Fixed income, Infra, RE</div>
         </div>
-        <div class="inv-metrics"><div class="invm"><div class="invm-val">$250K</div><div class="invm-lbl">Min Check</div></div><div class="invm"><div class="invm-val gold">$1.2M</div><div class="invm-lbl">Remaining</div></div><div class="invm"><div class="invm-val">20%</div><div class="invm-lbl">Target IRR</div></div></div>
-        <div class="inv-footer"><span class="inv-status open">Open · 5 spots</span><button class="btn-sm gold">Connect →</button></div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$50M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Selective</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('ADIA',this)">Request Intro →</button></div>
       </div>
-      <div style="height:8px;"></div>
-    </div>
+      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#2A3A1A,#182A10);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">ADQ</div>
+            <div><div class="inv-name" style="margin:0;">ADQ — Abu Dhabi Holding Company</div><div class="inv-sub" style="margin:0;">Abu Dhabi · $110B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">Food & agri, Healthcare, Infra, Utilities, Logistics</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$20M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Active</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('ADQ',this)">Request Intro →</button></div>
+      </div>
+      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1A2A3A,#0D1A28);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">EIA</div>
+            <div><div class="inv-name" style="margin:0;">Emirates Investment Authority</div><div class="inv-sub" style="margin:0;">Abu Dhabi · ~$90B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">Government reserves · Broad mandate · GCC & global</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$30M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Selective</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('EIA',this)">Request Intro →</button></div>
+      </div>
+      <div class="sec-label">Saudi Arabia</div>
+      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#2A1A0A,#1A0D05);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#C8A84B;flex-shrink:0;">PIF</div>
+            <div><div class="inv-name" style="margin:0;">Public Investment Fund (PIF)</div><div class="inv-sub" style="margin:0;">Riyadh · $700B+ AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">Vision 2030 · Tech, RE, Tourism, Giga-projects, Global PE</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$50M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Active</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('PIF',this)">Request Intro →</button></div>
+      </div>
+      <div class="sec-label">Qatar</div>
+      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#3A1A1A,#280D0D);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">QIA</div>
+            <div><div class="inv-name" style="margin:0;">Qatar Investment Authority</div><div class="inv-sub" style="margin:0;">Doha · $475B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">Real Estate, Sports, Infra, Financial services, Tech</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$20M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Active</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('QIA',this)">Request Intro →</button></div>
+      </div>
+      <div class="sec-label">Kuwait</div>
+      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1A1A3A,#0D0D28);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">KIA</div>
+            <div><div class="inv-name" style="margin:0;">Kuwait Investment Authority</div><div class="inv-sub" style="margin:0;">Kuwait City · $750B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">One of the world's oldest SWFs · Global multi-asset</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$50M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Selective</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('KIA',this)">Request Intro →</button></div>
+      </div>
+      <div class="sec-label">Oman &amp; Bahrain</div>
+      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#2A2A1A,#1A1A0D);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#C8A84B;flex-shrink:0;">OIA</div>
+            <div><div class="inv-name" style="margin:0;">Oman Investment Authority</div><div class="inv-sub" style="margin:0;">Muscat · $45B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">Infrastructure, PE, OMV energy · Oman diversification</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$10M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Active</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('OIA',this)">Request Intro →</button></div>
+      </div>      <div class="inv-card">
+        <div class="inv-card-top">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1A3A2A,#0D2A1A);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">MUM</div>
+            <div><div class="inv-name" style="margin:0;">Bahrain Mumtalakat Holding</div><div class="inv-sub" style="margin:0;">Manama · ~$18B AUM</div></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px;">Sovereign equity · Global diversified · Gulf aviation</div>
+        </div>
+        <div class="inv-metrics"><div class="invm"><div class="invm-val gold">$5M+</div><div class="invm-lbl">Min Ticket</div></div><div class="invm"><div class="invm-val">Active</div><div class="invm-lbl">Status</div></div><div class="invm"><div class="invm-val">Warm</div><div class="invm-lbl">Intro</div></div></div>
+        <div class="inv-footer"><span class="inv-status open">Available via NAFIC</span><button class="btn-sm gold" data-swf-btn onclick="expressInterest('MUM',this)">Request Intro →</button></div>
+      </div>
+      <div id="swf-obs-note" style="display:none;margin:4px 16px 8px;padding:10px 14px;background:rgba(255,140,0,.07);border:1px solid rgba(255,140,0,.2);border-radius:10px;font-size:12px;color:#B45309;font-weight:600;">👁 Observer view — Request Intro available for Contributing Members. <span style="text-decoration:underline;cursor:pointer;" onclick="selectTier('member')">Preview as Member</span></div>
+      <div style="margin:0 16px 16px;font-size:11px;color:var(--muted);text-align:center;line-height:1.6;padding:10px 12px;background:rgba(200,168,75,.04);border:1px solid var(--gold-border);border-radius:10px;">All introductions coordinated by NAFIC admin. Your mandate is only shared after you confirm mutual interest.</div>
+    </div><!-- /ci-swf-content -->
 
-  </div>
-  <div class="tab-bar">
+    <!-- ══ SHARE A DEAL TAB ══ -->
+    <div id="ci-share-content" style="display:none;">
+    <div id="ci-share-wrap" style="margin:10px 16px 4px;padding:18px;background:var(--black);border-radius:16px;">
+      <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px;">Share with the Community</div>
+      <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px;">Have a deal worth sharing?</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.45);line-height:1.55;margin-bottom:14px;">Share an opportunity you're excited about. NAFIC admin reviews before it circulates — your identity stays private until both sides confirm.</div>
+
+      <!-- SUBMIT FORM -->
+      <div id="anchor-form-wrap">
+        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.8px;margin-bottom:6px;">DEAL DETAILS</div>
+        <input id="anchor-deal-name" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 12px;font-size:13px;margin-bottom:8px;font-family:'Inter',sans-serif;color:#fff;background:rgba(255,255,255,.07);" placeholder="Deal / company name" />
+        <input id="anchor-asset" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 12px;font-size:13px;margin-bottom:8px;font-family:'Inter',sans-serif;color:#fff;background:rgba(255,255,255,.07);" placeholder="Asset class (Real Estate, Pre-IPO, PE…)" />
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+          <input id="anchor-raise" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 12px;font-size:13px;font-family:'Inter',sans-serif;color:#fff;background:rgba(255,255,255,.07);" placeholder="Raise size (e.g. $30M)" />
+          <input id="anchor-min" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 12px;font-size:13px;font-family:'Inter',sans-serif;color:#fff;background:rgba(255,255,255,.07);" placeholder="Min ticket (e.g. $1M)" />
+        </div>
+        <input id="anchor-deadline" type="date" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 12px;font-size:13px;margin-bottom:8px;font-family:'Inter',sans-serif;color:rgba(255,255,255,.6);background:rgba(255,255,255,.07);" />
+        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.8px;margin-bottom:6px;">WHY YOU'RE SHARING THIS</div>
+        <textarea id="anchor-thesis" style="width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 12px;font-size:13px;margin-bottom:12px;font-family:'Inter',sans-serif;color:#fff;background:rgba(255,255,255,.07);resize:none;line-height:1.5;" rows="3" placeholder="Why are you excited about this? What's your angle? The community takes cues from how you frame it…"></textarea>
+        <button class="btn-gold" style="padding:13px;" onclick="submitAnchorDeal(this)">Share with Community →</button>
+        <div style="font-size:11px;color:rgba(255,255,255,.3);text-align:center;margin-top:8px;">Admin reviews within 24h · Your identity stays private</div>
+      </div>
+
+      <!-- PENDING STATE -->
+      <div id="anchor-pending-wrap" style="display:none;">
+        <div style="text-align:center;padding:8px 0;">
+          <div style="font-size:36px;margin-bottom:10px;">📋</div>
+          <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;">Shared with NAFIC team</div>
+          <div style="display:inline-block;background:rgba(200,168,75,.15);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:16px;border:1px solid rgba(200,168,75,.3);margin-bottom:12px;">⏳ PENDING REVIEW</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:14px;">Admin will review within 24 hours. If approved it'll appear in the community feed. You'll get a WhatsApp notification when it's live.</div>
+          <div id="anchor-summary" style="text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;font-size:12px;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:14px;"></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 12px;background:rgba(200,168,75,.06);border:1px solid rgba(200,168,75,.2);border-radius:10px;font-size:11px;color:rgba(255,255,255,.45);line-height:1.5;text-align:left;">
+            <span style="font-size:16px;">🛡️</span>
+            <span>Demo: open <b style="color:var(--gold);">Profile → Admin Panel → Deals</b> to approve or reject.</span>
+          </div>
+          <button style="margin-top:12px;width:100%;background:none;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px;font-size:13px;color:rgba(255,255,255,.5);cursor:pointer;font-family:'Inter',sans-serif;" onclick="document.getElementById('anchor-form-wrap').style.display='block';document.getElementById('anchor-pending-wrap').style.display='none';">Share Another Deal</button>
+        </div>
+      </div>
+    </div>
+    <div style="height:20px;"></div>
+    </div><!-- /ci-share-content -->
+
+  </div><!-- /scroll-body -->
+<div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn active" data-tab="investments"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
-    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
+    <button class="tab-btn" data-tab="directory" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Directory</div></button>
+    <button class="tab-btn active" data-tab="coinvest"><div class="tab-icon">💼</div><div class="tab-lbl">Co-Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
 
-<!-- ── MEMBERS DIRECTORY ── -->
+<!-- ── DIRECTORY ── -->
 <div id="s-members" class="screen">
   <div class="status-bar" style="background:var(--black)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%)">9:41</div></div>
   <div class="ev-head" style="padding-bottom:0;">
-    <div class="ev-head-title">Members</div>
-    <div class="ev-head-sub">Private directory · Approved families only</div>
+    <div class="ev-head-title">Directory</div>
+    <div class="ev-head-sub">Approved families · AI-matched · LP-initiated only</div>
     <div class="mem-search-wrap" style="padding:12px 0 0;">
-      <input class="mem-search" type="text" placeholder="🔍  Search by name or office…"/>
+      <input class="mem-search" type="text" placeholder="🔍  Search by name, region, or asset class…"/>
     </div>
     <div class="mem-filters">
-      <div class="mem-filter on">All</div>
-      <div class="mem-filter">Middle East</div>
-      <div class="mem-filter">Asia Pacific</div>
-      <div class="mem-filter">Europe</div>
-      <div class="mem-filter">Americas</div>
-      <div class="mem-filter">Private Equity</div>
-      <div class="mem-filter">Digital Assets</div>
-      <div class="mem-filter">Venture Capital</div>
+      <select class="dir-filter-select" id="dir-f-region" onchange="filterDirectory()">
+        <option value="">🌍 Region</option>
+        <option>GCC / MENA</option>
+        <option>Greater China</option>
+        <option>Southeast Asia</option>
+        <option>South Asia</option>
+        <option>Japan / Korea</option>
+        <option>Europe</option>
+        <option>North America</option>
+        <option>South America</option>
+        <option>Africa</option>
+        <option>Global</option>
+      </select>
+      <select class="dir-filter-select" id="dir-f-asset" onchange="filterDirectory()">
+        <option value="">💼 Asset Class</option>
+        <option>Private Equity</option>
+        <option>Venture Capital</option>
+        <option>Hedge Funds</option>
+        <option>Private Credit</option>
+        <option>Real Estate</option>
+        <option>Fund of Funds</option>
+        <option>Co-Investments</option>
+        <option>Direct Investments</option>
+        <option>Digital Assets</option>
+        <option>Infrastructure</option>
+        <option>Impact / ESG</option>
+      </select>
+      <select class="dir-filter-select" id="dir-f-orgtype" onchange="filterDirectory()">
+        <option value="">🏢 Type</option>
+        <option>Single Family Office</option>
+        <option>Multi-Family Office</option>
+        <option>Family Business</option>
+        <option>LP Advisor</option>
+        <option>Asset Manager</option>
+      </select>
     </div>
   </div>
   <div class="scroll-body">
-    <div class="mem-count">23 members</div>
+
+    <!-- AI MATCH BANNER -->
+    <div id="dir-ai-match" style="margin:12px 16px 8px;padding:14px 15px;background:linear-gradient(135deg,rgba(200,168,75,.1),rgba(200,168,75,.04));border:1px solid var(--gold-border);border-radius:14px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+        <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;">🤖 AI Match — Your Top Matches</div>
+        <span style="font-size:10px;color:var(--muted);">Member Access</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#fff;border-radius:10px;border:1px solid var(--sand);">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:30px;height:30px;border-radius:8px;background:#C4A050;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">AF</div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--text);">Al-Farsi Family</div><div style="font-size:10px;color:var(--muted);">PE · Real Estate · GCC</div></div>
+          </div>
+          <div style="text-align:right;"><div style="font-size:14px;font-weight:700;color:var(--gold-dim);">92%</div><div style="font-size:9px;color:var(--muted);">mandate match</div></div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#fff;border-radius:10px;border:1px solid var(--sand);">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:30px;height:30px;border-radius:8px;background:#2A68A8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">LF</div>
+            <div><div style="font-size:12px;font-weight:600;color:var(--text);">Lee Family Office</div><div style="font-size:10px;color:var(--muted);">VC · Tech · Asia-Pacific</div></div>
+          </div>
+          <div style="text-align:right;"><div style="font-size:14px;font-weight:700;color:var(--gold-dim);">85%</div><div style="font-size:9px;color:var(--muted);">mandate match</div></div>
+        </div>
+      </div>
+      <button style="margin-top:10px;width:100%;background:none;border:1.5px solid var(--gold-border);border-radius:10px;padding:9px;font-size:12px;font-weight:600;color:var(--gold-dim);cursor:pointer;" onclick="showInner('s-dash')">View All AI Matches →</button>
+    </div>
+
+    <!-- MEMBER COUNT -->
+    <div id="dir-mem-count" class="mem-count">23 members · LP-initiated connections only</div>
 
     <div class="mem-card">
       <div class="mem-av" style="background:#1C2E1A;">AF</div>
@@ -1187,14 +1701,24 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <button class="mem-connect">Connect</button>
     </div>
 
+    <!-- BUMBLE CONNECT SECTION -->
+    <div id="dir-bumble" style="margin:6px 16px 8px;padding:14px 15px;background:#fff;border:1px solid var(--sand);border-radius:14px;position:relative;overflow:hidden;">
+      <div style="font-size:11px;font-weight:700;color:var(--gold-dim);letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px;">Bumble Connect</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:10px;">LPs initiate first. GPs may never cold-reach a member. Admin facilitates all introductions after mutual interest is confirmed.</div>
+      <div style="display:flex;align-items:center;gap:8px;padding:10px 12px;background:var(--paper);border-radius:10px;border:1px solid var(--sand);">
+        <div style="font-size:20px;">🔔</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.45;"><b style="color:var(--text);">2 families have signalled interest</b> in connecting with you based on mandate match. Review and initiate if you choose.</div>
+      </div>
+      <button style="margin-top:10px;width:100%;background:var(--black);border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:600;color:#fff;cursor:pointer;">Review Inbound Interest →</button>
+    </div>
+
     <div style="height:16px;"></div>
   </div>
-  <div class="tab-bar">
+<div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
-    <button class="tab-btn active" data-tab="members"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
+    <button class="tab-btn active" data-tab="directory"><div class="tab-icon">👥</div><div class="tab-lbl">Directory</div></button>
+    <button class="tab-btn" data-tab="coinvest" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">💼</div><div class="tab-lbl">Co-Invest</div></button>
     <button class="tab-btn" data-tab="profile" onclick="setTab(this);showInner('s-profile')"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
   </div>
 </div>
@@ -1207,7 +1731,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div class="prof-av">LZ</div>
       <div class="prof-name">Lixia Zhu</div>
       <div class="prof-sub">76 Columbus · Single Family Office · G2</div>
-      <div class="prof-tier"><div class="pt-dot"></div><div class="pt-text">Member · Active</div></div>
+      <div class="prof-tier"><div class="pt-dot"></div><div id="prof-tier-text" class="pt-text">Member · Active</div></div>
     </div>
     <div class="founding-badge">
       <div class="fb-title">🌟 Founding Circle Progress</div>
@@ -1220,8 +1744,8 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div class="prof-tags"><span class="prof-tag">Private Equity</span><span class="prof-tag">Venture Capital</span><span class="prof-tag">Real Estate</span><span class="prof-tag">Technology</span></div>
       <div class="ps-lbl">Membership</div>
       <div class="prof-detail-card">
-        <div class="pdc-row"><div class="pdc-k">Tier</div><div class="pdc-v gold">Member</div></div>
-        <div class="pdc-row"><div class="pdc-k">Annual fee</div><div class="pdc-v">$45,000</div></div>
+        <div class="pdc-row"><div class="pdc-k">Tier</div><div id="prof-tier-val" class="pdc-v gold">Member</div></div>
+        <div id="prof-fee-row" class="pdc-row"><div class="pdc-k">Annual fee</div><div class="pdc-v">$45,000</div></div>
         <div class="pdc-row"><div class="pdc-k">Renewal</div><div class="pdc-v">Jun 1, 2026</div></div>
         <div class="pdc-row"><div class="pdc-k">Check size</div><div class="pdc-v">$1M – $25M</div></div>
         <div class="pdc-row"><div class="pdc-k">Generation</div><div class="pdc-v">G2</div></div>
@@ -1236,7 +1760,15 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       </div>
     </div>
     <div style="padding:16px 0 0;">
-      <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:0 16px 8px;">Admin</div>
+      <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:0 16px 8px;">My Account</div>
+      <div class="admin-panel-btn" onclick="showInner('s-tiers')" style="margin-bottom:8px;">
+        <div class="apb-left">
+          <div class="apb-icon">🏛️</div>
+          <div><div class="apb-label">Contribution Tiers</div><div class="apb-sub">Observer · Member · What's included</div></div>
+        </div>
+        <div class="apb-arrow">›</div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding:8px 16px 8px;">Admin</div>
       <div class="admin-panel-btn" onclick="showInner('s-admin')">
         <div class="apb-left">
           <div class="apb-icon">🛡️</div>
@@ -1251,13 +1783,141 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     </div>
     <button class="signout-btn" onclick="go('s-splash')">Sign Out</button>
   </div>
-  <div class="tab-bar">
+<div class="tab-bar">
     <button class="tab-btn" data-tab="home" onclick="setTab(this);showInner('s-dash')"><div class="tab-icon">🏠</div><div class="tab-lbl">Home</div></button>
     <button class="tab-btn" data-tab="events" onclick="setTab(this);showInner('s-events')"><div class="tab-icon">📅</div><div class="tab-lbl">Events</div></button>
-    <button class="tab-btn" data-tab="investments" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">📈</div><div class="tab-lbl">Invest</div></button>
-    <button class="tab-btn" data-tab="members" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Members</div></button>
-    <button class="tab-btn" data-tab="messages" onclick="setTab(this);showInner('s-messages')"><div class="tab-icon">💬</div><div class="tab-lbl">Messages</div></button>
+    <button class="tab-btn" data-tab="directory" onclick="setTab(this);showInner('s-members')"><div class="tab-icon">👥</div><div class="tab-lbl">Directory</div></button>
+    <button class="tab-btn" data-tab="coinvest" onclick="setTab(this);showInner('s-investments')"><div class="tab-icon">💼</div><div class="tab-lbl">Co-Invest</div></button>
     <button class="tab-btn active" data-tab="profile"><div class="tab-icon">👤</div><div class="tab-lbl">Profile</div></button>
+  </div>
+</div>
+
+<!-- ── CONTRIBUTION TIERS ── -->
+<div id="s-tiers" class="screen" style="background:#0F0F0E;">
+  <div class="status-bar" style="background:#0F0F0E;"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:#fff;">9:41</div></div>
+  <div style="background:#0F0F0E;padding:8px 16px 0;display:flex;align-items:center;">
+    <button onclick="showInner('s-profile')" style="color:#fff;font-size:22px;background:none;border:none;padding:0 12px 0 0;cursor:pointer;">&#x2039;</button>
+    <div style="color:#fff;font-size:16px;font-weight:700;flex:1;text-align:center;">Contribution Tiers</div>
+    <div style="width:36px;"></div>
+  </div>
+  <div class="scroll-body" style="background:#0F0F0E;padding-bottom:40px;">
+    <div style="padding:18px 16px 14px;">
+      <div style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px;">Knowledge &#xB7; Events &#xB7; Network &#xB7; Co-Invest</div>
+      <div style="color:#666;font-size:12px;font-style:italic;">You learn, you gather, you connect, you co-invest.</div>
+    </div>
+    <div style="margin:0 16px;border-radius:14px;overflow:hidden;border:1px solid #2A2A28;">
+      <!-- Column headers — tap to select tier -->
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#1C1C1A;">
+        <div style="padding:14px 12px 12px;">
+          <div style="font-size:9px;color:#555;letter-spacing:.8px;text-transform:uppercase;line-height:1.4;">Tap column<br>to preview</div>
+        </div>
+        <div id="tier-col-obs" class="tier-col-hdr" onclick="selectTier('observer')" style="padding:14px 8px 10px;text-align:center;border-left:1px solid #2A2A28;">
+          <div style="font-size:12px;font-weight:700;color:#C0A860;">Observer</div>
+          <div style="font-size:10px;color:#6A6050;margin-top:2px;">Inv. Only</div>
+          <div id="tier-obs-check" class="tier-check" style="color:#C0A860;opacity:0;">✓</div>
+        </div>
+        <div id="tier-col-mem" class="tier-col-hdr" onclick="selectTier('member')" style="padding:14px 8px 10px;text-align:center;border-left:1px solid #2A2A28;background:rgba(200,168,75,.1);">
+          <div style="font-size:12px;font-weight:700;color:var(--gold);">Member</div>
+          <div style="font-size:10px;color:#B89040;margin-top:2px;">Annual fee</div>
+          <div id="tier-mem-check" class="tier-check" style="color:var(--gold);opacity:1;">✓</div>
+        </div>
+      </div>
+      <!-- KNOWLEDGE -->
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">KNOWLEDGE</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Market Intel</div><div style="font-size:10px;color:#555;margin-top:2px;">Macro / Financial / Industry briefings</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#8A7040;">&#x2713;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Research Participation</div><div style="font-size:10px;color:#555;margin-top:2px;">Case studies &amp; co-research</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Academy Branding</div><div style="font-size:10px;color:#444;margin-top:2px;">Columbia, HKUST programme access</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <!-- EVENTS -->
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">EVENTS</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Curated Roundtables</div><div style="font-size:10px;color:#555;margin-top:2px;">&#x2264;50 pax &#xB7; Vetted FO discussions</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#8A7040;">&#x2713;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Delegation Trips</div><div style="font-size:10px;color:#444;margin-top:2px;">&#x2264;10 pax &#xB7; ADFW &amp; cross-border</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Private Residency</div><div style="font-size:10px;color:#444;margin-top:2px;">&#x2264;10 pax &#xB7; Multi-day immersive</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <!-- NETWORK -->
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">NETWORK</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Member Directory</div><div style="font-size:10px;color:#555;margin-top:2px;">Searchable approved member roster</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">AI Match Making</div><div style="font-size:10px;color:#444;margin-top:2px;">Auto-alerts when mandates align</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Bumble Connect</div><div style="font-size:10px;color:#444;margin-top:2px;">Direct msg &#xB7; GPs never cold-reach</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <!-- CO-INVEST -->
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;background:#2C2C2A;border-top:1px solid #3A3A38;">
+        <div style="padding:7px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1.2px;">CO-INVEST</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;background:rgba(200,168,75,.06);"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">Deal Flow</div><div style="font-size:10px;color:#555;margin-top:2px;">Family-led co-investments</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#E0D8C0;">SWF Access</div><div style="font-size:10px;color:#555;margin-top:2px;">Mubadala, ADIA, QIA, OIA warm intros</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:10px;font-weight:700;color:#8A6820;">Limited</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Express Interest</div><div style="font-size:10px;color:#444;margin-top:2px;">Signal intent &#xB7; admin facilitates intro</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 72px 72px;border-top:1px solid #222220;opacity:.55;">
+        <div style="padding:11px 12px;"><div style="font-size:12px;font-weight:600;color:#888;">Anchor Deal</div><div style="font-size:10px;color:#444;margin-top:2px;">Anchor &amp; publish across allocators</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;color:#444;">&#x2013;</div>
+        <div style="display:flex;align-items:center;justify-content:center;border-left:1px solid #222220;font-size:15px;font-weight:700;color:#5A9A5A;background:rgba(200,168,75,.05);">&#x2713;</div>
+      </div>
+    </div>
+    <div style="padding:12px 16px 4px;display:flex;gap:16px;font-size:10.5px;color:#555;">
+      <span><b style="color:#5A9A5A;">&#x2713;</b> Full</span>
+      <span><b style="color:#8A6820;">Limited</b> = Partial</span>
+      <span><b style="color:#444;">&#x2013;</b> Not included</span>
+    </div>
+    <div style="margin:16px 16px 8px;background:linear-gradient(135deg,#221A00,#3A2A00);border:1.5px solid var(--gold);border-radius:16px;padding:18px 16px;text-align:center;">
+      <div style="color:var(--gold);font-size:15px;font-weight:700;margin-bottom:4px;">Become a Contributing Member</div>
+      <div style="color:#8A7040;font-size:12px;margin-bottom:14px;">Full access across all four pillars</div>
+      <button onclick="showInner('s-profile')" style="background:var(--gold);color:#0A0907;border:none;border-radius:10px;padding:12px 0;font-size:14px;font-weight:700;cursor:pointer;width:100%;">Apply for Membership &#x2192;</button>
+    </div>
   </div>
 </div>
 
@@ -1295,6 +1955,18 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
               <span class="ar-status new">Application received · 2h ago</span>
             </div>
           </div>
+          <div style="margin:8px 0 6px;"><button onclick="document.getElementById('zw-answers').style.display=document.getElementById('zw-answers').style.display==='block'?'none':'block'" style="font-size:12px;color:var(--gold-dim);background:none;border:none;cursor:pointer;font-weight:600;padding:0;">View Full Application ↓</button></div>
+          <div id="zw-answers" style="display:none;padding:10px 12px;background:#F9F6EF;border-radius:10px;margin-bottom:8px;font-size:12px;color:var(--text);line-height:1.9;">
+            <b>Org type:</b> Single Family Office · G2<br>
+            <b>Industry focus:</b> Technology, FinTech, AI &amp; Deep Tech<br>
+            <b>Asset focus:</b> PE, Digital Assets, Venture Capital<br>
+            <b>Geography:</b> Greater China, Southeast Asia<br>
+            <b>Check size:</b> $5M – $50M<br>
+            <b>Exploring:</b> Co-investments (Active), Digital Assets (Researching), LP Introductions (Curious)<br>
+            <b>Engagement:</b> 1:1 intros, Deal room<br>
+            <b>Tier chosen:</b> Member (Contributing)<br>
+            <b>WhatsApp:</b> +86 138 0000 1234
+          </div>
           <div class="ar-actions">
             <button class="ar-approve" onclick="this.textContent='✓ Approved';this.style.background='#2E7D32';">Approve</button>
             <button class="ar-reject" onclick="this.textContent='Rejected';this.style.opacity='.5';">Reject</button>
@@ -1307,6 +1979,18 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
               <div class="ar-sub">MFO · Abu Dhabi · Invited 5 days ago<br>Real Estate, Infrastructure · $25M–$100M</div>
               <span class="ar-status new">Application received · 5h ago</span>
             </div>
+          </div>
+          <div style="margin:8px 0 6px;"><button onclick="document.getElementById('km-answers').style.display=document.getElementById('km-answers').style.display==='block'?'none':'block'" style="font-size:12px;color:var(--gold-dim);background:none;border:none;cursor:pointer;font-weight:600;padding:0;">View Full Application ↓</button></div>
+          <div id="km-answers" style="display:none;padding:10px 12px;background:#F9F6EF;border-radius:10px;margin-bottom:8px;font-size:12px;color:var(--text);line-height:1.9;">
+            <b>Org type:</b> Multi-Family Office (LP/GP)<br>
+            <b>Industry focus:</b> Real Estate, Energy / CleanTech, Manufacturing<br>
+            <b>Asset focus:</b> Real Estate, Infrastructure, Private Credit<br>
+            <b>Geography:</b> GCC / MENA, Europe<br>
+            <b>Check size:</b> $25M – $100M<br>
+            <b>Exploring:</b> Deal origination (Active), SWF introductions (Active), Co-investments (Researching)<br>
+            <b>Engagement:</b> Small roundtables, Delegation trips<br>
+            <b>Tier chosen:</b> Member (Contributing)<br>
+            <b>WhatsApp:</b> +971 50 000 5678
           </div>
           <div class="ar-actions">
             <button class="ar-approve" onclick="this.textContent='✓ Approved';this.style.background='#2E7D32';">Approve</button>
@@ -1330,7 +2014,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         <div style="font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px;">WHO ARE YOU INVITING?</div>
         <div style="display:flex;background:#F0EBE3;border-radius:12px;padding:3px;gap:3px;" id="invite-type-toggle">
           <button id="inv-type-lp" onclick="setInviteType('lp')" style="flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:var(--black);color:#fff;transition:all .2s;">👤 LP Member</button>
-          <button id="inv-type-gp" onclick="setInviteType('gp')" style="flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;">🏢 GP / Fund</button>
+          <button id="inv-type-gp" onclick="setInviteType('gp')" style="flex:1;padding:9px;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s;">🏢 Asset Manager</button>
         </div>
       </div>
 
@@ -1349,16 +2033,16 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
       <!-- GP invite form -->
       <div id="inv-form-gp" class="admin-form" style="display:none;">
-        <div class="admin-form-title">Invite GP / Fund Manager</div>
-        <div class="admin-form-hint">Their GP onboarding form will be pre-filled. Since you're inviting them, the referral step is automatically confirmed — they go straight to submitting their deal.</div>
+        <div class="admin-form-title">Invite Asset Manager</div>
+        <div class="admin-form-hint">Their onboarding form will be pre-filled. Since you're inviting them, the referral step is automatically confirmed — they go straight to submitting their deal.</div>
         <input class="admin-input" type="email" placeholder="Email address *"/>
         <input class="admin-input" type="text" placeholder="Full name"/>
         <input class="admin-input" type="text" placeholder="Organisation name"/>
         <input class="admin-input" type="text" placeholder="Role / Title (e.g. Managing Partner)"/>
         <input class="admin-input" type="text" placeholder="WhatsApp / Phone"/>
         <input class="admin-input" type="text" placeholder="LinkedIn URL (optional)"/>
-        <div style="padding:10px 12px;background:rgba(42,104,168,.07);border:1px solid rgba(42,104,168,.2);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 Recipient receives GP onboarding link → 3-step deal submission (referral pre-confirmed) → pending admin deal review</div>
-        <button class="admin-submit" style="background:#1A5888;" onclick="showInviteSent(this,'GP')">Send GP Invitation →</button>
+        <div style="padding:10px 12px;background:rgba(42,104,168,.07);border:1px solid rgba(42,104,168,.2);border-radius:10px;font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:4px;">📨 Recipient receives asset manager onboarding link → 3-step deal submission (referral pre-confirmed) → pending admin review</div>
+        <button class="admin-submit" style="background:#1A5888;" onclick="showInviteSent(this,'Asset Manager')">Send Invitation →</button>
       </div>
 
       <!-- Pending invites list -->
@@ -1454,20 +2138,15 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
 <!-- ── GP ONBOARDING ── -->
 <div id="s-gp-apply" class="screen">
-  <div class="status-bar"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:#fff;">9:41</div></div>
+  <div class="status-bar" style="background:var(--paper)"><div style="width:60px"></div><div class="sb-time" style="position:absolute;left:50%;transform:translateX(-50%);color:var(--text);">9:41</div></div>
 
   <!-- Step 1: Organisation -->
   <div class="gp-step active" id="gp-step-1">
-    <div class="gp-progress">
-      <div class="gp-prog-dot done"></div>
-      <div class="gp-prog-dot"></div>
-      <div class="gp-prog-dot"></div>
-      <div class="gp-prog-dot"></div>
-    </div>
+    <div class="gp-progress"><div class="gp-prog-track"><div class="gp-prog-fill" style="width:33%"></div></div></div>
     <div class="gp-step-head">
-      <div class="gp-step-eyebrow">Step 1 of 4 · GP Onboarding</div>
+      <div class="gp-step-eyebrow">Step 1 of 3 · Asset Manager Onboarding</div>
       <div class="gp-step-title">Your organisation</div>
-      <div class="gp-step-sub">Select your type — your fund summary will adapt to match.</div>
+      <div class="gp-step-sub">Select your type — this shapes your profile in the NAFIC network.</div>
     </div>
     <div class="gp-form">
       <div class="gp-type-grid">
@@ -1478,7 +2157,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
         </div>
         <div class="gp-type-card" onclick="selectGpType(this)">
           <div class="gp-type-icon">📊</div>
-          <div class="gp-type-label">Fund Manager</div>
+          <div class="gp-type-label">Asset Manager</div>
           <div class="gp-type-sub">PE, VC, Hedge, Private Credit</div>
         </div>
         <div class="gp-type-card" onclick="selectGpType(this)">
@@ -1512,14 +2191,11 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
 
   <!-- Step 2: Your Details -->
   <div class="gp-step" id="gp-step-2">
-    <div class="gp-progress">
-      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
-      <div class="gp-prog-dot"></div><div class="gp-prog-dot"></div>
-    </div>
+    <div class="gp-progress"><div class="gp-prog-track"><div class="gp-prog-fill" style="width:66%"></div></div></div>
     <div class="gp-step-head">
-      <div class="gp-step-eyebrow">Step 2 of 4 · Your Details</div>
+      <div class="gp-step-eyebrow">Step 2 of 3 · Your Details</div>
       <div class="gp-step-title">Who are we speaking with?</div>
-      <div class="gp-step-sub">The primary contact for this submission.</div>
+      <div class="gp-step-sub">The primary contact for this application.</div>
     </div>
     <div class="gp-form">
       <label class="gp-label">Full Name</label>
@@ -1534,109 +2210,39 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <input class="gp-input" type="url" placeholder="linkedin.com/in/yourprofile"/>
     </div>
     <div class="gp-footer">
-      <button class="gp-next-btn" onclick="gpStep(3)">Continue →</button>
+      <button class="gp-next-btn" onclick="gpStep(4)">Continue →</button>
       <button class="gp-back-btn" onclick="gpStep(1)">← Back</button>
     </div>
   </div>
 
-  <!-- Step 3: Fund Summary -->
-  <div class="gp-step" id="gp-step-3">
-    <div class="gp-progress">
-      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
-      <div class="gp-prog-dot"></div>
-    </div>
-    <div class="gp-step-head">
-      <div class="gp-step-eyebrow">Step 3 of 4 · Fund Summary</div>
-      <div class="gp-step-title">Tell us about the opportunity</div>
-      <div class="gp-step-sub">Be specific — NAFIC families review dozens of opportunities.</div>
-    </div>
-    <div class="gp-form">
-      <label class="gp-label">Deal / Fund Name</label>
-      <input class="gp-input" type="text" placeholder="e.g. FinEdge Technologies Pre-IPO"/>
-      <label class="gp-label">Sector / Industry</label>
-      <select class="gp-select">
-        <option>FinTech</option><option>Healthcare & Life Sciences</option>
-        <option>Technology & AI</option><option>Real Estate</option>
-        <option>Energy & Infrastructure</option><option>Consumer & Retail</option>
-        <option>Digital Assets</option><option>Education</option><option>Other</option>
-      </select>
-      <label class="gp-label">Stage</label>
-      <select class="gp-select">
-        <option>Pre-IPO (Series C+)</option><option>Series B</option>
-        <option>Fund I</option><option>Fund II+</option>
-        <option>Single Asset</option><option>Co-Investment</option>
-      </select>
-      <div class="gp-row-2">
-        <div>
-          <label class="gp-label">Total Raise</label>
-          <input class="gp-input" type="text" placeholder="e.g. $30M"/>
-        </div>
-        <div>
-          <label class="gp-label">Min Ticket</label>
-          <input class="gp-input" type="text" placeholder="e.g. $500K"/>
-        </div>
-      </div>
-      <div class="gp-row-2">
-        <div>
-          <label class="gp-label">Valuation / NAV</label>
-          <input class="gp-input" type="text" placeholder="e.g. $150M"/>
-        </div>
-        <div>
-          <label class="gp-label">Target Close</label>
-          <input class="gp-input" type="text" placeholder="e.g. Q4 2026"/>
-        </div>
-      </div>
-      <label class="gp-label">IPO Target / Exit Strategy</label>
-      <input class="gp-input" type="text" placeholder="e.g. HKEX listing Q1 2027 / Trade sale"/>
-      <label class="gp-label">One-line description</label>
-      <input class="gp-input" type="text" placeholder="What does the company/fund do?"/>
-      <label class="gp-label">Pitch Deck / One-Pager</label>
-      <div style="border:1.5px dashed rgba(255,255,255,.2);border-radius:12px;padding:18px;text-align:center;cursor:pointer;margin-bottom:4px;">
-        <div style="font-size:22px;margin-bottom:4px;">📎</div>
-        <div style="font-size:13px;color:rgba(255,255,255,.5);">Tap to upload PDF · Max 20MB</div>
-      </div>
-      <label class="gp-label" style="margin-top:8px;">3 Key Highlights</label>
-      <div class="gp-highlight-row"><div class="gp-highlight-num">1</div><input class="gp-input" style="margin:0;" type="text" placeholder="e.g. $12M ARR, 3x YoY growth"/></div>
-      <div class="gp-highlight-row"><div class="gp-highlight-num">2</div><input class="gp-input" style="margin:0;" type="text" placeholder="e.g. Backed by Sequoia & GIC"/></div>
-      <div class="gp-highlight-row"><div class="gp-highlight-num">3</div><input class="gp-input" style="margin:0;" type="text" placeholder="e.g. HKEX IPO target Q1 2027"/></div>
-    </div>
-    <div class="gp-footer">
-      <button class="gp-next-btn" onclick="gpStep(4)">Continue →</button>
-      <button class="gp-back-btn" onclick="gpStep(2)">← Back</button>
-    </div>
-  </div>
-
-  <!-- Step 4: Referral -->
+  <!-- Step 3 (was Step 4): Referral -->
   <div class="gp-step" id="gp-step-4">
-    <div class="gp-progress">
-      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
-      <div class="gp-prog-dot done"></div><div class="gp-prog-dot done"></div>
-    </div>
+    <div class="gp-progress"><div class="gp-prog-track"><div class="gp-prog-fill" style="width:100%"></div></div></div>
     <div class="gp-step-head">
-      <div class="gp-step-eyebrow">Step 4 of 4 · Referral</div>
+      <div class="gp-step-eyebrow">Step 3 of 3 · Referral</div>
       <div class="gp-step-title">Who referred you?</div>
-      <div class="gp-step-sub">NAFIC is trust-based. A referral from a member or LP carries weight in our review.</div>
+      <div class="gp-step-sub">NAFIC is trust-based. A referral from an existing member carries weight in our review.</div>
     </div>
     <div class="gp-form">
-      <label class="gp-label">Referred by (NAFIC Member / LP)</label>
-      <input class="gp-input" type="text" placeholder="Search member name or family office…"/>
-      <div style="margin-top:-4px;margin-bottom:10px;padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;">
-        <div style="font-size:12px;color:rgba(255,255,255,.4);margin-bottom:6px;">NAFIC MEMBERS</div>
+      <label class="gp-label">Referred by (NAFIC Member)</label>
+      <input class="gp-input" type="text" placeholder="Search member name or firm…"/>
+      <div style="margin-top:-4px;margin-bottom:10px;padding:10px 12px;background:var(--paper);border:1px solid var(--sand);border-radius:10px;">
+        <div style="font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.8px;margin-bottom:6px;">NAFIC MEMBERS</div>
         <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
-          <div class="gp-ref-av" style="background:#C4A050;">AF</div>
-          <div><div class="gp-ref-name">Al-Farsi Family</div><div class="gp-ref-sub">SFO · Abu Dhabi</div></div>
+          <div class="gp-ref-av" style="background:#C4A050;">ME</div>
+          <div><div class="gp-ref-name">Middle East Family</div><div class="gp-ref-sub">SFO · GCC / MENA</div></div>
         </div>
         <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
-          <div class="gp-ref-av" style="background:#1A1A2E;">CH</div>
-          <div><div class="gp-ref-name">Chen Holdings</div><div class="gp-ref-sub">SFO · Hong Kong</div></div>
+          <div class="gp-ref-av" style="background:#1A1A2E;">AS</div>
+          <div><div class="gp-ref-name">Asia Family Office</div><div class="gp-ref-sub">SFO · Greater China</div></div>
         </div>
         <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
-          <div class="gp-ref-av" style="background:#2A68A8;">LF</div>
-          <div><div class="gp-ref-name">Lee Family Office</div><div class="gp-ref-sub">MFO · Singapore</div></div>
+          <div class="gp-ref-av" style="background:#2A68A8;">AP</div>
+          <div><div class="gp-ref-name">Asia-Pacific Family</div><div class="gp-ref-sub">MFO · Southeast Asia</div></div>
         </div>
         <div class="gp-ref-row" onclick="this.classList.toggle('selected')">
-          <div class="gp-ref-av" style="background:#1E1A2E;">AR</div>
-          <div><div class="gp-ref-name">Al-Rashid Capital</div><div class="gp-ref-sub">SFO · Dubai</div></div>
+          <div class="gp-ref-av" style="background:#1E4A2E;">EU</div>
+          <div><div class="gp-ref-name">European Family Office</div><div class="gp-ref-sub">MFO · Europe</div></div>
         </div>
       </div>
       <label class="gp-label">How else did you hear about NAFIC?</label>
@@ -1652,16 +2258,17 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     </div>
     <div class="gp-footer">
       <button class="gp-next-btn" onclick="gpSubmit()">Submit for Review →</button>
-      <button class="gp-back-btn" onclick="gpStep(3)">← Back</button>
+      <button class="gp-back-btn" onclick="gpStep(2)">← Back</button>
     </div>
   </div>
 
   <!-- Submitted state -->
   <div class="gp-step" id="gp-step-done">
+    <div class="gp-progress"><div class="gp-prog-track"><div class="gp-prog-fill" style="width:100%"></div></div></div>
     <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;text-align:center;">
-      <div style="width:72px;height:72px;border-radius:50%;background:rgba(196,160,80,.15);border:2px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:24px;">✓</div>
-      <div style="font-size:24px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;margin-bottom:10px;">Submission received</div>
-      <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:32px;">Thank you. The NAFIC team will review your submission within 48 hours. You'll be notified by email once a decision is made.</div>
+      <div style="width:72px;height:72px;border-radius:50%;background:rgba(200,168,75,.12);border:2px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:24px;">✓</div>
+      <div style="font-size:24px;font-weight:700;color:var(--text);font-family:'DM Serif Display',serif;margin-bottom:10px;">Application received</div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:32px;">The NAFIC team will review your application within 48 hours. You'll be notified by WhatsApp once a decision is made.</div>
       <button class="gp-next-btn" onclick="showInner('s-gp-dash')" style="max-width:280px;">View Your Dashboard →</button>
     </div>
   </div>
@@ -1688,20 +2295,56 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
       <div class="gpd-pending-sub">Your submission is being reviewed by the NAFIC team. You'll receive an email notification once approved or if we need more information. Typical response time is 48 hours.</div>
     </div>
 
-    <div class="gpd-section"><div class="gpd-section-title">Your Submission</div></div>
+    <div class="gpd-section"><div class="gpd-section-title">Your Profile</div></div>
     <div class="gpd-card">
-      <div class="gpd-row"><div class="gpd-k">Deal</div><div class="gpd-v">FinEdge Technologies Pre-IPO</div></div>
-      <div class="gpd-row"><div class="gpd-k">Type</div><div class="gpd-v">Pre-IPO · FinTech · Series C</div></div>
-      <div class="gpd-row"><div class="gpd-k">Raise</div><div class="gpd-v">$30M total · $500K min ticket</div></div>
-      <div class="gpd-row"><div class="gpd-k">Valuation</div><div class="gpd-v">$150M pre-money</div></div>
-      <div class="gpd-row"><div class="gpd-k">Target close</div><div class="gpd-v">Q4 2026</div></div>
-      <div class="gpd-row"><div class="gpd-k">Exit</div><div class="gpd-v">HKEX listing Q1 2027</div></div>
+      <div class="gpd-row"><div class="gpd-k">Firm</div><div class="gpd-v">FinEdge Technologies</div></div>
+      <div class="gpd-row"><div class="gpd-k">Type</div><div class="gpd-v">Asset Manager · FinTech</div></div>
+      <div class="gpd-row"><div class="gpd-k">HQ</div><div class="gpd-v">Singapore</div></div>
+      <div class="gpd-row"><div class="gpd-k">Status</div><div class="gpd-v" style="color:#B45309;font-weight:600;">⏳ Pending admin review</div></div>
+      <div class="gpd-row" style="flex-direction:column;align-items:flex-start;gap:4px;padding:12px 16px;">
+        <div style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px;">DEALS</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">Deals are added by the NAFIC admin team after your profile is approved. You will be notified on WhatsApp when a deal goes live.</div>
+      </div>
     </div>
 
-    <div class="gpd-section" style="margin-top:4px;"><div class="gpd-section-title">Member Interests</div></div>
+    <div class="gpd-section" style="margin-top:4px;"><div class="gpd-section-title">Family Interests · Your Deals</div></div>
+    <div style="margin:0 16px 4px;padding:10px 12px;background:rgba(200,168,75,.06);border:1px solid var(--gold-border);border-radius:10px;font-size:11px;color:var(--muted);line-height:1.55;">
+      🔒 <b>Privacy protected.</b> Family identities are never disclosed to Asset Managers. You see interest signals by type and region — NAFIC facilitates introductions once both sides confirm intent.
+    </div>
     <div class="gpd-card">
-      <div style="padding:24px;text-align:center;">
-        <div style="font-size:13px;color:var(--muted);">No interests yet — your deal is under review.<br>Interests will appear here once published.</div>
+      <div style="padding:20px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:8px;">📊</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">No interests yet</div>
+        <div style="font-size:12px;color:var(--muted);">Interests will appear here once your profile is approved and visible to NAFIC families.</div>
+      </div>
+    </div>
+
+    <!-- Demo: what interests look like once approved -->
+    <div class="gpd-section" style="margin-top:4px;"><div class="gpd-section-title">Example · How interests appear when live</div></div>
+    <div class="gpd-card" style="opacity:.65;">
+      <div class="gpd-interest-row">
+        <div class="gpd-av" style="background:#C4A050;font-size:11px;">ME</div>
+        <div class="gpd-member-info">
+          <div class="gpd-member-name">Middle East Family</div>
+          <div class="gpd-member-sub">SFO · GCC / MENA · PE &amp; Real Estate focus · $5M–$50M</div>
+        </div>
+        <button class="gpd-msg-btn">Intro →</button>
+      </div>
+      <div class="gpd-interest-row">
+        <div class="gpd-av" style="background:#2A68A8;font-size:11px;">AP</div>
+        <div class="gpd-member-info">
+          <div class="gpd-member-name">Asia-Pacific Family</div>
+          <div class="gpd-member-sub">MFO · Southeast Asia · VC &amp; Tech focus · $1M–$10M</div>
+        </div>
+        <button class="gpd-msg-btn">Intro →</button>
+      </div>
+      <div class="gpd-interest-row">
+        <div class="gpd-av" style="background:#1E4A2E;font-size:11px;">EU</div>
+        <div class="gpd-member-info">
+          <div class="gpd-member-name">European Family Office</div>
+          <div class="gpd-member-sub">MFO · Europe · Alternatives &amp; Digital Assets · $10M–$100M</div>
+        </div>
+        <button class="gpd-msg-btn">Intro →</button>
       </div>
     </div>
 
@@ -1709,7 +2352,7 @@ html,body{width:100%;height:100%;height:100dvh;background:var(--black);font-fami
     <div class="gpd-card">
       <div class="gpd-row" style="flex-direction:column;align-items:flex-start;gap:6px;">
         <div style="font-size:12px;color:var(--muted);">NAFIC Team · Just now</div>
-        <div style="font-size:13px;color:var(--text);line-height:1.5;">Thanks for submitting. We've received your deck and are reviewing the opportunity. We'll be in touch within 48 hours.</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.5;">Thanks for applying. We've received your profile and are reviewing your application. We'll be in touch via WhatsApp within 48 hours.</div>
       </div>
     </div>
 
@@ -1746,10 +2389,27 @@ function go(id){
   document.getElementById(id).classList.add('active');
 }
 function showInner(id){
-  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail','s-admin','s-gp-apply','s-gp-dash'];
+  const inner=['s-dash','s-events','s-messages','s-gpdirectory','s-alerts','s-investments','s-members','s-profile','s-event-detail','s-admin','s-gp-apply','s-gp-dash','s-tiers'];
   inner.forEach(sid=>{const el=document.getElementById(sid);if(el)el.classList.remove('active');});
   document.getElementById(id).classList.add('active');
 }
+function filterDirectory(){
+  const region=(document.getElementById('dir-f-region')||{}).value||'';
+  const asset=(document.getElementById('dir-f-asset')||{}).value||'';
+  const orgtype=(document.getElementById('dir-f-orgtype')||{}).value||'';
+  document.querySelectorAll('.mem-card').forEach(card=>{
+    const office=(card.querySelector('.mem-office')||{}).textContent||'';
+    const reg=(card.querySelector('.mem-region')||{}).textContent||'';
+    const tagsEl=card.querySelector('.mem-tags');
+    const tags=tagsEl?tagsEl.textContent:'';
+    let show=true;
+    if(region&&!reg.toLowerCase().includes(region.toLowerCase())&&!office.toLowerCase().includes(region.toLowerCase()))show=false;
+    if(asset&&!tags.toLowerCase().includes(asset.toLowerCase()))show=false;
+    if(orgtype&&!office.toLowerCase().includes(orgtype.toLowerCase()))show=false;
+    card.style.display=show?'':'none';
+  });
+}
+
 function setTab(el){
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   el.classList.add('active');
@@ -1786,20 +2446,21 @@ function showEventDetail(id){
 }
 
 // ── Express Interest & View Interests ──
+// Family identities are anonymised in the GP/Asset Manager view — shown as type + region only
 const memberInterests = {
   'NovaBio Pre-IPO':[
-    {name:'Al-Farsi Family',initials:'AF',bg:'#C4A050',office:'SFO · Abu Dhabi · PE, Real Estate',time:'2h ago'},
-    {name:'Chen Holdings',initials:'CH',bg:'#1A1A2E',office:'SFO · Hong Kong · Digital Assets, VC',time:'5h ago'},
-    {name:'Ricci Family',initials:'RF',bg:'#8A3A1A',office:'SFO · Milan · PE, Hedge Funds',time:'1d ago'},
-    {name:'Tanaka Family',initials:'TF',bg:'#1A2A1A',office:'SFO · Tokyo · PE, Infrastructure',time:'2d ago'},
-    {name:'Al-Rashid Capital',initials:'AR',bg:'#1E1A2E',office:'SFO · Dubai · Real Estate, PE',time:'3d ago'},
+    {name:'Middle East Family',initials:'ME',bg:'#C4A050',office:'SFO · GCC / MENA · PE &amp; Real Estate focus',time:'2h ago'},
+    {name:'Asia Family — Digital Focus',initials:'AS',bg:'#1A1A2E',office:'SFO · Greater China · Digital Assets, VC',time:'5h ago'},
+    {name:'European Family Office',initials:'EU',bg:'#8A3A1A',office:'MFO · Europe · PE, Hedge Funds',time:'1d ago'},
+    {name:'Asia-Pacific Family',initials:'AP',bg:'#1A2A1A',office:'SFO · Japan · PE, Infrastructure',time:'2d ago'},
+    {name:'Gulf Family — Real Estate',initials:'GF',bg:'#1E1A2E',office:'SFO · Gulf · Real Estate, PE',time:'3d ago'},
   ],
   'DeepMind Ventures Fund II':[
-    {name:'Lee Family Office',initials:'LF',bg:'#2A68A8',office:'MFO · Singapore · VC, Technology',time:'3h ago'},
+    {name:'Asia-Pacific Family — Tech Focus',initials:'AP',bg:'#2A68A8',office:'MFO · Southeast Asia · VC, Technology',time:'3h ago'},
   ],
   'GCC Infrastructure Fund III':[
-    {name:'Al-Farsi Family',initials:'AF',bg:'#C4A050',office:'SFO · Abu Dhabi · PE, Real Estate',time:'1d ago'},
-    {name:'Al-Rashid Capital',initials:'AR',bg:'#1E1A2E',office:'SFO · Dubai · Real Estate, PE',time:'2d ago'},
+    {name:'Middle East Family — PE Focus',initials:'ME',bg:'#C4A050',office:'SFO · GCC / MENA · PE, Real Estate',time:'1d ago'},
+    {name:'Gulf Family — Alternatives',initials:'GF',bg:'#1E1A2E',office:'SFO · Gulf · Real Estate, PE',time:'2d ago'},
   ],
   'Southeast Asia Credit Opportunities':[],
 };
@@ -1890,7 +2551,8 @@ function unlock(id){
 
 // Application flow
 let applyStep=1;
-const TOTAL=8;
+let _naficOrgType=''; // tracks org type selected on step 1
+
 const steps=[
   {title:"Basic Information",sub:"Tell us about yourself and your family office.",render:()=>`
     <button class="li-btn" id="li-autofill-btn" onclick="linkedinAutofill()"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span id="li-btn-text">Autofill from LinkedIn</span></button>
@@ -1899,18 +2561,35 @@ const steps=[
     <div class="af"><div class="af-label">EMAIL</div><input class="af-input" id="fi-email" type="email" placeholder="your@familyoffice.com"/></div>
     <div class="af"><div class="af-label">WHATSAPP / PHONE</div><input class="af-input" id="fi-phone" type="tel" placeholder="+971 50 000 0000"/></div>
     <div class="af"><div class="af-label">LEVEL</div><select class="af-select" id="fi-level"><option>Select level</option><option>Principal / Owner</option><option>CIO / Investment Director</option><option>Managing Director</option><option>Associate / Analyst</option><option>Advisor</option></select></div>
-    <div class="af"><div class="af-label">ORGANIZATION TYPE</div><select class="af-select" id="fi-orgtype"><option>Select type</option><option>Single Family Office (LP)</option><option>Multi-Family Office (LP/GP)</option><option>Family Business (LP)</option><option>GP / Fund</option><option>LP Advisor / Consultant</option></select></div>
+    <div class="af"><div class="af-label">ORGANIZATION TYPE</div><select class="af-select" id="fi-orgtype" onchange="orgTypeChanged(this.value)"><option disabled selected>Select type</option><optgroup label="— LP / Capital Allocator —"><option>Single Family Office</option><option>Multi-Family Office</option><option>Family Business</option><option>LP Advisor / Consultant</option></optgroup><optgroup label="— Asset Manager —"><option>Asset Manager (PE / VC / Hedge / Credit)</option><option>Real Estate Fund</option><option>Co-Investment Vehicle</option></optgroup></select></div>
+    <div id="fi-orgtype-hint" style="display:none;margin:-8px 0 4px;padding:9px 12px;background:rgba(200,168,75,.08);border:1px solid var(--gold-border);border-radius:9px;font-size:12px;color:var(--gold-dim);line-height:1.5;">🏗️ Family Business path: we'll ask one extra question about your operating heritage to improve matching.</div>
+    <div id="fi-gp-hint" style="display:none;margin:-8px 0 4px;padding:9px 12px;background:rgba(42,104,168,.08);border:1px solid rgba(42,104,168,.25);border-radius:9px;font-size:12px;color:#2A68A8;line-height:1.5;">🏢 Asset Manager detected — you'll be routed to GP onboarding after this step with questions tailored to fund managers.</div>
     <div class="af"><div class="af-label">FAMILY OFFICE / BUSINESS NAME</div><input class="af-input" id="fi-org" type="text" placeholder="Your organization name"/></div>
     <div class="af"><div class="af-label">GENERATION IN FAMILY BUSINESS</div><select class="af-select" id="fi-gen"><option>Select generation</option><option>G1 — Founder</option><option>G2 — Second generation</option><option>G3 — Third generation</option><option>G4+ — Multi-generational</option></select></div>
     <div class="af"><div class="toggle-row"><div class="toggle-info"><div class="toggle-name">WhatsApp Notifications</div><div class="toggle-desc">Receive approvals and alerts via WhatsApp</div></div><div class="toggle-switch" onclick="this.classList.toggle('off')"><div class="toggle-knob"></div></div></div></div>
     <div class="af"><div class="af-label">WECHAT (OPTIONAL)</div><input class="af-input" id="fi-wechat" type="text" placeholder="WeChat ID for Asia connections"/></div>`},
-  {title:"Where do you focus?",sub:"Select all asset classes that apply. Add your own below.",render:()=>`
-    <div class="chips-wrap" id="focus-chips">${['Private Equity','Venture / Growth','Real Estate','Private Credit / Debt','Infrastructure','Digital Assets','Public Markets','Hedge Funds','Real Assets','Impact / ESG'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>
-    <div class="add-chip-row"><input class="add-chip-input" id="focus-input" type="text" placeholder="Add your own…" onkeydown="if(event.key==='Enter'){addCustomChip('focus-chips','focus-input');}"/><button class="add-chip-btn" onclick="addCustomChip('focus-chips','focus-input')">+</button></div>`},
+  {title:"Where do you focus?",
+   sub:"Select all asset classes that apply. Add your own below.",
+   subFamilyBiz:"Outside your core business, where are you allocating capital?",
+   render:()=>{
+     const isFB=_naficOrgType==='Family Business';
+     return `
+    ${isFB?`<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding:9px 12px;background:rgba(200,168,75,.07);border:1px solid var(--gold-border);border-radius:9px;font-size:12px;color:var(--gold-dim);">💼 Showing capital allocation options — separate from your core operating business</div>`:''}
+    <div class="chips-wrap" id="focus-chips">${['Private Equity','Venture / Growth','Real Estate','Private Credit / Debt','Infrastructure','Digital Assets','Public Markets','Hedge Funds','Real Assets','Impact / ESG','Fund of Funds','Co-Investments','Direct Investments'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>
+    <div class="add-chip-row"><input class="add-chip-input" id="focus-input" type="text" placeholder="Add your own…" onkeydown="if(event.key==='Enter'){addCustomChip('focus-chips','focus-input');}"/><button class="add-chip-btn" onclick="addCustomChip('focus-chips','focus-input')">+</button></div>`;
+   }},
   {title:"What industries do you focus on?",sub:"Select all that apply. Add your own below.",render:()=>`
-    <div class="chips-wrap" id="industry-chips">${['Technology','Healthcare / Biotech','FinTech','Real Estate','Energy / CleanTech','Consumer / Retail','AI & Deep Tech','Defence & Security','Media & Entertainment','Education','Food & AgriTech','Manufacturing','Digital Assets'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>
+    <div class="chips-wrap" id="industry-chips">${['AI & Deep Tech','Consumer / Retail','Defence & Security','Digital Assets','Education','Energy / CleanTech','FinTech','Food & AgriTech','Healthcare / Biotech','Manufacturing','Media & Entertainment','Real Estate','Technology'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>
     <div class="add-chip-row"><input class="add-chip-input" id="industry-input" type="text" placeholder="Add your own…" onkeydown="if(event.key==='Enter'){addCustomChip('industry-chips','industry-input');}"/><button class="add-chip-btn" onclick="addCustomChip('industry-chips','industry-input')">+</button></div>`},
-  {title:"Geographic Focus",sub:"Select regions and countries of interest.",render:()=>`<div class="chips-wrap">${['GCC / MENA','Greater China','Southeast Asia','South Asia','Japan / Korea','Europe','North America','Latin America','Africa','Global'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>`},
+  {title:"Geographic Focus",sub:"Tap a region to expand countries. Select all that apply.",render:()=>`
+    <div style="display:flex;flex-direction:column;gap:0;">${Object.entries(GEO_REGIONS).map(([id,r])=>`<div style="margin-bottom:4px;">
+        <span class="achip geo-chip" onclick="toggleRegion('${id}',this)" id="${id}-chip" style="display:inline-flex;align-items:center;gap:6px;">${r.label} <span id="${id}-arrow" style="font-size:9px;opacity:.55;transition:transform .2s;">▼</span></span>
+        <div class="geo-country-panel" id="${id}-panel">
+          <div class="geo-country-label">COUNTRIES</div>
+          <div class="chips-wrap" style="margin:0;" id="${id}-clist"></div>
+        </div>
+      </div>`).join('')}
+    </div>`},
   {title:"Typical Check Size",sub:"Set your minimum and maximum investment range.",render:()=>`
     <div class="ck-display">
       <div class="ck-badge"><div class="ck-badge-lbl">MIN</div><div class="ck-badge-val" id="ck-min-lbl">$1M</div></div>
@@ -1923,14 +2602,79 @@ const steps=[
       <input type="range" id="ck-max-r" min="0" max="10" step="1" value="6" oninput="ckUpdate()"/>
     </div>
     <div class="slider-marks"><span>$100K</span><span>$500K</span><span>$1M</span><span>$5M</span><span>$10M</span><span>$25M</span><span>$50M</span><span>$100M</span><span>$250M</span><span>$500M</span><span>$1B+</span></div>`},
-  {title:"What are you exploring?",sub:"Select topics — then set your depth: E=Explore · V=Vetting · A=Active",render:()=>`<div>${['Co-investment opportunities','Fund manager sourcing','LP introductions','Deal origination','Education & thought leadership','Digital assets allocation','AI & emerging tech','Family governance','Succession planning'].map(t=>`<div class="intent-row"><span class="intent-name">${t}</span><div class="depth-group"><button class="depth-btn" onclick="setDepth(this,'E')">E</button><button class="depth-btn" onclick="setDepth(this,'V')">V</button><button class="depth-btn" onclick="setDepth(this,'A')">A</button></div></div>`).join('')}</div>`},
-  {title:"Choose your membership",sub:"Your annual fee is a commitment signal — not a revenue line for us.",render:()=>`
-    <div class="tier-options">
-      <div class="tier-opt" onclick="selTier(this)"><div class="tier-opt-head"><div class="tier-opt-name">Associate</div><div class="tier-opt-fee">$15K<span style="font-size:13px;font-weight:400;color:var(--muted)">/yr</span></div></div><div class="tier-opt-sub">Under $100M AUM · Emerging family offices</div><div class="tier-opt-feats"><span class="tier-feat">Full Academy</span><span class="tier-feat">Events</span><span class="tier-feat">Directory</span><span class="tier-feat">Network intro</span></div></div>
-      <div class="tier-opt sel" onclick="selTier(this)"><div class="tier-recommended">MOST COMMON</div><div class="tier-opt-head"><div class="tier-opt-name">Member</div><div class="tier-opt-fee">$45K<span style="font-size:13px;font-weight:400;color:var(--muted)">/yr</span></div></div><div class="tier-opt-sub">$100M–$1B AUM · Active co-investors</div><div class="tier-opt-feats"><span class="tier-feat">Deal flow</span><span class="tier-feat">Academy cohort</span><span class="tier-feat">SYNDICATE view</span><span class="tier-feat">Events</span><span class="tier-feat">Messaging</span></div></div>
-      <div class="tier-opt" onclick="selTier(this)"><div class="tier-opt-head"><div class="tier-opt-name">Founding Member</div><div class="tier-opt-fee">$80K<span style="font-size:13px;font-weight:400;color:var(--muted)">/yr</span></div></div><div class="tier-opt-sub">$1B+ AUM · Anchor co-investors</div><div class="tier-opt-feats"><span class="tier-feat">Full SYNDICATE SPV rights</span><span class="tier-feat">SWF anchor access</span><span class="tier-feat">Priority academy</span><span class="tier-feat">1:1 MD access</span></div></div>
+  {title:"What are you exploring?",sub:"Tap a topic — then set your level of intent.",render:()=>`
+    <div>${[
+      {label:'ALTERNATIVES',items:['Co-investment opportunities','Fund manager sourcing','LP introductions','Deal origination','GP Stakes'],id:'expl-alt'},
+      {label:'DIGITAL & EMERGING',items:['Digital Assets','Deep-tech / AI Funds','Pre-IPO / Growth'],id:'expl-dig'},
+      {label:'LEARNING & GOVERNANCE',items:['Education & thought leadership','Family governance','Succession planning'],id:'expl-gov'},
+    ].map(cat=>`
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.1px;color:var(--gold-dim);text-transform:uppercase;padding:14px 0 6px;border-bottom:1px solid var(--sand);margin-bottom:2px;">${cat.label}</div>
+        <div id="${cat.id}">${cat.items.map(t=>`<div class="intent-row"><span class="intent-name">${t}</span><div class="depth-group"><button class="depth-btn" onclick="setDepth(this,'E')">Curious</button><button class="depth-btn" onclick="setDepth(this,'V')">Researching</button><button class="depth-btn" onclick="setDepth(this,'A')">Active</button></div></div>`).join('')}</div>
+        <div class="add-chip-row" style="margin:6px 0 10px;"><input class="add-chip-input" type="text" placeholder="Add your own…" onkeydown="if(event.key==='Enter'){addExploreRow(this,'${cat.id}');}"/><button class="add-chip-btn" onclick="addExploreRow(this.previousElementSibling,'${cat.id}')">+</button></div>
+      </div>`).join('')}
+    </div>`},
+  {title:"Choose your contribution",sub:"Two tiers · Invitation-only base · Full access for contributing Members.",render:()=>`
+    <div style="border-radius:14px;overflow:hidden;border:1px solid #E0D8C8;">
+      <!-- Column headers -->
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:#F5F0E4;">
+        <div style="padding:12px 12px 10px;"></div>
+        <div style="padding:12px 8px 10px;text-align:center;border-left:1px solid #E0D8C8;">
+          <div style="font-size:12px;font-weight:700;color:#5A4A20;">Observer</div>
+          <div style="font-size:10px;color:#9A8A60;margin-top:2px;">Inv. Only</div>
+        </div>
+        <div style="padding:12px 8px 10px;text-align:center;border-left:1px solid #E0D8C8;background:#EDD87A33;">
+          <div style="font-size:12px;font-weight:700;color:var(--gold-dim);">Member</div>
+          <div style="font-size:10px;color:#B89040;margin-top:2px;">Annual fee</div>
+        </div>
+      </div>
+      <!-- KNOWLEDGE -->
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:#2C2C2A;">
+        <div style="padding:6px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;">KNOWLEDGE</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;"></div>
+      </div>
+      ${[['Market Intel','✓','✓','full'],['Research Participation','Limited','✓','lim'],['Academy Branding','–','✓','none']].map(([n,o,m,t])=>`
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid #EEE8DC;${t==='none'?'opacity:.6':''}">
+        <div style="padding:10px 12px;font-size:12px;color:#333;">${n}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:600;color:${t==='full'?'#5A7A50':t==='lim'?'#8A6820':'#BBB'}">${o}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:700;color:#5A7A50;background:rgba(200,168,75,.04);">${m}</div>
+      </div>`).join('')}
+      <!-- EVENTS -->
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:#2C2C2A;border-top:1px solid #3A3A38;">
+        <div style="padding:6px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;">EVENTS</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;"></div>
+      </div>
+      ${[['Curated Roundtables','✓','✓','full'],['Delegation Trips','–','✓','none'],['Private Residency','–','✓','none']].map(([n,o,m,t])=>`
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid #EEE8DC;${t==='none'?'opacity:.6':''}">
+        <div style="padding:10px 12px;font-size:12px;color:#333;">${n}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:600;color:${t==='full'?'#5A7A50':'#BBB'}">${o}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:700;color:#5A7A50;background:rgba(200,168,75,.04);">${m}</div>
+      </div>`).join('')}
+      <!-- NETWORK -->
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:#2C2C2A;border-top:1px solid #3A3A38;">
+        <div style="padding:6px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;">NETWORK</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;"></div>
+      </div>
+      ${[['Member Directory','Limited','✓','lim'],['AI Match Making','–','✓','none'],['Bumble Connect','–','✓','none']].map(([n,o,m,t])=>`
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid #EEE8DC;${t==='none'?'opacity:.6':''}">
+        <div style="padding:10px 12px;font-size:12px;color:#333;">${n}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:600;color:${t==='lim'?'#8A6820':'#BBB'}">${o}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:700;color:#5A7A50;background:rgba(200,168,75,.04);">${m}</div>
+      </div>`).join('')}
+      <!-- CO-INVEST -->
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;background:#2C2C2A;border-top:1px solid #3A3A38;">
+        <div style="padding:6px 12px;font-size:10px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;">CO-INVEST</div>
+        <div style="border-left:1px solid #3A3A38;"></div><div style="border-left:1px solid #3A3A38;"></div>
+      </div>
+      ${[['Deal Flow','Limited','✓','lim'],['SWF Access','Limited','✓','lim'],['Express Interest','–','✓','none'],['Anchor Deal','–','✓','none']].map(([n,o,m,t])=>`
+      <div style="display:grid;grid-template-columns:1fr 80px 80px;border-top:1px solid #EEE8DC;${t==='none'?'opacity:.6':''}">
+        <div style="padding:10px 12px;font-size:12px;color:#333;">${n}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:600;color:${t==='lim'?'#8A6820':'#BBB'}">${o}</div>
+        <div style="padding:10px 8px;text-align:center;border-left:1px solid #EEE8DC;font-size:12px;font-weight:700;color:#5A7A50;background:rgba(200,168,75,.04);">${m}</div>
+      </div>`).join('')}
     </div>
-    <div style="margin-top:14px;padding:12px;background:rgba(200,168,75,.06);border:1px solid var(--gold-border);border-radius:12px;font-size:12px;color:var(--muted);line-height:1.5;"><b style="color:var(--gold-dim);">LP fee policy:</b> NAFIC charges LPs a flat annual fee only. No placement fees. No carry taken from LP investments. Ever.</div>`},
+    <div style="margin-top:10px;font-size:10.5px;color:#AAA;text-align:center;">✓ Full access &nbsp;·&nbsp; Limited = Partial &nbsp;·&nbsp; – Not included</div>
+    <div style="margin-top:10px;padding:11px 13px;background:rgba(200,168,75,.06);border:1px solid var(--gold-border);border-radius:11px;font-size:12px;color:var(--muted);line-height:1.5;"><b style="color:var(--gold-dim);">LP fee policy:</b> Flat annual fee only. No placement fees. No carry taken from LP investments. Ever.</div>`},
   {title:"How do you prefer to engage?",sub:"Choose all that apply. This shapes your event and intro experience.",render:()=>`
     <div class="engage-card" onclick="this.classList.toggle('on')"><div class="engage-icon">🤝</div><div class="engage-text">1:1 introductions to specific families</div></div>
     <div class="engage-card" onclick="this.classList.toggle('on')"><div class="engage-icon">👥</div><div class="engage-text">Small roundtables (6–10 people)</div></div>
@@ -1941,16 +2685,71 @@ const steps=[
     <div class="af" style="margin-top:14px;"><div class="af-label">ANYTHING ELSE?</div><textarea class="af-input" rows="3" style="resize:none;line-height:1.5;" placeholder="Optional message to the NAFIC team…"></textarea></div>`},
 ];
 
-function initApply(){applyStep=1;renderStep();}
+// Core business step — only shown for Family Business (defined AFTER steps so reference is valid)
+const coreBizStep={
+  title:"What is your core operating business?",
+  sub:"Your family's operating heritage — separate from where you're allocating capital.",
+  _isCoreBiz:true,
+  render:()=>`
+    <div style="margin-bottom:14px;padding:11px 13px;background:rgba(200,168,75,.07);border:1px solid var(--gold-border);border-radius:11px;font-size:12px;color:var(--muted);line-height:1.6;">
+      <b style="color:var(--gold-dim);">Why this matters:</b> NAFIC matches families with operating synergies — not just capital mandates. A fellow developer or manufacturer may be a better co-invest partner than a pure allocator.
+    </div>
+    <div class="chips-wrap" id="corebiz-chips">${['Real Estate / Property Dev','Manufacturing & Industry','F&B / Hospitality','Technology & SaaS','Logistics & Supply Chain','Trading & Commodities','Energy & Resources','Healthcare & MedTech','Media & Entertainment','Financial Services','Retail & Consumer','Agriculture & Food'].map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('')}</div>
+    <div class="add-chip-row"><input class="add-chip-input" id="corebiz-input" type="text" placeholder="Add your own…" onkeydown="if(event.key==='Enter'){addCustomChip('corebiz-chips','corebiz-input');}"/><button class="add-chip-btn" onclick="addCustomChip('corebiz-chips','corebiz-input')">+</button></div>`
+};
+function buildEffectiveSteps(){
+  const base=[...steps];
+  if(_naficOrgType==='Family Business'){base.splice(1,0,coreBizStep);}
+  return base;
+}
+let effectiveSteps=buildEffectiveSteps();
+function totalSteps(){return effectiveSteps.length;}
+
+function orgTypeChanged(val){
+  _naficOrgType=val;
+  effectiveSteps=buildEffectiveSteps();
+  const T=totalSteps();
+  const lbl=document.getElementById('app-step-lbl');
+  const fill=document.getElementById('app-prog-fill');
+  if(lbl)lbl.textContent=`STEP 1 OF ${T}`;
+  if(fill)fill.style.width=`${(1/T)*100}%`;
+  const hint=document.getElementById('fi-orgtype-hint');
+  if(hint)hint.style.display=(val==='Family Business')?'block':'none';
+  const gpHint=document.getElementById('fi-gp-hint');
+  if(gpHint)gpHint.style.display=GP_ORG_TYPES.includes(val)?'block':'none';
+}
+function initApply(){applyStep=1;_naficOrgType='';effectiveSteps=buildEffectiveSteps();renderStep();}
 function renderStep(){
-  const s=steps[applyStep-1];
-  document.getElementById('app-step-lbl').textContent=`STEP ${applyStep} OF ${TOTAL}`;
-  document.getElementById('app-prog-fill').style.width=`${(applyStep/TOTAL)*100}%`;
-  document.getElementById('apply-content').innerHTML=`<div class="apply-title">${s.title}</div><div class="apply-sub">${s.sub}</div>${s.render()}`;
-  document.getElementById('apply-continue-btn').textContent=applyStep===TOTAL?'Submit Application →':'Continue →';
+  // Always sync org type from DOM on step 1 in case it was set before renderStep ran
+  if(applyStep===1){
+    const sel=document.getElementById('fi-orgtype');
+    if(sel&&sel.value&&sel.value!==_naficOrgType){
+      _naficOrgType=sel.value;
+      effectiveSteps=buildEffectiveSteps();
+    }
+  }
+  const T=totalSteps();
+  const s=effectiveSteps[applyStep-1];
+  document.getElementById('app-step-lbl').textContent=`STEP ${applyStep} OF ${T}`;
+  document.getElementById('app-prog-fill').style.width=`${(applyStep/T)*100}%`;
+  // Use adaptive subtitle for family business where defined
+  const sub=(s.subFamilyBiz&&_naficOrgType==='Family Business')?s.subFamilyBiz:s.sub;
+  document.getElementById('apply-content').innerHTML=`<div class="apply-title">${s.title}</div><div class="apply-sub">${sub}</div>${s.render()}`;
+  document.getElementById('apply-continue-btn').textContent=applyStep===T?'Submit Application →':'Continue →';
   document.getElementById('apply-scroll').scrollTop=0;
 }
-function applyNext(){if(applyStep<TOTAL){applyStep++;renderStep();}else{go('s-submitted');}}
+const GP_ORG_TYPES=['Asset Manager (PE / VC / Hedge / Credit)','Real Estate Fund','Co-Investment Vehicle'];
+function applyNext(){
+  // Always capture org type from DOM when leaving step 1
+  if(applyStep===1){
+    const sel=document.getElementById('fi-orgtype');
+    if(sel&&sel.value){orgTypeChanged(sel.value);}
+    // Route Asset Managers to GP onboarding
+    if(sel&&GP_ORG_TYPES.includes(sel.value)){go('s-gp-apply');return;}
+  }
+  const T=totalSteps();
+  if(applyStep<T){applyStep++;renderStep();}else{go('s-pending');}
+}
 function applyBack(){if(applyStep>1){applyStep--;renderStep();}else{go('s-principles');}}
 const CK_LABELS=['$25K','$100K','$250K','$500K','$1M','$5M','$10M','$25M','$50M','$100M','$1B+'];
 function ckUpdate(){
@@ -1985,6 +2784,18 @@ function addCustomChip(containerId,inputId){
 }
 function setDepth(btn,d){const g=btn.closest('.depth-group');g.querySelectorAll('.depth-btn').forEach(b=>b.className='depth-btn');btn.classList.add('on-'+d);}
 function selTier(el){document.querySelectorAll('.tier-opt').forEach(t=>{t.classList.remove('sel');t.style.borderColor='';t.style.background='';});el.classList.add('sel');el.style.borderColor='var(--gold)';el.style.background='rgba(200,168,75,.04)';}
+function selTier2(tier){
+  const obs=document.getElementById('tier-observer');
+  const mem=document.getElementById('tier-member');
+  if(!obs||!mem)return;
+  if(tier==='observer'){
+    obs.style.borderColor='var(--black)';obs.style.background='#F0EEE8';
+    mem.style.borderColor='var(--gold)';mem.style.background='linear-gradient(160deg,#FBF8EF,#F5EDD8)';
+  } else {
+    mem.style.borderColor='var(--gold)';mem.style.background='linear-gradient(160deg,#F5EDD8,#EDD87A33)';mem.style.boxShadow='0 0 0 1px var(--gold)';
+    obs.style.borderColor='#DDD';obs.style.background='#FAFAF8';obs.style.boxShadow='none';
+  }
+}
 
 // ── Admin Invite Type Toggle ──
 function setInviteType(type){
@@ -2008,7 +2819,7 @@ function showInviteSent(btn, type){
   btn.textContent='✓ '+(type==='LP'?'LP':'GP')+' invitation sent';
   btn.style.background='#2E7D32';
   btn.disabled=true;
-  showToast((type==='LP'?'LP member':'GP / Fund') + ' invitation sent successfully');
+  showToast((type==='LP'?'LP member':'Asset manager') + ' invitation sent successfully');
 }
 
 // ── GP Onboarding ──
@@ -2020,11 +2831,7 @@ function gpStep(n){
   document.querySelectorAll('.gp-step').forEach(s=>s.classList.remove('active'));
   const target=document.getElementById('gp-step-'+n);
   if(target)target.classList.add('active');
-  // update progress dots
-  document.querySelectorAll('.gp-prog-dot').forEach((d,i)=>{
-    d.classList.toggle('done',i<n-1);
-    d.classList.toggle('active-dot',i===n-1);
-  });
+  // The fill bars are baked into each step's HTML (33%, 66%, 100%) — no update needed
 }
 function gpSubmit(){
   document.querySelectorAll('.gp-step').forEach(s=>s.classList.remove('active'));
@@ -2062,6 +2869,219 @@ function linkedinAutofill(){
     const scroll=document.getElementById('apply-scroll');
     if(scroll)scroll.scrollTop=80;
   },1800);
+}
+
+let _naficTier='member';
+
+const GEO_REGIONS={
+  'geo-mena':{label:'MENA',countries:['Saudi Arabia','UAE','Qatar','Kuwait','Bahrain','Oman','Jordan','Egypt','Morocco','Turkey','Lebanon','Iraq']},
+  'geo-asia':{label:'Asia',countries:['Mainland China','Hong Kong','Taiwan','Macau','Singapore','Malaysia','Indonesia','Thailand','Vietnam','Philippines','India','Pakistan','Bangladesh','Sri Lanka','Japan','South Korea','Australia','New Zealand']},
+  'geo-eu':{label:'Europe',countries:['UK','Germany','France','Switzerland','Italy','Netherlands','Luxembourg','Monaco','Sweden','Spain','Norway','Denmark','Belgium','Austria','Portugal','Ireland']},
+  'geo-am':{label:'Americas',countries:['United States','Canada','Mexico','Brazil','Argentina','Chile','Colombia','Peru','Uruguay','Panama','Cayman Islands']},
+};
+
+function selectTier(tier){
+  _naficTier=tier;
+  const isMem=tier==='member';
+  // tier table highlights
+  const obsCol=document.getElementById('tier-col-obs');
+  const memCol=document.getElementById('tier-col-mem');
+  const obsChk=document.getElementById('tier-obs-check');
+  const memChk=document.getElementById('tier-mem-check');
+  if(obsCol)obsCol.style.background=isMem?'':'rgba(200,168,75,.15)';
+  if(memCol)memCol.style.background=isMem?'rgba(200,168,75,.1)':'';
+  if(obsChk)obsChk.style.opacity=isMem?'0':'1';
+  if(memChk)memChk.style.opacity=isMem?'1':'0';
+  // profile
+  const ptt=document.getElementById('prof-tier-text');
+  if(ptt)ptt.textContent=isMem?'Member · Active':'Observer · Active';
+  const ptv=document.getElementById('prof-tier-val');
+  if(ptv){ptv.textContent=isMem?'Member':'Observer';ptv.style.color=isMem?'var(--gold-dim)':'#8A7040';}
+  const pfr=document.getElementById('prof-fee-row');
+  if(pfr)pfr.style.display=isMem?'':'none';
+  // directory
+  const ai=document.getElementById('dir-ai-match');
+  if(ai)ai.style.display=isMem?'block':'none';
+  const mc=document.getElementById('dir-mem-count');
+  if(mc)mc.textContent=isMem?'23 members · LP-initiated connections only':'5 members visible · Full directory for Members only';
+  const bumble=document.getElementById('dir-bumble');
+  if(bumble){
+    let lock=bumble.querySelector('.obs-lock-overlay');
+    if(!isMem){
+      if(!lock){lock=document.createElement('div');lock.className='obs-lock-overlay';lock.innerHTML='<div style="font-size:28px;">🔒</div><div style="font-size:13px;font-weight:700;color:var(--gold);">Member Only</div><div style="font-size:11px;color:rgba(255,255,255,.55);margin-top:2px;">Bumble Connect</div>';bumble.appendChild(lock);}
+      lock.style.display='flex';bumble.classList.add('member-gate');
+    } else {if(lock)lock.style.display='none';bumble.classList.remove('member-gate');}
+  }
+  // co-invest anchor tab
+  const at=document.getElementById('cit-anchor');
+  if(at){at.style.opacity=isMem?'1':'0.38';at.style.pointerEvents=isMem?'':'none';}
+  if(!isMem){const ac2=document.getElementById('ci-anchor-content');if(ac2&&ac2.style.display!=='none')ciTab('dealflow');}
+  const ac=document.getElementById('ci-anchor-content');
+  if(ac){
+    let al=document.getElementById('anchor-obs-lock');
+    if(!isMem){
+      if(!al){al=document.createElement('div');al.id='anchor-obs-lock';al.style='margin:20px 16px;padding:28px 20px;text-align:center;background:#fff;border:1px solid var(--sand);border-radius:14px;';al.innerHTML='<div style="font-size:40px;margin-bottom:10px;">🔒</div><div style="font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px;">Contributing Member Only</div><div style="font-size:12px;color:var(--muted);line-height:1.65;max-width:260px;margin:0 auto 18px;">Anchor Deal is available to Contributing Members only.</div><button class="btn-gold" onclick="selectTier(\'member\')" style="padding:12px 24px;width:auto;display:inline-block;">Preview as Member →</button>';ac.prepend(al);}
+      al.style.display='block';
+      const af=document.getElementById('anchor-form-wrap');const ap=document.getElementById('anchor-pending-wrap');
+      if(af)af.style.display='none';if(ap)ap.style.display='none';
+    } else {if(al)al.style.display='none';const af=document.getElementById('anchor-form-wrap');if(af)af.style.display='block';}
+  }
+  // swf buttons
+  document.querySelectorAll('[data-swf-btn]').forEach(b=>{b.style.opacity=isMem?'1':'0.4';b.style.pointerEvents=isMem?'':'none';});
+  const sn=document.getElementById('swf-obs-note');if(sn)sn.style.display=isMem?'none':'block';
+  showTierToast(tier);
+}
+
+function showTierToast(tier){
+  let t=document.getElementById('tier-toast');
+  if(!t){t=document.createElement('div');t.id='tier-toast';t.style='position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(16px);background:#111;color:#fff;font-size:13px;font-weight:600;padding:10px 22px;border-radius:22px;opacity:0;transition:opacity .3s,transform .3s;z-index:9999;pointer-events:none;white-space:nowrap;border:1px solid rgba(200,168,75,.3);';document.body.appendChild(t);}
+  t.textContent=tier==='member'?'✦ Member view — full access':'👁 Observer view — limited access';
+  t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';
+  setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(16px)';},2800);
+}
+
+function ciTab(t){
+  ['dealflow','swf','anchor'].forEach(s=>{
+    const c=document.getElementById('ci-'+s+'-content');if(c)c.style.display=s===t?'block':'none';
+    const b=document.getElementById('cit-'+s);if(b)b.classList.toggle('active',s===t);
+  });
+}
+
+// Ticket size bands mapped to deal min values in $K
+const CI_TICKET_BANDS={xs:[0,500],sm:[500,2000],md:[2000,10000],lg:[10000,50000],xl:[50000,Infinity]};
+// Deal data for filtering (mirrors the HTML cards)
+const CI_DEALS=[
+  {id:'d1',geo:'GCC / MENA',asset:'Real Estate',minK:2000,tags:'fam re'},
+  {id:'d2',geo:'Southeast Asia',asset:'Pre-IPO',minK:250,tags:'fam ipo'},
+  {id:'d3',geo:'GCC / MENA',asset:'Private Equity',minK:1000,tags:'fam alt'},
+  {id:'d4',geo:'Greater China',asset:'Pre-IPO',minK:500,tags:'fam ipo alt'},
+  {id:'d5',geo:'Europe',asset:'Pre-IPO',minK:1000,tags:'fam re'},
+];
+
+function ciTab2(tab){
+  ['all','fam','swf','share'].forEach(t=>{
+    const btn=document.getElementById('cit2-'+t);
+    const content=document.getElementById('ci-'+t+'-content')||document.getElementById('ci-'+t+'content');
+    if(btn)btn.classList.toggle('active',t===tab);
+  });
+  document.getElementById('ci-all-content').style.display=tab==='all'?'block':'none';
+  document.getElementById('ci-swf-content').style.display=tab==='swf'?'block':'none';
+  document.getElementById('ci-share-content').style.display=tab==='share'?'block':'none';
+  // Family-Led tab: populate and show
+  const famContent=document.getElementById('ci-fam-content');
+  const famFilters=document.getElementById('ci-fam-filters');
+  if(tab==='fam'){
+    famContent.style.display='block';
+    famFilters.style.display='block';
+    updateMandateHint();
+    applyFamFilters();
+  } else {
+    famContent.style.display='none';
+    famFilters.style.display='none';
+  }
+}
+
+function updateMandateHint(){
+  // Read user's onboarding check size selection
+  const minR=document.getElementById('ck-min-r');
+  const maxR=document.getElementById('ck-max-r');
+  const CK=['$25K','$100K','$250K','$500K','$1M','$5M','$10M','$25M','$50M','$100M','$1B+'];
+  const lo=minR?CK[parseInt(minR.value)]:'$250K';
+  const hi=maxR?CK[parseInt(maxR.value)]:'$10M';
+  const hint=document.getElementById('ci-mandate-hint');
+  if(hint)hint.textContent=`✦ Your mandate from onboarding: ${lo} – ${hi} · Ticket filter pre-set to match`;
+  // Auto-select matching ticket band
+  const minKMap={'$25K':25,'$100K':100,'$250K':250,'$500K':500,'$1M':1000,'$5M':5000,'$10M':10000,'$25M':25000,'$50M':50000,'$100M':100000,'$1B+':Infinity};
+  const loK=minKMap[lo]||250;
+  const sel=document.getElementById('cif-ticket');
+  if(sel&&sel.value===''){
+    // Pick band that contains the user's min
+    if(loK<500)sel.value='xs';
+    else if(loK<2000)sel.value='sm';
+    else if(loK<10000)sel.value='md';
+    else if(loK<50000)sel.value='lg';
+    else sel.value='xl';
+  }
+}
+
+function applyFamFilters(){
+  const geo=(document.getElementById('cif-geo')||{}).value||'';
+  const asset=(document.getElementById('cif-asset')||{}).value||'';
+  const ticket=(document.getElementById('cif-ticket')||{}).value||'';
+  const band=ticket?CI_TICKET_BANDS[ticket]:null;
+  // Rebuild family-led card list filtered
+  const famDiv=document.getElementById('ci-fam-content');
+  if(!famDiv)return;
+  // Clone cards from All tab that have class ci-card with fam tag
+  const allCards=[...document.querySelectorAll('#ci-all-content .ci-card')];
+  famDiv.innerHTML='<div style="height:4px;"></div>';
+  let shown=0;
+  allCards.forEach((card,i)=>{
+    const d=CI_DEALS[i]||{};
+    if(!d.tags||!d.tags.includes('fam'))return;
+    if(geo&&d.geo!==geo)return;
+    if(asset&&!d.asset.toLowerCase().includes(asset.toLowerCase().split(' ')[0]))return;
+    if(band&&(d.minK<band[0]||d.minK>band[1]))return;
+    const clone=card.cloneNode(true);
+    famDiv.appendChild(clone);
+    shown++;
+  });
+  if(shown===0){
+    famDiv.innerHTML+='<div style="text-align:center;padding:32px 24px;"><div style="font-size:32px;margin-bottom:8px;">🔍</div><div style="font-size:14px;font-weight:600;color:var(--text);">No deals match these filters</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">Try adjusting Geography, Asset Class, or Ticket Size.</div></div>';
+  }
+  famDiv.innerHTML+='<div style="height:10px;"></div>';
+}
+
+function ciFilter(chip,tag){
+  // Legacy — redirect to new tab system
+  if(tag==='swfb')ciTab2('swf');
+  else if(tag==='all')ciTab2('all');
+  else ciTab2('fam');
+}
+
+function toggleRegion(id,el){
+  const region=GEO_REGIONS[id];
+  const countries=region?region.countries:[];
+  el.classList.toggle('on');
+  const panel=document.getElementById(id+'-panel');
+  const arrow=document.getElementById(id+'-arrow');
+  if(!panel)return;
+  const isOn=el.classList.contains('on');
+  if(arrow)arrow.style.transform=isOn?'rotate(180deg)':'rotate(0deg)';
+  if(isOn&&countries.length>0){
+    panel.style.display='block';
+    const clist=document.getElementById(id+'-clist');
+    if(clist&&clist.children.length===0)clist.innerHTML=countries.map(c=>`<span class="achip" onclick="this.classList.toggle('on')">${c}</span>`).join('');
+  } else if(isOn&&countries.length===0){
+    // Global — no countries to show, just mark selected
+    panel.style.display='none';
+  } else {panel.style.display='none';}
+}
+
+function addExploreRow(input,containerId){
+  const v=input.value.trim();if(!v)return;
+  const c=document.getElementById(containerId);if(!c)return;
+  const row=document.createElement('div');row.className='intent-row';
+  row.innerHTML=`<span class="intent-name">${v}</span><div class="depth-group"><button class="depth-btn" onclick="setDepth(this,'E')">Curious</button><button class="depth-btn" onclick="setDepth(this,'V')">Researching</button><button class="depth-btn" onclick="setDepth(this,'A')">Active</button></div>`;
+  c.appendChild(row);input.value='';
+}
+
+function submitAnchorDeal(btn){
+  const name=document.getElementById('anchor-deal-name').value.trim()||'Untitled Deal';
+  const asset=document.getElementById('anchor-asset').value.trim()||'—';
+  const raise=document.getElementById('anchor-raise').value.trim()||'—';
+  const min=document.getElementById('anchor-min').value.trim()||'—';
+  const thesis=document.getElementById('anchor-thesis').value.trim()||'—';
+  const dlRaw=document.getElementById('anchor-deadline').value;
+  const deadline=dlRaw?new Date(dlRaw).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'—';
+  document.getElementById('anchor-summary').innerHTML='<b>Deal:</b> '+name+'<br><b>Asset class:</b> '+asset+'<br><b>Raise:</b> '+raise+'<br><b>Min ticket:</b> '+min+'<br><b>Deadline:</b> '+deadline+'<br><b>Thesis:</b> '+thesis;
+  document.getElementById('anchor-form-wrap').style.display='none';
+  document.getElementById('anchor-pending-wrap').style.display='block';
+  const dealsList=document.getElementById('admin-deals-content');
+  if(dealsList){
+    const existing=dealsList.querySelector('.admin-section');
+    if(existing){const card=document.createElement('div');card.className='admin-card';card.style='margin:0 16px 10px;';card.innerHTML='<div class="admin-row"><div class="ar-top"><div class="ar-info"><div class="ar-name">'+name+'</div><div class="ar-sub">'+asset+' · '+raise+' · Min '+min+'</div><span class="ar-status new">Submitted · Pending approval</span></div></div><div class="ar-actions"><button class="ar-approve" onclick="this.textContent=\'✓ Approved · Now Live\';this.style.background=\'#2E7D32\';">Approve &amp; Publish</button><button class="ar-reject" onclick="this.textContent=\'Rejected\';this.style.opacity=\'.5\';">Reject</button></div></div>';existing.after(card);}
+  }
 }
 </script>
 </body>
